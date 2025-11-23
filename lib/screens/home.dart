@@ -43,7 +43,7 @@ class _HomePageState extends State<HomePage> {
           Row(
             children: [
               const Text(
-                '⚡ Flash Deals',
+                'Flash Deals',
                 style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
               ),
               const Spacer(),

@@ -33,8 +33,7 @@ class BeautyApp extends StatelessWidget {
         debugShowCheckedModeBanner: false,
         initialRoute: '/',
         routes: {
-          '/': (context) =>
-              const BottomNavBar(), // 👉 thay MainScreen bằng BottomNavBar
+          '/': (context) => const BottomNavBar(), // 👉 thay MainScreen bằng BottomNavBar
           '/address': (context) => const AddressPage(),
           '/payment': (context) => const PaymentPage(),
           '/history': (context) => const OrderHistoryPage(),
