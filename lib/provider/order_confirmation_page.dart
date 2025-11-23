@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:intl/intl.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
 
 class OrderConfirmationPage extends StatefulWidget {
   const OrderConfirmationPage({super.key});
@@ -101,20 +101,22 @@ class _OrderConfirmationPageState extends State<OrderConfirmationPage>
 
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Xác nhận đơn hàng'),
+        title: const Text('✅ Xác nhận đơn hàng'),
         backgroundColor: const Color(0xFFBFAF9B),
+        elevation: 4,
       ),
       body: FadeTransition(
         opacity: _fade,
         child: loading
             ? const Center(child: CircularProgressIndicator())
             : orderData == null
-            ? const Center(child: Text('Không tìm thấy đơn hàng'))
+            ? const Center(child: Text('❌ Không tìm thấy đơn hàng'))
             : SingleChildScrollView(
                 padding: const EdgeInsets.all(16),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
+                    // Trạng thái đơn hàng
                     Center(child: Icon(icon, color: color, size: 80)),
                     const SizedBox(height: 20),
                     Center(
@@ -140,79 +142,157 @@ class _OrderConfirmationPageState extends State<OrderConfirmationPage>
                       ),
                     ),
                     const Divider(height: 32),
-                    Text('📍 Địa chỉ: ${orderData?['address'] ?? '---'}'),
-                    Text('🏬 Chi nhánh: ${orderData?['branch'] ?? '---'}'),
-                    Text(
-                      '📏 Khoảng cách giao hàng: ${orderData?['distanceKm']} km',
-                    ),
-                    Text(
-                      '🚚 Phí vận chuyển: ${formatCurrency(orderData?['shippingFee'])}',
-                    ),
-                    Text(
-                      '🚚 Giao hàng dự kiến: ${orderData?['estimatedDelivery'] ?? '---'}',
-                    ),
-                    Text(
-                      '💳 Thanh toán: ${orderData?['paymentMethod'] ?? '---'}',
-                    ),
-                    if ((orderData?['note']?.toString().trim().isNotEmpty ??
-                        false))
-                      Text('📝 Ghi chú: ${orderData?['note']}'),
-                    if (orderData?['discountCode'] != null)
-                      Text(
-                        '🏷 Mã giảm giá: ${orderData?['discountCode']} (-${(orderData?['discountPercent'] * 100).toInt()}%)',
-                      ),
-                    const SizedBox(height: 16),
-                    Text(
-                      '🛍 Sản phẩm đã đặt:',
-                      style: const TextStyle(fontWeight: FontWeight.bold),
-                    ),
-                    const SizedBox(height: 8),
-                    ...List<Widget>.from(
-                      (orderData?['items'] as List<dynamic>? ?? []).map((item) {
-                        final name = item['name'] ?? '---';
-                        final quantity = item['quantity'] ?? 1;
-                        final price =
-                            item['discountPrice'] ?? item['price'] ?? 0;
-                        final image = item['image'] ?? '';
 
-                        return Card(
-                          margin: const EdgeInsets.symmetric(vertical: 6),
-                          child: ListTile(
-                            leading: image.isNotEmpty
-                                ? ClipRRect(
-                                    borderRadius: BorderRadius.circular(8),
-                                    child: Image.network(
-                                      image,
-                                      width: 50,
-                                      height: 50,
-                                      fit: BoxFit.cover,
+                    // Địa chỉ giao hàng
+                    Card(
+                      elevation: 3,
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(12),
+                      ),
+                      child: Padding(
+                        padding: const EdgeInsets.all(12),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            const Text(
+                              '📍 Địa chỉ giao hàng',
+                              style: TextStyle(
+                                fontSize: 16,
+                                fontWeight: FontWeight.bold,
+                                color: Colors.brown,
+                              ),
+                            ),
+                            const Divider(),
+                            Text(
+                              '👤 Người nhận: ${orderData?['receiverName'] ?? '---'}',
+                            ),
+                            Text(
+                              '📞 SĐT: ${orderData?['receiverPhone'] ?? '---'}',
+                            ),
+                            Text(
+                              '🏠 Địa chỉ: ${orderData?['address'] ?? '---'}',
+                            ),
+                            Text(
+                              '🏬 Chi nhánh: ${orderData?['branch'] ?? '---'}',
+                            ),
+                            Text(
+                              '🚚 Giao hàng dự kiến: ${orderData?['estimatedDelivery'] ?? '---'}',
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
+                    const SizedBox(height: 20),
+
+                    // Sản phẩm đã đặt
+                    Card(
+                      elevation: 3,
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(12),
+                      ),
+                      child: Padding(
+                        padding: const EdgeInsets.all(12),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            const Text(
+                              '🛍 Sản phẩm đã đặt',
+                              style: TextStyle(
+                                fontSize: 16,
+                                fontWeight: FontWeight.bold,
+                                color: Colors.brown,
+                              ),
+                            ),
+                            const Divider(),
+                            ...List<Widget>.from(
+                              (orderData?['items'] as List<dynamic>? ?? []).map(
+                                (item) {
+                                  final name = item['name'] ?? '---';
+                                  final quantity = item['quantity'] ?? 1;
+                                  final price =
+                                      item['discountPrice'] ?? item['price'];
+                                  final image = item['image'] ?? '';
+
+                                  return ListTile(
+                                    leading: image.isNotEmpty
+                                        ? ClipRRect(
+                                            borderRadius: BorderRadius.circular(
+                                              8,
+                                            ),
+                                            child: Image.network(
+                                              image,
+                                              width: 50,
+                                              height: 50,
+                                              fit: BoxFit.cover,
+                                            ),
+                                          )
+                                        : const Icon(Icons.image_not_supported),
+                                    title: Text(name),
+                                    subtitle: Text('Số lượng: $quantity'),
+                                    trailing: Text(
+                                      formatCurrency(
+                                        (price as num) * (quantity as num),
+                                      ),
+                                      style: const TextStyle(
+                                        fontWeight: FontWeight.bold,
+                                        color: Colors.redAccent,
+                                      ),
                                     ),
-                                  )
-                                : const Icon(Icons.image_not_supported),
-                            title: Text(name),
-                            subtitle: Text('Số lượng: $quantity'),
-                            trailing: Text(formatCurrency(price * quantity)),
-                          ),
-                        );
-                      }),
+                                  );
+                                },
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
                     ),
-                    const SizedBox(height: 16),
-                    Text(
-                      'Giá sản phẩm: ${formatCurrency(orderData?['totalPrice'])}',
-                    ),
-                    Text(
-                      'Phí vận chuyển: ${formatCurrency(orderData?['shippingFee'])}',
-                    ),
-                    const SizedBox(height: 4),
-                    Text(
-                      'Tổng cộng: ${formatCurrency((orderData?['totalPrice'] ?? 0) + (orderData?['shippingFee'] ?? 0))}',
-                      style: const TextStyle(
-                        fontSize: 18,
-                        fontWeight: FontWeight.bold,
-                        color: Color(0xFFBFAF9B),
+                    const SizedBox(height: 20),
+
+                    // Chi tiết thanh toán
+                    Card(
+                      elevation: 3,
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(12),
+                      ),
+                      child: Padding(
+                        padding: const EdgeInsets.all(12),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            const Text(
+                              '💰 Chi tiết thanh toán',
+                              style: TextStyle(
+                                fontSize: 16,
+                                fontWeight: FontWeight.bold,
+                                color: Colors.brown,
+                              ),
+                            ),
+                            const Divider(),
+                            Text(
+                              'Giá sản phẩm: ${formatCurrency(orderData?['subtotal'] ?? 0)}',
+                            ),
+                            Text(
+                              'Thuế (10%): ${formatCurrency(orderData?['tax'] ?? 0)}',
+                            ),
+                            Text(
+                              'Giảm giá: ${(orderData?['discountPercent'] ?? 0) * 100}%',
+                            ),
+                            const SizedBox(height: 8),
+                            Text(
+                              'Thành tiền: ${formatCurrency(orderData?['finalTotal'] ?? 0)}',
+                              style: const TextStyle(
+                                fontSize: 20,
+                                fontWeight: FontWeight.bold,
+                                color: Colors.redAccent,
+                              ),
+                            ),
+                          ],
+                        ),
                       ),
                     ),
                     const SizedBox(height: 30),
+
+                    // Nút hành động
                     Center(
                       child: Column(
                         children: [
@@ -223,9 +303,13 @@ class _OrderConfirmationPageState extends State<OrderConfirmationPage>
                             label: const Text('Xem lịch sử đơn hàng'),
                             style: ElevatedButton.styleFrom(
                               backgroundColor: const Color(0xFFBFAF9B),
+                              foregroundColor: Colors.white,
                               padding: const EdgeInsets.symmetric(
                                 horizontal: 24,
                                 vertical: 12,
+                              ),
+                              shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(12),
                               ),
                             ),
                           ),
@@ -238,12 +322,20 @@ class _OrderConfirmationPageState extends State<OrderConfirmationPage>
                             icon: const Icon(Icons.home),
                             label: const Text('Về trang chủ'),
                             style: ElevatedButton.styleFrom(
-                              backgroundColor: Colors.grey.shade300,
-                              foregroundColor: Colors.black87,
+                              backgroundColor: const Color(0xFFBFAF9B),
+                              foregroundColor: Colors.white,
                               padding: const EdgeInsets.symmetric(
                                 horizontal: 24,
                                 vertical: 12,
                               ),
+                              shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(12),
+                              ),
+                              textStyle: const TextStyle(
+                                fontSize: 16,
+                                fontWeight: FontWeight.bold,
+                              ),
+                              elevation: 4,
                             ),
                           ),
                         ],

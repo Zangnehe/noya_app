@@ -36,7 +36,7 @@ class _OrderHistoryPageState extends State<OrderHistoryPage>
     super.dispose();
   }
 
-  String formatCurrency(double amount) {
+  String formatCurrency(num amount) {
     final formatter = NumberFormat.currency(
       locale: 'vi_VN',
       symbol: '₫',
@@ -75,9 +75,11 @@ class _OrderHistoryPageState extends State<OrderHistoryPage>
 
     setState(() {
       monthlyOrderCount = monthCount;
-      mostUsedBranch = branchCount.entries
-          .reduce((a, b) => a.value > b.value ? a : b)
-          .key;
+      if (branchCount.isNotEmpty) {
+        mostUsedBranch = branchCount.entries
+            .reduce((a, b) => a.value > b.value ? a : b)
+            .key;
+      }
     });
   }
 
@@ -127,8 +129,9 @@ class _OrderHistoryPageState extends State<OrderHistoryPage>
 
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Lịch sử đơn hàng'),
+        title: const Text('📜 Lịch sử đơn hàng'),
         backgroundColor: const Color(0xFFBFAF9B),
+        elevation: 4,
       ),
       body: FadeTransition(
         opacity: _fade,
@@ -148,7 +151,18 @@ class _OrderHistoryPageState extends State<OrderHistoryPage>
             if (monthlyOrderCount.isNotEmpty)
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 16),
-                child: buildChart(),
+                child: Column(
+                  children: [
+                    const Text(
+                      '📊 Số đơn hàng theo tháng',
+                      style: TextStyle(
+                        fontSize: 16,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                    buildChart(),
+                  ],
+                ),
               ),
             Expanded(
               child: StreamBuilder<QuerySnapshot>(
@@ -158,8 +172,10 @@ class _OrderHistoryPageState extends State<OrderHistoryPage>
                     .orderBy('createdAt', descending: true)
                     .snapshots(),
                 builder: (context, snapshot) {
-                  if (!snapshot.hasData)
+                  if (!snapshot.hasData) {
                     return const Center(child: CircularProgressIndicator());
+                  }
+
                   final orders = snapshot.data!.docs;
 
                   if (orders.isEmpty) {
@@ -172,11 +188,32 @@ class _OrderHistoryPageState extends State<OrderHistoryPage>
                     itemCount: orders.length,
                     itemBuilder: (context, index) {
                       final data = orders[index].data() as Map<String, dynamic>;
-                      final total = data['totalPrice'] ?? 0.0;
+                      final subtotal = data['subtotal'] ?? 0.0;
+                      final tax = data['tax'] ?? 0.0;
+                      final shippingFee = data['shippingFee'] ?? 0.0;
+                      final discountPercent =
+                          (data['discountPercent'] ?? 0.0) * 100;
+                      final finalTotal = data['finalTotal'] ?? 0.0;
                       final status = data['status'] ?? 'Đang xử lý';
                       final createdAt = data['createdAt'] as Timestamp?;
                       final branch = data['branch'] ?? '---';
                       final delivery = data['estimatedDelivery'] ?? '---';
+
+                      IconData icon;
+                      Color color;
+                      switch (status) {
+                        case 'paid':
+                          icon = Icons.check_circle;
+                          color = Colors.green;
+                          break;
+                        case 'cancelled':
+                          icon = Icons.cancel;
+                          color = Colors.red;
+                          break;
+                        default:
+                          icon = Icons.hourglass_top;
+                          color = Colors.orange;
+                      }
 
                       return Card(
                         margin: const EdgeInsets.symmetric(
@@ -186,80 +223,123 @@ class _OrderHistoryPageState extends State<OrderHistoryPage>
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(12),
                         ),
-                        child: ListTile(
-                          title: Text('Đơn hàng #${data['orderId'] ?? '---'}'),
-                          subtitle: Column(
+                        elevation: 3,
+                        child: Padding(
+                          padding: const EdgeInsets.all(12),
+                          child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
-                              Text('Tổng tiền: ${formatCurrency(total)}'),
+                              Row(
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceBetween,
+                                children: [
+                                  Text(
+                                    'Đơn hàng #${data['orderId'] ?? '---'}',
+                                    style: const TextStyle(
+                                      fontWeight: FontWeight.bold,
+                                      fontSize: 15,
+                                    ),
+                                  ),
+                                  Icon(icon, color: color),
+                                ],
+                              ),
+                              const Divider(),
+                              Text('Giá sản phẩm: ${formatCurrency(subtotal)}'),
+                              Text('Thuế: ${formatCurrency(tax)}'),
+                              Text(
+                                'Phí vận chuyển: ${formatCurrency(shippingFee)}',
+                              ),
+                              Text('Giảm giá: $discountPercent%'),
+                              Text(
+                                'Thành tiền: ${formatCurrency(finalTotal)}',
+                                style: const TextStyle(
+                                  fontWeight: FontWeight.bold,
+                                  color: Colors.redAccent,
+                                ),
+                              ),
+                              const SizedBox(height: 6),
                               if (createdAt != null)
                                 Text('Ngày đặt: ${formatDate(createdAt)}'),
                               Text('Chi nhánh: $branch'),
                               Text('Giao hàng: $delivery'),
                               Text('Trạng thái: $status'),
+                              const SizedBox(height: 8),
+                              Row(
+                                mainAxisAlignment: MainAxisAlignment.end,
+                                children: [
+                                  if (status == 'pending')
+                                    IconButton(
+                                      icon: const Icon(
+                                        Icons.cancel,
+                                        color: Colors.red,
+                                      ),
+                                      onPressed: () async {
+                                        final confirm = await showDialog<bool>(
+                                          context: context,
+                                          builder: (ctx) => AlertDialog(
+                                            title: const Text(
+                                              'Xác nhận hủy đơn',
+                                            ),
+                                            content: const Text(
+                                              'Bạn có chắc muốn hủy đơn hàng này không?',
+                                            ),
+                                            actions: [
+                                              TextButton(
+                                                onPressed: () =>
+                                                    Navigator.pop(ctx, false),
+                                                child: const Text('Không'),
+                                              ),
+                                              TextButton(
+                                                onPressed: () =>
+                                                    Navigator.pop(ctx, true),
+                                                child: const Text('Hủy đơn'),
+                                              ),
+                                            ],
+                                          ),
+                                        );
+                                        if (confirm == true) {
+                                          await FirebaseFirestore.instance
+                                              .collection('orders')
+                                              .where(
+                                                'orderId',
+                                                isEqualTo: data['orderId'],
+                                              )
+                                              .get()
+                                              .then((snapshot) async {
+                                                for (var doc in snapshot.docs) {
+                                                  await doc.reference.update({
+                                                    'status': 'cancelled',
+                                                  });
+                                                }
+                                              });
+                                          ScaffoldMessenger.of(
+                                            context,
+                                          ).showSnackBar(
+                                            const SnackBar(
+                                              content: Text('Đã hủy đơn hàng'),
+                                              backgroundColor: Colors.red,
+                                            ),
+                                          );
+                                        }
+                                      },
+                                    ),
+                                  IconButton(
+                                    icon: const Icon(
+                                      Icons.receipt_long,
+                                      color: Colors.brown,
+                                    ),
+                                    onPressed: () {
+                                      Navigator.pushNamed(
+                                        context,
+                                        '/order-detail',
+                                        arguments: data,
+                                      );
+                                    },
+                                  ),
+                                ],
+                              ),
                             ],
                           ),
-                          trailing: status == 'pending'
-                              ? IconButton(
-                                  icon: const Icon(
-                                    Icons.cancel,
-                                    color: Colors.red,
-                                  ),
-                                  onPressed: () async {
-                                    final confirm = await showDialog<bool>(
-                                      context: context,
-                                      builder: (ctx) => AlertDialog(
-                                        title: const Text('Xác nhận hủy đơn'),
-                                        content: const Text(
-                                          'Bạn có chắc muốn hủy đơn hàng này không?',
-                                        ),
-                                        actions: [
-                                          TextButton(
-                                            onPressed: () =>
-                                                Navigator.pop(ctx, false),
-                                            child: const Text('Không'),
-                                          ),
-                                          TextButton(
-                                            onPressed: () =>
-                                                Navigator.pop(ctx, true),
-                                            child: const Text('Hủy đơn'),
-                                          ),
-                                        ],
-                                      ),
-                                    );
-                                    if (confirm == true) {
-                                      await FirebaseFirestore.instance
-                                          .collection('orders')
-                                          .where(
-                                            'orderId',
-                                            isEqualTo: data['orderId'],
-                                          )
-                                          .get()
-                                          .then((snapshot) async {
-                                            for (var doc in snapshot.docs) {
-                                              await doc.reference.update({
-                                                'status': 'cancelled',
-                                              });
-                                            }
-                                          });
-                                      ScaffoldMessenger.of(
-                                        context,
-                                      ).showSnackBar(
-                                        const SnackBar(
-                                          content: Text('Đã hủy đơn hàng'),
-                                        ),
-                                      );
-                                    }
-                                  },
-                                )
-                              : const Icon(Icons.receipt_long),
-                          onTap: () {
-                            Navigator.pushNamed(
-                              context,
-                              '/order-detail',
-                              arguments: data,
-                            );
-                          },
                         ),
                       );
                     },

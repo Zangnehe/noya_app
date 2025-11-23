@@ -42,13 +42,13 @@ class _ReusableFlashDealCardState extends State<ReusableFlashDealCard> {
         : await getDiscountPercent(widget.item['id'].toString());
 
     final savedTime = await getDiscountStartTime(widget.item['id'].toString());
-    final endTime = savedTime.add(Duration(hours: 4));
+    final endTime = savedTime.add(const Duration(hours: 4));
     remainingTime = endTime.difference(DateTime.now());
 
     discountedPrice = originalPrice * (1 - discountPercent! / 100.0);
     isLoaded = true;
 
-    countdownTimer = Timer.periodic(Duration(seconds: 1), (timer) {
+    countdownTimer = Timer.periodic(const Duration(seconds: 1), (timer) {
       final now = DateTime.now();
       setState(() {
         remainingTime = endTime.difference(now);
@@ -81,7 +81,7 @@ class _ReusableFlashDealCardState extends State<ReusableFlashDealCard> {
     final key = 'discount_$productId';
     final timeKey = 'discount_time_$productId';
     final now = DateTime.now().millisecondsSinceEpoch;
-    final fourHours = 4 * 60 * 60 * 1000;
+    const fourHours = 4 * 60 * 60 * 1000;
 
     final saved = prefs.getInt(key);
     final savedTime = prefs.getInt(timeKey);
@@ -126,7 +126,7 @@ class _ReusableFlashDealCardState extends State<ReusableFlashDealCard> {
         discountPercent == null ||
         remainingTime == null ||
         discountedPrice == null) {
-      return Center(child: CircularProgressIndicator());
+      return const Center(child: CircularProgressIndicator());
     }
 
     return SizedBox(
@@ -148,21 +148,24 @@ class _ReusableFlashDealCardState extends State<ReusableFlashDealCard> {
                     : Container(
                         height: 120,
                         alignment: Alignment.center,
-                        child: Icon(Icons.broken_image),
+                        child: const Icon(Icons.broken_image),
                       ),
                 if (discountPercent! > 0)
                   Positioned(
                     top: 8,
                     right: 8,
                     child: Container(
-                      padding: EdgeInsets.symmetric(horizontal: 6, vertical: 4),
+                      padding: const EdgeInsets.symmetric(
+                        horizontal: 6,
+                        vertical: 4,
+                      ),
                       decoration: BoxDecoration(
                         color: Colors.red,
                         borderRadius: BorderRadius.circular(4),
                       ),
                       child: Text(
                         'Giảm ${discountPercent!}%',
-                        style: TextStyle(
+                        style: const TextStyle(
                           color: Colors.white,
                           fontWeight: FontWeight.bold,
                           fontSize: 12,
@@ -176,19 +179,19 @@ class _ReusableFlashDealCardState extends State<ReusableFlashDealCard> {
             // Nội dung cuộn được
             Expanded(
               child: SingleChildScrollView(
-                padding: EdgeInsets.all(8),
+                padding: const EdgeInsets.all(8),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(name, maxLines: 2, overflow: TextOverflow.ellipsis),
-                    SizedBox(height: 4),
+                    const SizedBox(height: 4),
                     if (discountPercent! > 0)
                       Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Text(
                             formatCurrency(originalPrice),
-                            style: TextStyle(
+                            style: const TextStyle(
                               decoration: TextDecoration.lineThrough,
                               color: Colors.grey,
                               fontSize: 12,
@@ -196,7 +199,7 @@ class _ReusableFlashDealCardState extends State<ReusableFlashDealCard> {
                           ),
                           Text(
                             formatCurrency(discountedPrice!),
-                            style: TextStyle(
+                            style: const TextStyle(
                               fontWeight: FontWeight.bold,
                               color: Colors.red,
                               fontSize: 14,
@@ -207,7 +210,7 @@ class _ReusableFlashDealCardState extends State<ReusableFlashDealCard> {
                     else
                       Text(
                         formatCurrency(originalPrice),
-                        style: TextStyle(
+                        style: const TextStyle(
                           fontWeight: FontWeight.bold,
                           fontSize: 14,
                         ),
@@ -215,16 +218,19 @@ class _ReusableFlashDealCardState extends State<ReusableFlashDealCard> {
                     if (item['sold'] != null)
                       Text(
                         'Đã bán: ${item['sold']}',
-                        style: TextStyle(fontSize: 12),
+                        style: const TextStyle(fontSize: 12),
                       ),
                     Text(
                       'Còn lại: ${remainingTime!.inHours.toString().padLeft(2, '0')}:${(remainingTime!.inMinutes % 60).toString().padLeft(2, '0')}:${(remainingTime!.inSeconds % 60).toString().padLeft(2, '0')}',
-                      style: TextStyle(fontSize: 12, color: Colors.orange),
+                      style: const TextStyle(
+                        fontSize: 12,
+                        color: Colors.orange,
+                      ),
                     ),
                     Align(
                       alignment: Alignment.centerRight,
                       child: IconButton(
-                        icon: Icon(Icons.add_shopping_cart),
+                        icon: const Icon(Icons.add_shopping_cart),
                         onPressed: () {
                           widget.cart.addToCart(
                             Product(
@@ -233,15 +239,18 @@ class _ReusableFlashDealCardState extends State<ReusableFlashDealCard> {
                               brand: brand,
                               type: type,
                               price: originalPrice,
+                              discountPrice: discountPercent! > 0
+                                  ? discountedPrice
+                                  : null,
                               image: imageUrl ?? '',
-                              promotion: item['promotion'],
+                              promotion: item['promotion']?.toString(),
                               quantity: 1,
                             ),
                           );
                           ScaffoldMessenger.of(context).showSnackBar(
                             SnackBar(
                               content: Text('$name đã thêm vào giỏ hàng'),
-                              duration: Duration(seconds: 2),
+                              duration: const Duration(seconds: 2),
                             ),
                           );
                         },

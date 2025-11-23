@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "894593598450",
+    "project_id": "beauty-shop-app-10ec1",
+    "storage_bucket": "beauty-shop-app-10ec1.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:894593598450:android:3e6d7a41fb866dd6e3a16b",
+        "android_client_info": {
+          "package_name": "com.example.giao_dien_trang_home"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAW9Xd8KesytQ-lbUXNZaYOuKmAUgMF9gg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
