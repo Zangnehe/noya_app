@@ -4,6 +4,7 @@ import '../screens/home.dart';
 import '../cart/category.dart';
 import '../provider/cart_page.dart';
 import '../Notification/notification_page.dart';
+import '../provider/cart_page.dart';
 
 class BottomNavBar extends StatefulWidget {
   const BottomNavBar({super.key});
@@ -12,7 +13,8 @@ class BottomNavBar extends StatefulWidget {
   State<BottomNavBar> createState() => _BottomNavBarState();
 }
 
-class _BottomNavBarState extends State<BottomNavBar> with TickerProviderStateMixin {
+class _BottomNavBarState extends State<BottomNavBar>
+    with TickerProviderStateMixin {
   int _selectedIndex = 0; // Mở app mặc định tab Home
 
   // Danh sách các màn hình tương ứng
@@ -21,7 +23,7 @@ class _BottomNavBarState extends State<BottomNavBar> with TickerProviderStateMix
     CategoryPage(),
     CartPage(),
     NotificationPage(),
-    AccountScreen()
+    AccountScreen(),
   ];
 
   // Animation Controller cho Fade + Slide
@@ -30,7 +32,7 @@ class _BottomNavBarState extends State<BottomNavBar> with TickerProviderStateMix
   late Animation<Offset> _slideAnimation;
 
   // Số thông báo (ví dụ)
-  int _notificationCount = 3;
+  final int _notificationCount = 3;
 
   @override
   void initState() {
@@ -39,7 +41,10 @@ class _BottomNavBarState extends State<BottomNavBar> with TickerProviderStateMix
       vsync: this,
       duration: const Duration(milliseconds: 300),
     );
-    _fadeAnimation = CurvedAnimation(parent: _controller, curve: Curves.easeInOut);
+    _fadeAnimation = CurvedAnimation(
+      parent: _controller,
+      curve: Curves.easeInOut,
+    );
     _slideAnimation = Tween<Offset>(
       begin: const Offset(0.0, 0.1),
       end: Offset.zero,
@@ -72,7 +77,8 @@ class _BottomNavBarState extends State<BottomNavBar> with TickerProviderStateMix
           position: _slideAnimation,
           child: FadeTransition(
             opacity: _fadeAnimation,
-            child: IndexedStack( // ✅ giữ trạng thái từng màn hình
+            child: IndexedStack(
+              // ✅ giữ trạng thái từng màn hình
               index: _selectedIndex,
               children: _screens,
             ),

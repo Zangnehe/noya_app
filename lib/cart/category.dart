@@ -7,7 +7,6 @@ class CategoryPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // 🔄 Nhóm sản phẩm theo category
     final Map<String, List<Map<String, dynamic>>> grouped = {};
     for (var product in productList) {
       final category = product['category'] ?? 'Khác';
@@ -21,7 +20,7 @@ class CategoryPage extends StatelessWidget {
       'Bodycare': 'assets/bodycare.jpg',
       'Fragrance': 'assets/fragrance.jpg',
       'Tools': 'assets/tools.jpg',
-      'Khác': 'assets/other.jpg', // thêm ảnh mặc định cho danh mục khác
+      'Khác': 'assets/other.jpg',
     };
 
     final List<Map<String, dynamic>> categories = grouped.entries.map((entry) {
@@ -33,7 +32,10 @@ class CategoryPage extends StatelessWidget {
     }).toList();
 
     return Scaffold(
-      appBar: AppBar(title: const Text('Danh mục sản phẩm')),
+      appBar: AppBar(
+        title: const Text('Danh mục sản phẩm'),
+        backgroundColor: const Color(0xFFBFAF9B), // đồng bộ màu AppBar
+      ),
       body: GridView.builder(
         padding: const EdgeInsets.all(12),
         itemCount: categories.length,
@@ -61,28 +63,59 @@ class CategoryPage extends StatelessWidget {
                 ),
               );
             },
-            child: AnimatedContainer(
+            child: TweenAnimationBuilder(
+              tween: Tween<double>(begin: 1, end: 1),
               duration: const Duration(milliseconds: 300),
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(12),
-                image: DecorationImage(
-                  image: AssetImage(item['image']),
-                  fit: BoxFit.cover,
-                  colorFilter: ColorFilter.mode(
-                    Colors.black.withOpacity(0.3),
-                    BlendMode.darken,
+              builder: (context, scale, child) {
+                return Transform.scale(
+                  scale: scale,
+                  child: Container(
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(16),
+                      image: DecorationImage(
+                        image: AssetImage(item['image']),
+                        fit: BoxFit.cover,
+                      ),
+                      boxShadow: [
+                        BoxShadow(
+                          color: Colors.black.withOpacity(0.15),
+                          blurRadius: 8,
+                          offset: const Offset(0, 4),
+                        ),
+                      ],
+                    ),
+                    child: Container(
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(16),
+                        gradient: LinearGradient(
+                          colors: [
+                            Colors.black.withOpacity(0.5),
+                            Colors.transparent,
+                          ],
+                          begin: Alignment.bottomCenter,
+                          end: Alignment.topCenter,
+                        ),
+                      ),
+                      alignment: Alignment.center,
+                      child: Text(
+                        item['name'],
+                        style: const TextStyle(
+                          color: Colors.white,
+                          fontSize: 18,
+                          fontWeight: FontWeight.bold,
+                          shadows: [
+                            Shadow(
+                              color: Colors.black54,
+                              blurRadius: 4,
+                              offset: Offset(1, 1),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
                   ),
-                ),
-              ),
-              alignment: Alignment.center,
-              child: Text(
-                item['name'],
-                style: const TextStyle(
-                  color: Colors.white,
-                  fontSize: 18,
-                  fontWeight: FontWeight.bold,
-                ),
-              ),
+                );
+              },
             ),
           );
         },

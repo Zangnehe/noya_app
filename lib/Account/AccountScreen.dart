@@ -21,9 +21,39 @@ class AccountScreen extends StatelessWidget {
     {'icon': Icons.rule, 'label': 'Quy định & Điều khoản'},
   ];
 
+  AccountScreen({super.key});
+
   @override
   Widget build(BuildContext context) {
     final double screenHeight = MediaQuery.of(context).size.height;
+    Widget _gridSection(
+      BuildContext context,
+      List<Map<String, dynamic>> items,
+    ) {
+      return GridView.count(
+        crossAxisCount: 4,
+        shrinkWrap: true,
+        physics: const NeverScrollableScrollPhysics(),
+        children: items.map((item) {
+          return InkWell(
+            onTap: item['onTap'], // xử lý click ở đây
+            borderRadius: BorderRadius.circular(12),
+            splashColor: Colors.brown[100],
+            child: Column(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                CircleAvatar(
+                  backgroundColor: Colors.brown[200],
+                  child: Icon(item['icon'], color: Colors.white),
+                ),
+                const SizedBox(height: 6),
+                Text(item['label'], style: const TextStyle(fontSize: 12)),
+              ],
+            ),
+          );
+        }).toList(),
+      );
+    }
 
     return Scaffold(
       body: Container(
@@ -38,13 +68,42 @@ class AccountScreen extends StatelessWidget {
               _sectionContainer(
                 'Tiện ích',
                 _gridSection(context, [
-                  {'icon': Icons.favorite, 'label': 'Yêu thích'},
-                  {'icon': Icons.location_on, 'label': 'Sổ địa chỉ'},
-                  {'icon': Icons.rule, 'label': 'Quy định'},
-                  {'icon': Icons.card_giftcard, 'label': 'Mã giảm giá'},
-                  {'icon': Icons.support_agent, 'label': 'Hỗ trợ'},
-                  {'icon': Icons.compare_arrows, 'label': 'So sánh sản phẩm'},
-                  {'icon': Icons.spa, 'label': 'Kiểm tra da'},
+                  {
+                    'icon': Icons.favorite,
+                    'label': 'Yêu thích',
+                    'onTap': () => Navigator.pushNamed(context, '/favorites'),
+                  },
+                  {
+                    'icon': Icons.location_on,
+                    'label': 'Sổ địa chỉ',
+                    'onTap': () =>
+                        Navigator.pushNamed(context, '/address-list'),
+                  },
+                  {
+                    'icon': Icons.rule,
+                    'label': 'Quy định',
+                    'onTap': () {}, // thêm sau
+                  },
+                  {
+                    'icon': Icons.card_giftcard,
+                    'label': 'Mã giảm giá',
+                    'onTap': () {}, // thêm sau
+                  },
+                  {
+                    'icon': Icons.support_agent,
+                    'label': 'Hỗ trợ',
+                    'onTap': () {}, // thêm sau
+                  },
+                  {
+                    'icon': Icons.compare_arrows,
+                    'label': 'So sánh sản phẩm',
+                    'onTap': () {}, // thêm sau
+                  },
+                  {
+                    'icon': Icons.spa,
+                    'label': 'Kiểm tra da',
+                    'onTap': () {}, // thêm sau
+                  },
                 ]),
                 const Color(0xFFF5F5F5),
               ),
@@ -86,11 +145,16 @@ class AccountScreen extends StatelessWidget {
                 Text(
                   customerName,
                   style: const TextStyle(
-                      fontSize: 20, fontWeight: FontWeight.bold, color: Colors.white),
+                    fontSize: 20,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.white,
+                  ),
                 ),
                 const SizedBox(height: 4),
-                Text('Điểm: $customerPoints điểm',
-                    style: const TextStyle(fontSize: 14, color: Colors.white)),
+                Text(
+                  'Điểm: $customerPoints điểm',
+                  style: const TextStyle(fontSize: 14, color: Colors.white),
+                ),
               ],
             ),
           ),
@@ -132,14 +196,18 @@ class AccountScreen extends StatelessWidget {
               const Text(
                 'Đơn hàng của tôi',
                 style: TextStyle(
-                    fontSize: 18, fontWeight: FontWeight.bold, color: Colors.brown),
+                  fontSize: 18,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.brown,
+                ),
               ),
               GestureDetector(
                 onTap: () {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
-                        builder: (_) => OrderOverviewScreen(initialTabIndex: 0)),
+                      builder: (_) => OrderOverviewScreen(initialTabIndex: 0),
+                    ),
                   );
                 },
                 child: const Text(
@@ -160,8 +228,8 @@ class AccountScreen extends StatelessWidget {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
-                      builder: (_) => OrderOverviewScreen(
-                          initialTabIndex: item['index']),
+                      builder: (_) =>
+                          OrderOverviewScreen(initialTabIndex: item['index']),
                     ),
                   );
                 },
@@ -178,9 +246,11 @@ class AccountScreen extends StatelessWidget {
                       child: Icon(item['icon'], size: 24, color: Colors.white),
                     ),
                     const SizedBox(height: 6),
-                    Text(item['label'],
-                        textAlign: TextAlign.center,
-                        style: const TextStyle(fontSize: 12, color: Colors.brown)),
+                    Text(
+                      item['label'],
+                      textAlign: TextAlign.center,
+                      style: const TextStyle(fontSize: 12, color: Colors.brown),
+                    ),
                   ],
                 ),
               );
@@ -191,11 +261,14 @@ class AccountScreen extends StatelessWidget {
     );
   }
 
-  Widget _sectionContainer(String title, Widget child, Color background,
-      {bool removeTopMargin = false}) {
+  Widget _sectionContainer(
+    String title,
+    Widget child,
+    Color background, {
+    bool removeTopMargin = false,
+  }) {
     return Container(
-      margin: EdgeInsets.only(
-          top: removeTopMargin ? 0 : 12, bottom: 12),
+      margin: EdgeInsets.only(top: removeTopMargin ? 0 : 12, bottom: 12),
       padding: const EdgeInsets.all(10),
       decoration: BoxDecoration(
         color: background,
@@ -207,9 +280,14 @@ class AccountScreen extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Text(title,
-              style: const TextStyle(
-                  fontSize: 18, fontWeight: FontWeight.bold, color: Colors.brown)),
+          Text(
+            title,
+            style: const TextStyle(
+              fontSize: 18,
+              fontWeight: FontWeight.bold,
+              color: Colors.brown,
+            ),
+          ),
           const SizedBox(height: 12),
           child,
         ],
@@ -238,9 +316,11 @@ class AccountScreen extends StatelessWidget {
             children: [
               Icon(item['icon'], size: 30, color: Colors.brown),
               const SizedBox(height: 6),
-              Text(item['label'],
-                  textAlign: TextAlign.center,
-                  style: const TextStyle(fontSize: 12, color: Colors.brown)),
+              Text(
+                item['label'],
+                textAlign: TextAlign.center,
+                style: const TextStyle(fontSize: 12, color: Colors.brown),
+              ),
             ],
           ),
         );
@@ -249,24 +329,31 @@ class AccountScreen extends StatelessWidget {
   }
 
   Widget _listSection(BuildContext context, List<Map<String, dynamic>> items) {
-  return Column(
-    children: items.map((item) {
-      return InkWell(
-        onTap: () {
-          ScaffoldMessenger.of(context).showSnackBar(
-            SnackBar(
-              content: Text('Mở: ${item['label']}'),
-              duration: const Duration(seconds: 1),
+    return Column(
+      children: items.map((item) {
+        return InkWell(
+          onTap: () {
+            ScaffoldMessenger.of(context).showSnackBar(
+              SnackBar(
+                content: Text('Mở: ${item['label']}'),
+                duration: const Duration(seconds: 1),
+              ),
+            );
+          },
+          child: ListTile(
+            leading: Icon(item['icon'], color: Colors.brown),
+            title: Text(
+              item['label'],
+              style: const TextStyle(color: Colors.brown),
             ),
-          );
-        },
-        child: ListTile(
-          leading: Icon(item['icon'], color: Colors.brown),
-          title: Text(item['label'], style: const TextStyle(color: Colors.brown)),
-          trailing: const Icon(Icons.arrow_forward_ios, size: 16, color: Colors.brown),
-        ),
-      );
-    }).toList(),
-  );
-}
+            trailing: const Icon(
+              Icons.arrow_forward_ios,
+              size: 16,
+              color: Colors.brown,
+            ),
+          ),
+        );
+      }).toList(),
+    );
+  }
 }

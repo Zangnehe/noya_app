@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Noya Firebase Handler</title>
+  <script src="https://www.gstatic.com/firebasejs/10.7.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.7.0/firebase-auth.js"></script>
+</head>
+<body>
+  <h2 id="status">Đang xử lý yêu cầu...</h2>
+  <div id="resetForm" style="display:none;">
+    <input type="password" id="newPassword" placeholder="Nhập mật khẩu mới">
+    <button onclick="resetPassword()">Đặt lại mật khẩu</button>
+  </div>
+
+  <script>
+    // Cấu hình Firebase của bạn
+    const firebaseConfig = {
+      apiKey: "YOUR_API_KEY",
+      authDomain: "beauty-shop-app-10ec1.firebaseapp.com",
+      projectId: "beauty-shop-app-10ec1",
+      appId: "YOUR_APP_ID"
+    };
+    firebase.initializeApp(firebaseConfig);
+    const auth = firebase.auth();
+
+    const urlParams = new URLSearchParams(window.location.search);
+    const mode = urlParams.get('mode');
+    const oobCode = urlParams.get('oobCode');
+
+    if (mode === 'resetPassword') {
+      document.getElementById('status').innerText = 'Vui lòng nhập mật khẩu mới';
+      document.getElementById('resetForm').style.display = 'block';
+
+      window.resetPassword = function() {
+        const newPassword = document.getElementById('newPassword').value;
+        auth.confirmPasswordReset(oobCode, newPassword).then(() => {
+          document.getElementById('status').innerText = '✅ Mật khẩu đã được đặt lại thành công';
+          document.getElementById('resetForm').style.display = 'none';
+        }).catch(error => {
+          document.getElementById('status').innerText = '❌ Lỗi: ' + error.message;
+        });
+      };
+    } else if (mode === 'verifyEmail') {
+      auth.applyActionCode(oobCode).then(() => {
+        document.getElementById('status').innerText = '✅ Email đã được xác thực';
+      }).catch(error => {
+        document.getElementById('status').innerText = '❌ Lỗi xác thực: ' + error.message;
+      });
+    } else {
+      document.getElementById('status').innerText = '❌ Không xác định được yêu cầu';
+    }
+  </script>
+</body>
+</html>
