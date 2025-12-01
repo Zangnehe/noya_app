@@ -1,10 +1,12 @@
 import 'dart:convert';
+import 'dart:math';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'package:provider/provider.dart';
 
 import 'cart_provider.dart';
 import '../models/user_address.dart';
+import 'package:diacritic/diacritic.dart';
 
 class AddressPage extends StatefulWidget {
   const AddressPage({super.key});
@@ -80,6 +82,8 @@ class _AddressPageState extends State<AddressPage>
         selectedDistrictName = null;
         selectedWardName = null;
       });
+    } else {
+      _showSnack('⚠️ Không tải được danh sách quận/huyện', Colors.orange);
     }
   }
 
@@ -94,12 +98,34 @@ class _AddressPageState extends State<AddressPage>
         selectedDistrictName = districtName;
         selectedWardName = null;
       });
+    } else {
+      _showSnack('⚠️ Không tải được danh sách phường/xã', Colors.orange);
     }
   }
 
-  Future<Map<String, double>?> fetchCoordinates(String fullAddress) async {
-    // Encode địa chỉ để tránh lỗi ký tự đặc biệt, dấu tiếng Việt
-    final encodedAddress = Uri.encodeComponent(fullAddress);
+  String normalizeAddress(String input) {
+    final noAccent = removeDiacritics(input);
+    return noAccent
+            .replaceAll(RegExp(r'phuong', caseSensitive: false), '')
+            .replaceAll(RegExp(r'quan', caseSensitive: false), '')
+            .replaceAll(RegExp(r'huyen', caseSensitive: false), '')
+            .replaceAll(RegExp(r'thanh pho', caseSensitive: false), '')
+            .replaceAll(RegExp(r'Ward', caseSensitive: false), '')
+            .replaceAll(RegExp(r'District', caseSensitive: false), '')
+            .replaceAll(RegExp(r'Vietnam', caseSensitive: false), '')
+            .trim() +
+        ', Vietnam';
+  }
+
+  Future<Map<String, double>?> fetchCoordinates({
+    required String ward,
+    required String district,
+    required String province,
+  }) async {
+    // chỉ lấy ward + district + province để query
+    final simplifiedAddress = '$ward, $district, $province, Vietnam';
+    final normalized = normalizeAddress(simplifiedAddress);
+    final encodedAddress = Uri.encodeComponent(normalized);
     final url =
         'https://nominatim.openstreetmap.org/search?q=$encodedAddress&format=json&limit=1';
 
@@ -108,11 +134,10 @@ class _AddressPageState extends State<AddressPage>
           .get(
             Uri.parse(url),
             headers: {
-              // ✅ Nominatim yêu cầu User-Agent hợp lệ (tên app + email liên hệ)
-              'User-Agent': 'MyFlutterApp/1.0 (contact@example.com)',
+              'User-Agent': 'MyFlutterApp/1.0 (voanhkiet0217@gmail.com)',
             },
           )
-          .timeout(const Duration(seconds: 10)); // tránh treo request
+          .timeout(const Duration(seconds: 10));
 
       if (response.statusCode == 200) {
         final List data = jsonDecode(response.body);
@@ -122,9 +147,8 @@ class _AddressPageState extends State<AddressPage>
           if (lat != null && lon != null) {
             return {'lat': lat, 'lng': lon};
           }
-        } else {
-          debugPrint("❌ API không trả về kết quả cho: $fullAddress");
         }
+        debugPrint("❌ Không tìm thấy tọa độ cho: $normalized");
       } else {
         debugPrint("❌ Lỗi HTTP ${response.statusCode} khi gọi API Nominatim");
       }
@@ -132,14 +156,52 @@ class _AddressPageState extends State<AddressPage>
       debugPrint("❌ Lỗi khi gọi API Nominatim: $e");
     }
 
-    // ✅ Fallback: trả về null nếu không tìm thấy
-    debugPrint("❌ Không tìm thấy tọa độ cho địa chỉ: $fullAddress");
     return null;
+  }
+
+  double _degToRad(double deg) => deg * pi / 180;
+
+  double calculateDistanceKm(
+    double lat1,
+    double lon1,
+    double lat2,
+    double lon2,
+  ) {
+    const earthRadiusKm = 6371.0;
+    double dLat = _degToRad(lat2 - lat1);
+    double dLon = _degToRad(lon2 - lon1);
+
+    double a =
+        sin(dLat / 2) * sin(dLat / 2) +
+        cos(_degToRad(lat1)) *
+            cos(_degToRad(lat2)) *
+            sin(dLon / 2) *
+            sin(dLon / 2);
+
+    double c = 2 * atan2(sqrt(a), sqrt(1 - a));
+    return earthRadiusKm * c;
+  }
+
+  double calculateShippingFee({
+    required double shopLat,
+    required double shopLon,
+    required double customerLat,
+    required double customerLon,
+    double pricePerKm = 5000,
+  }) {
+    double distance = calculateDistanceKm(
+      shopLat,
+      shopLon,
+      customerLat,
+      customerLon,
+    );
+    return distance * pricePerKm;
   }
 
   Future<void> submitAddress() async {
     final phone = phoneController.text.trim();
 
+    // kiểm tra dữ liệu bắt buộc
     if (selectedProvinceName == null ||
         selectedDistrictName == null ||
         selectedWardName == null ||
@@ -150,6 +212,7 @@ class _AddressPageState extends State<AddressPage>
       return;
     }
 
+    // kiểm tra số điện thoại
     final phoneRegex = RegExp(r'^0\d{9}$');
     if (!phoneRegex.hasMatch(phone)) {
       setState(() => phoneError = true);
@@ -159,10 +222,35 @@ class _AddressPageState extends State<AddressPage>
       setState(() => phoneError = false);
     }
 
+    // full address để hiển thị cho user
     final fullAddress =
         '${streetController.text}, $selectedWardName, $selectedDistrictName, $selectedProvinceName';
 
-    final coords = await fetchCoordinates(fullAddress);
+    // gọi API lấy tọa độ với ward/district/province
+    var coords = await fetchCoordinates(
+      ward: selectedWardName!,
+      district: selectedDistrictName!,
+      province: selectedProvinceName!,
+    );
+
+    if (coords == null) {
+      _showSnack(
+        '⚠️ Không tìm thấy tọa độ cho địa chỉ: $fullAddress',
+        Colors.orange,
+      );
+      return;
+    }
+
+    // Ví dụ: cửa hàng ở Quận 1, TP.HCM
+    const shopLat = 10.7769;
+    const shopLon = 106.7009;
+    final fee = calculateShippingFee(
+      shopLat: shopLat,
+      shopLon: shopLon,
+      customerLat: coords['lat']!,
+      customerLon: coords['lng']!,
+      pricePerKm: 5000,
+    );
 
     final cart = Provider.of<CartProvider>(context, listen: false);
     cart.addAddress(
@@ -170,14 +258,21 @@ class _AddressPageState extends State<AddressPage>
         id: DateTime.now().millisecondsSinceEpoch.toString(),
         receiverName: nameController.text.trim(),
         phone: phone,
-        fullAddress: fullAddress,
-        lat: coords?['lat'],
-        lng: coords?['lng'],
+        fullAddress: fullAddress, // vẫn lưu nguyên văn để hiển thị
+        lat: coords['lat'],
+        lng: coords['lng'],
+        shippingFee: fee,
       ),
     );
 
+    // ❌ KHÔNG xoá giỏ hàng ở đây
+    // cart.clearCart();
+
     Navigator.pushNamed(context, '/payment');
-    _showSnack('✅ Đã thêm địa chỉ mới', Colors.green);
+    _showSnack(
+      '✅ Đã thêm địa chỉ mới, phí ~${fee.toStringAsFixed(0)} VND',
+      Colors.green,
+    );
   }
 
   void _showSnack(String message, Color color) {
@@ -255,7 +350,13 @@ class _AddressPageState extends State<AddressPage>
                               title: Text(
                                 '${addr.receiverName} - ${addr.phone}',
                               ),
-                              subtitle: Text(addr.fullAddress),
+                              subtitle: Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Text(addr.fullAddress),
+                                  // ❌ bỏ phần hiển thị phí vận chuyển
+                                ],
+                              ),
                               trailing: PopupMenuButton<String>(
                                 shape: RoundedRectangleBorder(
                                   borderRadius: BorderRadius.circular(12),
@@ -300,6 +401,7 @@ class _AddressPageState extends State<AddressPage>
 
               const SizedBox(height: 20),
 
+              // Form thêm địa chỉ mới
               Card(
                 elevation: 4,
                 shape: RoundedRectangleBorder(
@@ -427,6 +529,7 @@ class _AddressPageState extends State<AddressPage>
     );
   }
 }
+
 // import 'dart:convert';
 // import 'package:flutter/material.dart';
 // import 'package:http/http.dart' as http;

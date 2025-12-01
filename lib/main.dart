@@ -17,6 +17,8 @@ import '../ProductDetailPage/favorite_page.dart';
 import '../ProductDetailPage/favorite_provider.dart';
 import '../Account/SkinAssessmentProvider.dart';
 
+import '../models/product.dart';
+
 import 'firebase_options.dart';
 import '../Login/login_page.dart';
 import '../Login/register_page.dart';
@@ -27,8 +29,9 @@ import '../product_data/product_data.dart';
 import '../cart/category.dart';
 import '../screens/guide.dart';
 import '../screens/new_products.dart';
-
 import '../provider/addresspage.dart';
+import '../ProductDetailPage/product_detail_page.dart';
+import '../provider/cart_page.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -59,14 +62,22 @@ class BeautyApp extends StatelessWidget {
           '/login': (context) => const LoginPage(),
           '/forgot': (context) => const ForgotPasswordPage(),
           '/register': (context) => const RegisterPage(),
+          '/address-edit': (context) => const AddressEditPage(),
           '/payment': (context) => const PaymentPage(),
           '/history': (context) => const OrderHistoryPage(),
+          '/cart': (context) => const CartPage(),
           '/order-confirm': (context) => const OrderConfirmationPage(),
           '/order-detail': (context) => const OrderDetailPage(),
           '/branch-info': (context) => const BranchInfoPage(),
           '/favorites': (context) => const FavoritePage(),
           '/category': (context) => const CategoryPage(),
           '/guide': (context) => const GuidePage(),
+
+          // '/product-detail': (context) {
+          //   final product =
+          //       ModalRoute.of(context)!.settings.arguments as Product;
+          //   return ProductDetailPage(product: product);
+          // },
           '/new-products': (context) =>
               NewProductsPage(productList: productList),
           '/address': (context) => const AddressPage(),

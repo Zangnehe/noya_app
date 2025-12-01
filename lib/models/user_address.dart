@@ -5,6 +5,7 @@ class UserAddress {
   final String fullAddress; // Địa chỉ đầy đủ
   final double? lat; // Vĩ độ
   final double? lng; // Kinh độ
+  final double? shippingFee; // ✅ Phí vận chuyển
 
   UserAddress({
     required this.id,
@@ -13,6 +14,7 @@ class UserAddress {
     required this.fullAddress,
     this.lat,
     this.lng,
+    this.shippingFee,
   });
 
   /// Convert sang JSON để lưu vào Firebase/Local
@@ -23,6 +25,7 @@ class UserAddress {
     'fullAddress': fullAddress,
     'lat': lat,
     'lng': lng,
+    'shippingFee': shippingFee,
   };
 
   /// Parse từ JSON (API/Firebase)
@@ -33,6 +36,7 @@ class UserAddress {
     fullAddress: json['fullAddress'] ?? '',
     lat: (json['lat'] as num?)?.toDouble(),
     lng: (json['lng'] as num?)?.toDouble(),
+    shippingFee: (json['shippingFee'] as num?)?.toDouble(),
   );
 
   /// Parse từ Map (mock/local data)
@@ -43,6 +47,7 @@ class UserAddress {
     fullAddress: (map['fullAddress'] ?? '').toString(),
     lat: (map['lat'] as num?)?.toDouble(),
     lng: (map['lng'] as num?)?.toDouble(),
+    shippingFee: (map['shippingFee'] as num?)?.toDouble(),
   );
 
   /// Tạo bản sao có chỉnh sửa
@@ -53,6 +58,7 @@ class UserAddress {
     String? fullAddress,
     double? lat,
     double? lng,
+    double? shippingFee,
   }) {
     return UserAddress(
       id: id ?? this.id,
@@ -61,12 +67,13 @@ class UserAddress {
       fullAddress: fullAddress ?? this.fullAddress,
       lat: lat ?? this.lat,
       lng: lng ?? this.lng,
+      shippingFee: shippingFee ?? this.shippingFee,
     );
   }
 
   @override
   String toString() {
     return 'UserAddress(id: $id, receiverName: $receiverName, phone: $phone, '
-        'fullAddress: $fullAddress, lat: $lat, lng: $lng)';
+        'fullAddress: $fullAddress, lat: $lat, lng: $lng, shippingFee: $shippingFee)';
   }
 }

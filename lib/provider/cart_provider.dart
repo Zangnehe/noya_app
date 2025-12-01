@@ -46,15 +46,14 @@ class CartProvider extends ChangeNotifier {
   double get tax => subtotal * 0.10;
 
   double get totalPrice => subtotal * (1 - _discountPercent);
-
   double get shippingFee {
-    if (_shippingFee > 0) return _shippingFee;
+    // Nếu chưa chọn chi nhánh hoặc chưa có địa chỉ → không tính phí
+    if (_selectedAddress == null || branchLat == null || branchLng == null) {
+      return 0.0;
+    }
 
     // Nếu có tọa độ đầy đủ → tính theo khoảng cách
-    if (_selectedAddress?.lat != null &&
-        _selectedAddress?.lng != null &&
-        branchLat != null &&
-        branchLng != null) {
+    if (_selectedAddress!.lat != null && _selectedAddress!.lng != null) {
       final distance = calculateDistanceKm(
         _selectedAddress!.lat!,
         _selectedAddress!.lng!,
@@ -64,11 +63,7 @@ class CartProvider extends ChangeNotifier {
       return calculateShippingFee(distance);
     }
 
-    // Nếu thiếu tọa độ → fallback sang bảng phí theo địa chỉ
-    if (_selectedAddress != null) {
-      return calculateShippingFeeByAddress(_selectedAddress!);
-    }
-
+    // Nếu thiếu tọa độ → không tính được khoảng cách → không tính phí
     return 0.0;
   }
 
@@ -330,6 +325,18 @@ class CartProvider extends ChangeNotifier {
     }
   }
 
+  void removeOrderedItems() {
+    // Xoá các sản phẩm đã chọn khỏi giỏ
+    _items.removeWhere((item) => _selectedItemIds.contains(item.id));
+
+    // Reset lựa chọn sau khi xoá
+    _selectedItemIds.clear();
+
+    saveCart();
+    syncCartToFirebase();
+    notifyListeners();
+  }
+
   Future<String?> submitOrder() async {
     final user = FirebaseAuth.instance.currentUser;
     if (user == null ||
@@ -385,7 +392,10 @@ class CartProvider extends ChangeNotifier {
           .collection('orders')
           .doc(orderId)
           .set(orderData);
-      _selectedItemIds.clear();
+
+      // xoá sản phẩm đã đặt khỏi giỏ
+      removeOrderedItems();
+
       debugPrint('✅ Đã lưu đơn hàng: $orderId');
       return orderId;
     } catch (e) {

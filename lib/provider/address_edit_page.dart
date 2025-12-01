@@ -470,6 +470,7 @@ import 'package:provider/provider.dart';
 
 import '../provider/cart_provider.dart';
 import '../models/user_address.dart';
+import 'package:diacritic/diacritic.dart';
 
 class AddressEditPage extends StatefulWidget {
   const AddressEditPage({super.key});
@@ -486,81 +487,107 @@ class _AddressEditPageState extends State<AddressEditPage> {
   late TextEditingController streetController;
   UserAddress? addr;
 
+  List provinces = [];
   List districts = [];
   List wards = [];
 
-  String selectedProvinceName = "Thành phố Hồ Chí Minh"; // cố định TP.HCM
+  String? selectedProvinceName;
   String? selectedDistrictName;
   String? selectedWardName;
+
+  bool phoneError = false;
+
+  @override
+  void initState() {
+    super.initState();
+    fetchProvinces();
+  }
 
   @override
   void didChangeDependencies() {
     super.didChangeDependencies();
     if (addr == null) {
-      addr = ModalRoute.of(context)?.settings.arguments as UserAddress?;
-      nameController = TextEditingController(text: addr?.receiverName ?? '');
-      phoneController = TextEditingController(text: addr?.phone ?? '');
-      streetController = TextEditingController();
+      final args = ModalRoute.of(context)?.settings.arguments;
+      if (args is UserAddress) {
+        addr = args;
+        nameController = TextEditingController(text: addr?.receiverName ?? '');
+        phoneController = TextEditingController(text: addr?.phone ?? '');
+        streetController = TextEditingController();
 
-      if (addr?.fullAddress != null) {
-        final parts = addr!.fullAddress.split(',');
-        if (parts.isNotEmpty) streetController.text = parts.first.trim();
-        if (parts.length >= 4) {
-          selectedWardName = parts[1].trim();
-          selectedDistrictName = parts[2].trim();
-        }
-      }
-      fetchDistricts();
-    }
-  }
-
-  Future<void> fetchDistricts() async {
-    try {
-      final response = await http.get(
-        Uri.parse('https://provinces.open-api.vn/api/v1/?depth=2'),
-      );
-      if (response.statusCode == 200) {
-        final List data = jsonDecode(response.body);
-        final hcm = data.firstWhere((p) => p['code'] == 79);
-        setState(() {
-          districts = hcm['districts'];
-          wards = [];
-        });
-      }
-    } catch (e) {
-      debugPrint("❌ Lỗi khi tải quận/huyện: $e");
-    }
-  }
-
-  void selectDistrict(Map district) {
-    setState(() {
-      selectedDistrictName = district['name'];
-      wards = district['wards'];
-      selectedWardName = null;
-    });
-  }
-
-  Future<Map<String, double>?> fetchCoordinates(String fullAddress) async {
-    final encoded = Uri.encodeComponent('$fullAddress, Vietnam');
-    final url =
-        'https://geocode.maps.co/search?q=$encoded&api_key=YOUR_KEY'; // thay YOUR_KEY bằng key thật
-
-    try {
-      final response = await http.get(Uri.parse(url));
-      if (response.statusCode == 200) {
-        final List data = jsonDecode(response.body);
-        if (data.isNotEmpty) {
-          final lat = double.tryParse(data[0]['lat']);
-          final lon = double.tryParse(data[0]['lon']);
-          if (lat != null && lon != null) {
-            return {'lat': lat, 'lng': lon};
+        if (addr?.fullAddress != null) {
+          final parts = addr!.fullAddress.split(',');
+          if (parts.isNotEmpty) streetController.text = parts.first.trim();
+          if (parts.length >= 4) {
+            selectedWardName = parts[1].trim();
+            selectedDistrictName = parts[2].trim();
+            selectedProvinceName = parts[3].trim();
           }
         }
       }
-    } catch (e) {
-      debugPrint("❌ Lỗi khi gọi Maps.co: $e");
     }
-    return null;
+  }
+
+  @override
+  void dispose() {
+    nameController.dispose();
+    phoneController.dispose();
+    streetController.dispose();
+    super.dispose();
+  }
+
+  Future<void> fetchProvinces() async {
+    try {
+      final response = await http.get(
+        Uri.parse('https://provinces.open-api.vn/api/?depth=1'),
+      );
+      if (response.statusCode == 200) {
+        final List data = jsonDecode(response.body);
+        setState(() {
+          provinces = data;
+          // mặc định chọn TP.HCM
+          final hcm = provinces.firstWhere((p) => p['code'].toString() == "79");
+          selectedProvinceName = hcm['name'];
+        });
+        // load quận/huyện của TP.HCM luôn
+        await fetchDistricts("79", "Thành phố Hồ Chí Minh");
+      }
+    } catch (e) {
+      debugPrint("❌ Lỗi khi tải tỉnh/thành phố: $e");
+    }
+  }
+
+  Future<void> fetchDistricts(String provinceCode, String provinceName) async {
+    final response = await http.get(
+      Uri.parse('https://provinces.open-api.vn/api/p/$provinceCode?depth=2'),
+    );
+    if (response.statusCode == 200) {
+      final data = jsonDecode(response.body);
+      setState(() {
+        districts = data['districts'];
+        wards = [];
+        selectedProvinceName = provinceName;
+        selectedDistrictName = null;
+        selectedWardName = null;
+      });
+    } else {
+      _showSnack('⚠️ Không tải được danh sách quận/huyện', Colors.orange);
+    }
+  }
+
+  Future<void> fetchWards(String districtCode, String districtName) async {
+    final response = await http.get(
+      Uri.parse('https://provinces.open-api.vn/api/d/$districtCode?depth=2'),
+    );
+    if (response.statusCode == 200) {
+      final data = jsonDecode(response.body);
+      setState(() {
+        wards = data['wards'];
+        selectedDistrictName = districtName;
+        selectedWardName = null;
+      });
+    } else {
+      _showSnack('⚠️ Không tải được danh sách phường/xã', Colors.orange);
+    }
   }
 
   Future<void> saveAddress(UserAddress oldAddr) async {
@@ -571,15 +598,19 @@ class _AddressEditPageState extends State<AddressEditPage> {
         phone.isEmpty ||
         street.isEmpty ||
         selectedDistrictName == null ||
-        selectedWardName == null) {
+        selectedWardName == null ||
+        selectedProvinceName == null) {
       _showSnack('⚠️ Vui lòng nhập đầy đủ thông tin', Colors.orange);
       return;
     }
 
     final phoneRegex = RegExp(r'^0\d{9}$');
     if (!phoneRegex.hasMatch(phone)) {
+      setState(() => phoneError = true);
       _showSnack('📵 Số điện thoại không hợp lệ', Colors.red);
       return;
+    } else {
+      setState(() => phoneError = false);
     }
 
     final fullAddress =
@@ -598,8 +629,9 @@ class _AddressEditPageState extends State<AddressEditPage> {
     );
 
     cart.updateAddress(oldAddr.id, newAddr);
-    Navigator.pop(context);
+
     _showSnack('✅ Đã lưu thay đổi địa chỉ', AddressEditPage.themeColor);
+    Navigator.pop(context);
   }
 
   void deleteAddress(UserAddress oldAddr) {
@@ -607,6 +639,32 @@ class _AddressEditPageState extends State<AddressEditPage> {
     cart.deleteAddress(oldAddr.id);
     Navigator.pop(context);
     _showSnack('🗑️ Đã xóa địa chỉ', Colors.red.shade600);
+  }
+
+  Future<Map<String, double>?> fetchCoordinates(String fullAddress) async {
+    final encoded = Uri.encodeComponent(fullAddress);
+    final url =
+        'https://nominatim.openstreetmap.org/search?q=$encoded&format=json&limit=1';
+
+    try {
+      final response = await http.get(
+        Uri.parse(url),
+        headers: {'User-Agent': 'MyFlutterApp/1.0 (voanhkiet0217@gmail.com)'},
+      );
+      if (response.statusCode == 200) {
+        final List data = jsonDecode(response.body);
+        if (data.isNotEmpty) {
+          final lat = double.tryParse(data[0]['lat']);
+          final lon = double.tryParse(data[0]['lon']);
+          if (lat != null && lon != null) {
+            return {'lat': lat, 'lng': lon};
+          }
+        }
+      }
+    } catch (e) {
+      debugPrint("❌ Lỗi khi gọi API Nominatim: $e");
+    }
+    return null;
   }
 
   void _showSnack(String message, Color color) {
@@ -656,24 +714,69 @@ class _AddressEditPageState extends State<AddressEditPage> {
             TextFormField(
               controller: phoneController,
               keyboardType: TextInputType.phone,
-              decoration: _inputDecoration('Số điện thoại', Icons.phone),
+              decoration: _inputDecoration('Số điện thoại', Icons.phone)
+                  .copyWith(
+                    errorText: phoneError ? 'Số điện thoại không hợp lệ' : null,
+                  ),
             ),
             const SizedBox(height: 16),
+
+            // Tỉnh/Thành phố
             DropdownButtonFormField<String>(
-              value: selectedDistrictName,
+              value: selectedProvinceName,
+              decoration: _inputDecoration(
+                'Tỉnh/Thành phố',
+                Icons.location_city,
+              ),
+              items: provinces.map<DropdownMenuItem<String>>((p) {
+                return DropdownMenuItem(
+                  value: p['name'],
+                  child: Text(p['name']),
+                );
+              }).toList(),
+              onChanged: (val) {
+                setState(() {
+                  selectedProvinceName = val;
+                  final province = provinces.firstWhere(
+                    (p) => p['name'] == val,
+                  );
+                  fetchDistricts(province['code'].toString(), province['name']);
+                });
+              },
+            ),
+
+            const SizedBox(height: 16),
+
+            // Quận/Huyện
+            DropdownButtonFormField<String>(
+              value: districts.any((d) => d['name'] == selectedDistrictName)
+                  ? selectedDistrictName
+                  : null,
               decoration: _inputDecoration('Quận/Huyện', Icons.apartment),
               items: districts.map<DropdownMenuItem<String>>((d) {
                 return DropdownMenuItem(
                   value: d['name'],
                   child: Text(d['name']),
-                  onTap: () => selectDistrict(d),
                 );
               }).toList(),
-              onChanged: (val) => setState(() => selectedDistrictName = val),
+              onChanged: (val) {
+                setState(() {
+                  selectedDistrictName = val;
+                  final district = districts.firstWhere(
+                    (d) => d['name'] == val,
+                  );
+                  fetchWards(district['code'].toString(), district['name']);
+                });
+              },
             ),
+
             const SizedBox(height: 16),
+
+            // Phường/Xã
             DropdownButtonFormField<String>(
-              value: selectedWardName,
+              value: wards.any((w) => w['name'] == selectedWardName)
+                  ? selectedWardName
+                  : null,
               decoration: _inputDecoration('Phường/Xã', Icons.map),
               items: wards.map<DropdownMenuItem<String>>((w) {
                 return DropdownMenuItem(
@@ -683,12 +786,14 @@ class _AddressEditPageState extends State<AddressEditPage> {
               }).toList(),
               onChanged: (val) => setState(() => selectedWardName = val),
             ),
+
             const SizedBox(height: 16),
             TextFormField(
               controller: streetController,
               decoration: _inputDecoration('Số nhà, tên đường', Icons.home),
             ),
             const SizedBox(height: 24),
+
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [

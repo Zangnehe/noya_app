@@ -269,6 +269,12 @@ import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 
+import 'package:flutter/material.dart';
+import 'package:intl/intl.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
+import '../ProductDetailPage/product_detail_page.dart';
+import '../models/product.dart';
+
 class OrderDetailPage extends StatefulWidget {
   const OrderDetailPage({super.key});
 
@@ -334,7 +340,7 @@ class _OrderDetailPageState extends State<OrderDetailPage> {
       ScaffoldMessenger.of(context).showSnackBar(
         const SnackBar(
           content: Text('✅ Đã hủy đơn hàng'),
-          backgroundColor: Colors.red,
+          backgroundColor: Colors.green,
         ),
       );
     }
@@ -424,7 +430,7 @@ class _OrderDetailPageState extends State<OrderDetailPage> {
                     Text('👤 Người nhận: ${data?['receiverName'] ?? '---'}'),
                     Text('📞 SĐT: ${data?['receiverPhone'] ?? '---'}'),
                     Text('🏠 Địa chỉ: ${data?['address'] ?? '---'}'),
-                    Text('📏 Khoảng cách: ${distanceKm.toString()} km'),
+                    Text('📏 Khoảng cách: ${distanceKm.toStringAsFixed(1)} km'),
                   ],
                 ),
               ),
@@ -453,33 +459,43 @@ class _OrderDetailPageState extends State<OrderDetailPage> {
                     const Divider(),
                     ...List<Widget>.from(
                       (data?['items'] as List<dynamic>? ?? []).map((item) {
-                        final name = item['name'] ?? '---';
-                        final quantity = item['quantity'] ?? 1;
-                        final price =
-                            item['discountPrice'] ?? item['price'] ?? 0;
-                        final image = item['image'] ?? '';
+                        final product = Product.fromMap(
+                          item as Map<String, dynamic>,
+                        );
 
                         return ListTile(
-                          leading: image.isNotEmpty
+                          leading: product.image.isNotEmpty
                               ? ClipRRect(
                                   borderRadius: BorderRadius.circular(8),
                                   child: Image.network(
-                                    image,
+                                    product.image,
                                     width: 50,
                                     height: 50,
                                     fit: BoxFit.cover,
                                   ),
                                 )
                               : const Icon(Icons.image_not_supported),
-                          title: Text(name),
-                          subtitle: Text('Số lượng: $quantity'),
+                          title: Text(product.name),
+                          subtitle: Text('Số lượng: ${product.quantity}'),
                           trailing: Text(
-                            formatCurrency((price as num) * (quantity as num)),
+                            formatCurrency(
+                              product.discountPrice ?? product.price,
+                            ),
                             style: const TextStyle(
                               fontWeight: FontWeight.bold,
                               color: Colors.redAccent,
                             ),
                           ),
+                          // 👇 Khi nhấn vào sản phẩm sẽ mở ProductDetailPage
+                          onTap: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) =>
+                                    ProductDetailPage(product: product),
+                              ),
+                            );
+                          },
                         );
                       }),
                     ),
@@ -510,12 +526,14 @@ class _OrderDetailPageState extends State<OrderDetailPage> {
                     ),
                     const Divider(),
                     Text('Giá sản phẩm: ${formatCurrency(subtotal)}'),
-                    Text('Thuế: ${formatCurrency(tax)}'),
-                    Text('Phí vận chuyển: ${formatCurrency(shippingFee)}'),
-                    Text('Giảm giá: $discountPercent%'),
+                    Text('Thuế (10%): ${formatCurrency(tax)}'),
+                    Text(
+                      'Phí vận chuyển: ${shippingFee != null ? formatCurrency(shippingFee) : '---'}',
+                    ),
+                    Text('Giảm giá: ${discountPercent.toStringAsFixed(0)}%'),
                     const SizedBox(height: 8),
                     Text(
-                      'Thành tiền: ${formatCurrency(finalTotal)}',
+                      '💳 Thành tiền: ${formatCurrency(finalTotal)}',
                       style: const TextStyle(
                         fontSize: 20,
                         fontWeight: FontWeight.bold,
@@ -532,31 +550,31 @@ class _OrderDetailPageState extends State<OrderDetailPage> {
             Center(
               child: Column(
                 children: [
-                  ElevatedButton.icon(
-                    onPressed: () {
-                      Navigator.pushNamed(
-                        context,
-                        '/cart',
-                        arguments: data?['items'],
-                      );
-                    },
-                    icon: const Icon(Icons.shopping_cart),
-                    label: const Text('Mua lại đơn này'),
-                    style: ElevatedButton.styleFrom(
-                      backgroundColor: const Color(0xFFBFAF9B),
-                      foregroundColor: Colors.white,
-                      padding: const EdgeInsets.symmetric(
-                        horizontal: 24,
-                        vertical: 12,
-                      ),
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(12),
-                      ),
-                      textStyle: const TextStyle(fontSize: 16),
-                      elevation: 4,
-                    ),
-                  ),
-                  const SizedBox(height: 12),
+                  // ElevatedButton.icon(
+                  //   onPressed: () {
+                  //     Navigator.pushNamed(
+                  //       context,
+                  //       '/cart',
+                  //       arguments: data?['items'],
+                  //     );
+                  //   },
+                  //   icon: const Icon(Icons.shopping_cart),
+                  //   label: const Text('Mua lại đơn này'),
+                  //   style: ElevatedButton.styleFrom(
+                  //     backgroundColor: const Color(0xFFBFAF9B),
+                  //     foregroundColor: Colors.white,
+                  //     padding: const EdgeInsets.symmetric(
+                  //       horizontal: 24,
+                  //       vertical: 12,
+                  //     ),
+                  //     shape: RoundedRectangleBorder(
+                  //       borderRadius: BorderRadius.circular(12),
+                  //     ),
+                  //     textStyle: const TextStyle(fontSize: 16),
+                  //     elevation: 4,
+                  //   ),
+                  // ),
+                  // const SizedBox(height: 12),
                   ElevatedButton.icon(
                     onPressed: () async {
                       if (status == 'pending') {

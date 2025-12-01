@@ -305,6 +305,7 @@ class _CartPageState extends State<CartPage> {
                   ),
                 ),
                 // Tổng kết
+                // Tổng kết
                 Container(
                   padding: const EdgeInsets.all(16),
                   decoration: const BoxDecoration(
@@ -325,7 +326,7 @@ class _CartPageState extends State<CartPage> {
                       Text('Thuế (10%): ${formatCurrency(cart.tax)}'),
                       const SizedBox(height: 8),
                       Text(
-                        'Tổng cộng: ${formatCurrency(cart.finalTotal)}',
+                        'Tổng cộng: ${formatCurrency(cart.subtotal + cart.tax)}',
                         style: const TextStyle(
                           fontSize: 20,
                           fontWeight: FontWeight.bold,

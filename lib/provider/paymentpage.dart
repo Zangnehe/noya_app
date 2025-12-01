@@ -637,7 +637,9 @@ class _PaymentPageState extends State<PaymentPage>
             Text('🏬 Chi nhánh: ${branchAddress(cart.branchLabel)}'),
             Text('⏱ Dự kiến: ${cart.estimatedDelivery ?? '---'}'),
             Text('📏 Khoảng cách: $distanceText'),
-            Text('📦 Phí vận chuyển: ${formatCurrency(cart.shippingFee)}'),
+            Text(
+              '📦 Phí vận chuyển: ${cart.selectedAddress?.shippingFee != null ? formatCurrency(cart.selectedAddress!.shippingFee!) : '---'}',
+            ),
           ],
         ),
       ),
@@ -664,7 +666,9 @@ class _PaymentPageState extends State<PaymentPage>
             const Divider(),
             Text('Giá sản phẩm: ${formatCurrency(cart.subtotal)}'),
             Text('Thuế (10%): ${formatCurrency(cart.tax)}'),
-            Text('Phí vận chuyển: ${formatCurrency(cart.shippingFee)}'),
+            Text(
+              'Phí vận chuyển: ${cart.selectedAddress?.shippingFee != null ? formatCurrency(cart.selectedAddress!.shippingFee!) : '---'}',
+            ),
             Text(
               'Giảm giá: ${(cart.discountPercent * 100).toStringAsFixed(0)}%',
             ),

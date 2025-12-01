@@ -354,9 +354,9 @@
 //   }
 // }
 import 'package:flutter/material.dart';
+import 'package:intl/intl.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:intl/intl.dart';
 import 'package:fl_chart/fl_chart.dart';
 
 class OrderHistoryPage extends StatefulWidget {
@@ -439,6 +439,16 @@ class _OrderHistoryPageState extends State<OrderHistoryPage>
   }
 
   Widget buildChart() {
+    if (monthlyOrderCount.isEmpty) {
+      return const Padding(
+        padding: EdgeInsets.all(16),
+        child: Text(
+          'Không có dữ liệu biểu đồ',
+          style: TextStyle(color: Colors.grey),
+        ),
+      );
+    }
+
     final months = monthlyOrderCount.keys.toList()..sort();
     final values = months.map((m) => monthlyOrderCount[m]!.toDouble()).toList();
 
@@ -510,7 +520,7 @@ class _OrderHistoryPageState extends State<OrderHistoryPage>
       ScaffoldMessenger.of(context).showSnackBar(
         const SnackBar(
           content: Text('✅ Đã hủy đơn hàng'),
-          backgroundColor: Colors.red,
+          backgroundColor: Colors.green,
         ),
       );
     }
@@ -562,7 +572,7 @@ class _OrderHistoryPageState extends State<OrderHistoryPage>
                 stream: FirebaseFirestore.instance
                     .collection('orders')
                     .where('userId', isEqualTo: user?.uid)
-                    .orderBy('createdAt', descending: true)
+                    .orderBy('createdAt', descending: true) // cần index
                     .snapshots(),
                 builder: (context, snapshot) {
                   if (!snapshot.hasData) {
@@ -624,14 +634,15 @@ class _OrderHistoryPageState extends State<OrderHistoryPage>
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               Row(
-                                mainAxisAlignment:
-                                    MainAxisAlignment.spaceBetween,
                                 children: [
-                                  Text(
-                                    'Đơn hàng #${data['orderId'] ?? '---'}',
-                                    style: const TextStyle(
-                                      fontWeight: FontWeight.bold,
-                                      fontSize: 15,
+                                  Expanded(
+                                    child: Text(
+                                      'Đơn hàng #${data['orderId'] ?? '---'}',
+                                      style: const TextStyle(
+                                        fontWeight: FontWeight.bold,
+                                        fontSize: 15,
+                                      ),
+                                      overflow: TextOverflow.ellipsis,
                                     ),
                                   ),
                                   Icon(icon, color: color),
@@ -639,12 +650,16 @@ class _OrderHistoryPageState extends State<OrderHistoryPage>
                               ),
                               const Divider(),
                               Text('Giá sản phẩm: ${formatCurrency(subtotal)}'),
-                              Text('Thuế: ${formatCurrency(tax)}'),
+                              Text('Thuế (10%): ${formatCurrency(tax)}'),
                               Text(
                                 'Phí vận chuyển: ${formatCurrency(shippingFee)}',
                               ),
-                              Text('Khoảng cách: ${distanceKm.toString()} km'),
-                              Text('Giảm giá: $discountPercent%'),
+                              Text(
+                                'Khoảng cách: ${distanceKm.toStringAsFixed(1)} km',
+                              ),
+                              Text(
+                                'Giảm giá: ${discountPercent.toStringAsFixed(0)}%',
+                              ),
                               Text(
                                 'Thành tiền: ${formatCurrency(finalTotal)}',
                                 style: const TextStyle(

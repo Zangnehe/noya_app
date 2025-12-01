@@ -429,7 +429,7 @@ class _OrderConfirmationPageState extends State<OrderConfirmationPage>
       ScaffoldMessenger.of(context).showSnackBar(
         const SnackBar(
           content: Text('✅ Đã hủy đơn hàng'),
-          backgroundColor: Colors.red,
+          backgroundColor: Colors.green,
         ),
       );
     }
@@ -560,7 +560,7 @@ class _OrderConfirmationPageState extends State<OrderConfirmationPage>
                             '🚚 Giao hàng dự kiến: ${orderData['estimatedDelivery'] ?? '---'}',
                           ),
                           Text(
-                            '📏 Khoảng cách: ${(orderData['distanceKm'] ?? 0).toString()} km',
+                            '📏 Khoảng cách: ${(orderData['distanceKm'] ?? 0).toStringAsFixed(1)} km',
                           ),
                         ],
                       ),
@@ -602,7 +602,7 @@ class _OrderConfirmationPageState extends State<OrderConfirmationPage>
                           ),
                           const SizedBox(height: 8),
                           Text(
-                            'Thành tiền: ${formatCurrency(orderData['finalTotal'] ?? 0)}',
+                            '💳 Thành tiền: ${formatCurrency(orderData['finalTotal'] ?? 0)}',
                             style: const TextStyle(
                               fontSize: 20,
                               fontWeight: FontWeight.bold,
