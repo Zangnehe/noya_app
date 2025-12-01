@@ -68,18 +68,30 @@ class _CartPageState extends State<CartPage> {
                     itemCount: cart.items.length,
                     itemBuilder: (context, index) {
                       final item = cart.items[index];
-                      final price = item.discountPrice ?? item.price;
                       final originalPrice = item.originalPrice ?? item.price;
-                      final discountPercent =
-                          (originalPrice > price && originalPrice > 0)
-                          ? ((originalPrice - price) / originalPrice * 100)
+                      final discountPrice = item.discountPrice;
+                      final now = DateTime.now();
+
+                      // ✅ Điều kiện khuyến mãi hợp lệ
+                      final isDiscountActive =
+                          discountPrice != null &&
+                          discountPrice < originalPrice &&
+                          item.promotionEnd != null &&
+                          now.isBefore(item.promotionEnd!);
+
+                      final displayedPrice = isDiscountActive
+                          ? discountPrice!
+                          : originalPrice;
+                      final discountPercent = isDiscountActive
+                          ? (((originalPrice - discountPrice!) /
+                                        originalPrice) *
+                                    100)
                                 .round()
                           : 0;
-                      final endTime =
-                          item.promotionEnd?.millisecondsSinceEpoch ??
-                          DateTime.now()
-                              .add(const Duration(hours: 2))
-                              .millisecondsSinceEpoch;
+
+                      final endTime = isDiscountActive
+                          ? item.promotionEnd!.millisecondsSinceEpoch
+                          : null;
 
                       return Dismissible(
                         key: Key(item.id),
@@ -120,7 +132,6 @@ class _CartPageState extends State<CartPage> {
                               padding: const EdgeInsets.all(12),
                               child: Row(
                                 children: [
-                                  // Checkbox chọn sản phẩm
                                   Checkbox(
                                     value: cart.selectedItemIds.contains(
                                       item.id,
@@ -130,7 +141,6 @@ class _CartPageState extends State<CartPage> {
                                     shape: const CircleBorder(),
                                     activeColor: const Color(0xFFBFAF9B),
                                   ),
-                                  // Ảnh sản phẩm
                                   ClipRRect(
                                     borderRadius: BorderRadius.circular(8),
                                     child: Image.network(
@@ -145,7 +155,6 @@ class _CartPageState extends State<CartPage> {
                                     ),
                                   ),
                                   const SizedBox(width: 12),
-                                  // Thông tin sản phẩm gọn
                                   Expanded(
                                     child: Column(
                                       crossAxisAlignment:
@@ -162,7 +171,7 @@ class _CartPageState extends State<CartPage> {
                                         ),
                                         Row(
                                           children: [
-                                            if (discountPercent > 0)
+                                            if (isDiscountActive)
                                               Text(
                                                 formatCurrency(originalPrice),
                                                 style: const TextStyle(
@@ -174,7 +183,7 @@ class _CartPageState extends State<CartPage> {
                                               ),
                                             const SizedBox(width: 6),
                                             Text(
-                                              formatCurrency(price),
+                                              formatCurrency(displayedPrice),
                                               style: const TextStyle(
                                                 fontSize: 14,
                                                 color: Color(0xFFBFAF9B),
@@ -183,7 +192,7 @@ class _CartPageState extends State<CartPage> {
                                             ),
                                           ],
                                         ),
-                                        if (discountPercent > 0)
+                                        if (isDiscountActive)
                                           Text(
                                             'Giảm $discountPercent%',
                                             style: const TextStyle(
@@ -198,18 +207,18 @@ class _CartPageState extends State<CartPage> {
                                             color: Colors.grey,
                                           ),
                                         ),
-                                        CountdownTimer(
-                                          endTime: endTime,
-                                          textStyle: const TextStyle(
-                                            fontSize: 12,
-                                            color: Colors.red,
-                                            fontWeight: FontWeight.bold,
+                                        if (endTime != null)
+                                          CountdownTimer(
+                                            endTime: endTime,
+                                            textStyle: const TextStyle(
+                                              fontSize: 12,
+                                              color: Colors.red,
+                                              fontWeight: FontWeight.bold,
+                                            ),
                                           ),
-                                        ),
                                       ],
                                     ),
                                   ),
-                                  // Nút tăng/giảm số lượng
                                   Column(
                                     children: [
                                       IconButton(
@@ -227,6 +236,7 @@ class _CartPageState extends State<CartPage> {
                                         ),
                                         color: const Color(0xFFBFAF9B),
                                         onPressed: () => cart.addToCart(item),
+                                        // ✅ truyền đủ tham số
                                       ),
                                     ],
                                   ),
@@ -239,6 +249,7 @@ class _CartPageState extends State<CartPage> {
                     },
                   ),
                 ),
+
                 // Nhập mã giảm giá
                 Padding(
                   padding: const EdgeInsets.symmetric(

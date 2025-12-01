@@ -358,16 +358,19 @@ class _HomePageState extends State<HomePage> {
         final promotionEnd = DateTime.tryParse(product['promotionEnd'] ?? '');
 
         if (promotionStart != null && promotionEnd != null) {
-          final endTime = promotionEnd.millisecondsSinceEpoch;
+          // 👉 Điều kiện mới: chỉ lấy sản phẩm nếu thời gian kết thúc còn ở tương lai
+          if (promotionEnd.isAfter(DateTime.now())) {
+            final endTime = promotionEnd.millisecondsSinceEpoch;
 
-          flashProducts.add({
-            ...product,
-            'originalPrice': originalPrice,
-            'discountPrice': discountPrice,
-            'discountPercent': discountPercent,
-            'endTime': endTime,
-            'stockQuantity': stockQuantity,
-          });
+            flashProducts.add({
+              ...product,
+              'originalPrice': originalPrice,
+              'discountPrice': discountPrice,
+              'discountPercent': discountPercent,
+              'endTime': endTime,
+              'stockQuantity': stockQuantity,
+            });
+          }
         }
       }
     }

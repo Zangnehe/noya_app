@@ -2,10 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
 import '../provider/cart_provider.dart';
-import '../models/user_address.dart'; // ✅ import đúng class UserAddress
+import '../models/user_address.dart';
 
 class AddressListPage extends StatelessWidget {
   const AddressListPage({super.key});
+
+  static const Color themeColor = Color(0xFFBFAF9B);
 
   @override
   Widget build(BuildContext context) {
@@ -14,7 +16,7 @@ class AddressListPage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text('📍 Địa chỉ giao hàng của tôi'),
-        backgroundColor: const Color(0xFFBFAF9B),
+        backgroundColor: themeColor,
         elevation: 4,
       ),
       body: cart.addresses.isEmpty
@@ -35,6 +37,13 @@ class AddressListPage extends StatelessWidget {
                 return AnimatedContainer(
                   duration: const Duration(milliseconds: 300),
                   curve: Curves.easeInOut,
+                  decoration: BoxDecoration(
+                    color: isSelected ? themeColor.withOpacity(0.1) : null,
+                    borderRadius: BorderRadius.circular(12),
+                    border: isSelected
+                        ? Border.all(color: themeColor, width: 2)
+                        : null,
+                  ),
                   child: Card(
                     elevation: 5,
                     margin: const EdgeInsets.symmetric(vertical: 8),
@@ -44,7 +53,7 @@ class AddressListPage extends StatelessWidget {
                     child: ListTile(
                       leading: Icon(
                         isSelected ? Icons.check_circle : Icons.location_on,
-                        color: isSelected ? Colors.green : Colors.brown,
+                        color: isSelected ? themeColor : Colors.brown,
                         size: 30,
                       ),
                       title: Text(
@@ -104,7 +113,7 @@ class AddressListPage extends StatelessWidget {
                       ),
                       onTap: () {
                         cart.selectAddress(addr.id);
-                        Navigator.pop(context); // quay lại PaymentPage
+                        Navigator.pushReplacementNamed(context, '/payment');
                       },
                     ),
                   ),
@@ -112,7 +121,7 @@ class AddressListPage extends StatelessWidget {
               },
             ),
       floatingActionButton: FloatingActionButton.extended(
-        backgroundColor: const Color(0xFFBFAF9B),
+        backgroundColor: themeColor,
         icon: const Icon(Icons.add_location_alt),
         label: const Text('Thêm địa chỉ'),
         onPressed: () {

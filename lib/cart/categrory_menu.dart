@@ -2,16 +2,6 @@ import 'package:flutter/material.dart';
 import '../product_data/product_data.dart';
 import 'category_product_page.dart';
 
-// Map chứa ảnh cho từng danh mục (đã bỏ Skincare)
-final Map<String, String> categoryImages = {
-  'Makeup': 'assets/makeup.jpg',
-  'Haircare': 'assets/haircare.jpg',
-  'Bodycare': 'assets/bodycare.jpg',
-  'Fragrance': 'assets/fragrance.jpg',
-  'Tools': 'assets/tools.jpg',
-  'Khác': 'assets/other.jpg',
-};
-
 class CategoryMenu extends StatefulWidget {
   const CategoryMenu({super.key});
 
@@ -22,16 +12,36 @@ class CategoryMenu extends StatefulWidget {
 class _CategoryMenuState extends State<CategoryMenu> {
   int selectedCategoryIndex = 0;
 
-  List<Map<String, dynamic>> getProductsByCategory(String category) {
-    return productList
-        .where((product) => product['category'] == category)
-        .toList();
-  }
-
   @override
   Widget build(BuildContext context) {
+    // Gom sản phẩm theo category
+    final Map<String, List<Map<String, dynamic>>> grouped = {};
+    for (var product in productList) {
+      final category = product['category'] ?? 'Khác';
+      grouped.putIfAbsent(category, () => []).add(product);
+    }
+
+    // Ảnh cho từng danh mục
+    final Map<String, String> categoryImages = {
+      'Skincare': 'assets/skincare.jpg',
+      'Makeup': 'assets/makeup.jpg',
+      'Haircare': 'assets/haircare.jpg',
+      'Bodycare': 'assets/bodycare.jpg',
+      'Fragrance': 'assets/fragrance.jpg',
+      'Tools': 'assets/tools.jpg',
+      'Khác': 'assets/other.jpg',
+    };
+
+    // Tạo danh sách categories
+    final List<Map<String, dynamic>> categories = grouped.entries.map((entry) {
+      return {
+        'name': entry.key,
+        'image': categoryImages[entry.key] ?? 'assets/other.jpg',
+        'products': entry.value,
+      };
+    }).toList();
+
     final screenWidth = MediaQuery.of(context).size.width;
-    final categories = categoryImages.entries.toList();
 
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
@@ -39,19 +49,19 @@ class _CategoryMenuState extends State<CategoryMenu> {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           const Text(
-            ' Danh mục sản phẩm',
+            'Danh mục sản phẩm',
             style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
           ),
           const SizedBox(height: 8),
           SizedBox(
-            height: 150,
+            height: 160,
             child: ListView.builder(
               scrollDirection: Axis.horizontal,
               itemCount: categories.length,
               itemBuilder: (context, index) {
-                final label = categories[index].key;
-                final imagePath = categories[index].value;
+                final item = categories[index];
                 final isSelected = selectedCategoryIndex == index;
+                final productCount = (item['products'] as List).length;
 
                 return InkWell(
                   borderRadius: BorderRadius.circular(16),
@@ -62,14 +72,13 @@ class _CategoryMenuState extends State<CategoryMenu> {
                       selectedCategoryIndex = index;
                     });
 
-                    final filteredProducts = getProductsByCategory(label);
-
                     Navigator.push(
                       context,
                       PageRouteBuilder(
                         pageBuilder: (_, __, ___) => CategoryProductPage(
-                          category: label,
-                          products: filteredProducts,
+                          category: item['name'] as String,
+                          products:
+                              item['products'] as List<Map<String, dynamic>>,
                         ),
                         transitionsBuilder: (_, animation, __, child) {
                           return FadeTransition(
@@ -108,8 +117,8 @@ class _CategoryMenuState extends State<CategoryMenu> {
                         ClipRRect(
                           borderRadius: BorderRadius.circular(16),
                           child: Image.asset(
-                            imagePath,
-                            height: 150,
+                            item['image'],
+                            height: 160,
                             width: double.infinity,
                             fit: BoxFit.cover,
                           ),
@@ -123,7 +132,7 @@ class _CategoryMenuState extends State<CategoryMenu> {
                             decoration: BoxDecoration(
                               gradient: LinearGradient(
                                 colors: [
-                                  Colors.black.withOpacity(0.4), // nhẹ hơn
+                                  Colors.black.withOpacity(0.4),
                                   Colors.transparent,
                                 ],
                                 begin: Alignment.bottomCenter,
@@ -134,25 +143,36 @@ class _CategoryMenuState extends State<CategoryMenu> {
                                 bottomRight: Radius.circular(16),
                               ),
                             ),
-                            child: Center(
-                              child: Text(
-                                label,
-                                style: TextStyle(
-                                  color: Colors.white,
-                                  fontSize: 15, // tăng size
-                                  fontWeight: isSelected
-                                      ? FontWeight.bold
-                                      : FontWeight.w600,
-                                  shadows: [
-                                    Shadow(
-                                      color: Colors.black.withOpacity(0.8),
-                                      offset: const Offset(0, 1),
-                                      blurRadius: 2,
-                                    ),
-                                  ],
+                            child: Column(
+                              mainAxisSize: MainAxisSize.min,
+                              children: [
+                                Text(
+                                  item['name'],
+                                  style: TextStyle(
+                                    color: Colors.white,
+                                    fontSize: 15,
+                                    fontWeight: isSelected
+                                        ? FontWeight.bold
+                                        : FontWeight.w600,
+                                    shadows: [
+                                      Shadow(
+                                        color: Colors.black.withOpacity(0.8),
+                                        offset: const Offset(0, 1),
+                                        blurRadius: 2,
+                                      ),
+                                    ],
+                                  ),
+                                  textAlign: TextAlign.center,
                                 ),
-                                textAlign: TextAlign.center,
-                              ),
+                                const SizedBox(height: 2),
+                                Text(
+                                  '$productCount sản phẩm',
+                                  style: const TextStyle(
+                                    color: Colors.white70,
+                                    fontSize: 12,
+                                  ),
+                                ),
+                              ],
                             ),
                           ),
                         ),

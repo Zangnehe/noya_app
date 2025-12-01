@@ -10,7 +10,7 @@ final List<Map<String, dynamic>> productList = [
     "discountPrice": 250000,
     "isDiscountActive": true,
     "promotionStart": "2025-11-26T10:30:00",
-    "promotionEnd": "2025-11-29T12:00:00",
+    "promotionEnd": "2025-12-19T12:00:00",
     "stockQuantity": 120,
     'image':
         'https://product.hstatic.net/200000150709/product/387857923-332923989234326-6152903455516813115-n_44225c430863446185bb52542a5ed4e9.jpg',
@@ -62,6 +62,10 @@ final List<Map<String, dynamic>> productList = [
    - Tránh tiếp xúc trực tiếp với mắt.
    - Bảo quản nơi khô ráo, tránh ánh nắng trực tiếp.
 ''',
+    "skinTypeTags": ["da nhạy cảm", "da hỗn hợp", "da dầu"],
+    "skinConcerns": ["cháy nắng", "lão hóa", "mụn do tia UV"],
+    "recommendationScore": 92,
+    "ageGroup": ["18-25", "25-40", "40+"],
   },
   {
     "id": "SP002",
@@ -72,7 +76,7 @@ final List<Map<String, dynamic>> productList = [
     "discountPrice": 145000,
     "isDiscountActive": false,
     "promotionStart": "2025-11-26T10:30:00",
-    "promotionEnd": "2025-11-29T12:00:00",
+    "promotionEnd": "2025-12-19T12:00:00",
     "stockQuantity": 100,
     "image":
         "https://www.guardian.com.vn/media/catalog/product/cache/30b2b44eba57cd45fd3ef9287600968e/s/u/sua-rua-mat-cetaphil-diu-nhe-khong-xa-phong-moi-3_7e864003c68b42ecb1b42088894cf086_zlktadjrdoqhjwme.jpg",
@@ -118,6 +122,10 @@ final List<Map<String, dynamic>> productList = [
 
 7. **Kết hợp**: Dùng thêm kem dưỡng ẩm Cetaphil để tăng hiệu quả chăm sóc da.
 ''',
+    "skinTypeTags": ["da nhạy cảm", "da khô", "da hỗn hợp"],
+    "skinConcerns": ["kích ứng", "khô ráp", "làm sạch dịu nhẹ"],
+    "recommendationScore": 95,
+    "ageGroup": ["0-12", "13-17", "18-25", "25-40", "40+"],
   },
   {
     "id": "SP003",
@@ -128,7 +136,7 @@ final List<Map<String, dynamic>> productList = [
     "discountPrice": 450000,
     "isDiscountActive": true,
     "promotionStart": "2025-11-25T09:00:00",
-    "promotionEnd": "2025-11-30T23:59:00",
+    "promotionEnd": "2025-12-19T12:00:00",
     "stockQuantity": 80,
     "image":
         "https://mint07.com/wp-content/uploads/2016/05/paulas-choice-skin-perfecting-2-bha-liquid-scaled.jpg",
@@ -179,6 +187,15 @@ final List<Map<String, dynamic>> productList = [
 
 7. **Lưu ý**: Không dùng chung với sản phẩm chứa Retinol trong cùng một lần thoa.
 ''',
+    "skinTypeTags": ["da dầu", "da hỗn hợp", "da mụn"],
+    "skinConcerns": [
+      "mụn đầu đen",
+      "mụn viêm",
+      "lỗ chân lông to",
+      "da sần sùi",
+    ],
+    "recommendationScore": 94,
+    "ageGroup": ["18-25", "25-40"],
   },
   {
     "id": "SP004",
@@ -189,7 +206,7 @@ final List<Map<String, dynamic>> productList = [
     "discountPrice": 250000,
     "isDiscountActive": true,
     "promotionStart": "2025-11-25T09:00:00",
-    "promotionEnd": "2025-11-30T23:59:00",
+    "promotionEnd": "2025-12-19T12:00:00",
     "stockQuantity": 120,
     "image":
         "https://klairsvietnam.vn/wp-content/uploads/2020/07/nuoc-hoa-hong-khong-mui-klairs.jpg",
@@ -234,6 +251,10 @@ final List<Map<String, dynamic>> productList = [
 
 6. Kết hợp với serum Vitamin C hoặc Niacinamide để tăng hiệu quả dưỡng sáng.
 ''',
+    "skinTypeTags": ["da nhạy cảm", "da khô", "da hỗn hợp"],
+    "skinConcerns": ["mất nước", "kích ứng", "lỗ chân lông to"],
+    "recommendationScore": 91,
+    "ageGroup": ["18-25", "25-40", "40+"],
   },
   {
     "id": "SP005",
@@ -244,7 +265,7 @@ final List<Map<String, dynamic>> productList = [
     "discountPrice": 280000,
     "isDiscountActive": true,
     "promotionStart": "2025-11-25T09:00:00",
-    "promotionEnd": "2025-11-30T23:59:00",
+    "promotionEnd": "2025-12-19T12:00:00",
     "stockQuantity": 150,
     "image":
         "https://media.hcdn.vn/catalog/product/k/e/kem-duong-cerave-cho-da-kho-den-rat-kho-50ml-1-1743218557_img_450x450_31d6f9_fit_center.jpg",
@@ -288,6 +309,10 @@ final List<Map<String, dynamic>> productList = [
 
 6. Thoa nhiều hơn vào vùng da khô ráp như khuỷu tay, đầu gối.
 ''',
+    "skinTypeTags": ["da khô", "da nhạy cảm", "da thường"],
+    "skinConcerns": ["khô ráp", "mất nước", "hàng rào bảo vệ da yếu"],
+    "recommendationScore": 96,
+    "ageGroup": ["13-17", "18-25", "25-40", "40+"],
   },
   {
     "id": "SP006",
@@ -298,7 +323,7 @@ final List<Map<String, dynamic>> productList = [
     "discountPrice": 20000,
     "isDiscountActive": true,
     "promotionStart": "2025-11-25T09:00:00",
-    "promotionEnd": "2025-11-30T23:59:00",
+    "promotionEnd": "2025-12-19T12:00:00",
     "stockQuantity": 500,
     "image": "https://images.soco.id/75256f56-6e90-4e3c-9b5c-602eae74f6ae-.jpg",
     "promotion": "Mua 5 tặng 1",
@@ -334,6 +359,15 @@ final List<Map<String, dynamic>> productList = [
 5. Không cần rửa lại bằng nước, tiếp tục các bước dưỡng da sau đó.
 6. Sử dụng 2–3 lần/tuần để đạt hiệu quả tốt nhất.
 ''',
+    "skinTypeTags": ["da dầu", "da hỗn hợp", "da mụn"],
+    "skinConcerns": [
+      "mụn viêm",
+      "mụn đầu đen",
+      "lỗ chân lông to",
+      "da tiết dầu nhiều",
+    ],
+    "recommendationScore": 93,
+    "ageGroup": ["13-17", "18-25", "25-40"],
   },
   {
     "id": "SP007",
@@ -344,7 +378,7 @@ final List<Map<String, dynamic>> productList = [
     "discountPrice": 260000,
     "isDiscountActive": true,
     "promotionStart": "2025-11-25T09:00:00",
-    "promotionEnd": "2025-11-30T23:59:00",
+    "promotionEnd": "2025-12-19T12:00:00",
     "stockQuantity": 300,
     "image":
         "https://media.hcdn.vn/wysiwyg/HaNguyen/nuoc-tay-trang-bioderma-danh-cho-da-nhay-cam-1_1.jpg",
@@ -378,6 +412,10 @@ final List<Map<String, dynamic>> productList = [
 4. Sử dụng hàng ngày, sáng và tối.
 5. Có thể dùng cho vùng mắt và môi.
 ''',
+    "skinTypeTags": ["da nhạy cảm", "da khô", "da thường"],
+    "skinConcerns": ["kích ứng", "mẩn đỏ", "khô ráp", "làm sạch dịu nhẹ"],
+    "recommendationScore": 95,
+    "ageGroup": ["18-25", "25-40", "40+"],
   },
   {
     "id": "SP008",
@@ -388,7 +426,7 @@ final List<Map<String, dynamic>> productList = [
     "discountPrice": 240000,
     "isDiscountActive": true,
     "promotionStart": "2025-11-25T09:00:00",
-    "promotionEnd": "2025-11-30T23:59:00",
+    "promotionEnd": "2025-12-19T12:00:00",
     "stockQuantity": 200,
     "image":
         "https://file.hstatic.net/1000360941/file/chong_nang_skin1004_863da4e03f824793bc73ccef6e898354.jpg",
@@ -423,6 +461,10 @@ final List<Map<String, dynamic>> productList = [
 4. Thoa lại sau mỗi 2 giờ nếu tiếp xúc trực tiếp với ánh nắng.
 5. Kết hợp với kem dưỡng để tăng hiệu quả bảo vệ da.
 ''',
+    "skinTypeTags": ["da nhạy cảm", "da hỗn hợp", "da dầu"],
+    "skinConcerns": ["cháy nắng", "kích ứng", "lão hóa sớm", "mụn do tia UV"],
+    "recommendationScore": 93,
+    "ageGroup": ["18-25", "25-40", "40+"],
   },
   {
     "id": "SP009",
@@ -433,7 +475,7 @@ final List<Map<String, dynamic>> productList = [
     "discountPrice": 72000,
     "isDiscountActive": true,
     "promotionStart": "2025-11-25T09:00:00",
-    "promotionEnd": "2025-11-30T23:59:00",
+    "promotionEnd": "2025-12-19T12:00:00",
     "stockQuantity": 400,
     "image":
         "https://mint07.com/wp-content/uploads/2021/07/srm-senka-perfect-whip-acne-care-100g-5.jpg",
@@ -476,6 +518,15 @@ final List<Map<String, dynamic>> productList = [
 
 6. Kết hợp với toner và kem dưỡng để đạt hiệu quả chăm sóc da tối ưu.
 ''',
+    "skinTypeTags": ["da dầu", "da hỗn hợp", "da thường"],
+    "skinConcerns": [
+      "mụn đầu đen",
+      "mụn viêm nhẹ",
+      "lỗ chân lông to",
+      "da tiết dầu nhiều",
+    ],
+    "recommendationScore": 90,
+    "ageGroup": ["18-25", "25-40"],
   },
   {
     "id": "SP010",
@@ -486,7 +537,7 @@ final List<Map<String, dynamic>> productList = [
     "discountPrice": 250000,
     "isDiscountActive": true,
     "promotionStart": "2025-11-25T09:00:00",
-    "promotionEnd": "2025-11-30T23:59:00",
+    "promotionEnd": "2025-12-19T12:00:00",
     "stockQuantity": 100,
     "image":
         "https://naricosmetics.com/wp-content/uploads/2021/04/serum-the-ordinari.jpg",
@@ -526,6 +577,16 @@ final List<Map<String, dynamic>> productList = [
 
 5. Có thể kết hợp với Hyaluronic Acid để tăng hiệu quả dưỡng ẩm.
 ''',
+    "skinTypeTags": ["da dầu", "da hỗn hợp", "da mụn"],
+    "skinConcerns": [
+      "mụn đầu đen",
+      "mụn viêm",
+      "lỗ chân lông to",
+      "da tiết dầu nhiều",
+      "không đều màu",
+    ],
+    "recommendationScore": 94,
+    "ageGroup": ["18-25", "25-40"],
   },
   {
     "id": "SP011",
@@ -536,7 +597,7 @@ final List<Map<String, dynamic>> productList = [
     "discountPrice": 190000,
     "isDiscountActive": true,
     "promotionStart": "2025-11-25T09:00:00",
-    "promotionEnd": "2025-11-30T23:59:00",
+    "promotionEnd": "2025-12-19T12:00:00",
     "stockQuantity": 150,
     "image":
         "https://product.hstatic.net/200000150709/product/nuoc_hoa_hong_duong_am_mamonde_rose_water_toner_150ml2_51c7110f41564d659b9fe6e83ecf3a6c.jpg",
@@ -574,6 +635,10 @@ final List<Map<String, dynamic>> productList = [
 
 5. Có thể dùng làm xịt khoáng cấp ẩm tức thì.
 ''',
+    "skinTypeTags": ["da khô", "da nhạy cảm", "da thường"],
+    "skinConcerns": ["mất nước", "kích ứng nhẹ", "thiếu độ đàn hồi"],
+    "recommendationScore": 92,
+    "ageGroup": ["18-25", "25-40", "40+"],
   },
   {
     "id": "SP012",
@@ -584,7 +649,7 @@ final List<Map<String, dynamic>> productList = [
     "discountPrice": 310000,
     "isDiscountActive": true,
     "promotionStart": "2025-11-25T09:00:00",
-    "promotionEnd": "2025-11-30T23:59:00",
+    "promotionEnd": "2025-12-19T12:00:00",
     "stockQuantity": 120,
     "image":
         "https://product.hstatic.net/200000542135/product/la5_5d6160a8b18d4958ad16e9a4e588cc79.jpg",
@@ -624,6 +689,10 @@ final List<Map<String, dynamic>> productList = [
 
 5. Thoa nhiều hơn vào vùng da khô, bong tróc hoặc kích ứng.
 ''',
+    "skinTypeTags": ["da nhạy cảm", "da khô", "da thường"],
+    "skinConcerns": ["kích ứng", "tổn thương da", "khô ráp", "mẩn đỏ"],
+    "recommendationScore": 97,
+    "ageGroup": ["0-12", "13-17", "18-25", "25-40", "40+"],
   },
   {
     "id": "SP013",
@@ -634,7 +703,7 @@ final List<Map<String, dynamic>> productList = [
     "discountPrice": 24000,
     "isDiscountActive": true,
     "promotionStart": "2025-11-25T09:00:00",
-    "promotionEnd": "2025-11-30T23:59:00",
+    "promotionEnd": "2025-12-19T12:00:00",
     "stockQuantity": 400,
     "image":
         "https://kyo.vn/wp-content/uploads/2021/04/MAT-NA-TRAM-TRA-NARUKO-TEA-TREE-SHINE-CONTROL-BLEMISH-CLEAR-MASK-bao-bi.jpg",
@@ -674,6 +743,15 @@ final List<Map<String, dynamic>> productList = [
 
 6. Sử dụng 2–3 lần/tuần để đạt hiệu quả tốt nhất.
 ''',
+    "skinTypeTags": ["da dầu", "da hỗn hợp", "da mụn"],
+    "skinConcerns": [
+      "mụn viêm",
+      "mụn đầu đen",
+      "lỗ chân lông to",
+      "da tiết dầu nhiều",
+    ],
+    "recommendationScore": 92,
+    "ageGroup": ["13-17", "18-25", "25-40"],
   },
   {
     "id": "SP014",
@@ -684,7 +762,7 @@ final List<Map<String, dynamic>> productList = [
     "discountPrice": 160000,
     "isDiscountActive": true,
     "promotionStart": "2025-11-25T09:00:00",
-    "promotionEnd": "2025-11-30T23:59:00",
+    "promotionEnd": "2025-12-19T12:00:00",
     "stockQuantity": 250,
     "image":
         "https://mint07.com/wp-content/uploads/2021/07/tay-trang-loreal-revitalift-crystal-purifying-1.jpg",
@@ -722,6 +800,15 @@ final List<Map<String, dynamic>> productList = [
 
 5. Có thể dùng cho vùng mắt và môi.
 ''',
+    "skinTypeTags": ["da thường", "da dầu", "da nhạy cảm"],
+    "skinConcerns": [
+      "làm sạch lớp trang điểm",
+      "bụi bẩn",
+      "dầu thừa",
+      "kích ứng nhẹ",
+    ],
+    "recommendationScore": 92,
+    "ageGroup": ["18-25", "25-40", "40+"],
   },
   {
     "id": "SP015",
@@ -732,7 +819,7 @@ final List<Map<String, dynamic>> productList = [
     "discountPrice": 399000,
     "isDiscountActive": true,
     "promotionStart": "2025-11-25T09:00:00",
-    "promotionEnd": "2025-11-30T23:59:00",
+    "promotionEnd": "2025-12-19T12:00:00",
     "stockQuantity": 180,
     "image":
         "https://file.hstatic.net/1000223746/file/444833961_1951171525339826_3869668363523474924_n_grande.jpg",
@@ -771,6 +858,10 @@ final List<Map<String, dynamic>> productList = [
 
 5. Dùng sau các bước dưỡng da cơ bản để tăng hiệu quả bảo vệ.
 ''',
+    "skinTypeTags": ["da dầu", "da hỗn hợp", "da thường"],
+    "skinConcerns": ["cháy nắng", "lão hóa sớm", "da tiết dầu nhiều"],
+    "recommendationScore": 94,
+    "ageGroup": ["18-25", "25-40", "40+"],
   },
   {
     "id": "SP016",
@@ -781,7 +872,7 @@ final List<Map<String, dynamic>> productList = [
     "discountPrice": 85000,
     "isDiscountActive": true,
     "promotionStart": "2025-11-25T09:00:00",
-    "promotionEnd": "2025-11-30T23:59:00",
+    "promotionEnd": "2025-12-19T12:00:00",
     "stockQuantity": 300,
     "image":
         "https://nguonmypham.com/wp-content/uploads/15461-combo-simple-lam-sach-can-bang-diu-nhe-da-nhay-cam-3-mon-3-4.jpg",
@@ -822,6 +913,10 @@ final List<Map<String, dynamic>> productList = [
 
 6. Kết hợp với toner và kem dưỡng để đạt hiệu quả chăm sóc da tối ưu.
 ''',
+    "skinTypeTags": ["da nhạy cảm", "da thường", "da hỗn hợp"],
+    "skinConcerns": ["kích ứng nhẹ", "khô ráp", "làm sạch dịu nhẹ"],
+    "recommendationScore": 93,
+    "ageGroup": ["13-17", "18-25", "25-40", "40+"],
   },
   {
     "id": "SP017",
@@ -832,7 +927,7 @@ final List<Map<String, dynamic>> productList = [
     "discountPrice": 450000,
     "isDiscountActive": true,
     "promotionStart": "2025-11-25T09:00:00",
-    "promotionEnd": "2025-11-30T23:59:00",
+    "promotionEnd": "2025-12-19T12:00:00",
     "stockQuantity": 200,
     "image":
         "https://beco.vn/wp-content/uploads/2024/04/Artboard-1-copy-5-100-38.jpg",
@@ -867,6 +962,15 @@ final List<Map<String, dynamic>> productList = [
 
 4. Kết hợp với kem dưỡng ẩm để tăng hiệu quả phục hồi da.
 ''',
+    "skinTypeTags": ["da nhạy cảm", "da khô", "da hỗn hợp", "da thường"],
+    "skinConcerns": [
+      "mất nước",
+      "khô ráp",
+      "hàng rào bảo vệ da yếu",
+      "thiếu độ đàn hồi",
+    ],
+    "recommendationScore": 96,
+    "ageGroup": ["18-25", "25-40", "40+"],
   },
   {
     "id": "SP018",
@@ -877,7 +981,7 @@ final List<Map<String, dynamic>> productList = [
     "discountPrice": 210000,
     "isDiscountActive": true,
     "promotionStart": "2025-11-25T09:00:00",
-    "promotionEnd": "2025-11-30T23:59:00",
+    "promotionEnd": "2025-12-19T12:00:00",
     "stockQuantity": 250,
     "image":
         "https://product.hstatic.net/200000150709/product/laven_e36bb7e1fdef4034a92d7493dae037de.jpg",
@@ -913,6 +1017,15 @@ final List<Map<String, dynamic>> productList = [
 
 4. Có thể dùng làm lotion mask để cấp ẩm tức thì.
 ''',
+    "skinTypeTags": ["da dầu", "da hỗn hợp", "da thường"],
+    "skinConcerns": [
+      "lỗ chân lông to",
+      "mụn đầu đen",
+      "mụn viêm nhẹ",
+      "da tiết dầu nhiều",
+    ],
+    "recommendationScore": 91,
+    "ageGroup": ["18-25", "25-40", "40+"],
   },
   {
     "id": "SP019",
@@ -923,7 +1036,7 @@ final List<Map<String, dynamic>> productList = [
     "discountPrice": 265000,
     "isDiscountActive": true,
     "promotionStart": "2025-11-25T09:00:00",
-    "promotionEnd": "2025-11-30T23:59:00",
+    "promotionEnd": "2025-12-19T12:00:00",
     "stockQuantity": 180,
     "image":
         "https://product.hstatic.net/200000551679/product/1_a90f57e8a70947be952e454aa5ffe6d4_grande.jpg",
@@ -962,6 +1075,10 @@ final List<Map<String, dynamic>> productList = [
 
 5. Kết hợp với kem chống nắng ban ngày để bảo vệ da tối ưu.
 ''',
+    "skinTypeTags": ["da dầu", "da hỗn hợp", "da thường"],
+    "skinConcerns": ["mất nước", "khô ráp", "thiếu độ đàn hồi"],
+    "recommendationScore": 94,
+    "ageGroup": ["18-25", "25-40", "40+"],
   },
   {
     "id": "SP020",
@@ -972,7 +1089,7 @@ final List<Map<String, dynamic>> productList = [
     "discountPrice": 27000,
     "isDiscountActive": true,
     "promotionStart": "2025-11-25T09:00:00",
-    "promotionEnd": "2025-11-30T23:59:00",
+    "promotionEnd": "2025-12-19T12:00:00",
     "stockQuantity": 500,
     "image":
         "https://mint07.com/wp-content/uploads/2023/04/mat-na-lululun-precious-7-mieng-moist-mau-do.jpg",
@@ -1012,6 +1129,10 @@ final List<Map<String, dynamic>> productList = [
 
 6. Sử dụng 2–3 lần/tuần để duy trì độ ẩm và độ căng bóng cho da.
 ''',
+    "skinTypeTags": ["da khô", "da nhạy cảm", "da thường"],
+    "skinConcerns": ["mất nước", "khô ráp", "thiếu độ đàn hồi", "lão hóa sớm"],
+    "recommendationScore": 93,
+    "ageGroup": ["18-25", "25-40", "40+"],
   },
   {
     "id": "SP021",
@@ -1022,7 +1143,7 @@ final List<Map<String, dynamic>> productList = [
     "discountPrice": 175000,
     "isDiscountActive": true,
     "promotionStart": "2025-11-25T09:00:00",
-    "promotionEnd": "2025-11-30T23:59:00",
+    "promotionEnd": "2025-12-19T12:00:00",
     "stockQuantity": 220,
     "image":
         "https://xachtaynhat.net/wp-content/uploads/2021/03/toner-Innisfree-tra-xanh-Green-Te.jpg",
@@ -1061,6 +1182,10 @@ final List<Map<String, dynamic>> productList = [
 
 5. Có thể dùng làm lotion mask để cấp ẩm tức thì.
 ''',
+    "skinTypeTags": ["da hỗn hợp", "da dầu", "da thường"],
+    "skinConcerns": ["mất nước", "da tiết dầu nhiều", "thiếu độ đàn hồi"],
+    "recommendationScore": 92,
+    "ageGroup": ["18-25", "25-40", "40+"],
   },
   {
     "id": "SP022",
@@ -1071,7 +1196,7 @@ final List<Map<String, dynamic>> productList = [
     "discountPrice": 279000,
     "isDiscountActive": true,
     "promotionStart": "2025-11-25T09:00:00",
-    "promotionEnd": "2025-11-30T23:59:00",
+    "promotionEnd": "2025-12-19T12:00:00",
     "stockQuantity": 200,
     "image":
         "https://file.hstatic.net/200000551679/file/some_by_mi_tinh_chat_aha-bha-pha_30_days_miracle_serum_50ml_bcf0b3234c944a8c99fdd32ed4711cc4_1024x1024.jpg",
@@ -1113,6 +1238,16 @@ final List<Map<String, dynamic>> productList = [
 
 6. Kết hợp với serum dưỡng ẩm để giảm khô da.
 ''',
+    "skinTypeTags": ["da dầu", "da hỗn hợp", "da mụn"],
+    "skinConcerns": [
+      "mụn viêm",
+      "mụn đầu đen",
+      "mụn ẩn",
+      "lỗ chân lông to",
+      "da tiết dầu nhiều",
+    ],
+    "recommendationScore": 93,
+    "ageGroup": ["13-17", "18-25", "25-40"],
   },
   {
     "id": "SP023",
@@ -1123,7 +1258,7 @@ final List<Map<String, dynamic>> productList = [
     "discountPrice": 200000,
     "isDiscountActive": true,
     "promotionStart": "2025-11-25T09:00:00",
-    "promotionEnd": "2025-11-30T23:59:00",
+    "promotionEnd": "2025-12-19T12:00:00",
     "stockQuantity": 250,
     "image": "https://images.soco.id/de4b8158-f7fe-4bd6-8851-2312f823df01-.jpg",
     "promotion": null,
@@ -1160,6 +1295,10 @@ final List<Map<String, dynamic>> productList = [
 
 5. Kết hợp với toner Hada Labo để tăng hiệu quả dưỡng ẩm.
 ''',
+    "skinTypeTags": ["da khô", "da nhạy cảm", "da thường"],
+    "skinConcerns": ["mất nước", "khô ráp", "thiếu độ đàn hồi"],
+    "recommendationScore": 94,
+    "ageGroup": ["18-25", "25-40", "40+"],
   },
   {
     "id": "SP024",
@@ -1170,7 +1309,7 @@ final List<Map<String, dynamic>> productList = [
     "discountPrice": 24000,
     "isDiscountActive": true,
     "promotionStart": "2025-11-25T09:00:00",
-    "promotionEnd": "2025-11-30T23:59:00",
+    "promotionEnd": "2025-12-19T12:00:00",
     "stockQuantity": 600,
     "image":
         "https://linkstore.vn/wp-content/uploads/2023/06/Mat-na-Banobagi-Vita-Genic-Jelly-Mask-Premium-2024-1.jpg",
@@ -1209,6 +1348,10 @@ final List<Map<String, dynamic>> productList = [
 
 6. Sử dụng 2–3 lần/tuần để duy trì làn da sáng khỏe.
 ''',
+    "skinTypeTags": ["da khô", "da nhạy cảm", "da thường"],
+    "skinConcerns": ["mất nước", "khô ráp", "thiếu độ đàn hồi", "xỉn màu"],
+    "recommendationScore": 93,
+    "ageGroup": ["18-25", "25-40", "40+"],
   },
   {
     "id": "SP025",
@@ -1219,7 +1362,7 @@ final List<Map<String, dynamic>> productList = [
     "discountPrice": 130000,
     "isDiscountActive": true,
     "promotionStart": "2025-11-25T09:00:00",
-    "promotionEnd": "2025-11-30T23:59:00",
+    "promotionEnd": "2025-12-19T12:00:00",
     "stockQuantity": 250,
     "image":
         "https://xachtaynhat.net/wp-content/uploads/2021/06/Cosrx-Good-Morning-Low-PH-Cleans.jpg",
@@ -1263,6 +1406,15 @@ final List<Map<String, dynamic>> productList = [
 
 6. Kết hợp với toner và kem dưỡng để đạt hiệu quả chăm sóc da tối ưu.
 ''',
+    "skinTypeTags": ["da dầu", "da hỗn hợp", "da nhạy cảm"],
+    "skinConcerns": [
+      "mụn đầu đen",
+      "mụn viêm nhẹ",
+      "lỗ chân lông to",
+      "kích ứng nhẹ",
+    ],
+    "recommendationScore": 95,
+    "ageGroup": ["13-17", "18-25", "25-40"],
   },
   {
     "id": "SP026",
@@ -1273,7 +1425,7 @@ final List<Map<String, dynamic>> productList = [
     "discountPrice": 340000,
     "isDiscountActive": true,
     "promotionStart": "2025-11-25T09:00:00",
-    "promotionEnd": "2025-11-30T23:59:00",
+    "promotionEnd": "2025-12-19T12:00:00",
     "stockQuantity": 180,
     "image":
         "https://media.hcdn.vn/wysiwyg/MaiQuynh/kem-chong-nang-vichy-capital-soleil-50ml-4.jpg",
@@ -1313,6 +1465,15 @@ final List<Map<String, dynamic>> productList = [
 
 5. Sử dụng hàng ngày để bảo vệ da tối ưu.
 ''',
+    "skinTypeTags": ["da dầu", "da hỗn hợp", "da thường", "da nhạy cảm"],
+    "skinConcerns": [
+      "cháy nắng",
+      "lão hóa sớm",
+      "da tiết dầu nhiều",
+      "kích ứng nhẹ",
+    ],
+    "recommendationScore": 95,
+    "ageGroup": ["18-25", "25-40", "40+"],
   },
   {
     "id": "SP027",
@@ -1323,7 +1484,7 @@ final List<Map<String, dynamic>> productList = [
     "discountPrice": 150000,
     "isDiscountActive": true,
     "promotionStart": "2025-11-25T09:00:00",
-    "promotionEnd": "2025-11-30T23:59:00",
+    "promotionEnd": "2025-12-19T12:00:00",
     "stockQuantity": 300,
     "image":
         "https://mint07.com/wp-content/uploads/2023/03/nuoc-tay-trang-garnier-salicylic-bha-micellar-cleansing-water-2.jpg",
@@ -1362,6 +1523,15 @@ final List<Map<String, dynamic>> productList = [
 
 5. Có thể dùng cho vùng mắt và môi.
 ''',
+    "skinTypeTags": ["da nhạy cảm", "da thường", "da dầu"],
+    "skinConcerns": [
+      "làm sạch lớp trang điểm",
+      "bụi bẩn",
+      "dầu thừa",
+      "kích ứng nhẹ",
+    ],
+    "recommendationScore": 93,
+    "ageGroup": ["18-25", "25-40", "40+"],
   },
   {
     "id": "SP028",
@@ -1372,7 +1542,7 @@ final List<Map<String, dynamic>> productList = [
     "discountPrice": 399000,
     "isDiscountActive": true,
     "promotionStart": "2025-11-25T09:00:00",
-    "promotionEnd": "2025-11-30T23:59:00",
+    "promotionEnd": "2025-12-19T12:00:00",
     "stockQuantity": 150,
     "image":
         "https://media.hcdn.vn/wysiwyg/Chau/serum-timeless-10-vitamin-c-sang-da-mo-vet-tham-30ml-2.jpg",
@@ -1416,6 +1586,10 @@ final List<Map<String, dynamic>> productList = [
 
 6. Lưu ý: Bảo quản trong tủ lạnh hoặc nơi khô ráo, tránh ánh sáng trực tiếp để giữ ổn định Vitamin C.
 ''',
+    "skinTypeTags": ["da thường", "da khô", "da hỗn hợp"],
+    "skinConcerns": ["xỉn màu", "lão hóa sớm", "thiếu độ đàn hồi", "khô ráp"],
+    "recommendationScore": 95,
+    "ageGroup": ["18-25", "25-40", "40+"],
   },
   {
     "id": "SP029",
@@ -1426,7 +1600,7 @@ final List<Map<String, dynamic>> productList = [
     "discountPrice": 89000,
     "isDiscountActive": true,
     "promotionStart": "2025-11-25T09:00:00",
-    "promotionEnd": "2025-11-30T23:59:00",
+    "promotionEnd": "2025-12-19T12:00:00",
     "stockQuantity": 200,
     "image":
         "https://media.hcdn.vn/wysiwyg/MaiQuynh/nuoc-hoa-hong-evoluderm-3.jpg",
@@ -1465,6 +1639,10 @@ final List<Map<String, dynamic>> productList = [
 
 5. Có thể dùng làm lotion mask để cấp ẩm tức thì.
 ''',
+    "skinTypeTags": ["da thường", "da khô", "da nhạy cảm"],
+    "skinConcerns": ["mất nước", "khô ráp", "kích ứng nhẹ", "thiếu độ đàn hồi"],
+    "recommendationScore": 91,
+    "ageGroup": ["18-25", "25-40", "40+"],
   },
   {
     "id": "SP030",
@@ -1475,7 +1653,7 @@ final List<Map<String, dynamic>> productList = [
     "discountPrice": 115000,
     "isDiscountActive": true,
     "promotionStart": "2025-11-25T09:00:00",
-    "promotionEnd": "2025-11-30T23:59:00",
+    "promotionEnd": "2025-12-19T12:00:00",
     "stockQuantity": 220,
     "image":
         "https://product.hstatic.net/200000617989/product/436275335_122123367440238279_3880484553705447209_n_e64e2258590343b6886c51e5d650110a_1024x1024.jpg",
@@ -1515,6 +1693,10 @@ final List<Map<String, dynamic>> productList = [
 
 5. Kết hợp với serum dưỡng ẩm để tăng hiệu quả phục hồi da.
 ''',
+    "skinTypeTags": ["da nhạy cảm", "da thường", "da hỗn hợp"],
+    "skinConcerns": ["mất nước", "khô ráp", "kích ứng nhẹ"],
+    "recommendationScore": 92,
+    "ageGroup": ["18-25", "25-40", "40+"],
   },
 
   {
@@ -1526,7 +1708,7 @@ final List<Map<String, dynamic>> productList = [
     "discountPrice": 16000,
     "isDiscountActive": true,
     "promotionStart": "2025-11-25T09:00:00",
-    "promotionEnd": "2025-11-30T23:59:00",
+    "promotionEnd": "2025-12-19T12:00:00",
     "stockQuantity": 500,
     "image":
         "https://laz-img-sg.alicdn.com/p/06c171b00439e3cb8a1625040b20715c.jpg",
@@ -1564,6 +1746,15 @@ final List<Map<String, dynamic>> productList = [
 
 5. Kết hợp với toner và kem dưỡng để đạt hiệu quả chăm sóc da tối ưu.
 ''',
+    "skinTypeTags": ["da dầu", "da hỗn hợp", "da thường"],
+    "skinConcerns": [
+      "mụn đầu đen",
+      "mụn ẩn",
+      "lỗ chân lông to",
+      "da tiết dầu nhiều",
+    ],
+    "recommendationScore": 90,
+    "ageGroup": ["18-25", "25-40"],
   },
   {
     "id": "SP032",
@@ -1574,7 +1765,7 @@ final List<Map<String, dynamic>> productList = [
     "discountPrice": 88000,
     "isDiscountActive": true,
     "promotionStart": "2025-11-25T09:00:00",
-    "promotionEnd": "2025-11-30T23:59:00",
+    "promotionEnd": "2025-12-19T12:00:00",
     "stockQuantity": 300,
     "image":
         "https://myphambo.com/wp-content/uploads/2020/03/sua-rua-mat-y-di-hatomugi-naturie-%E2%80%93-nhat-ban-2.jpg",
@@ -1614,6 +1805,10 @@ final List<Map<String, dynamic>> productList = [
 
 6. Kết hợp với toner Hatomugi để tăng hiệu quả dưỡng sáng.
 ''',
+    "skinTypeTags": ["da thường", "da dầu", "da hỗn hợp"],
+    "skinConcerns": ["bụi bẩn", "dầu thừa", "lỗ chân lông to", "khô ráp nhẹ"],
+    "recommendationScore": 91,
+    "ageGroup": ["18-25", "25-40", "40+"],
   },
   {
     "id": "SP033",
@@ -1624,7 +1819,7 @@ final List<Map<String, dynamic>> productList = [
     "discountPrice": 195000,
     "isDiscountActive": true,
     "promotionStart": "2025-11-25T09:00:00",
-    "promotionEnd": "2025-11-30T23:59:00",
+    "promotionEnd": "2025-12-19T12:00:00",
     "stockQuantity": 220,
     "image":
         "https://product.hstatic.net/200000551679/product/ng_duong_the_uv_aqua_rich_body_tone_up_peach_pearly_spf50__pa____130ml_cf3abc3d381f4f4f89ac428427f6f02d_1024x1024.jpg",
@@ -1663,6 +1858,10 @@ final List<Map<String, dynamic>> productList = [
 
 5. Sử dụng hàng ngày để bảo vệ da tối ưu.
 ''',
+    "skinTypeTags": ["da dầu", "da hỗn hợp", "da thường"],
+    "skinConcerns": ["cháy nắng", "lão hóa sớm", "da tiết dầu nhiều"],
+    "recommendationScore": 94,
+    "ageGroup": ["18-25", "25-40", "40+"],
   },
   {
     "id": "SP034",
@@ -1673,7 +1872,7 @@ final List<Map<String, dynamic>> productList = [
     "discountPrice": 121500,
     "isDiscountActive": true,
     "promotionStart": "2025-11-25T09:00:00",
-    "promotionEnd": "2025-11-30T23:59:00",
+    "promotionEnd": "2025-12-19T12:00:00",
     "stockQuantity": 300,
     "image":
         "https://product.hstatic.net/200000150709/product/25540716802e20e4c95dde7895df1d51_c78b71c17e7545d0be66d9add3cb4f6c.jpg",
@@ -1712,6 +1911,15 @@ final List<Map<String, dynamic>> productList = [
 
 5. Có thể dùng cho vùng mắt và môi.
 ''',
+    "skinTypeTags": ["da nhạy cảm", "da thường", "da dầu"],
+    "skinConcerns": [
+      "làm sạch lớp trang điểm",
+      "bụi bẩn",
+      "dầu thừa",
+      "kích ứng nhẹ",
+    ],
+    "recommendationScore": 92,
+    "ageGroup": ["18-25", "25-40", "40+"],
   },
   {
     "id": "SP035",
@@ -1722,7 +1930,7 @@ final List<Map<String, dynamic>> productList = [
     "discountPrice": 470000,
     "isDiscountActive": true,
     "promotionStart": "2025-11-25T09:00:00",
-    "promotionEnd": "2025-11-30T23:59:00",
+    "promotionEnd": "2025-12-19T12:00:00",
     "stockQuantity": 200,
     "image":
         "https://mint07.com/wp-content/uploads/2020/09/serum-loreal-revitalift-15-hyaluronic-acid-2.jpg",
@@ -1760,6 +1968,10 @@ final List<Map<String, dynamic>> productList = [
 
 5. Luôn dùng kem chống nắng ban ngày để bảo vệ da.
 ''',
+    "skinTypeTags": ["da thường", "da khô", "da hỗn hợp"],
+    "skinConcerns": ["mất nước", "thiếu độ đàn hồi", "lão hóa sớm", "khô ráp"],
+    "recommendationScore": 95,
+    "ageGroup": ["25-40", "40+"],
   },
   {
     "id": "SP036",
@@ -1770,7 +1982,7 @@ final List<Map<String, dynamic>> productList = [
     "discountPrice": 225000,
     "isDiscountActive": true,
     "promotionStart": "2025-11-25T09:00:00",
-    "promotionEnd": "2025-11-30T23:59:00",
+    "promotionEnd": "2025-12-19T12:00:00",
     "stockQuantity": 220,
     "image":
         "https://gaspa.vn/wp-content/uploads/2018/11/Eucerin-Nu%CC%9Bo%CC%9B%CC%81c-hoa-ho%CC%82%CC%80ng-e1544671167538.jpg",
@@ -1808,6 +2020,16 @@ final List<Map<String, dynamic>> productList = [
 
 5. Kết hợp với sản phẩm trị mụn để tăng hiệu quả.
 ''',
+    "skinTypeTags": ["da dầu", "da hỗn hợp", "da mụn"],
+    "skinConcerns": [
+      "mụn viêm",
+      "mụn đầu đen",
+      "mụn ẩn",
+      "lỗ chân lông to",
+      "da tiết dầu nhiều",
+    ],
+    "recommendationScore": 94,
+    "ageGroup": ["13-17", "18-25", "25-40"],
   },
   {
     "id": "SP037",
@@ -1818,7 +2040,7 @@ final List<Map<String, dynamic>> productList = [
     "discountPrice": 314500,
     "isDiscountActive": true,
     "promotionStart": "2025-11-25T09:00:00",
-    "promotionEnd": "2025-11-30T23:59:00",
+    "promotionEnd": "2025-12-19T12:00:00",
     "stockQuantity": 180,
     "image":
         "https://www.thebodyshop.com.vn/img/resize/565?url=%2Fpub/media%2Fcatalog%2Fproduct%2F1%2F0%2F1026960_vitamin_e_face_wash_125ml-4_1_1.jpg",
@@ -1856,6 +2078,10 @@ final List<Map<String, dynamic>> productList = [
 
 5. Kết hợp với serum Vitamin C để tăng hiệu quả chống oxy hóa.
 ''',
+    "skinTypeTags": ["da thường", "da khô", "da nhạy cảm"],
+    "skinConcerns": ["mất nước", "khô ráp", "thiếu độ đàn hồi", "lão hóa sớm"],
+    "recommendationScore": 94,
+    "ageGroup": ["18-25", "25-40", "40+"],
   },
   {
     "id": "SP038",
@@ -1866,7 +2092,7 @@ final List<Map<String, dynamic>> productList = [
     "discountPrice": 26000,
     "isDiscountActive": true,
     "promotionStart": "2025-11-25T09:00:00",
-    "promotionEnd": "2025-11-30T23:59:00",
+    "promotionEnd": "2025-12-19T12:00:00",
     "stockQuantity": 500,
     "image":
         "https://media.hasaki.vn/wysiwyg/minhchau/mat-na-my-beauty-diary-ngoc-trai-den-sang-da-23ml-4.jpg",
@@ -1906,6 +2132,10 @@ final List<Map<String, dynamic>> productList = [
 
 6. Sử dụng 2–3 lần/tuần để duy trì làn da sáng khỏe.
 ''',
+    "skinTypeTags": ["da thường", "da khô", "da hỗn hợp"],
+    "skinConcerns": ["xỉn màu", "mất nước", "thiếu độ đàn hồi", "khô ráp"],
+    "recommendationScore": 93,
+    "ageGroup": ["18-25", "25-40", "40+"],
   },
   {
     "id": "SP039",
@@ -1916,7 +2146,7 @@ final List<Map<String, dynamic>> productList = [
     "discountPrice": 125000,
     "isDiscountActive": true,
     "promotionStart": "2025-11-25T09:00:00",
-    "promotionEnd": "2025-11-30T23:59:00",
+    "promotionEnd": "2025-12-19T12:00:00",
     "stockQuantity": 220,
     "image":
         "https://mint07.com/wp-content/uploads/2022/09/sua-rua-mat-innisfree-jeju-volcanic-pore-cleansing-foam-ex-150g.jpg",
@@ -1956,6 +2186,15 @@ final List<Map<String, dynamic>> productList = [
 
 6. Kết hợp với toner Innisfree để tăng hiệu quả kiểm soát dầu.
 ''',
+    "skinTypeTags": ["da dầu", "da hỗn hợp", "da thường"],
+    "skinConcerns": [
+      "mụn đầu đen",
+      "mụn ẩn",
+      "lỗ chân lông to",
+      "da tiết dầu nhiều",
+    ],
+    "recommendationScore": 93,
+    "ageGroup": ["18-25", "25-40"],
   },
   {
     "id": "SP040",
@@ -1966,7 +2205,7 @@ final List<Map<String, dynamic>> productList = [
     "discountPrice": 170000,
     "isDiscountActive": true,
     "promotionStart": "2025-11-25T09:00:00",
-    "promotionEnd": "2025-11-30T23:59:00",
+    "promotionEnd": "2025-12-19T12:00:00",
     "stockQuantity": 200,
     "image":
         "https://media.hcdn.vn/wysiwyg/HaNguyen/sua-chong-nang-missha-all-around-safe-block-sun-milk-70ml.jpg",
@@ -2006,6 +2245,10 @@ final List<Map<String, dynamic>> productList = [
 
 5. Sử dụng hàng ngày để bảo vệ da tối ưu.
 ''',
+    "skinTypeTags": ["da dầu", "da hỗn hợp", "da thường"],
+    "skinConcerns": ["cháy nắng", "lão hóa sớm", "da tiết dầu nhiều"],
+    "recommendationScore": 93,
+    "ageGroup": ["18-25", "25-40", "40+"],
   },
   {
     "id": "SP041",
@@ -2016,7 +2259,7 @@ final List<Map<String, dynamic>> productList = [
     "discountPrice": 801000,
     "isDiscountActive": true,
     "promotionStart": "2025-11-25T09:00:00",
-    "promotionEnd": "2025-11-30T23:59:00",
+    "promotionEnd": "2025-12-19T12:00:00",
     "stockQuantity": 150,
     "image":
         "https://file.hstatic.net/1000025647/file/serum_50ml_kiehls_54300e9095534d9d9fb76ea0b6c6d81e_1024x1024.jpg",
@@ -2054,6 +2297,10 @@ final List<Map<String, dynamic>> productList = [
 
 5. Dùng liên tục ít nhất 4 tuần để thấy hiệu quả rõ rệt.
 ''',
+    "skinTypeTags": ["da thường", "da khô", "da hỗn hợp", "da nhạy cảm"],
+    "skinConcerns": ["thâm nám", "xỉn màu", "không đều màu", "lão hóa sớm"],
+    "recommendationScore": 95,
+    "ageGroup": ["18-25", "25-40", "40+"],
   },
   {
     "id": "SP042",
@@ -2064,7 +2311,7 @@ final List<Map<String, dynamic>> productList = [
     "discountPrice": 195000,
     "isDiscountActive": true,
     "promotionStart": "2025-11-25T09:00:00",
-    "promotionEnd": "2025-11-30T23:59:00",
+    "promotionEnd": "2025-12-19T12:00:00",
     "stockQuantity": 220,
     "image":
         "https://vn-test-11.slatic.net/p/57cf6975ac4c3022ce59fcd556522491.jpg",
@@ -2102,6 +2349,16 @@ final List<Map<String, dynamic>> productList = [
 
 5. Kết hợp với sản phẩm trị mụn để tăng hiệu quả kiểm soát dầu.
 ''',
+    "skinTypeTags": ["da dầu", "da hỗn hợp", "da mụn"],
+    "skinConcerns": [
+      "mụn viêm",
+      "mụn đầu đen",
+      "mụn ẩn",
+      "lỗ chân lông to",
+      "da tiết dầu nhiều",
+    ],
+    "recommendationScore": 94,
+    "ageGroup": ["18-25", "25-40"],
   },
   {
     "id": "SP043",
@@ -2112,7 +2369,7 @@ final List<Map<String, dynamic>> productList = [
     "discountPrice": 520000,
     "isDiscountActive": false,
     "promotionStart": "2025-11-25T09:00:00",
-    "promotionEnd": "2025-11-30T23:59:00",
+    "promotionEnd": "2025-12-19T12:00:00",
     "stockQuantity": 180,
     "image":
         "https://media.hcdn.vn/wysiwyg/Chau/kem-duong-am-laneige-water-bank-blue-ha-cream-50ml-5.jpg",
@@ -2150,6 +2407,10 @@ final List<Map<String, dynamic>> productList = [
 
 5. Kết hợp với mặt nạ ngủ Laneige để tăng hiệu quả dưỡng ẩm.
 ''',
+    "skinTypeTags": ["da thường", "da khô", "da hỗn hợp"],
+    "skinConcerns": ["mất nước", "khô ráp", "thiếu độ đàn hồi", "lão hóa sớm"],
+    "recommendationScore": 95,
+    "ageGroup": ["18-25", "25-40", "40+"],
   },
   {
     "id": "SP044",
@@ -2160,7 +2421,7 @@ final List<Map<String, dynamic>> productList = [
     "discountPrice": 25000,
     "isDiscountActive": false,
     "promotionStart": "2025-11-25T09:00:00",
-    "promotionEnd": "2025-11-30T23:59:00",
+    "promotionEnd": "2025-12-19T12:00:00",
     "stockQuantity": 600,
     "image":
         "https://product.hstatic.net/200000551679/product/real_nature_green_tea_mask_sheet_-_inforgraphic_e87a1ad744c84e9bbcf3162a021d3b10_1024x1024.jpg",
@@ -2198,6 +2459,10 @@ final List<Map<String, dynamic>> productList = [
 
 6. Sử dụng 2–3 lần/tuần để duy trì làn da khỏe mạnh.
 ''',
+    "skinTypeTags": ["da thường", "da khô", "da hỗn hợp", "da nhạy cảm"],
+    "skinConcerns": ["mất nước", "xỉn màu", "khô ráp", "thiếu độ đàn hồi"],
+    "recommendationScore": 92,
+    "ageGroup": ["18-25", "25-40", "40+"],
   },
   {
     "id": "SP045",
@@ -2208,7 +2473,7 @@ final List<Map<String, dynamic>> productList = [
     "discountPrice": 270000,
     "isDiscountActive": true,
     "promotionStart": "2025-11-25T09:00:00",
-    "promotionEnd": "2025-11-30T23:59:00",
+    "promotionEnd": "2025-12-19T12:00:00",
     "stockQuantity": 220,
     "image":
         "https://hermore.vn/uploads/product/430/10-25-13-08-03-2023-vichy-srm-5.jpg",
@@ -2248,6 +2513,16 @@ final List<Map<String, dynamic>> productList = [
 
 6. Kết hợp với toner Vichy để tăng hiệu quả kiểm soát dầu.
 ''',
+    "skinTypeTags": ["da dầu", "da hỗn hợp", "da mụn"],
+    "skinConcerns": [
+      "mụn viêm",
+      "mụn đầu đen",
+      "mụn ẩn",
+      "lỗ chân lông to",
+      "da tiết dầu nhiều",
+    ],
+    "recommendationScore": 95,
+    "ageGroup": ["18-25", "25-40"],
   },
   {
     "id": "SP046",
@@ -2258,7 +2533,7 @@ final List<Map<String, dynamic>> productList = [
     "discountPrice": 375000,
     "isDiscountActive": true,
     "promotionStart": "2025-11-25T09:00:00",
-    "promotionEnd": "2025-11-30T23:59:00",
+    "promotionEnd": "2025-12-19T12:00:00",
     "stockQuantity": 200,
     "image":
         "https://chuanauthentic.com/wp-content/uploads/2025/06/kem-chong-nang-kiem-dau-eucerin-sun-gel-cream-dry-touch-oil-control-spf50-50ml-5.jpg",
@@ -2298,6 +2573,16 @@ final List<Map<String, dynamic>> productList = [
 
 5. Sử dụng hàng ngày để bảo vệ da tối ưu.
 ''',
+    "skinTypeTags": ["da dầu", "da hỗn hợp", "da mụn"],
+    "skinConcerns": [
+      "cháy nắng",
+      "mụn viêm",
+      "mụn đầu đen",
+      "lỗ chân lông to",
+      "da tiết dầu nhiều",
+    ],
+    "recommendationScore": 95,
+    "ageGroup": ["18-25", "25-40"],
   },
   {
     "id": "SP047",
@@ -2308,7 +2593,7 @@ final List<Map<String, dynamic>> productList = [
     "discountPrice": 300000,
     "isDiscountActive": true,
     "promotionStart": "2025-11-25T09:00:00",
-    "promotionEnd": "2025-11-30T23:59:00",
+    "promotionEnd": "2025-12-19T12:00:00",
     "stockQuantity": 250,
     "image":
         "https://media.hcdn.vn/catalog/product/d/a/dau-tay-trang-dhc-chiet-xuat-olive-lam-sach-sau-da-120ml-1650444669_img_450x450_31d6f9_fit_center.jpg",
@@ -2348,6 +2633,15 @@ final List<Map<String, dynamic>> productList = [
 
 6. Kết hợp với sữa rửa mặt để làm sạch kép hiệu quả.
 ''',
+    "skinTypeTags": ["da thường", "da khô", "da hỗn hợp"],
+    "skinConcerns": [
+      "làm sạch lớp trang điểm",
+      "bụi bẩn",
+      "khô ráp",
+      "thiếu độ đàn hồi",
+    ],
+    "recommendationScore": 96,
+    "ageGroup": ["18-25", "25-40", "40+"],
   },
   {
     "id": "SP048",
@@ -2358,7 +2652,7 @@ final List<Map<String, dynamic>> productList = [
     "discountPrice": 1850000,
     "isDiscountActive": true,
     "promotionStart": "2025-11-25T09:00:00",
-    "promotionEnd": "2025-11-30T23:59:00",
+    "promotionEnd": "2025-12-19T12:00:00",
     "stockQuantity": 150,
     "image":
         "https://product.hstatic.net/200000150709/product/cb9e25483eb92ba650d0a62994c0bd7f.jpg_1200x1200q80.jpg__592144adca0b4cdea5504b776827432e_1024x1024.jpg",
@@ -2397,6 +2691,16 @@ final List<Map<String, dynamic>> productList = [
 
 5. Kết hợp với kem dưỡng Estee Lauder để tối ưu hiệu quả phục hồi.
 ''',
+    "skinTypeTags": ["da thường", "da khô", "da hỗn hợp", "da nhạy cảm"],
+    "skinConcerns": [
+      "lão hóa sớm",
+      "thiếu độ đàn hồi",
+      "xỉn màu",
+      "khô ráp",
+      "mất nước",
+    ],
+    "recommendationScore": 97,
+    "ageGroup": ["25-40", "40+"],
   },
   {
     "id": "SP049",
@@ -2407,7 +2711,7 @@ final List<Map<String, dynamic>> productList = [
     "discountPrice": 275000,
     "isDiscountActive": true,
     "promotionStart": "2025-11-25T09:00:00",
-    "promotionEnd": "2025-11-30T23:59:00",
+    "promotionEnd": "2025-12-19T12:00:00",
     "stockQuantity": 220,
     "image":
         "https://shophoitu.com/shop/media/media/thumb/2021-01-31/nuoc-hoa-hong-nhat.jpg.jpg",
@@ -2445,6 +2749,15 @@ final List<Map<String, dynamic>> productList = [
 
 5. Kết hợp với sản phẩm trị mụn để tăng hiệu quả kiểm soát dầu.
 ''',
+    "skinTypeTags": ["da dầu", "da hỗn hợp", "da mụn"],
+    "skinConcerns": [
+      "lỗ chân lông to",
+      "mụn đầu đen",
+      "mụn ẩn",
+      "da tiết dầu nhiều",
+    ],
+    "recommendationScore": 94,
+    "ageGroup": ["18-25", "25-40"],
   },
   {
     "id": "SP050",
@@ -2455,7 +2768,7 @@ final List<Map<String, dynamic>> productList = [
     "discountPrice": 306000,
     "isDiscountActive": true,
     "promotionStart": "2025-11-25T09:00:00",
-    "promotionEnd": "2025-11-30T23:59:00",
+    "promotionEnd": "2025-12-19T12:00:00",
     "stockQuantity": 200,
     "image":
         "https://www.innisfree.vn/static/upload/product/product/14_ID0101_4.jpg",
@@ -2493,6 +2806,10 @@ final List<Map<String, dynamic>> productList = [
 
 5. Kết hợp với toner Innisfree để tăng hiệu quả dưỡng ẩm.
 ''',
+    "skinTypeTags": ["da thường", "da khô", "da hỗn hợp", "da nhạy cảm"],
+    "skinConcerns": ["mất nước", "khô ráp", "thiếu độ đàn hồi", "xỉn màu"],
+    "recommendationScore": 94,
+    "ageGroup": ["18-25", "25-40", "40+"],
   },
   {
     "id": "SP051",
@@ -2503,7 +2820,7 @@ final List<Map<String, dynamic>> productList = [
     "discountPrice": 26000,
     "isDiscountActive": true,
     "promotionStart": "2025-11-25T09:00:00",
-    "promotionEnd": "2025-11-30T23:59:00",
+    "promotionEnd": "2025-12-19T12:00:00",
     "stockQuantity": 500,
     "image":
         "https://media.hcdn.vn/wysiwyg/MaiQuynh/mat-na-den-sexy-look-duong-sang-da-28ml-1.jpg",
@@ -2542,6 +2859,15 @@ final List<Map<String, dynamic>> productList = [
 
 6. Sử dụng 2–3 lần/tuần để duy trì làn da sáng khỏe.
 ''',
+    "skinTypeTags": ["da dầu", "da hỗn hợp", "da thường"],
+    "skinConcerns": [
+      "mụn đầu đen",
+      "mụn ẩn",
+      "lỗ chân lông to",
+      "da tiết dầu nhiều",
+    ],
+    "recommendationScore": 92,
+    "ageGroup": ["18-25", "25-40"],
   },
   {
     "id": "SP052",
@@ -2552,7 +2878,7 @@ final List<Map<String, dynamic>> productList = [
     "discountPrice": 220000,
     "isDiscountActive": false,
     "promotionStart": "2025-11-25T09:00:00",
-    "promotionEnd": "2025-11-30T23:59:00",
+    "promotionEnd": "2025-12-19T12:00:00",
     "stockQuantity": 180,
     "image":
         "https://afamilycdn.com/150157425591193600/2020/5/24/645483051653747964756109679380404637534-1590297625633217748952.jpg",
@@ -2592,6 +2918,15 @@ final List<Map<String, dynamic>> productList = [
 
 6. Sử dụng hàng ngày, sáng và tối.
 ''',
+    "skinTypeTags": ["da thường", "da khô", "da hỗn hợp", "da nhạy cảm"],
+    "skinConcerns": [
+      "mất nước",
+      "khô ráp",
+      "làm sạch lớp trang điểm",
+      "bụi bẩn",
+    ],
+    "recommendationScore": 95,
+    "ageGroup": ["18-25", "25-40", "40+"],
   },
   {
     "id": "SP053",
@@ -2602,7 +2937,7 @@ final List<Map<String, dynamic>> productList = [
     "discountPrice": 280000,
     "isDiscountActive": true,
     "promotionStart": "2025-11-25T09:00:00",
-    "promotionEnd": "2025-11-30T23:59:00",
+    "promotionEnd": "2025-12-19T12:00:00",
     "stockQuantity": 220,
     "image":
         "https://media.hcdn.vn/catalog/product/k/e/kem-chong-nang-klairs-mong-nhe-cho-da-nhay-cam-80ml-3_img_450x450_31d6f9_fit_center.jpg",
@@ -2642,6 +2977,10 @@ final List<Map<String, dynamic>> productList = [
 
 5. Sử dụng hàng ngày để bảo vệ da tối ưu.
 ''',
+    "skinTypeTags": ["da thường", "da khô", "da hỗn hợp", "da nhạy cảm"],
+    "skinConcerns": ["cháy nắng", "xỉn màu", "lão hóa sớm", "mất nước"],
+    "recommendationScore": 94,
+    "ageGroup": ["18-25", "25-40", "40+"],
   },
   {
     "id": "SP054",
@@ -2652,7 +2991,7 @@ final List<Map<String, dynamic>> productList = [
     "discountPrice": 176000,
     "isDiscountActive": true,
     "promotionStart": "2025-11-25T09:00:00",
-    "promotionEnd": "2025-11-30T23:59:00",
+    "promotionEnd": "2025-12-19T12:00:00",
     "stockQuantity": 250,
     "image":
         "https://mint07.com/wp-content/uploads/2017/06/tay-trang-neutrogena-oil-free-eye-make-remover-162ml-1-1.jpg",
@@ -2690,6 +3029,15 @@ final List<Map<String, dynamic>> productList = [
 
 5. Không cần rửa lại bằng nước, nhưng có thể rửa nếu muốn.
 ''',
+    "skinTypeTags": ["da thường", "da dầu", "da hỗn hợp", "da nhạy cảm"],
+    "skinConcerns": [
+      "làm sạch lớp trang điểm mắt",
+      "bụi bẩn",
+      "nhạy cảm vùng mắt",
+      "khô ráp",
+    ],
+    "recommendationScore": 93,
+    "ageGroup": ["18-25", "25-40", "40+"],
   },
   {
     "id": "SP055",
@@ -2700,7 +3048,7 @@ final List<Map<String, dynamic>> productList = [
     "discountPrice": 2800000,
     "isDiscountActive": true,
     "promotionStart": "2025-11-25T09:00:00",
-    "promotionEnd": "2025-11-30T23:59:00",
+    "promotionEnd": "2025-12-19T12:00:00",
     "stockQuantity": 120,
     "image":
         "https://dalieushop.com/wp-content/uploads/2023/09/354928450-2608685342617115-2482947689745453701-n.jpg",
@@ -2738,6 +3086,10 @@ final List<Map<String, dynamic>> productList = [
 
 5. Bảo quản nơi khô ráo, tránh ánh sáng trực tiếp để giữ ổn định Vitamin C.
 ''',
+    "skinTypeTags": ["da thường", "da khô", "da hỗn hợp"],
+    "skinConcerns": ["lão hóa sớm", "xỉn màu", "thiếu độ đàn hồi", "nếp nhăn"],
+    "recommendationScore": 97,
+    "ageGroup": ["25-40", "40+"],
   },
   {
     "id": "SP056",
@@ -2748,7 +3100,7 @@ final List<Map<String, dynamic>> productList = [
     "discountPrice": 115000,
     "isDiscountActive": false,
     "promotionStart": "2025-11-25T09:00:00",
-    "promotionEnd": "2025-11-30T23:59:00",
+    "promotionEnd": "2025-12-19T12:00:00",
     "stockQuantity": 250,
     "image":
         "https://file.hstatic.net/1000360941/file/a1_0be0d05c56eb4cb7a8c9d92fd18b42f1.jpg",
@@ -2787,6 +3139,10 @@ final List<Map<String, dynamic>> productList = [
 
 5. Có thể dùng làm lotion mask để cấp ẩm tức thì.
 ''',
+    "skinTypeTags": ["da thường", "da khô", "da hỗn hợp", "da nhạy cảm"],
+    "skinConcerns": ["mất nước", "khô ráp", "nhạy cảm", "xỉn màu"],
+    "recommendationScore": 93,
+    "ageGroup": ["18-25", "25-40", "40+"],
   },
   {
     "id": "SP057",
@@ -2797,7 +3153,7 @@ final List<Map<String, dynamic>> productList = [
     "discountPrice": 621000,
     "isDiscountActive": true,
     "promotionStart": "2025-11-25T09:00:00",
-    "promotionEnd": "2025-11-30T23:59:00",
+    "promotionEnd": "2025-12-19T12:00:00",
     "stockQuantity": 180,
     "image":
         "https://file.hstatic.net/1000223746/file/paulas_choice_omega_complex_moisturizer1_d1e528f2b3ef4e099af29a4442924e00_grande.jpg",
@@ -2835,6 +3191,10 @@ final List<Map<String, dynamic>> productList = [
 
 5. Kết hợp với serum Paula’s Choice để tăng hiệu quả phục hồi.
 ''',
+    "skinTypeTags": ["da thường", "da khô", "da hỗn hợp", "da nhạy cảm"],
+    "skinConcerns": ["mất nước", "khô ráp", "thiếu độ đàn hồi", "lão hóa sớm"],
+    "recommendationScore": 95,
+    "ageGroup": ["25-40", "40+"],
   },
   {
     "id": "SP058",
@@ -2845,7 +3205,7 @@ final List<Map<String, dynamic>> productList = [
     "discountPrice": 420000,
     "isDiscountActive": false,
     "promotionStart": "2025-11-25T09:00:00",
-    "promotionEnd": "2025-11-30T23:59:00",
+    "promotionEnd": "2025-12-19T12:00:00",
     "stockQuantity": 200,
     "image": "https://nanabeauty.com.vn/upload/product/686566847108.jpg",
     "promotion": "Tặng 1 sample",
@@ -2882,6 +3242,10 @@ final List<Map<String, dynamic>> productList = [
 
 5. Kết hợp với kem dưỡng Laneige để tăng hiệu quả phục hồi.
 ''',
+    "skinTypeTags": ["da thường", "da khô", "da hỗn hợp", "da nhạy cảm"],
+    "skinConcerns": ["mất nước", "khô ráp", "xỉn màu", "thiếu độ đàn hồi"],
+    "recommendationScore": 95,
+    "ageGroup": ["18-25", "25-40", "40+"],
   },
   {
     "id": "SP059",
@@ -2892,7 +3256,7 @@ final List<Map<String, dynamic>> productList = [
     "discountPrice": 250000,
     "isDiscountActive": true,
     "promotionStart": "2025-11-25T09:00:00",
-    "promotionEnd": "2025-11-30T23:59:00",
+    "promotionEnd": "2025-12-19T12:00:00",
     "stockQuantity": 220,
     "image":
         "https://boribeauty.com/wp-content/uploads/2023/07/gel-rua-mat-3.jpg",
@@ -2932,6 +3296,16 @@ final List<Map<String, dynamic>> productList = [
 
 6. Kết hợp với toner và kem dưỡng SVR để tăng hiệu quả kiểm soát dầu.
 ''',
+    "skinTypeTags": ["da dầu", "da hỗn hợp", "da mụn"],
+    "skinConcerns": [
+      "mụn viêm",
+      "mụn đầu đen",
+      "mụn ẩn",
+      "lỗ chân lông to",
+      "da tiết dầu nhiều",
+    ],
+    "recommendationScore": 95,
+    "ageGroup": ["18-25", "25-40"],
   },
   {
     "id": "SP060",
@@ -2942,7 +3316,7 @@ final List<Map<String, dynamic>> productList = [
     "discountPrice": 366000,
     "isDiscountActive": true,
     "promotionStart": "2025-11-25T09:00:00",
-    "promotionEnd": "2025-11-30T23:59:00",
+    "promotionEnd": "2025-12-19T12:00:00",
     "stockQuantity": 180,
     "image":
         "https://myphamhangnga.com/wp-content/uploads/2019/11/xit-chong-nang-avene-very-high-protection-spray-1_result.jpg",
@@ -2981,6 +3355,16 @@ final List<Map<String, dynamic>> productList = [
 
 5. Sử dụng hàng ngày để bảo vệ da tối ưu.
 ''',
+    "skinTypeTags": ["da thường", "da khô", "da hỗn hợp", "da nhạy cảm"],
+    "skinConcerns": [
+      "cháy nắng",
+      "xỉn màu",
+      "lão hóa sớm",
+      "mất nước",
+      "kích ứng do tia UV",
+    ],
+    "recommendationScore": 94,
+    "ageGroup": ["18-25", "25-40", "40+"],
   },
   {
     "id": "SP061",
@@ -2991,7 +3375,7 @@ final List<Map<String, dynamic>> productList = [
     "discountPrice": 193500,
     "isDiscountActive": true,
     "promotionStart": "2025-11-25T09:00:00",
-    "promotionEnd": "2025-11-30T23:59:00",
+    "promotionEnd": "2025-12-19T12:00:00",
     "stockQuantity": 200,
     "image":
         "https://www.guardian.com.vn/media/wysiwyg/ml-2_e35c3c3db95d45d9a5a06fb32634e631_4f9632927fc74c4d8f4b714a8c5e9ebf_75d6c265eb92432e866c44295be4b62a_axifyrjg0gremfiv.jpg",
@@ -3029,6 +3413,10 @@ final List<Map<String, dynamic>> productList = [
 
 5. Kết hợp với kem dưỡng Garnier để tăng hiệu quả làm sáng da.
 ''',
+    "skinTypeTags": ["da thường", "da dầu", "da hỗn hợp"],
+    "skinConcerns": ["xỉn màu", "thâm nám", "không đều màu", "lão hóa sớm"],
+    "recommendationScore": 93,
+    "ageGroup": ["18-25", "25-40"],
   },
   {
     "id": "SP062",
@@ -3039,7 +3427,7 @@ final List<Map<String, dynamic>> productList = [
     "discountPrice": 230000,
     "isDiscountActive": true,
     "promotionStart": "2025-11-25T09:00:00",
-    "promotionEnd": "2025-11-30T23:59:00",
+    "promotionEnd": "2025-12-19T12:00:00",
     "stockQuantity": 220,
     "image":
         "https://media.hcdn.vn/wysiwyg/kimhuy/dung-dich-duong-am-toi-uu-hada-labo-170ml-1.jpg",
@@ -3078,6 +3466,10 @@ final List<Map<String, dynamic>> productList = [
 
 5. Có thể dùng làm lotion mask để cấp ẩm tức thì.
 ''',
+    "skinTypeTags": ["da thường", "da khô", "da hỗn hợp", "da nhạy cảm"],
+    "skinConcerns": ["mất nước", "khô ráp", "thiếu độ đàn hồi", "xỉn màu"],
+    "recommendationScore": 95,
+    "ageGroup": ["18-25", "25-40", "40+"],
   },
   {
     "id": "SP063",
@@ -3088,7 +3480,7 @@ final List<Map<String, dynamic>> productList = [
     "discountPrice": 490000,
     "isDiscountActive": true,
     "promotionStart": "2025-11-25T09:00:00",
-    "promotionEnd": "2025-11-30T23:59:00",
+    "promotionEnd": "2025-12-19T12:00:00",
     "stockQuantity": 180,
     "image":
         "https://product.hstatic.net/1000006063/product/vn-11134207-7r98o-lrcle9a1yzes68_cdc73efe848f424e81096946cdfb0878_grande.jpg",
@@ -3126,6 +3518,10 @@ final List<Map<String, dynamic>> productList = [
 
 5. Kết hợp với serum Olay để tăng hiệu quả chống lão hóa.
 ''',
+    "skinTypeTags": ["da thường", "da khô", "da hỗn hợp"],
+    "skinConcerns": ["lão hóa sớm", "nếp nhăn", "thiếu độ đàn hồi", "xỉn màu"],
+    "recommendationScore": 96,
+    "ageGroup": ["25-40", "40+"],
   },
   {
     "id": "SP064",
@@ -3136,7 +3532,7 @@ final List<Map<String, dynamic>> productList = [
     "discountPrice": 80000,
     "isDiscountActive": true,
     "promotionStart": "2025-11-25T09:00:00",
-    "promotionEnd": "2025-11-30T23:59:00",
+    "promotionEnd": "2025-12-19T12:00:00",
     "stockQuantity": 300,
     "image": "https://mint07.com/wp-content/uploads/2015/10/chanh-bac-ha.jpg",
     "promotion": null,
@@ -3173,6 +3569,15 @@ final List<Map<String, dynamic>> productList = [
 
 5. Kết hợp với toner Freeman để tăng hiệu quả chăm sóc da.
 ''',
+    "skinTypeTags": ["da dầu", "da hỗn hợp", "da thường"],
+    "skinConcerns": [
+      "mụn đầu đen",
+      "mụn ẩn",
+      "lỗ chân lông to",
+      "da tiết dầu nhiều",
+    ],
+    "recommendationScore": 92,
+    "ageGroup": ["18-25", "25-40"],
   },
   {
     "id": "SP065",
@@ -3183,7 +3588,7 @@ final List<Map<String, dynamic>> productList = [
     "discountPrice": 71250,
     "isDiscountActive": true,
     "promotionStart": "2025-11-25T09:00:00",
-    "promotionEnd": "2025-11-30T23:59:00",
+    "promotionEnd": "2025-12-19T12:00:00",
     "stockQuantity": 300,
     "image":
         "https://laskin.vn/wp-content/uploads/2022/11/sua-rua-mat-pond-s-lam-sang-da-n-2.jpg",
@@ -3223,6 +3628,10 @@ final List<Map<String, dynamic>> productList = [
 
 6. Kết hợp với toner Pond’s để tăng hiệu quả làm sáng da.
 ''',
+    "skinTypeTags": ["da dầu", "da hỗn hợp", "da thường"],
+    "skinConcerns": ["xỉn màu", "bụi bẩn", "mụn đầu đen", "da tiết dầu nhiều"],
+    "recommendationScore": 91,
+    "ageGroup": ["18-25", "25-40"],
   },
   {
     "id": "SP066",
@@ -3233,7 +3642,7 @@ final List<Map<String, dynamic>> productList = [
     "discountPrice": 175000,
     "isDiscountActive": false,
     "promotionStart": "2025-11-25T09:00:00",
-    "promotionEnd": "2025-11-30T23:59:00",
+    "promotionEnd": "2025-12-19T12:00:00",
     "stockQuantity": 200,
     "image":
         "https://file.hstatic.net/1000360941/file/a2_4e0246972f944b0384d5dce3bd0a113e.jpg",
@@ -3272,6 +3681,10 @@ final List<Map<String, dynamic>> productList = [
 
 5. Sử dụng hàng ngày để bảo vệ da tối ưu.
 ''',
+    "skinTypeTags": ["da thường", "da khô", "da hỗn hợp", "da dầu"],
+    "skinConcerns": ["cháy nắng", "xỉn màu", "lão hóa sớm", "mất nước"],
+    "recommendationScore": 93,
+    "ageGroup": ["18-25", "25-40", "40+"],
   },
   {
     "id": "SP067",
@@ -3282,7 +3695,7 @@ final List<Map<String, dynamic>> productList = [
     "discountPrice": 125000,
     "isDiscountActive": false,
     "promotionStart": "2025-11-25T09:00:00",
-    "promotionEnd": "2025-11-30T23:59:00",
+    "promotionEnd": "2025-12-19T12:00:00",
     "stockQuantity": 280,
     "image":
         "https://cdn.hstatic.net/products/200000530637/93ab1796-4dca-4c3f-8957-ce58e1d30bac_0c11758b5d5c493d804eac9896bfc9b7_large.jpg",
@@ -3320,6 +3733,21 @@ final List<Map<String, dynamic>> productList = [
 
 5. Có thể dùng cho vùng mắt và môi.
 ''',
+    "skinTypeTags": [
+      "da thường",
+      "da khô",
+      "da dầu",
+      "da hỗn hợp",
+      "da nhạy cảm",
+    ],
+    "skinConcerns": [
+      "làm sạch lớp trang điểm",
+      "bụi bẩn",
+      "mất nước",
+      "nhạy cảm",
+    ],
+    "recommendationScore": 92,
+    "ageGroup": ["18-25", "25-40", "40+"],
   },
   {
     "id": "SP068",
@@ -3330,7 +3758,7 @@ final List<Map<String, dynamic>> productList = [
     "discountPrice": 375000,
     "isDiscountActive": true,
     "promotionStart": "2025-11-25T09:00:00",
-    "promotionEnd": "2025-11-30T23:59:00",
+    "promotionEnd": "2025-12-19T12:00:00",
     "stockQuantity": 180,
     "image":
         "https://media.hcdn.vn/wysiwyg/Chau/serum-l-oreal-paris-duong-sang-va-mo-tham-nam-30ml-1.jpg",
@@ -3368,6 +3796,10 @@ final List<Map<String, dynamic>> productList = [
 
 5. Kết hợp với kem dưỡng L’Oreal để tăng hiệu quả làm sáng da.
 ''',
+    "skinTypeTags": ["da thường", "da dầu", "da hỗn hợp"],
+    "skinConcerns": ["xỉn màu", "thâm nám", "không đều màu", "lão hóa sớm"],
+    "recommendationScore": 92,
+    "ageGroup": ["18-25", "25-40"],
   },
   {
     "id": "SP069",
@@ -3378,7 +3810,7 @@ final List<Map<String, dynamic>> productList = [
     "discountPrice": 89100,
     "isDiscountActive": true,
     "promotionStart": "2025-11-25T09:00:00",
-    "promotionEnd": "2025-11-30T23:59:00",
+    "promotionEnd": "2025-12-19T12:00:00",
     "stockQuantity": 250,
     "image":
         "https://product.hstatic.net/200000736563/product/upload_3e6c4d03cead49fab69006b02c2d4fef_master.jpg",
@@ -3416,6 +3848,16 @@ final List<Map<String, dynamic>> productList = [
 
 5. Có thể dùng làm lotion mask để cấp ẩm tức thì.
 ''',
+    "skinTypeTags": [
+      "da thường",
+      "da khô",
+      "da dầu",
+      "da hỗn hợp",
+      "da nhạy cảm",
+    ],
+    "skinConcerns": ["mất nước", "khô ráp", "nhạy cảm", "xỉn màu"],
+    "recommendationScore": 91,
+    "ageGroup": ["18-25", "25-40", "40+"],
   },
   {
     "id": "SP070",
@@ -3426,7 +3868,7 @@ final List<Map<String, dynamic>> productList = [
     "discountPrice": 280000,
     "isDiscountActive": true,
     "promotionStart": "2025-11-25T09:00:00",
-    "promotionEnd": "2025-11-30T23:59:00",
+    "promotionEnd": "2025-12-19T12:00:00",
     "stockQuantity": 200,
     "image":
         "https://media.hcdn.vn/wysiwyg/kimhuy/kem-duong-da-pond-s-ngan-ngua-lao-hoa-50g-3_1.jpg",
@@ -3464,6 +3906,10 @@ final List<Map<String, dynamic>> productList = [
 
 5. Kết hợp với serum Pond’s để tăng hiệu quả chống lão hóa.
 ''',
+    "skinTypeTags": ["da thường", "da khô", "da hỗn hợp"],
+    "skinConcerns": ["lão hóa sớm", "nếp nhăn", "xỉn màu", "thiếu độ đàn hồi"],
+    "recommendationScore": 92,
+    "ageGroup": ["25-40", "40+"],
   },
   {
     "id": "SP071",
@@ -3474,7 +3920,7 @@ final List<Map<String, dynamic>> productList = [
     "discountPrice": 25000,
     "isDiscountActive": false,
     "promotionStart": "2025-11-25T09:00:00",
-    "promotionEnd": "2025-11-30T23:59:00",
+    "promotionEnd": "2025-12-19T12:00:00",
     "stockQuantity": 600,
     "image":
         "https://adminbeauty.hvnet.vn/Upload/images/review-danh-gia-mat-na-giay-innisfree-its-real-squeeze-mask-hinh-anh-2.jpg",
@@ -3514,6 +3960,22 @@ final List<Map<String, dynamic>> productList = [
 
 6. Sử dụng 2–3 lần/tuần để duy trì làn da khỏe mạnh.
 ''',
+    "skinTypeTags": [
+      "da thường",
+      "da khô",
+      "da dầu",
+      "da hỗn hợp",
+      "da nhạy cảm",
+    ],
+    "skinConcerns": [
+      "mất nước",
+      "xỉn màu",
+      "khô ráp",
+      "mụn nhẹ",
+      "thiếu độ đàn hồi",
+    ],
+    "recommendationScore": 92,
+    "ageGroup": ["18-25", "25-40"],
   },
   {
     "id": "SP072",
@@ -3524,7 +3986,7 @@ final List<Map<String, dynamic>> productList = [
     "discountPrice": 65000,
     "isDiscountActive": false,
     "promotionStart": "2025-11-25T09:00:00",
-    "promotionEnd": "2025-11-30T23:59:00",
+    "promotionEnd": "2025-12-19T12:00:00",
     "stockQuantity": 300,
     "image":
         "https://media.hcdn.vn/wysiwyg/Chau/sua-rua-mat-clean-clear-100g-1.jpg",
@@ -3563,6 +4025,10 @@ final List<Map<String, dynamic>> productList = [
 
 6. Kết hợp với toner Clean & Clear để tăng hiệu quả kiểm soát dầu.
 ''',
+    "skinTypeTags": ["da dầu", "da hỗn hợp", "da thường"],
+    "skinConcerns": ["mụn đầu đen", "mụn ẩn", "da tiết dầu nhiều", "bụi bẩn"],
+    "recommendationScore": 90,
+    "ageGroup": ["18-25", "25-40"],
   },
   {
     "id": "SP073",
@@ -3573,7 +4039,7 @@ final List<Map<String, dynamic>> productList = [
     "discountPrice": 137750,
     "isDiscountActive": true,
     "promotionStart": "2025-11-25T09:00:00",
-    "promotionEnd": "2025-11-30T23:59:00",
+    "promotionEnd": "2025-12-19T12:00:00",
     "stockQuantity": 220,
     "image":
         "https://product.hstatic.net/200000551679/product/sunplay_sua_chong_nang_skin_aqua_clear_white__1__1d343f3cc7b0463b97af275329a06c53_1024x1024.jpg",
@@ -3612,6 +4078,22 @@ final List<Map<String, dynamic>> productList = [
 
 5. Sử dụng hàng ngày để bảo vệ da tối ưu.
 ''',
+    "skinTypeTags": [
+      "da thường",
+      "da khô",
+      "da dầu",
+      "da hỗn hợp",
+      "da nhạy cảm",
+    ],
+    "skinConcerns": [
+      "cháy nắng",
+      "xỉn màu",
+      "lão hóa sớm",
+      "mất nước",
+      "kích ứng do tia UV",
+    ],
+    "recommendationScore": 93,
+    "ageGroup": ["18-25", "25-40", "40+"],
   },
   {
     "id": "SP074",
@@ -3622,7 +4104,7 @@ final List<Map<String, dynamic>> productList = [
     "discountPrice": 128000,
     "isDiscountActive": true,
     "promotionStart": "2025-11-25T09:00:00",
-    "promotionEnd": "2025-11-30T23:59:00",
+    "promotionEnd": "2025-12-19T12:00:00",
     "stockQuantity": 280,
     "image": "https://media.hcdn.vn/wysiwyg/Chau/nuoc-tay-trang-nivea-3.jpg",
     "promotion": null,
@@ -3659,6 +4141,21 @@ final List<Map<String, dynamic>> productList = [
 
 5. Có thể dùng cho vùng mắt và môi.
 ''',
+    "skinTypeTags": [
+      "da thường",
+      "da khô",
+      "da dầu",
+      "da hỗn hợp",
+      "da nhạy cảm",
+    ],
+    "skinConcerns": [
+      "làm sạch lớp trang điểm",
+      "bụi bẩn",
+      "mất nước",
+      "nhạy cảm",
+    ],
+    "recommendationScore": 92,
+    "ageGroup": ["18-25", "25-40", "40+"],
   },
   {
     "id": "SP075",
@@ -3669,7 +4166,7 @@ final List<Map<String, dynamic>> productList = [
     "discountPrice": 295000,
     "isDiscountActive": false,
     "promotionStart": "2025-11-25T09:00:00",
-    "promotionEnd": "2025-11-30T23:59:00",
+    "promotionEnd": "2025-12-19T12:00:00",
     "stockQuantity": 200,
     "image":
         "https://www.shopnhatchaly.com/wp-content/uploads/2023/05/Serum-Melano-CC-Vitamin-C-Rohto-noi-dia-Nhat.jpg",
@@ -3707,6 +4204,10 @@ final List<Map<String, dynamic>> productList = [
 
 5. Kết hợp với kem dưỡng Rohto để tăng hiệu quả làm sáng da.
 ''',
+    "skinTypeTags": ["da thường", "da dầu", "da hỗn hợp"],
+    "skinConcerns": ["thâm nám", "xỉn màu", "không đều màu", "mụn viêm nhẹ"],
+    "recommendationScore": 93,
+    "ageGroup": ["18-25", "25-40"],
   },
   {
     "id": "SP076",
@@ -3717,7 +4218,7 @@ final List<Map<String, dynamic>> productList = [
     "discountPrice": 280000,
     "isDiscountActive": true,
     "promotionStart": "2025-11-25T09:00:00",
-    "promotionEnd": "2025-11-30T23:59:00",
+    "promotionEnd": "2025-12-19T12:00:00",
     "stockQuantity": 220,
     "image":
         "https://www.dermacolvietnam.net/wp-content/uploads/2025/03/481235977_971797275095827_2438069365694181920_n.jpeg",
@@ -3755,6 +4256,16 @@ final List<Map<String, dynamic>> productList = [
 
 5. Có thể dùng làm lotion mask cho vùng da sần sùi.
 ''',
+    "skinTypeTags": ["da thường", "da dầu", "da hỗn hợp"],
+    "skinConcerns": [
+      "xỉn màu",
+      "không đều màu",
+      "mụn đầu đen",
+      "lỗ chân lông to",
+      "lão hóa sớm",
+    ],
+    "recommendationScore": 93,
+    "ageGroup": ["18-25", "25-40"],
   },
   {
     "id": "SP077",
@@ -3765,7 +4276,7 @@ final List<Map<String, dynamic>> productList = [
     "discountPrice": 103500,
     "isDiscountActive": true,
     "promotionStart": "2025-11-25T09:00:00",
-    "promotionEnd": "2025-11-30T23:59:00",
+    "promotionEnd": "2025-12-19T12:00:00",
     "stockQuantity": 300,
     "image":
         "https://bonita.vn/wp-content/uploads/2020/06/484112988_540651489060161_96737132551202892_n.jpg",
@@ -3801,6 +4312,10 @@ final List<Map<String, dynamic>> productList = [
 
 4. Kết hợp với sữa tắm Vaseline để tăng hiệu quả dưỡng trắng.
 ''',
+    "skinTypeTags": ["da thường", "da khô", "da dầu", "da hỗn hợp"],
+    "skinConcerns": ["xỉn màu", "khô ráp", "mất nước", "lão hóa sớm"],
+    "recommendationScore": 91,
+    "ageGroup": ["18-25", "25-40", "40+"],
   },
   {
     "id": "SP078",
@@ -3811,7 +4326,7 @@ final List<Map<String, dynamic>> productList = [
     "discountPrice": 400000,
     "isDiscountActive": true,
     "promotionStart": "2025-11-25T09:00:00",
-    "promotionEnd": "2025-11-30T23:59:00",
+    "promotionEnd": "2025-12-19T12:00:00",
     "stockQuantity": 180,
     "image":
         "https://sg-live-01.slatic.net/p/909b7d7f3d512f979909913e20450b2f.jpg_525x525q80.jpg",
@@ -3849,6 +4364,16 @@ final List<Map<String, dynamic>> productList = [
 
 5. Kết hợp với toner Lush để tăng hiệu quả chăm sóc da.
 ''',
+    "skinTypeTags": ["da dầu", "da hỗn hợp", "da thường"],
+    "skinConcerns": [
+      "mụn đầu đen",
+      "mụn ẩn",
+      "lỗ chân lông to",
+      "da tiết dầu nhiều",
+      "xỉn màu",
+    ],
+    "recommendationScore": 93,
+    "ageGroup": ["18-25", "25-40"],
   },
   {
     "id": "SP079",
@@ -3859,7 +4384,7 @@ final List<Map<String, dynamic>> productList = [
     "discountPrice": 65000,
     "isDiscountActive": false,
     "promotionStart": "2025-11-25T09:00:00",
-    "promotionEnd": "2025-11-30T23:59:00",
+    "promotionEnd": "2025-12-19T12:00:00",
     "stockQuantity": 350,
     "image":
         "https://cdn.hstatic.net/products/1000006063/6_5b2402bff3234653b60fac1d364a4ce7_1024x1024.jpg",
@@ -3898,6 +4423,15 @@ final List<Map<String, dynamic>> productList = [
 
 6. Kết hợp với toner Acnes để tăng hiệu quả kiểm soát dầu.
 ''',
+    "skinTypeTags": ["da dầu", "da hỗn hợp", "da thường"],
+    "skinConcerns": [
+      "mụn viêm nhẹ",
+      "mụn đầu đen",
+      "mụn ẩn",
+      "da tiết dầu nhiều",
+    ],
+    "recommendationScore": 90,
+    "ageGroup": ["18-25", "25-40"],
   },
   {
     "id": "SP080",
@@ -3908,7 +4442,7 @@ final List<Map<String, dynamic>> productList = [
     "discountPrice": 380000,
     "isDiscountActive": true,
     "promotionStart": "2025-11-25T09:00:00",
-    "promotionEnd": "2025-11-30T23:59:00",
+    "promotionEnd": "2025-12-19T12:00:00",
     "stockQuantity": 200,
     "image":
         "https://mint07.com/wp-content/uploads/2021/06/kem-chong-nang-cell-fusion-c-laser-sunscreen-100-spf-50-pa-5-1.jpg",
@@ -3945,6 +4479,22 @@ final List<Map<String, dynamic>> productList = [
 
 4. Sử dụng hàng ngày để bảo vệ da tối ưu, đặc biệt sau điều trị laser.
 ''',
+    "skinTypeTags": [
+      "da thường",
+      "da khô",
+      "da dầu",
+      "da hỗn hợp",
+      "da nhạy cảm",
+    ],
+    "skinConcerns": [
+      "cháy nắng",
+      "kích ứng sau laser",
+      "lão hóa sớm",
+      "xỉn màu",
+      "mất nước",
+    ],
+    "recommendationScore": 94,
+    "ageGroup": ["18-25", "25-40", "40+"],
   },
   {
     "id": "SP081",
@@ -3955,7 +4505,7 @@ final List<Map<String, dynamic>> productList = [
     "discountPrice": 378000,
     "isDiscountActive": true,
     "promotionStart": "2025-11-25T09:00:00",
-    "promotionEnd": "2025-11-30T23:59:00",
+    "promotionEnd": "2025-12-19T12:00:00",
     "stockQuantity": 180,
     "image":
         "https://www.innisfree.vn/static/upload/product/product/99_ID0101_2.jpg",
@@ -3991,6 +4541,15 @@ final List<Map<String, dynamic>> productList = [
 
 4. Dùng liên tục ít nhất 4 tuần để thấy hiệu quả rõ rệt.
 ''',
+    "skinTypeTags": ["da thường", "da dầu", "da hỗn hợp"],
+    "skinConcerns": [
+      "xỉn màu",
+      "lỗ chân lông to",
+      "không đều màu",
+      "thâm nám nhẹ",
+    ],
+    "recommendationScore": 92,
+    "ageGroup": ["18-25", "25-40"],
   },
   {
     "id": "SP082",
@@ -4001,7 +4560,7 @@ final List<Map<String, dynamic>> productList = [
     "discountPrice": 230000,
     "isDiscountActive": true,
     "promotionStart": "2025-11-25T09:00:00",
-    "promotionEnd": "2025-11-30T23:59:00",
+    "promotionEnd": "2025-12-19T12:00:00",
     "stockQuantity": 220,
     "image":
         "https://salt.tikicdn.com/cache/w300/ts/product/b0/7a/24/a76895a37d029abfe9007cdf953ef6b3.jpg",
@@ -4039,6 +4598,22 @@ final List<Map<String, dynamic>> productList = [
 
 5. Có thể dùng làm lotion mask để cấp ẩm tức thì.
 ''',
+    "skinTypeTags": [
+      "da thường",
+      "da khô",
+      "da dầu",
+      "da hỗn hợp",
+      "da nhạy cảm",
+    ],
+    "skinConcerns": [
+      "nhạy cảm",
+      "mụn viêm nhẹ",
+      "mất nước",
+      "đỏ rát",
+      "kích ứng",
+    ],
+    "recommendationScore": 94,
+    "ageGroup": ["18-25", "25-40", "40+"],
   },
   {
     "id": "SP083",
@@ -4049,7 +4624,7 @@ final List<Map<String, dynamic>> productList = [
     "discountPrice": 395000,
     "isDiscountActive": false,
     "promotionStart": "2025-11-25T09:00:00",
-    "promotionEnd": "2025-11-30T23:59:00",
+    "promotionEnd": "2025-12-19T12:00:00",
     "stockQuantity": 180,
     "image":
         "https://fmccosmetics.com.vn/image/upload/catalog/san-pham/duong-am/kem-duong-am-cho-da-bong-troc-kinh-nien-hon-tran-svr-hydraliane-riche-40ml-1000x1000.jpg",
@@ -4085,6 +4660,10 @@ final List<Map<String, dynamic>> productList = [
 
 4. Có thể dùng làm lớp khóa ẩm cuối cùng trong chu trình dưỡng da.
 ''',
+    "skinTypeTags": ["da khô", "da thường", "da hỗn hợp", "da nhạy cảm"],
+    "skinConcerns": ["mất nước", "khô ráp", "thiếu độ đàn hồi", "nhạy cảm"],
+    "recommendationScore": 94,
+    "ageGroup": ["25-40", "40+"],
   },
   {
     "id": "SP084",
@@ -4095,7 +4674,7 @@ final List<Map<String, dynamic>> productList = [
     "discountPrice": 30000,
     "isDiscountActive": true,
     "promotionStart": "2025-11-25T09:00:00",
-    "promotionEnd": "2025-11-30T23:59:00",
+    "promotionEnd": "2025-12-19T12:00:00",
     "stockQuantity": 500,
     "image":
         "https://media.hcdn.vn/wysiwyg/HaNguyen/mat-na-dr-jart-duong-da-4.jpg",
@@ -4133,6 +4712,22 @@ final List<Map<String, dynamic>> productList = [
 
 5. Không cần rửa lại bằng nước, tiếp tục các bước dưỡng da sau đó.
 ''',
+    "skinTypeTags": [
+      "da thường",
+      "da khô",
+      "da dầu",
+      "da hỗn hợp",
+      "da nhạy cảm",
+    ],
+    "skinConcerns": [
+      "mất nước",
+      "khô ráp",
+      "thiếu độ đàn hồi",
+      "xỉn màu",
+      "nhạy cảm",
+    ],
+    "recommendationScore": 94,
+    "ageGroup": ["18-25", "25-40", "40+"],
   },
   {
     "id": "SP085",
@@ -4143,7 +4738,7 @@ final List<Map<String, dynamic>> productList = [
     "discountPrice": 280000,
     "isDiscountActive": true,
     "promotionStart": "2025-11-25T09:00:00",
-    "promotionEnd": "2025-11-30T23:59:00",
+    "promotionEnd": "2025-12-19T12:00:00",
     "stockQuantity": 220,
     "image":
         "https://media.hcdn.vn/catalog/product/f/a/facebook-dynamic-gel-rua-mat-tao-bot-la-roche-posay-danh-cho-da-dau-nhay-cam-200ml-1716603223_img_450x450_31d6f9_fit_center.jpg",
@@ -4183,6 +4778,16 @@ final List<Map<String, dynamic>> productList = [
 
 6. Kết hợp với toner La Roche-Posay để tăng hiệu quả kiểm soát dầu.
 ''',
+    "skinTypeTags": ["da dầu", "da hỗn hợp", "da thường"],
+    "skinConcerns": [
+      "mụn viêm nhẹ",
+      "mụn đầu đen",
+      "mụn ẩn",
+      "da tiết dầu nhiều",
+      "lỗ chân lông to",
+    ],
+    "recommendationScore": 94,
+    "ageGroup": ["18-25", "25-40"],
   },
   {
     "id": "SP086",
@@ -4193,7 +4798,7 @@ final List<Map<String, dynamic>> productList = [
     "discountPrice": 295000,
     "isDiscountActive": true,
     "promotionStart": "2025-11-25T09:00:00",
-    "promotionEnd": "2025-11-30T23:59:00",
+    "promotionEnd": "2025-12-19T12:00:00",
     "stockQuantity": 200,
     "image":
         "https://afamilycdn.com/150157425591193600/2021/5/8/theordinarymineraluvfilter15882246988615f89b-1620470896538458378205.jpg",
@@ -4230,6 +4835,22 @@ final List<Map<String, dynamic>> productList = [
 
 4. Sử dụng hàng ngày để bảo vệ da tối ưu.
 ''',
+    "skinTypeTags": [
+      "da thường",
+      "da khô",
+      "da dầu",
+      "da hỗn hợp",
+      "da nhạy cảm",
+    ],
+    "skinConcerns": [
+      "cháy nắng",
+      "lão hóa sớm",
+      "xỉn màu",
+      "kích ứng do tia UV",
+      "mất nước",
+    ],
+    "recommendationScore": 93,
+    "ageGroup": ["18-25", "25-40", "40+"],
   },
   {
     "id": "SP087",
@@ -4240,7 +4861,7 @@ final List<Map<String, dynamic>> productList = [
     "discountPrice": 155000,
     "isDiscountActive": false,
     "promotionStart": "2025-11-25T09:00:00",
-    "promotionEnd": "2025-11-30T23:59:00",
+    "promotionEnd": "2025-12-19T12:00:00",
     "stockQuantity": 250,
     "image":
         "https://product.hstatic.net/200000150709/product/f0e5d1a924db3f179652796f4e1fa237_d7da0d30647042d7830c61d91de0d44c.jpg",
@@ -4277,6 +4898,15 @@ final List<Map<String, dynamic>> productList = [
 
 5. Sử dụng hàng ngày, sáng và tối.
 ''',
+    "skinTypeTags": ["da thường", "da khô", "da dầu", "da hỗn hợp"],
+    "skinConcerns": [
+      "làm sạch lớp trang điểm đậm",
+      "bụi bẩn",
+      "khô ráp",
+      "xỉn màu",
+    ],
+    "recommendationScore": 92,
+    "ageGroup": ["18-25", "25-40", "40+"],
   },
   {
     "id": "SP088",
@@ -4287,7 +4917,7 @@ final List<Map<String, dynamic>> productList = [
     "discountPrice": 280000,
     "isDiscountActive": true,
     "promotionStart": "2025-11-25T09:00:00",
-    "promotionEnd": "2025-11-30T23:59:00",
+    "promotionEnd": "2025-12-19T12:00:00",
     "stockQuantity": 180,
     "image":
         "https://fmccosmetics.com.vn/image/upload/catalog/san-pham/Serum/klairs-freshly-juiced-vitamin-drop-270x270.jpg",
@@ -4323,6 +4953,10 @@ final List<Map<String, dynamic>> productList = [
 
 4. Dùng liên tục ít nhất 4 tuần để thấy hiệu quả rõ rệt.
 ''',
+    "skinTypeTags": ["da thường", "da dầu", "da hỗn hợp", "da nhạy cảm"],
+    "skinConcerns": ["xỉn màu", "không đều màu", "thâm nám nhẹ", "lão hóa sớm"],
+    "recommendationScore": 93,
+    "ageGroup": ["18-25", "25-40", "40+"],
   },
   {
     "id": "SP089",
@@ -4333,7 +4967,7 @@ final List<Map<String, dynamic>> productList = [
     "discountPrice": 193500,
     "isDiscountActive": true,
     "promotionStart": "2025-11-25T09:00:00",
-    "promotionEnd": "2025-11-30T23:59:00",
+    "promotionEnd": "2025-12-19T12:00:00",
     "stockQuantity": 250,
     "image":
         "https://product.hstatic.net/200000232425/product/upload_ab75253e5fed41a6a75cf75ff20fe4a5_master.jpg",
@@ -4371,6 +5005,16 @@ final List<Map<String, dynamic>> productList = [
 
 5. Có thể dùng làm lotion mask cho vùng da dầu.
 ''',
+    "skinTypeTags": ["da dầu", "da hỗn hợp", "da thường"],
+    "skinConcerns": [
+      "lỗ chân lông to",
+      "mụn đầu đen",
+      "mụn ẩn",
+      "da tiết dầu nhiều",
+      "xỉn màu",
+    ],
+    "recommendationScore": 92,
+    "ageGroup": ["18-25", "25-40"],
   },
   {
     "id": "SP090",
@@ -4381,7 +5025,7 @@ final List<Map<String, dynamic>> productList = [
     "discountPrice": 345000,
     "isDiscountActive": true,
     "promotionStart": "2025-11-25T09:00:00",
-    "promotionEnd": "2025-11-30T23:59:00",
+    "promotionEnd": "2025-12-19T12:00:00",
     "stockQuantity": 200,
     "image":
         "https://img.lazcdn.com/g/p/e24fb7436ed59528ae8f33c4b11e086d.jpg_720x720q80.jpg",
@@ -4417,6 +5061,15 @@ final List<Map<String, dynamic>> productList = [
 
 4. Kết hợp với kem chống nắng ban ngày để bảo vệ da.
 ''',
+    "skinTypeTags": ["da thường", "da dầu", "da hỗn hợp"],
+    "skinConcerns": [
+      "xỉn màu",
+      "không đều màu",
+      "lão hóa sớm",
+      "thiếu độ đàn hồi",
+    ],
+    "recommendationScore": 92,
+    "ageGroup": ["25-40", "40+"],
   },
   {
     "id": "SP091",
@@ -4427,7 +5080,7 @@ final List<Map<String, dynamic>> productList = [
     "discountPrice": 27000,
     "isDiscountActive": false,
     "promotionStart": "2025-11-25T09:00:00",
-    "promotionEnd": "2025-11-30T23:59:00",
+    "promotionEnd": "2025-12-19T12:00:00",
     "stockQuantity": 600,
     "image":
         "https://media.hcdn.vn/wysiwyg/HaNguyen2/mat-na-mediheal-ampoule-mask-ex-25ml-4.jpg",
@@ -4467,6 +5120,10 @@ final List<Map<String, dynamic>> productList = [
 
 6. Sử dụng 2–3 lần/tuần để duy trì làn da căng mịn.
 ''',
+    "skinTypeTags": ["da thường", "da khô", "da dầu", "da hỗn hợp"],
+    "skinConcerns": ["mất nước", "khô ráp", "xỉn màu", "thiếu độ đàn hồi"],
+    "recommendationScore": 94,
+    "ageGroup": ["18-25", "25-40", "40+"],
   },
   {
     "id": "SP092",
@@ -4477,7 +5134,7 @@ final List<Map<String, dynamic>> productList = [
     "discountPrice": 280000,
     "isDiscountActive": true,
     "promotionStart": "2025-11-25T09:00:00",
-    "promotionEnd": "2025-11-30T23:59:00",
+    "promotionEnd": "2025-12-19T12:00:00",
     "stockQuantity": 250,
     "image":
         "https://mint07.com/wp-content/uploads/2014/09/sua-rua-mat-cerave-foaming-facial-cleanser-2.jpg",
@@ -4515,6 +5172,15 @@ final List<Map<String, dynamic>> productList = [
 
 5. Sử dụng 2 lần/ngày (sáng và tối).
 ''',
+    "skinTypeTags": ["da dầu", "da hỗn hợp", "da thường"],
+    "skinConcerns": [
+      "mụn đầu đen",
+      "mụn ẩn",
+      "da tiết dầu nhiều",
+      "lỗ chân lông to",
+    ],
+    "recommendationScore": 95,
+    "ageGroup": ["18-25", "25-40", "40+"],
   },
   {
     "id": "SP093",
@@ -4525,7 +5191,7 @@ final List<Map<String, dynamic>> productList = [
     "discountPrice": 156750,
     "isDiscountActive": true,
     "promotionStart": "2025-11-25T09:00:00",
-    "promotionEnd": "2025-11-30T23:59:00",
+    "promotionEnd": "2025-12-19T12:00:00",
     "stockQuantity": 220,
     "image":
         "https://jpaddict.com/wp-content/uploads/2023/05/kem-chong-nang-biore-mau-xanh-40ml-nhat-ban.jpg",
@@ -4561,6 +5227,15 @@ final List<Map<String, dynamic>> productList = [
 
 4. Sử dụng hàng ngày để bảo vệ da tối ưu.
 ''',
+    "skinTypeTags": ["da dầu", "da hỗn hợp", "da thường"],
+    "skinConcerns": [
+      "cháy nắng",
+      "da tiết dầu nhiều",
+      "lão hóa sớm",
+      "xỉn màu",
+    ],
+    "recommendationScore": 91,
+    "ageGroup": ["18-25", "25-40"],
   },
   {
     "id": "SP094",
@@ -4571,7 +5246,7 @@ final List<Map<String, dynamic>> productList = [
     "discountPrice": 135000,
     "isDiscountActive": true,
     "promotionStart": "2025-11-25T09:00:00",
-    "promotionEnd": "2025-11-30T23:59:00",
+    "promotionEnd": "2025-12-19T12:00:00",
     "stockQuantity": 280,
     "image":
         "https://media.hcdn.vn/wysiwyg/MaiQuynh/nuoc-tay-trang-l-oreal-3.jpg",
@@ -4608,6 +5283,15 @@ final List<Map<String, dynamic>> productList = [
 
 5. Có thể dùng cho vùng mắt và môi.
 ''',
+    "skinTypeTags": ["da khô", "da thường", "da nhạy cảm"],
+    "skinConcerns": [
+      "khô ráp",
+      "mất nước",
+      "bụi bẩn",
+      "làm sạch lớp trang điểm nhẹ",
+    ],
+    "recommendationScore": 92,
+    "ageGroup": ["18-25", "25-40", "40+"],
   },
   {
     "id": "SP095",
@@ -4618,7 +5302,7 @@ final List<Map<String, dynamic>> productList = [
     "discountPrice": 295000,
     "isDiscountActive": false,
     "promotionStart": "2025-11-25T09:00:00",
-    "promotionEnd": "2025-11-30T23:59:00",
+    "promotionEnd": "2025-12-19T12:00:00",
     "stockQuantity": 200,
     "image":
         "https://vivita.cdn.vccloud.vn/wp-content/uploads/2021/07/cong-dung-the-inkey-list-hyaluronic-acid-serum.jpg",
@@ -4654,6 +5338,16 @@ final List<Map<String, dynamic>> productList = [
 
 4. Kết hợp với kem dưỡng The Inkey List để tăng hiệu quả phục hồi.
 ''',
+    "skinTypeTags": [
+      "da thường",
+      "da khô",
+      "da dầu",
+      "da hỗn hợp",
+      "da nhạy cảm",
+    ],
+    "skinConcerns": ["mất nước", "khô ráp", "thiếu độ đàn hồi", "nhạy cảm"],
+    "recommendationScore": 95,
+    "ageGroup": ["18-25", "25-40", "40+"],
   },
   {
     "id": "SP096",
@@ -4664,7 +5358,7 @@ final List<Map<String, dynamic>> productList = [
     "discountPrice": 220000,
     "isDiscountActive": true,
     "promotionStart": "2025-11-25T09:00:00",
-    "promotionEnd": "2025-11-30T23:59:00",
+    "promotionEnd": "2025-12-19T12:00:00",
     "stockQuantity": 250,
     "image":
         "https://dailyvita.vn/upload/news/content/2020/08/thayer-rose-jpg-1597722840-18082020105400.jpg",
@@ -4702,6 +5396,22 @@ final List<Map<String, dynamic>> productList = [
 
 5. Có thể dùng làm lotion mask để cấp ẩm tức thì.
 ''',
+    "skinTypeTags": [
+      "da thường",
+      "da khô",
+      "da dầu",
+      "da hỗn hợp",
+      "da nhạy cảm",
+    ],
+    "skinConcerns": [
+      "mất nước",
+      "khô ráp",
+      "nhạy cảm",
+      "xỉn màu",
+      "lỗ chân lông to",
+    ],
+    "recommendationScore": 93,
+    "ageGroup": ["18-25", "25-40", "40+"],
   },
   {
     "id": "SP097",
@@ -4712,7 +5422,7 @@ final List<Map<String, dynamic>> productList = [
     "discountPrice": 265500,
     "isDiscountActive": true,
     "promotionStart": "2025-11-25T09:00:00",
-    "promotionEnd": "2025-11-30T23:59:00",
+    "promotionEnd": "2025-12-19T12:00:00",
     "stockQuantity": 220,
     "image":
         "https://media.hcdn.vn/catalog/product/k/e/kem-duong-am-cetaphil-diu-lanh-cho-da-nhay-cam-100g-3-1723705940_img_450x450_31d6f9_fit_center.jpg",
@@ -4750,6 +5460,10 @@ final List<Map<String, dynamic>> productList = [
 
 5. Kết hợp với sữa rửa mặt Cetaphil để tăng hiệu quả dưỡng ẩm.
 ''',
+    "skinTypeTags": ["da khô", "da thường", "da nhạy cảm"],
+    "skinConcerns": ["mất nước", "khô ráp", "nhạy cảm", "thiếu độ đàn hồi"],
+    "recommendationScore": 95,
+    "ageGroup": ["18-25", "25-40", "40+"],
   },
   {
     "id": "SP098",
@@ -4760,7 +5474,7 @@ final List<Map<String, dynamic>> productList = [
     "discountPrice": 29000,
     "isDiscountActive": false,
     "promotionStart": "2025-11-25T09:00:00",
-    "promotionEnd": "2025-11-30T23:59:00",
+    "promotionEnd": "2025-12-19T12:00:00",
     "stockQuantity": 600,
     "image":
         "https://media.hcdn.vn/wysiwyg/Chau/mat-na-naruko-duong-da-chuyen-sau-25ml-4.jpg",
@@ -4800,6 +5514,22 @@ final List<Map<String, dynamic>> productList = [
 
 6. Sử dụng 2–3 lần/tuần để duy trì làn da sáng khỏe.
 ''',
+    "skinTypeTags": [
+      "da thường",
+      "da khô",
+      "da dầu",
+      "da hỗn hợp",
+      "da nhạy cảm",
+    ],
+    "skinConcerns": [
+      "mất nước",
+      "khô ráp",
+      "xỉn màu",
+      "thiếu độ đàn hồi",
+      "nhạy cảm",
+    ],
+    "recommendationScore": 93,
+    "ageGroup": ["18-25", "25-40", "40+"],
   },
   {
     "id": "SP099",
@@ -4810,7 +5540,7 @@ final List<Map<String, dynamic>> productList = [
     "discountPrice": 95000,
     "isDiscountActive": false,
     "promotionStart": "2025-11-25T09:00:00",
-    "promotionEnd": "2025-11-30T23:59:00",
+    "promotionEnd": "2025-12-19T12:00:00",
     "stockQuantity": 300,
     "image":
         "https://bonita.vn/wp-content/uploads/2019/10/386401549_23861847250120720_4360689954184444175_n.jpg",
@@ -4847,6 +5577,10 @@ final List<Map<String, dynamic>> productList = [
 
 5. Sử dụng 2 lần/ngày (sáng và tối).
 ''',
+    "skinTypeTags": ["da thường", "da khô", "da hỗn hợp"],
+    "skinConcerns": ["mất nước", "khô ráp", "thiếu độ đàn hồi", "lão hóa sớm"],
+    "recommendationScore": 91,
+    "ageGroup": ["25-40", "40+"],
   },
   {
     "id": "SP100",
@@ -4857,7 +5591,7 @@ final List<Map<String, dynamic>> productList = [
     "discountPrice": 399000,
     "isDiscountActive": true,
     "promotionStart": "2025-11-25T09:00:00",
-    "promotionEnd": "2025-11-30T23:59:00",
+    "promotionEnd": "2025-12-19T12:00:00",
     "stockQuantity": 200,
     "image":
         "https://product.hstatic.net/200000150709/product/3337871323622_fc3835e03a1740e68524a4bd5a77a52a_1024x1024_763c2a3e0a9f490492d1565c8ca9740a.jpg",
@@ -4896,6 +5630,10 @@ final List<Map<String, dynamic>> productList = [
 
 5. Sử dụng hàng ngày để bảo vệ da tối ưu.
 ''',
+    "skinTypeTags": ["da thường", "da khô", "da hỗn hợp"],
+    "skinConcerns": ["mất nước", "khô ráp", "thiếu độ đàn hồi", "lão hóa sớm"],
+    "recommendationScore": 91,
+    "ageGroup": ["25-40", "40+"],
   },
   {
     "id": "SP101",
@@ -4906,7 +5644,7 @@ final List<Map<String, dynamic>> productList = [
     "discountPrice": 890000,
     "isDiscountActive": false,
     "promotionStart": "2025-11-25T09:00:00",
-    "promotionEnd": "2025-11-30T23:59:00",
+    "promotionEnd": "2025-12-19T12:00:00",
     "stockQuantity": 150,
     "image":
         "https://cdn.vuahanghieu.com/unsafe/0x900/left/top/smart/filters:quality(90)/https://admin.vuahanghieu.com/upload/product/2022/11/serum-tre-hoa-da-vichy-liftactiv-supreme-ha-epidermic-filler-30ml-6361c493a670f-02112022081459.jpg",
@@ -4942,6 +5680,10 @@ final List<Map<String, dynamic>> productList = [
 
 4. Kết hợp với kem dưỡng Vichy để tăng hiệu quả chống lão hóa.
 ''',
+    "skinTypeTags": ["da thường", "da khô", "da hỗn hợp"],
+    "skinConcerns": ["lão hóa sớm", "nếp nhăn", "thiếu độ đàn hồi", "xỉn màu"],
+    "recommendationScore": 94,
+    "ageGroup": ["25-40", "40+"],
   },
   {
     "id": "SP102",
@@ -4952,7 +5694,7 @@ final List<Map<String, dynamic>> productList = [
     "discountPrice": 690000,
     "isDiscountActive": true,
     "promotionStart": "2025-11-25T09:00:00",
-    "promotionEnd": "2025-11-30T23:59:00",
+    "promotionEnd": "2025-12-19T12:00:00",
     "stockQuantity": 200,
     "image":
         "https://product.hstatic.net/200000150709/product/toner-anh_0c05ef592976454d86351c092864e4cc.jpg",
@@ -4990,6 +5732,16 @@ final List<Map<String, dynamic>> productList = [
 
 5. Có thể dùng làm lotion mask để cấp ẩm tức thì.
 ''',
+    "skinTypeTags": ["da thường", "da dầu", "da hỗn hợp", "da nhạy cảm"],
+    "skinConcerns": [
+      "mụn viêm nhẹ",
+      "mụn đầu đen",
+      "lỗ chân lông to",
+      "da tiết dầu nhiều",
+      "nhạy cảm",
+    ],
+    "recommendationScore": 94,
+    "ageGroup": ["18-25", "25-40", "40+"],
   },
   {
     "id": "SP103",
@@ -5000,7 +5752,7 @@ final List<Map<String, dynamic>> productList = [
     "discountPrice": 445500,
     "isDiscountActive": true,
     "promotionStart": "2025-11-25T09:00:00",
-    "promotionEnd": "2025-11-30T23:59:00",
+    "promotionEnd": "2025-12-19T12:00:00",
     "stockQuantity": 180,
     "image":
         "https://ann.com.vn/wp-content/uploads/25814_kem-face-loreal-tim-phu-photoroom-2_20241123161020-2.jpg",
@@ -5036,6 +5788,10 @@ final List<Map<String, dynamic>> productList = [
 
 4. Có thể dùng làm lớp khóa ẩm cuối cùng trong chu trình dưỡng da.
 ''',
+    "skinTypeTags": ["da thường", "da khô", "da hỗn hợp"],
+    "skinConcerns": ["lão hóa sớm", "nếp nhăn", "thiếu độ đàn hồi", "xỉn màu"],
+    "recommendationScore": 93,
+    "ageGroup": ["25-40", "40+"],
   },
 
   {
@@ -5047,7 +5803,7 @@ final List<Map<String, dynamic>> productList = [
     "discountPrice": 399000,
     "isDiscountActive": true,
     "promotionStart": "2025-11-25T09:00:00",
-    "promotionEnd": "2025-11-30T23:59:00",
+    "promotionEnd": "2025-12-19T12:00:00",
     "stockQuantity": 180,
     "image":
         "https://saolamdep.com/wp-content/uploads/2019/04/mat-na-ngu-Laneige-Cica-Sleeping-2.jpg",
@@ -5083,6 +5839,22 @@ final List<Map<String, dynamic>> productList = [
 
 4. Sử dụng 2–3 lần/tuần để duy trì làn da khỏe mạnh.
 ''',
+    "skinTypeTags": [
+      "da thường",
+      "da khô",
+      "da dầu",
+      "da hỗn hợp",
+      "da nhạy cảm",
+    ],
+    "skinConcerns": [
+      "nhạy cảm",
+      "mất nước",
+      "khô ráp",
+      "kích ứng",
+      "thiếu độ đàn hồi",
+    ],
+    "recommendationScore": 94,
+    "ageGroup": ["18-25", "25-40", "40+"],
   },
   {
     "id": "SP105",
@@ -5093,7 +5865,7 @@ final List<Map<String, dynamic>> productList = [
     "discountPrice": 265000,
     "isDiscountActive": false,
     "promotionStart": "2025-11-25T09:00:00",
-    "promotionEnd": "2025-11-30T23:59:00",
+    "promotionEnd": "2025-12-19T12:00:00",
     "stockQuantity": 220,
     "image":
         "https://bellelab.co/wp-content/uploads/2019/12/Sebium_Gel_Moussant_200ml_2.jpg",
@@ -5131,6 +5903,16 @@ final List<Map<String, dynamic>> productList = [
 
 5. Sử dụng 2 lần/ngày (sáng và tối).
 ''',
+    "skinTypeTags": ["da dầu", "da hỗn hợp"],
+    "skinConcerns": [
+      "mụn đầu đen",
+      "mụn viêm nhẹ",
+      "mụn ẩn",
+      "da tiết dầu nhiều",
+      "lỗ chân lông to",
+    ],
+    "recommendationScore": 94,
+    "ageGroup": ["18-25", "25-40"],
   },
   {
     "id": "SP106",
@@ -5141,7 +5923,7 @@ final List<Map<String, dynamic>> productList = [
     "discountPrice": 470250,
     "isDiscountActive": true,
     "promotionStart": "2025-11-25T09:00:00",
-    "promotionEnd": "2025-11-30T23:59:00",
+    "promotionEnd": "2025-12-19T12:00:00",
     "stockQuantity": 200,
     "image":
         "https://file.hstatic.net/200000223113/file/review_gel_chong_nang_anessa_whitening_uv_sunscreen_gel_lam_trang_da_2_458e989d30cd42cdb0dbdb646a83ea3b.jpg",
@@ -5177,6 +5959,10 @@ final List<Map<String, dynamic>> productList = [
 
 4. Sử dụng hàng ngày để bảo vệ da tối ưu.
 ''',
+    "skinTypeTags": ["da thường", "da dầu", "da hỗn hợp"],
+    "skinConcerns": ["cháy nắng", "xỉn màu", "lão hóa sớm", "không đều màu"],
+    "recommendationScore": 92,
+    "ageGroup": ["18-25", "25-40", "40+"],
   },
   {
     "id": "SP107",
@@ -5187,7 +5973,7 @@ final List<Map<String, dynamic>> productList = [
     "discountPrice": 125000,
     "isDiscountActive": true,
     "promotionStart": "2025-11-25T09:00:00",
-    "promotionEnd": "2025-11-30T23:59:00",
+    "promotionEnd": "2025-12-19T12:00:00",
     "stockQuantity": 280,
     "image":
         "https://media.hcdn.vn/wysiwyg/Chau/nuoc-tay-trang-simple-lam-sach-trang-diem-vuot-troi-1.jpg",
@@ -5226,6 +6012,21 @@ final List<Map<String, dynamic>> productList = [
 
 5. Có thể dùng cho vùng mắt và môi.
 ''',
+    "skinTypeTags": [
+      "da thường",
+      "da khô",
+      "da dầu",
+      "da hỗn hợp",
+      "da nhạy cảm",
+    ],
+    "skinConcerns": [
+      "bụi bẩn",
+      "làm sạch lớp trang điểm nhẹ",
+      "mất nước",
+      "nhạy cảm",
+    ],
+    "recommendationScore": 93,
+    "ageGroup": ["18-25", "25-40", "40+"],
   },
   {
     "id": "SP108",
@@ -5236,7 +6037,7 @@ final List<Map<String, dynamic>> productList = [
     "discountPrice": 890000,
     "isDiscountActive": false,
     "promotionStart": "2025-11-25T09:00:00",
-    "promotionEnd": "2025-11-30T23:59:00",
+    "promotionEnd": "2025-12-19T12:00:00",
     "stockQuantity": 150,
     "image":
         "https://media.hcdn.vn/wysiwyg/MaiQuynh/serum-paula-s-choice-sang-da-giup-se-lo-chan-long-1.jpg",
@@ -5272,6 +6073,16 @@ final List<Map<String, dynamic>> productList = [
 
 4. Dùng liên tục ít nhất 4 tuần để thấy hiệu quả rõ rệt.
 ''',
+    "skinTypeTags": ["da dầu", "da hỗn hợp", "da thường"],
+    "skinConcerns": [
+      "lỗ chân lông to",
+      "mụn đầu đen",
+      "mụn ẩn",
+      "da tiết dầu nhiều",
+      "không đều màu",
+    ],
+    "recommendationScore": 95,
+    "ageGroup": ["18-25", "25-40", "40+"],
   },
   {
     "id": "SP109",
@@ -5282,7 +6093,7 @@ final List<Map<String, dynamic>> productList = [
     "discountPrice": 280000,
     "isDiscountActive": true,
     "promotionStart": "2025-11-25T09:00:00",
-    "promotionEnd": "2025-11-30T23:59:00",
+    "promotionEnd": "2025-12-19T12:00:00",
     "stockQuantity": 200,
     "image":
         "https://media.hcdn.vn/wysiwyg/MinhTu/nuoc-can-bang-klairs-tra-xanh-cap-am-lam-diu-da-500ml.jpg",
@@ -5320,6 +6131,16 @@ final List<Map<String, dynamic>> productList = [
 
 5. Có thể dùng làm lotion mask để cấp ẩm tức thì.
 ''',
+    "skinTypeTags": [
+      "da thường",
+      "da khô",
+      "da dầu",
+      "da hỗn hợp",
+      "da nhạy cảm",
+    ],
+    "skinConcerns": ["mất nước", "khô ráp", "nhạy cảm", "xỉn màu"],
+    "recommendationScore": 93,
+    "ageGroup": ["18-25", "25-40", "40+"],
   },
   {
     "id": "SP110",
@@ -5330,7 +6151,7 @@ final List<Map<String, dynamic>> productList = [
     "discountPrice": 265500,
     "isDiscountActive": true,
     "promotionStart": "2025-11-25T09:00:00",
-    "promotionEnd": "2025-11-30T23:59:00",
+    "promotionEnd": "2025-12-19T12:00:00",
     "stockQuantity": 220,
     "image":
         "https://ordinary.com.vn/wp-content/uploads/2020/10/Natural-Moisturizing-Factors-HA-30ml.jpg",
@@ -5366,6 +6187,16 @@ final List<Map<String, dynamic>> productList = [
 
 4. Có thể dùng làm lớp khóa ẩm cuối cùng trong chu trình dưỡng da.
 ''',
+    "skinTypeTags": [
+      "da thường",
+      "da khô",
+      "da dầu",
+      "da hỗn hợp",
+      "da nhạy cảm",
+    ],
+    "skinConcerns": ["mất nước", "khô ráp", "thiếu độ đàn hồi", "nhạy cảm"],
+    "recommendationScore": 95,
+    "ageGroup": ["18-25", "25-40", "40+"],
   },
   {
     "id": "SP111",
@@ -5376,7 +6207,7 @@ final List<Map<String, dynamic>> productList = [
     "discountPrice": 32000,
     "isDiscountActive": false,
     "promotionStart": "2025-11-25T09:00:00",
-    "promotionEnd": "2025-11-30T23:59:00",
+    "promotionEnd": "2025-12-19T12:00:00",
     "stockQuantity": 500,
     "image":
         "https://mint07.com/wp-content/uploads/2023/04/mat-na-lululun-precious-7-mieng-moist-mau-do.jpg",
@@ -5414,6 +6245,10 @@ final List<Map<String, dynamic>> productList = [
 
 5. Sử dụng 2–3 lần/tuần để đạt hiệu quả tốt nhất.
 ''',
+    "skinTypeTags": ["da thường", "da khô", "da hỗn hợp"],
+    "skinConcerns": ["mất nước", "khô ráp", "thiếu độ đàn hồi", "lão hóa sớm"],
+    "recommendationScore": 93,
+    "ageGroup": ["25-40", "40+"],
   },
   {
     "id": "SP112",
@@ -5424,7 +6259,7 @@ final List<Map<String, dynamic>> productList = [
     "discountPrice": 285000,
     "isDiscountActive": false,
     "promotionStart": "2025-11-25T09:00:00",
-    "promotionEnd": "2025-11-30T23:59:00",
+    "promotionEnd": "2025-12-19T12:00:00",
     "stockQuantity": 240,
     "image":
         "https://assets-hebela.cdn.vccloud.vn/dict/1/oshaatnithnamsoint20220808172017gel-rua-mat-eucerin-pro-acne-cleansing-gel-200ml/tnniirnssrsmistshn20220808172037sua-rua-mat-eucerin-pro-acne-solution-200ml-hebela-4.jpg",
@@ -5462,6 +6297,16 @@ final List<Map<String, dynamic>> productList = [
 
 5. Dùng 2 lần/ngày (sáng và tối).
 ''',
+    "skinTypeTags": ["da dầu", "da hỗn hợp"],
+    "skinConcerns": [
+      "mụn đầu đen",
+      "mụn viêm nhẹ",
+      "mụn ẩn",
+      "da tiết dầu nhiều",
+      "lỗ chân lông to",
+    ],
+    "recommendationScore": 94,
+    "ageGroup": ["18-25", "25-40"],
   },
   {
     "id": "SP113",
@@ -5472,7 +6317,7 @@ final List<Map<String, dynamic>> productList = [
     "discountPrice": 250000,
     "isDiscountActive": true,
     "promotionStart": "2025-11-25T09:00:00",
-    "promotionEnd": "2025-11-30T23:59:00",
+    "promotionEnd": "2025-12-19T12:00:00",
     "stockQuantity": 220,
     "image":
         "https://product.hstatic.net/200000810267/product/upload_a8a09e72711348c58233fb1777283a4e.jpg",
@@ -5511,6 +6356,22 @@ final List<Map<String, dynamic>> productList = [
 
 5. Sử dụng hàng ngày để bảo vệ da tối ưu.
 ''',
+    "skinTypeTags": [
+      "da thường",
+      "da khô",
+      "da dầu",
+      "da hỗn hợp",
+      "da nhạy cảm",
+    ],
+    "skinConcerns": [
+      "cháy nắng",
+      "mất nước",
+      "nhạy cảm",
+      "lão hóa sớm",
+      "xỉn màu",
+    ],
+    "recommendationScore": 95,
+    "ageGroup": ["18-25", "25-40", "40+"],
   },
   {
     "id": "SP114",
@@ -5521,7 +6382,7 @@ final List<Map<String, dynamic>> productList = [
     "discountPrice": 275500,
     "isDiscountActive": true,
     "promotionStart": "2025-11-25T09:00:00",
-    "promotionEnd": "2025-11-30T23:59:00",
+    "promotionEnd": "2025-12-19T12:00:00",
     "stockQuantity": 250,
     "image":
         "https://webhangngoai.com/wp-content/uploads/2025/08/13-nuoc-tay-trang-bioderma-xanh-hydrabio.jpg",
@@ -5559,6 +6420,10 @@ final List<Map<String, dynamic>> productList = [
 
 5. Sử dụng hàng ngày, sáng và tối.
 ''',
+    "skinTypeTags": ["da thường", "da khô", "da hỗn hợp", "da nhạy cảm"],
+    "skinConcerns": ["mất nước", "khô ráp", "nhạy cảm", "xỉn màu"],
+    "recommendationScore": 94,
+    "ageGroup": ["18-25", "25-40", "40+"],
   },
   {
     "id": "SP115",
@@ -5569,7 +6434,7 @@ final List<Map<String, dynamic>> productList = [
     "discountPrice": 399000,
     "isDiscountActive": true,
     "promotionStart": "2025-11-25T09:00:00",
-    "promotionEnd": "2025-11-30T23:59:00",
+    "promotionEnd": "2025-12-19T12:00:00",
     "stockQuantity": 180,
     "image":
         "https://product.hstatic.net/200000150709/product/da52d7381c4fd2590719e3_quot_c2e7fafa75294b38a9a955270e8197c3_1024x1024_fe6dd5fef7664fa79e4171fbe34613b1.jpg",
@@ -5605,6 +6470,10 @@ final List<Map<String, dynamic>> productList = [
 
 4. Sử dụng sáng và tối, kết hợp kem dưỡng để tăng hiệu quả.
 ''',
+    "skinTypeTags": ["da thường", "da khô", "da hỗn hợp"],
+    "skinConcerns": ["nếp nhăn", "lão hóa sớm", "thiếu độ đàn hồi", "xỉn màu"],
+    "recommendationScore": 94,
+    "ageGroup": ["25-40", "40+"],
   },
   {
     "id": "SP116",
@@ -5615,7 +6484,7 @@ final List<Map<String, dynamic>> productList = [
     "discountPrice": 99000,
     "isDiscountActive": false,
     "promotionStart": "2025-11-25T09:00:00",
-    "promotionEnd": "2025-11-30T23:59:00",
+    "promotionEnd": "2025-12-19T12:00:00",
     "stockQuantity": 300,
     "image":
         "https://bonita.vn/wp-content/uploads/2019/10/86973724_2672380829497347_8016552373470101504_n.jpg",
@@ -5652,6 +6521,16 @@ final List<Map<String, dynamic>> productList = [
 
 5. Có thể dùng làm lotion mask để cấp ẩm tức thì.
 ''',
+    "skinTypeTags": [
+      "da thường",
+      "da khô",
+      "da dầu",
+      "da hỗn hợp",
+      "da nhạy cảm",
+    ],
+    "skinConcerns": ["mất nước", "khô ráp", "xỉn màu", "nhạy cảm"],
+    "recommendationScore": 92,
+    "ageGroup": ["18-25", "25-40", "40+"],
   },
   {
     "id": "SP117",
@@ -5662,7 +6541,7 @@ final List<Map<String, dynamic>> productList = [
     "discountPrice": 295000,
     "isDiscountActive": true,
     "promotionStart": "2025-11-25T09:00:00",
-    "promotionEnd": "2025-11-30T23:59:00",
+    "promotionEnd": "2025-12-19T12:00:00",
     "stockQuantity": 200,
     "image":
         "https://www.guardian.com.vn/media/wysiwyg/5fbf5f74b07991d7cc6ec576eac_1024x1024_ee78d068d9044d629273d3663be83bbf_67f0de575a2e4e209a4c0b8dcda7c753_xx2ibtp5ekfeosyh.jpg",
@@ -5698,6 +6577,16 @@ final List<Map<String, dynamic>> productList = [
 
 4. Kết hợp với sữa rửa mặt và toner CeraVe để tăng hiệu quả dưỡng ẩm.
 ''',
+    "skinTypeTags": [
+      "da thường",
+      "da khô",
+      "da dầu",
+      "da hỗn hợp",
+      "da nhạy cảm",
+    ],
+    "skinConcerns": ["mất nước", "khô ráp", "nhạy cảm", "thiếu độ đàn hồi"],
+    "recommendationScore": 95,
+    "ageGroup": ["18-25", "25-40", "40+"],
   },
   {
     "id": "SP118",
@@ -5708,7 +6597,7 @@ final List<Map<String, dynamic>> productList = [
     "discountPrice": 18000,
     "isDiscountActive": false,
     "promotionStart": "2025-11-25T09:00:00",
-    "promotionEnd": "2025-11-30T23:59:00",
+    "promotionEnd": "2025-12-19T12:00:00",
     "stockQuantity": 500,
     "image":
         "https://file.hstatic.net/200000073977/article/mat-na-vedette-5__2__82d143378b7e4860904bbbd29c2b4451_1024x1024.jpg",
@@ -5745,6 +6634,16 @@ final List<Map<String, dynamic>> productList = [
 
 5. Sử dụng 2–3 lần/tuần để duy trì làn da sáng khỏe.
 ''',
+    "skinTypeTags": ["da dầu", "da hỗn hợp"],
+    "skinConcerns": [
+      "mụn đầu đen",
+      "mụn ẩn",
+      "da tiết dầu nhiều",
+      "lỗ chân lông to",
+      "xỉn màu",
+    ],
+    "recommendationScore": 91,
+    "ageGroup": ["18-25", "25-40"],
   },
   {
     "id": "SP119",
@@ -5755,7 +6654,7 @@ final List<Map<String, dynamic>> productList = [
     "discountPrice": 125000,
     "isDiscountActive": true,
     "promotionStart": "2025-11-25T09:00:00",
-    "promotionEnd": "2025-11-30T23:59:00",
+    "promotionEnd": "2025-12-19T12:00:00",
     "stockQuantity": 250,
     "image":
         "https://www.innisfree.vn/static/upload/product/product/476_ID0101_3.jpg",
@@ -5793,6 +6692,16 @@ final List<Map<String, dynamic>> productList = [
 
 5. Sử dụng 2 lần/ngày (sáng và tối).
 ''',
+    "skinTypeTags": ["da dầu", "da hỗn hợp"],
+    "skinConcerns": [
+      "mụn viêm nhẹ",
+      "mụn đầu đen",
+      "mụn ẩn",
+      "da tiết dầu nhiều",
+      "lỗ chân lông to",
+    ],
+    "recommendationScore": 93,
+    "ageGroup": ["18-25", "25-40"],
   },
   {
     "id": "SP120",
@@ -5803,7 +6712,7 @@ final List<Map<String, dynamic>> productList = [
     "discountPrice": 166500,
     "isDiscountActive": true,
     "promotionStart": "2025-11-25T09:00:00",
-    "promotionEnd": "2025-11-30T23:59:00",
+    "promotionEnd": "2025-12-19T12:00:00",
     "stockQuantity": 220,
     "image":
         "https://mint07.com/wp-content/uploads/2025/09/kem-chong-nang-missha-essence-sun-milk-ex-spf50-pa-70ml-3.jpg",
@@ -5840,6 +6749,10 @@ final List<Map<String, dynamic>> productList = [
 
 4. Sử dụng hàng ngày để bảo vệ da tối ưu.
 ''',
+    "skinTypeTags": ["da thường", "da khô", "da hỗn hợp"],
+    "skinConcerns": ["cháy nắng", "lão hóa sớm", "xỉn màu", "thiếu độ đàn hồi"],
+    "recommendationScore": 92,
+    "ageGroup": ["18-25", "25-40", "40+"],
   },
   {
     "id": "SP121",
@@ -5850,7 +6763,7 @@ final List<Map<String, dynamic>> productList = [
     "discountPrice": 265500,
     "isDiscountActive": true,
     "promotionStart": "2025-11-25T09:00:00",
-    "promotionEnd": "2025-11-30T23:59:00",
+    "promotionEnd": "2025-12-19T12:00:00",
     "stockQuantity": 200,
     "image":
         "https://cdn.hstatic.net/files/200000551679/file/sg-11134207-7rd6v-lu5pbaql139b15_1024x1024.jpg",
@@ -5886,6 +6799,22 @@ final List<Map<String, dynamic>> productList = [
 
 4. Dùng liên tục ít nhất 4 tuần để thấy hiệu quả rõ rệt.
 ''',
+    "skinTypeTags": [
+      "da thường",
+      "da khô",
+      "da dầu",
+      "da hỗn hợp",
+      "da nhạy cảm",
+    ],
+    "skinConcerns": [
+      "sẹo mụn",
+      "tổn thương da",
+      "không đều màu",
+      "lão hóa sớm",
+      "nhạy cảm",
+    ],
+    "recommendationScore": 94,
+    "ageGroup": ["18-25", "25-40", "40+"],
   },
   {
     "id": "SP122",
@@ -5896,7 +6825,7 @@ final List<Map<String, dynamic>> productList = [
     "discountPrice": 205000,
     "isDiscountActive": true,
     "promotionStart": "2025-11-25T09:00:00",
-    "promotionEnd": "2025-11-30T23:59:00",
+    "promotionEnd": "2025-12-19T12:00:00",
     "stockQuantity": 220,
     "image":
         "https://sieuthilamdep.com/images/detailed/13/nuoc-hoa-hong-trang-da-tri-tham-nam-tan-nhang-cc-melano-rohto-lotion-2.jpg",
@@ -5932,6 +6861,10 @@ final List<Map<String, dynamic>> productList = [
 
 4. Sử dụng sáng và tối trước serum/kem dưỡng.
 ''',
+    "skinTypeTags": ["da thường", "da dầu", "da hỗn hợp"],
+    "skinConcerns": ["thâm mụn", "không đều màu", "xỉn màu", "lão hóa sớm"],
+    "recommendationScore": 93,
+    "ageGroup": ["18-25", "25-40", "40+"],
   },
   {
     "id": "SP123",
@@ -5942,7 +6875,7 @@ final List<Map<String, dynamic>> productList = [
     "discountPrice": 115000,
     "isDiscountActive": false,
     "promotionStart": "2025-11-25T09:00:00",
-    "promotionEnd": "2025-11-30T23:59:00",
+    "promotionEnd": "2025-12-19T12:00:00",
     "stockQuantity": 300,
     "image":
         "https://wowmart.vn/wp-content/uploads/2019/03/vaseline-intensive-care-deep-restore-725ml-kb.jpg",
@@ -5977,6 +6910,10 @@ final List<Map<String, dynamic>> productList = [
 
 4. Kết hợp với sữa tắm Vaseline để tăng hiệu quả dưỡng ẩm.
 ''',
+    "skinTypeTags": ["da thường", "da khô", "da hỗn hợp"],
+    "skinConcerns": ["mất nước", "khô ráp", "nứt nẻ", "thiếu độ đàn hồi"],
+    "recommendationScore": 92,
+    "ageGroup": ["18-25", "25-40", "40+"],
   },
   {
     "id": "SP124",
@@ -5987,7 +6924,7 @@ final List<Map<String, dynamic>> productList = [
     "discountPrice": 27000,
     "isDiscountActive": false,
     "promotionStart": "2025-11-25T09:00:00",
-    "promotionEnd": "2025-11-30T23:59:00",
+    "promotionEnd": "2025-12-19T12:00:00",
     "stockQuantity": 500,
     "image":
         "https://storage.beautyfulls.com/uploads-1/avatar/product/1200x/2022/12/22/figure-1671696191948.jpg",
@@ -6025,6 +6962,10 @@ final List<Map<String, dynamic>> productList = [
 
 5. Không cần rửa lại bằng nước, tiếp tục các bước dưỡng da sau đó.
 ''',
+    "skinTypeTags": ["da thường", "da khô", "da dầu", "da hỗn hợp"],
+    "skinConcerns": ["xỉn màu", "không đều màu", "thâm mụn", "lão hóa sớm"],
+    "recommendationScore": 93,
+    "ageGroup": ["18-25", "25-40", "40+"],
   },
   {
     "id": "SP125",
@@ -6035,7 +6976,7 @@ final List<Map<String, dynamic>> productList = [
     "discountPrice": 98000,
     "isDiscountActive": false,
     "promotionStart": "2025-11-25T09:00:00",
-    "promotionEnd": "2025-11-30T23:59:00",
+    "promotionEnd": "2025-12-19T12:00:00",
     "stockQuantity": 300,
     "image":
         "https://media.hcdn.vn/wysiwyg/Chau/kem-rua-mat-hada-labo-duong-sang-da-80g-2_1.jpg",
@@ -6072,6 +7013,10 @@ final List<Map<String, dynamic>> productList = [
 
 5. Sử dụng 2 lần/ngày (sáng và tối).
 ''',
+    "skinTypeTags": ["da thường", "da dầu", "da hỗn hợp"],
+    "skinConcerns": ["xỉn màu", "không đều màu", "thâm mụn", "lão hóa sớm"],
+    "recommendationScore": 92,
+    "ageGroup": ["18-25", "25-40", "40+"],
   },
   {
     "id": "SP126",
@@ -6082,7 +7027,7 @@ final List<Map<String, dynamic>> productList = [
     "discountPrice": 199000,
     "isDiscountActive": true,
     "promotionStart": "2025-11-25T09:00:00",
-    "promotionEnd": "2025-11-30T23:59:00",
+    "promotionEnd": "2025-12-19T12:00:00",
     "stockQuantity": 250,
     "image":
         "https://jpaddict.com/wp-content/uploads/2022/08/review-kem-chong-nang-biore-aqua-rich-watery-essence.jpg",
@@ -6116,6 +7061,15 @@ final List<Map<String, dynamic>> productList = [
 
 3. Sử dụng hàng ngày để bảo vệ da tối ưu.
 ''',
+    "skinTypeTags": ["da thường", "da dầu", "da hỗn hợp"],
+    "skinConcerns": [
+      "cháy nắng",
+      "lão hóa sớm",
+      "xỉn màu",
+      "da tiết dầu nhiều",
+    ],
+    "recommendationScore": 93,
+    "ageGroup": ["18-25", "25-40", "40+"],
   },
   {
     "id": "SP127",
@@ -6126,7 +7080,7 @@ final List<Map<String, dynamic>> productList = [
     "discountPrice": 121500,
     "isDiscountActive": true,
     "promotionStart": "2025-11-25T09:00:00",
-    "promotionEnd": "2025-11-30T23:59:00",
+    "promotionEnd": "2025-12-19T12:00:00",
     "stockQuantity": 220,
     "image":
         "https://media.hcdn.vn/catalog/product/g/e/gel-rua-mat-tay-trang-senka-sach-sau-2-trong-1-170ml-1-1676341029_img_450x450_31d6f9_fit_center.jpg",
@@ -6163,6 +7117,16 @@ final List<Map<String, dynamic>> productList = [
 
 5. Sử dụng hàng ngày, đặc biệt khi trang điểm.
 ''',
+    "skinTypeTags": ["da thường", "da dầu", "da hỗn hợp"],
+    "skinConcerns": [
+      "mụn đầu đen",
+      "mụn ẩn",
+      "da tiết dầu nhiều",
+      "lỗ chân lông to",
+      "xỉn màu",
+    ],
+    "recommendationScore": 92,
+    "ageGroup": ["18-25", "25-40"],
   },
   {
     "id": "SP128",
@@ -6173,7 +7137,7 @@ final List<Map<String, dynamic>> productList = [
     "discountPrice": 280000,
     "isDiscountActive": true,
     "promotionStart": "2025-11-25T09:00:00",
-    "promotionEnd": "2025-11-30T23:59:00",
+    "promotionEnd": "2025-12-19T12:00:00",
     "stockQuantity": 200,
     "image":
         "https://cdn.chiaki.vn/unsafe/0x800/left/top/smart/filters:quality(75)/https://chiaki.vn/upload/news/2020/03/review-alpha-arbutin-the-ordinary-co-thuc-su-duong-trang-da-than-thanh-nhu-loi-don-18032020124102.jpg",
@@ -6209,6 +7173,10 @@ final List<Map<String, dynamic>> productList = [
 
 4. Dùng liên tục ít nhất 4 tuần để thấy hiệu quả rõ rệt.
 ''',
+    "skinTypeTags": ["da thường", "da dầu", "da hỗn hợp", "da khô"],
+    "skinConcerns": ["thâm mụn", "không đều màu", "xỉn màu", "lão hóa sớm"],
+    "recommendationScore": 94,
+    "ageGroup": ["18-25", "25-40", "40+"],
   },
   {
     "id": "SP129",
@@ -6219,7 +7187,7 @@ final List<Map<String, dynamic>> productList = [
     "discountPrice": 210000,
     "isDiscountActive": false,
     "promotionStart": "2025-11-25T09:00:00",
-    "promotionEnd": "2025-11-30T23:59:00",
+    "promotionEnd": "2025-12-19T12:00:00",
     "stockQuantity": 220,
     "image":
         "https://m.media-amazon.com/images/I/719VvEt5jTL._AC_UF1000,1000_QL80_.jpg",
@@ -6257,6 +7225,16 @@ final List<Map<String, dynamic>> productList = [
 
 5. Có thể dùng làm lotion mask cho vùng da dầu.
 ''',
+    "skinTypeTags": ["da thường", "da dầu", "da hỗn hợp", "da nhạy cảm"],
+    "skinConcerns": [
+      "mụn viêm nhẹ",
+      "mụn ẩn",
+      "da tiết dầu nhiều",
+      "lỗ chân lông to",
+      "nhạy cảm",
+    ],
+    "recommendationScore": 94,
+    "ageGroup": ["18-25", "25-40"],
   },
   {
     "id": "SP130",
@@ -6267,7 +7245,7 @@ final List<Map<String, dynamic>> productList = [
     "discountPrice": 499000,
     "isDiscountActive": true,
     "promotionStart": "2025-11-25T09:00:00",
-    "promotionEnd": "2025-11-30T23:59:00",
+    "promotionEnd": "2025-12-19T12:00:00",
     "stockQuantity": 180,
     "image":
         "https://myphamhangnga.com/wp-content/uploads/2020/09/kem-duong-am-cap-nuoc-laneige_result.jpg",
@@ -6302,6 +7280,10 @@ final List<Map<String, dynamic>> productList = [
 
 4. Có thể dùng làm lớp khóa ẩm cuối cùng trong chu trình dưỡng da.
 ''',
+    "skinTypeTags": ["da thường", "da khô", "da hỗn hợp"],
+    "skinConcerns": ["mất nước", "khô ráp", "thiếu độ đàn hồi", "xỉn màu"],
+    "recommendationScore": 95,
+    "ageGroup": ["18-25", "25-40", "40+"],
   },
   {
     "id": "SP131",
@@ -6312,7 +7294,7 @@ final List<Map<String, dynamic>> productList = [
     "discountPrice": 25000,
     "isDiscountActive": false,
     "promotionStart": "2025-11-25T09:00:00",
-    "promotionEnd": "2025-11-30T23:59:00",
+    "promotionEnd": "2025-12-19T12:00:00",
     "stockQuantity": 600,
     "image":
         "https://thefaceshoponline.com.vn/wp-content/uploads/2017/04/1ab19be42e1ad6448f0b.jpg",
@@ -6350,6 +7332,10 @@ final List<Map<String, dynamic>> productList = [
 
 5. Không cần rửa lại bằng nước, tiếp tục các bước dưỡng da sau đó.
 ''',
+    "skinTypeTags": ["da thường", "da khô", "da hỗn hợp"],
+    "skinConcerns": ["mất nước", "khô ráp", "thiếu độ đàn hồi", "xỉn màu"],
+    "recommendationScore": 93,
+    "ageGroup": ["18-25", "25-40", "40+"],
   },
   {
     "id": "SP132",
@@ -6360,7 +7346,7 @@ final List<Map<String, dynamic>> productList = [
     "discountPrice": 135000,
     "isDiscountActive": true,
     "promotionStart": "2025-11-25T09:00:00",
-    "promotionEnd": "2025-11-30T23:59:00",
+    "promotionEnd": "2025-12-19T12:00:00",
     "stockQuantity": 250,
     "image":
         "https://vn-live-01.slatic.net/p/c2ef3afb7b9aca2992d6c95c002e7fcd.jpg",
@@ -6398,6 +7384,16 @@ final List<Map<String, dynamic>> productList = [
 
 5. Sử dụng 2 lần/ngày (sáng và tối).
 ''',
+    "skinTypeTags": ["da dầu", "da hỗn hợp"],
+    "skinConcerns": [
+      "mụn viêm nhẹ",
+      "mụn đầu đen",
+      "mụn ẩn",
+      "da tiết dầu nhiều",
+      "lỗ chân lông to",
+    ],
+    "recommendationScore": 94,
+    "ageGroup": ["18-25", "25-40"],
   },
   {
     "id": "SP133",
@@ -6408,7 +7404,7 @@ final List<Map<String, dynamic>> productList = [
     "discountPrice": 280000,
     "isDiscountActive": true,
     "promotionStart": "2025-11-25T09:00:00",
-    "promotionEnd": "2025-11-30T23:59:00",
+    "promotionEnd": "2025-12-19T12:00:00",
     "stockQuantity": 200,
     "image":
         "https://ordinaryvietnam.net/wp-content/uploads/2023/03/261.1-Review-dong-kem-chong-nang-klairs-midday-blue-sun-lotion.jpg",
@@ -6443,6 +7439,10 @@ final List<Map<String, dynamic>> productList = [
 
 3. Sử dụng hàng ngày để bảo vệ da tối ưu.
 ''',
+    "skinTypeTags": ["da thường", "da dầu", "da hỗn hợp", "da nhạy cảm"],
+    "skinConcerns": ["cháy nắng", "kích ứng", "lão hóa sớm", "xỉn màu"],
+    "recommendationScore": 91,
+    "ageGroup": ["18-25", "25-40", "40+"],
   },
   {
     "id": "SP134",
@@ -6453,7 +7453,7 @@ final List<Map<String, dynamic>> productList = [
     "discountPrice": 305000,
     "isDiscountActive": true,
     "promotionStart": "2025-11-25T09:00:00",
-    "promotionEnd": "2025-11-30T23:59:00",
+    "promotionEnd": "2025-12-19T12:00:00",
     "stockQuantity": 200,
     "image":
         "https://product.hstatic.net/200000833669/product/dhc_5efcd25f38274485bcd349df3db212d9_master.jpg",
@@ -6489,6 +7489,22 @@ final List<Map<String, dynamic>> productList = [
 
 5. Sử dụng hàng ngày, đặc biệt khi trang điểm.
 ''',
+    "skinTypeTags": [
+      "da thường",
+      "da khô",
+      "da dầu",
+      "da hỗn hợp",
+      "da nhạy cảm",
+    ],
+    "skinConcerns": [
+      "mụn đầu đen",
+      "mụn ẩn",
+      "da tiết dầu nhiều",
+      "khô ráp",
+      "xỉn màu",
+    ],
+    "recommendationScore": 95,
+    "ageGroup": ["18-25", "25-40", "40+"],
   },
   {
     "id": "SP135",
@@ -6499,7 +7515,7 @@ final List<Map<String, dynamic>> productList = [
     "discountPrice": 1950000,
     "isDiscountActive": false,
     "promotionStart": "2025-11-25T09:00:00",
-    "promotionEnd": "2025-11-30T23:59:00",
+    "promotionEnd": "2025-12-19T12:00:00",
     "stockQuantity": 150,
     "image":
         "https://caostore.vn/wp-content/uploads/2023/03/vitamin-c-estee-lauderpng1.jpg",
@@ -6534,6 +7550,10 @@ final List<Map<String, dynamic>> productList = [
 
 4. Kết hợp với kem dưỡng Estee Lauder để tăng hiệu quả chống lão hóa.
 ''',
+    "skinTypeTags": ["da thường", "da khô", "da hỗn hợp"],
+    "skinConcerns": ["lão hóa sớm", "thiếu độ đàn hồi", "nếp nhăn", "xỉn màu"],
+    "recommendationScore": 95,
+    "ageGroup": ["25-40", "40+"],
   },
   {
     "id": "SP136",
@@ -6544,7 +7564,7 @@ final List<Map<String, dynamic>> productList = [
     "discountPrice": 280000,
     "isDiscountActive": true,
     "promotionStart": "2025-11-25T09:00:00",
-    "promotionEnd": "2025-11-30T23:59:00",
+    "promotionEnd": "2025-12-19T12:00:00",
     "stockQuantity": 220,
     "image":
         "https://cdn.tgdd.vn/Files/2022/08/18/1456979/danh-gia-chi-tiet-toner-labo-labo-giup-se-khit-lo-chan-long-202208180757150893.jpg",
@@ -6579,6 +7599,16 @@ final List<Map<String, dynamic>> productList = [
 
 4. Sử dụng sáng và tối trước serum/kem dưỡng.
 ''',
+    "skinTypeTags": ["da dầu", "da hỗn hợp"],
+    "skinConcerns": [
+      "lỗ chân lông to",
+      "mụn đầu đen",
+      "mụn ẩn",
+      "da tiết dầu nhiều",
+      "xỉn màu",
+    ],
+    "recommendationScore": 93,
+    "ageGroup": ["18-25", "25-40"],
   },
   {
     "id": "SP137",
@@ -6589,7 +7619,7 @@ final List<Map<String, dynamic>> productList = [
     "discountPrice": 280000,
     "isDiscountActive": true,
     "promotionStart": "2025-11-25T09:00:00",
-    "promotionEnd": "2025-11-30T23:59:00",
+    "promotionEnd": "2025-12-19T12:00:00",
     "stockQuantity": 120,
     "image":
         "https://product.hstatic.net/200000150709/product/kem-duong-am-dang-gel-innisfree-jeju-cherry-blossom-jelly-cream-1-1_af782b073e2d42a18ffa1d1bfc24dbab.jpg",
@@ -6623,6 +7653,15 @@ final List<Map<String, dynamic>> productList = [
 5. Sử dụng sáng và tối. Buổi sáng nên kết hợp thêm kem chống nắng để bảo vệ da.
 6. Có thể dùng như lớp khóa ẩm cuối cùng trong chu trình dưỡng da.
 ''',
+    "skinTypeTags": ["da thường", "da khô", "da hỗn hợp"],
+    "skinConcerns": [
+      "xỉn màu",
+      "không đều màu",
+      "mất nước",
+      "thiếu độ đàn hồi",
+    ],
+    "recommendationScore": 94,
+    "ageGroup": ["18-25", "25-40", "40+"],
   },
   {
     "id": "SP138",
@@ -6668,6 +7707,10 @@ final List<Map<String, dynamic>> productList = [
 6. Không cần rửa lại bằng nước, tiếp tục các bước dưỡng da sau đó.
 7. Sử dụng 2–3 lần/tuần để duy trì làn da căng mịn, đàn hồi.
 ''',
+    "skinTypeTags": ["da thường", "da khô", "da hỗn hợp", "da nhạy cảm"],
+    "skinConcerns": ["mất nước", "khô ráp", "thiếu độ đàn hồi", "xỉn màu"],
+    "recommendationScore": 94,
+    "ageGroup": ["18-25", "25-40", "40+"],
   },
   {
     "id": "SP139",
@@ -6678,7 +7721,7 @@ final List<Map<String, dynamic>> productList = [
     "discountPrice": 220000,
     "isDiscountActive": true,
     "promotionStart": "2025-11-25T09:00:00",
-    "promotionEnd": "2025-11-30T23:59:00",
+    "promotionEnd": "2025-12-19T12:00:00",
     "stockQuantity": 150,
     "image":
         "https://static.thcdn.com/productimg/original/14242474-1075284126348647.jpg",
@@ -6713,6 +7756,16 @@ final List<Map<String, dynamic>> productList = [
 6. Sử dụng 2 lần/ngày (sáng và tối).
 7. Sau khi rửa mặt, tiếp tục với toner và serum để đạt hiệu quả dưỡng da tối ưu.
 ''',
+    "skinTypeTags": ["da thường", "da dầu", "da hỗn hợp", "da nhạy cảm"],
+    "skinConcerns": [
+      "mụn ẩn",
+      "mụn đầu đen",
+      "da tiết dầu nhiều",
+      "kích ứng nhẹ",
+      "xỉn màu",
+    ],
+    "recommendationScore": 94,
+    "ageGroup": ["18-25", "25-40", "40+"],
   },
   {
     "id": "SP140",
@@ -6723,7 +7776,7 @@ final List<Map<String, dynamic>> productList = [
     "discountPrice": 385000,
     "isDiscountActive": true,
     "promotionStart": "2025-11-25T09:00:00",
-    "promotionEnd": "2025-11-30T23:59:00",
+    "promotionEnd": "2025-12-19T12:00:00",
     "stockQuantity": 200,
     "image":
         "https://mint07.com/wp-content/uploads/2019/11/kem-chong-nang-avene-cleanance-sunscreen-spf502.jpg",
@@ -6760,6 +7813,16 @@ final List<Map<String, dynamic>> productList = [
 5. Thoa lại sau mỗi 2 giờ nếu tiếp xúc trực tiếp với ánh nắng hoặc sau khi đổ mồ hôi/nước.
 6. Sử dụng hàng ngày để bảo vệ da tối ưu.
 ''',
+    "skinTypeTags": ["da dầu", "da hỗn hợp", "da nhạy cảm"],
+    "skinConcerns": [
+      "mụn viêm nhẹ",
+      "mụn ẩn",
+      "da tiết dầu nhiều",
+      "cháy nắng",
+      "lão hóa sớm",
+    ],
+    "recommendationScore": 95,
+    "ageGroup": ["18-25", "25-40"],
   },
   {
     "id": "SP141",
@@ -6770,7 +7833,7 @@ final List<Map<String, dynamic>> productList = [
     "discountPrice": 2950000,
     "isDiscountActive": true,
     "promotionStart": "2025-11-25T09:00:00",
-    "promotionEnd": "2025-11-30T23:59:00",
+    "promotionEnd": "2025-12-19T12:00:00",
     "stockQuantity": 80,
     "image":
         "https://media.hcdn.vn/wysiwyg/HaNguyen1/tinh-chat-skinceuticals-ho-tro-cap-am-tai-tao-da-30ml-1.jpg",
@@ -6805,6 +7868,10 @@ final List<Map<String, dynamic>> productList = [
 5. Có thể dùng riêng hoặc kết hợp với các loại serum khác trong chu trình dưỡng da.
 6. Dùng liên tục ít nhất 4 tuần để thấy hiệu quả rõ rệt.
 ''',
+    "skinTypeTags": ["da thường", "da khô", "da hỗn hợp", "da nhạy cảm"],
+    "skinConcerns": ["mất nước", "khô ráp", "thiếu độ đàn hồi", "xỉn màu"],
+    "recommendationScore": 96,
+    "ageGroup": ["18-25", "25-40", "40+"],
   },
   {
     "id": "SP142",
@@ -6815,7 +7882,7 @@ final List<Map<String, dynamic>> productList = [
     "discountPrice": 115000,
     "isDiscountActive": true,
     "promotionStart": "2025-11-25T09:00:00",
-    "promotionEnd": "2025-11-30T23:59:00",
+    "promotionEnd": "2025-12-19T12:00:00",
     "stockQuantity": 300,
     "image":
         "https://cdn.chiaki.vn/unsafe/0x480/left/top/smart/filters:quality(75)/https://chiaki.vn/upload/news/content/2023/04/toner-simple-danh-cho-da-gi-jpg-1681897154-19042023163914.jpg",
@@ -6851,6 +7918,16 @@ final List<Map<String, dynamic>> productList = [
 5. Có thể dùng làm lotion mask bằng cách thấm toner vào bông cotton và đắp lên mặt 3–5 phút.
 6. Kết hợp với các sản phẩm dưỡng ẩm khác để tăng hiệu quả làm dịu và cân bằng da.
 ''',
+    "skinTypeTags": [
+      "da thường",
+      "da khô",
+      "da dầu",
+      "da hỗn hợp",
+      "da nhạy cảm",
+    ],
+    "skinConcerns": ["kích ứng nhẹ", "mất nước", "khô ráp", "xỉn màu"],
+    "recommendationScore": 92,
+    "ageGroup": ["18-25", "25-40", "40+"],
   },
   {
     "id": "SP143",
@@ -6861,7 +7938,7 @@ final List<Map<String, dynamic>> productList = [
     "discountPrice": 621000,
     "isDiscountActive": true,
     "promotionStart": "2025-11-25T09:00:00",
-    "promotionEnd": "2025-11-30T23:59:00",
+    "promotionEnd": "2025-12-19T12:00:00",
     "stockQuantity": 120,
     "image":
         "https://media.hcdn.vn/wysiwyg/Chau/kem-duong-am-paula-s-choice-danh-cho-da-mun-60ml-1.jpg",
@@ -6895,6 +7972,16 @@ final List<Map<String, dynamic>> productList = [
 4. Sử dụng sáng và tối. Buổi sáng nên kết hợp thêm kem chống nắng.
 5. Có thể dùng làm lớp khóa ẩm cuối cùng trong chu trình dưỡng da.
 ''',
+    "skinTypeTags": ["da dầu", "da hỗn hợp", "da nhạy cảm"],
+    "skinConcerns": [
+      "mụn viêm nhẹ",
+      "mụn ẩn",
+      "mụn đầu đen",
+      "da tiết dầu nhiều",
+      "kích ứng nhẹ",
+    ],
+    "recommendationScore": 95,
+    "ageGroup": ["18-25", "25-40"],
   },
   {
     "id": "SP144",
@@ -6905,7 +7992,7 @@ final List<Map<String, dynamic>> productList = [
     "discountPrice": 420000,
     "isDiscountActive": true,
     "promotionStart": "2025-11-25T09:00:00",
-    "promotionEnd": "2025-11-30T23:59:00",
+    "promotionEnd": "2025-12-19T12:00:00",
     "stockQuantity": 250,
     "image":
         "https://file.hstatic.net/200000536035/file/mat-na-moi-laneige-lip-sleeping-mask-berry-a_48c4f84eafdd4694b2a9af5c9600047c_1024x1024.jpg",
@@ -6938,6 +8025,10 @@ final List<Map<String, dynamic>> productList = [
 4. Sử dụng hàng ngày để môi luôn mềm mịn, hồng hào.
 5. Có thể dùng như son dưỡng ban ngày khi môi khô nứt.
 ''',
+    "skinTypeTags": ["mọi loại da"],
+    "skinConcerns": ["khô ráp", "nứt nẻ", "xỉn màu", "thiếu độ mềm mịn"],
+    "recommendationScore": 96,
+    "ageGroup": ["18-25", "25-40", "40+"],
   },
   {
     "id": "SP145",
@@ -6948,7 +8039,7 @@ final List<Map<String, dynamic>> productList = [
     "discountPrice": 265000,
     "isDiscountActive": true,
     "promotionStart": "2025-11-25T09:00:00",
-    "promotionEnd": "2025-11-30T23:59:00",
+    "promotionEnd": "2025-12-19T12:00:00",
     "stockQuantity": 180,
     "image":
         "https://edbeauty.vn/wp-content/uploads/2022/04/Gel-rua-mat-SVR-Topialyse-Gel-Lavant-cho-da-kho-san-ngua-1-1.jpg",
@@ -6983,6 +8074,10 @@ final List<Map<String, dynamic>> productList = [
 5. Dùng hàng ngày sáng và tối để duy trì làn da khỏe mạnh.
 6. Có thể kết hợp với kem dưỡng SVR để tăng hiệu quả dưỡng ẩm.
 ''',
+    "skinTypeTags": ["da thường", "da khô", "da hỗn hợp", "da nhạy cảm"],
+    "skinConcerns": ["mất nước", "khô ráp", "kích ứng nhẹ", "thiếu độ đàn hồi"],
+    "recommendationScore": 93,
+    "ageGroup": ["18-25", "25-40", "40+"],
   },
   {
     "id": "SP146",
@@ -7030,6 +8125,10 @@ final List<Map<String, dynamic>> productList = [
 5. Thoa lại sau mỗi 2 giờ nếu tiếp xúc trực tiếp với ánh nắng hoặc sau khi đổ mồ hôi/nước.
 6. Sử dụng hàng ngày để bảo vệ da tối ưu.
 ''',
+    "skinTypeTags": ["da thường", "da khô", "da hỗn hợp", "da nhạy cảm"],
+    "skinConcerns": ["cháy nắng", "xỉn màu", "không đều màu", "lão hóa sớm"],
+    "recommendationScore": 92,
+    "ageGroup": ["18-25", "25-40", "40+"],
   },
   {
     "id": "SP147",
@@ -7075,6 +8174,10 @@ final List<Map<String, dynamic>> productList = [
 5. Có thể dùng riêng hoặc kết hợp với các loại serum khác trong chu trình dưỡng da.
 6. Dùng liên tục ít nhất 4 tuần để thấy hiệu quả rõ rệt.
 ''',
+    "skinTypeTags": ["da thường", "da dầu", "da hỗn hợp"],
+    "skinConcerns": ["xỉn màu", "không đều màu", "thâm mụn", "lão hóa sớm"],
+    "recommendationScore": 93,
+    "ageGroup": ["18-25", "25-40"],
   },
   {
     "id": "SP148",
@@ -7121,6 +8224,10 @@ final List<Map<String, dynamic>> productList = [
 5. Có thể dùng làm lotion mask bằng cách thấm toner vào bông cotton và đắp lên mặt 3–5 phút.
 6. Kết hợp với các sản phẩm dưỡng ẩm khác để tăng hiệu quả làm dịu và cân bằng da.
 ''',
+    "skinTypeTags": ["da thường", "da khô", "da hỗn hợp", "da nhạy cảm"],
+    "skinConcerns": ["mất nước", "khô ráp", "thiếu độ đàn hồi", "xỉn màu"],
+    "recommendationScore": 95,
+    "ageGroup": ["18-25", "25-40", "40+"],
   },
   {
     "id": "SP149",
@@ -7165,6 +8272,16 @@ final List<Map<String, dynamic>> productList = [
 4. Sử dụng sáng và tối. Buổi sáng nên kết hợp thêm kem chống nắng.
 5. Có thể dùng làm lớp khóa ẩm cuối cùng trong chu trình dưỡng da.
 ''',
+    "skinTypeTags": ["da thường", "da khô", "da hỗn hợp"],
+    "skinConcerns": [
+      "lão hóa sớm",
+      "nếp nhăn",
+      "xỉn màu",
+      "không đều màu",
+      "thiếu độ đàn hồi",
+    ],
+    "recommendationScore": 94,
+    "ageGroup": ["25-40", "40+"],
   },
   {
     "id": "SP150",
@@ -7208,6 +8325,16 @@ final List<Map<String, dynamic>> productList = [
 4. Rửa lại bằng nước sạch.
 5. Sử dụng 2–3 lần/tuần để duy trì làn da sáng khỏe.
 ''',
+    "skinTypeTags": ["da dầu", "da hỗn hợp"],
+    "skinConcerns": [
+      "mụn đầu đen",
+      "mụn ẩn",
+      "lỗ chân lông to",
+      "da tiết dầu nhiều",
+      "xỉn màu",
+    ],
+    "recommendationScore": 92,
+    "ageGroup": ["18-25", "25-40"],
   },
   {
     "id": "SP151",
@@ -7251,6 +8378,15 @@ final List<Map<String, dynamic>> productList = [
 4. Rửa lại bằng nước sạch.
 5. Sử dụng 2 lần/ngày (sáng và tối).
 ''',
+    "skinTypeTags": ["da thường", "da dầu", "da hỗn hợp"],
+    "skinConcerns": [
+      "xỉn màu",
+      "không đều màu",
+      "mụn đầu đen",
+      "da tiết dầu nhiều",
+    ],
+    "recommendationScore": 91,
+    "ageGroup": ["18-25", "25-40"],
   },
   {
     "id": "SP152",
@@ -7298,6 +8434,10 @@ final List<Map<String, dynamic>> productList = [
 5. Thoa lại sau mỗi 2 giờ nếu tiếp xúc trực tiếp với ánh nắng hoặc sau khi đổ mồ hôi/nước.
 6. Sử dụng hàng ngày để bảo vệ da tối ưu.
 ''',
+    "skinTypeTags": ["da thường", "da khô", "da hỗn hợp"],
+    "skinConcerns": ["cháy nắng", "xỉn màu", "không đều màu", "lão hóa sớm"],
+    "recommendationScore": 92,
+    "ageGroup": ["18-25", "25-40", "40+"],
   },
   {
     "id": "SP153",
@@ -7343,6 +8483,16 @@ final List<Map<String, dynamic>> productList = [
 4. Không cần rửa lại bằng nước, nhưng có thể rửa nếu muốn.
 5. Sử dụng hàng ngày, sáng và tối.
 ''',
+    "skinTypeTags": [
+      "da thường",
+      "da dầu",
+      "da khô",
+      "da hỗn hợp",
+      "da nhạy cảm",
+    ],
+    "skinConcerns": ["bụi bẩn", "lớp trang điểm", "kích ứng nhẹ", "mất nước"],
+    "recommendationScore": 92,
+    "ageGroup": ["18-25", "25-40", "40+"],
   },
   {
     "id": "SP154",
@@ -7387,6 +8537,16 @@ final List<Map<String, dynamic>> productList = [
 4. Sử dụng sáng và tối. Buổi sáng nên kết hợp thêm kem chống nắng.
 5. Dùng liên tục ít nhất 4 tuần để thấy hiệu quả rõ rệt.
 ''',
+    "skinTypeTags": ["da thường", "da khô", "da hỗn hợp", "da nhạy cảm"],
+    "skinConcerns": [
+      "mất nước",
+      "khô ráp",
+      "thiếu độ đàn hồi",
+      "nếp nhăn nhỏ",
+      "xỉn màu",
+    ],
+    "recommendationScore": 96,
+    "ageGroup": ["25-40", "40+"],
   },
   {
     "id": "SP155",
@@ -7431,6 +8591,15 @@ final List<Map<String, dynamic>> productList = [
 4. Sử dụng sáng và tối trước serum/kem dưỡng.
 5. Có thể dùng làm lotion mask bằng cách thấm toner vào bông cotton và đắp lên mặt 3–5 phút.
 ''',
+    "skinTypeTags": ["da dầu", "da hỗn hợp"],
+    "skinConcerns": [
+      "mụn đầu đen",
+      "mụn ẩn",
+      "lỗ chân lông to",
+      "da tiết dầu nhiều",
+    ],
+    "recommendationScore": 91,
+    "ageGroup": ["18-25", "25-40"],
   },
   {
     "id": "SP156",
@@ -7474,6 +8643,10 @@ final List<Map<String, dynamic>> productList = [
 4. Sử dụng sáng và tối. Buổi sáng nên kết hợp thêm kem chống nắng.
 5. Có thể dùng làm lớp khóa ẩm cuối cùng trong chu trình dưỡng da.
 ''',
+    "skinTypeTags": ["da thường", "da dầu", "da hỗn hợp"],
+    "skinConcerns": ["xỉn màu", "không đều màu", "thâm mụn", "lão hóa sớm"],
+    "recommendationScore": 92,
+    "ageGroup": ["18-25", "25-40"],
   },
   {
     "id": "SP157",
@@ -7517,6 +8690,16 @@ final List<Map<String, dynamic>> productList = [
 4. Rửa lại bằng nước sạch.
 5. Sử dụng 2–3 lần/tuần để duy trì làn da sạch khỏe.
 ''',
+    "skinTypeTags": ["da dầu", "da hỗn hợp"],
+    "skinConcerns": [
+      "mụn đầu đen",
+      "mụn ẩn",
+      "lỗ chân lông to",
+      "da tiết dầu nhiều",
+      "xỉn màu",
+    ],
+    "recommendationScore": 94,
+    "ageGroup": ["18-25", "25-40"],
   },
   {
     "id": "SP158",
@@ -7562,6 +8745,10 @@ final List<Map<String, dynamic>> productList = [
 5. Rửa lại bằng nước sạch và lau khô bằng khăn mềm.
 6. Sử dụng 2 lần/ngày (sáng và tối).
 ''',
+    "skinTypeTags": ["da thường", "da dầu", "da hỗn hợp"],
+    "skinConcerns": ["da tiết dầu nhiều", "mụn đầu đen", "xỉn màu", "mệt mỏi"],
+    "recommendationScore": 90,
+    "ageGroup": ["18-25", "25-40"],
   },
   {
     "id": "SP159",
@@ -7608,6 +8795,10 @@ final List<Map<String, dynamic>> productList = [
 5. Thoa trước khi ra ngoài ít nhất 15–20 phút.
 6. Thoa lại sau mỗi 2 giờ nếu tiếp xúc trực tiếp với ánh nắng hoặc sau khi đổ mồ hôi/nước.
 ''',
+    "skinTypeTags": ["da thường", "da khô", "da hỗn hợp"],
+    "skinConcerns": ["cháy nắng", "xỉn màu", "không đều màu", "lão hóa sớm"],
+    "recommendationScore": 93,
+    "ageGroup": ["18-25", "25-40", "40+"],
   },
   {
     "id": "SP160",
@@ -7652,6 +8843,10 @@ final List<Map<String, dynamic>> productList = [
 4. Không cần rửa lại bằng nước, nhưng có thể rửa nếu muốn.
 5. Sử dụng hàng ngày, sáng và tối.
 ''',
+    "skinTypeTags": ["da thường", "da dầu", "da hỗn hợp"],
+    "skinConcerns": ["bụi bẩn", "lớp trang điểm", "xỉn màu", "không đều màu"],
+    "recommendationScore": 91,
+    "ageGroup": ["18-25", "25-40"],
   },
   {
     "id": "SP161",
@@ -7695,6 +8890,10 @@ final List<Map<String, dynamic>> productList = [
 4. Sử dụng sáng và tối. Buổi sáng nên kết hợp thêm kem chống nắng.
 5. Dùng liên tục ít nhất 4 tuần để thấy hiệu quả rõ rệt.
 ''',
+    "skinTypeTags": ["da thường", "da dầu", "da hỗn hợp"],
+    "skinConcerns": ["thâm mụn", "xỉn màu", "không đều màu", "lão hóa sớm"],
+    "recommendationScore": 94,
+    "ageGroup": ["18-25", "25-40"],
   },
   {
     "id": "SP162",
@@ -7739,6 +8938,16 @@ final List<Map<String, dynamic>> productList = [
 4. Sử dụng buổi tối, tuần 2–3 lần để da làm quen.
 5. Kết hợp với serum và kem dưỡng để tăng hiệu quả chăm sóc da.
 ''',
+    "skinTypeTags": ["da dầu", "da hỗn hợp"],
+    "skinConcerns": [
+      "mụn đầu đen",
+      "mụn ẩn",
+      "mụn viêm nhẹ",
+      "lỗ chân lông to",
+      "da tiết dầu nhiều",
+    ],
+    "recommendationScore": 93,
+    "ageGroup": ["18-25", "25-40"],
   },
   {
     "id": "SP163",
@@ -7782,6 +8991,10 @@ final List<Map<String, dynamic>> productList = [
 4. Sử dụng hàng ngày để đạt hiệu quả tốt nhất.
 5. Kết hợp với sữa tắm Vaseline để tăng hiệu quả dưỡng sáng và cấp ẩm.
 ''',
+    "skinTypeTags": ["da thường", "da khô", "da hỗn hợp"],
+    "skinConcerns": ["xỉn màu", "không đều màu", "mất nước", "lão hóa sớm"],
+    "recommendationScore": 93,
+    "ageGroup": ["18-25", "25-40", "40+"],
   },
   {
     "id": "SP164",
@@ -7829,6 +9042,16 @@ final List<Map<String, dynamic>> productList = [
 6. Lau khô bằng khăn sạch và tiếp tục các bước dưỡng da sau đó.
 7. Sử dụng 2–3 lần/tuần để duy trì làn da sáng khỏe, mịn màng.
 ''',
+    "skinTypeTags": ["da thường", "da dầu", "da hỗn hợp"],
+    "skinConcerns": [
+      "xỉn màu",
+      "không đều màu",
+      "mụn đầu đen",
+      "da tiết dầu nhiều",
+      "thiếu sức sống",
+    ],
+    "recommendationScore": 92,
+    "ageGroup": ["18-25", "25-40"],
   },
   {
     "id": "SP165",
@@ -7874,6 +9097,15 @@ final List<Map<String, dynamic>> productList = [
 5. Lau khô bằng khăn mềm, tiếp tục với toner và kem dưỡng.
 6. Sử dụng 2 lần/ngày (sáng và tối) để đạt hiệu quả ngăn ngừa mụn tốt nhất.
 ''',
+    "skinTypeTags": ["da dầu", "da hỗn hợp"],
+    "skinConcerns": [
+      "mụn đầu đen",
+      "mụn ẩn",
+      "mụn viêm nhẹ",
+      "da tiết dầu nhiều",
+    ],
+    "recommendationScore": 90,
+    "ageGroup": ["13-18", "18-25"],
   },
   {
     "id": "SP166",
@@ -7921,6 +9153,16 @@ final List<Map<String, dynamic>> productList = [
 5. Thoa lại sau mỗi 2 giờ nếu tiếp xúc trực tiếp với ánh nắng hoặc sau khi đổ mồ hôi/nước.
 6. Sử dụng hàng ngày để bảo vệ da tối ưu, kể cả khi trời râm hoặc ngồi trong phòng có ánh sáng mạnh.
 ''',
+    "skinTypeTags": ["da dầu", "da hỗn hợp", "da nhạy cảm"],
+    "skinConcerns": [
+      "mụn viêm nhẹ",
+      "mụn đầu đen",
+      "lỗ chân lông to",
+      "da tiết dầu nhiều",
+      "kích ứng",
+    ],
+    "recommendationScore": 95,
+    "ageGroup": ["18-25", "25-40"],
   },
   {
     "id": "SP167",
@@ -7966,6 +9208,22 @@ final List<Map<String, dynamic>> productList = [
 5. Có thể dùng riêng hoặc kết hợp với các loại serum khác trong chu trình dưỡng da.
 6. Dùng liên tục ít nhất 4 tuần để thấy hiệu quả rõ rệt.
 ''',
+    "skinTypeTags": [
+      "da thường",
+      "da khô",
+      "da dầu",
+      "da hỗn hợp",
+      "da nhạy cảm",
+    ],
+    "skinConcerns": [
+      "mất nước",
+      "khô ráp",
+      "xỉn màu",
+      "thiếu sức sống",
+      "kích ứng nhẹ",
+    ],
+    "recommendationScore": 95,
+    "ageGroup": ["18-25", "25-40", "40+"],
   },
   {
     "id": "SP168",
@@ -8010,6 +9268,16 @@ final List<Map<String, dynamic>> productList = [
 4. Sử dụng buổi tối, tuần 2–3 lần để da làm quen.
 5. Kết hợp với serum và kem dưỡng để tăng hiệu quả chăm sóc da.
 ''',
+    "skinTypeTags": ["da dầu", "da hỗn hợp", "da thường"],
+    "skinConcerns": [
+      "mụn đầu đen",
+      "mụn ẩn",
+      "lỗ chân lông to",
+      "xỉn màu",
+      "da tiết dầu nhiều",
+    ],
+    "recommendationScore": 94,
+    "ageGroup": ["18-25", "25-40"],
   },
   {
     "id": "SP169",
@@ -8054,6 +9322,16 @@ final List<Map<String, dynamic>> productList = [
 4. Sử dụng sáng và tối. Buổi sáng nên kết hợp thêm kem chống nắng.
 5. Có thể dùng làm lớp khóa ẩm cuối cùng trong chu trình dưỡng da.
 ''',
+    "skinTypeTags": ["da dầu", "da hỗn hợp", "da nhạy cảm"],
+    "skinConcerns": [
+      "mụn viêm nhẹ",
+      "mụn ẩn",
+      "kích ứng sau trị mụn",
+      "mất nước",
+      "lỗ chân lông to",
+    ],
+    "recommendationScore": 95,
+    "ageGroup": ["18-25", "25-40"],
   },
   {
     "id": "SP170",
@@ -8097,6 +9375,22 @@ final List<Map<String, dynamic>> productList = [
 5. Gỡ mặt nạ, vỗ nhẹ tinh chất còn lại để thẩm thấu.
 6. Không cần rửa lại bằng nước, tiếp tục các bước dưỡng da sau đó.
 ''',
+    "skinTypeTags": [
+      "da thường",
+      "da khô",
+      "da dầu",
+      "da hỗn hợp",
+      "da nhạy cảm",
+    ],
+    "skinConcerns": [
+      "kích ứng",
+      "đỏ rát",
+      "mất nước",
+      "xỉn màu",
+      "thiếu sức sống",
+    ],
+    "recommendationScore": 95,
+    "ageGroup": ["18-25", "25-40", "40+"],
   },
   {
     "id": "SP171",
@@ -8140,6 +9434,22 @@ final List<Map<String, dynamic>> productList = [
 4. Rửa lại bằng nước sạch và lau khô bằng khăn mềm.
 5. Sử dụng sáng và tối để duy trì làn da khỏe mạnh.
 ''',
+    "skinTypeTags": [
+      "da thường",
+      "da khô",
+      "da dầu",
+      "da hỗn hợp",
+      "da nhạy cảm",
+    ],
+    "skinConcerns": [
+      "kích ứng",
+      "đỏ rát",
+      "mất nước",
+      "khô ráp",
+      "da nhạy cảm",
+    ],
+    "recommendationScore": 96,
+    "ageGroup": ["18-25", "25-40", "40+"],
   },
   {
     "id": "SP172",
@@ -8185,6 +9495,16 @@ final List<Map<String, dynamic>> productList = [
 3. Thoa lại sau mỗi 2 giờ nếu tiếp xúc trực tiếp với ánh nắng hoặc sau khi đổ mồ hôi/nước.
 4. Sử dụng hàng ngày để bảo vệ da tối ưu.
 ''',
+    "skinTypeTags": [
+      "da thường",
+      "da khô",
+      "da dầu",
+      "da hỗn hợp",
+      "da nhạy cảm",
+    ],
+    "skinConcerns": ["cháy nắng", "lão hóa sớm", "kích ứng", "xỉn màu"],
+    "recommendationScore": 94,
+    "ageGroup": ["18-25", "25-40", "40+"],
   },
   {
     "id": "SP173",
@@ -8229,6 +9549,16 @@ final List<Map<String, dynamic>> productList = [
 4. Không cần rửa lại bằng nước, nhưng có thể rửa nếu muốn.
 5. Sử dụng hàng ngày, sáng và tối.
 ''',
+    "skinTypeTags": ["da thường", "da khô", "da hỗn hợp", "da nhạy cảm"],
+    "skinConcerns": [
+      "bụi bẩn",
+      "lớp trang điểm",
+      "xỉn màu",
+      "khô ráp",
+      "thiếu sức sống",
+    ],
+    "recommendationScore": 92,
+    "ageGroup": ["18-25", "25-40", "40+"],
   },
   {
     "id": "SP174",
@@ -8272,6 +9602,22 @@ final List<Map<String, dynamic>> productList = [
 4. Sử dụng sáng và tối. Buổi sáng nên kết hợp thêm kem chống nắng.
 5. Dùng liên tục ít nhất 4 tuần để thấy hiệu quả rõ rệt.
 ''',
+    "skinTypeTags": [
+      "da thường",
+      "da khô",
+      "da dầu",
+      "da hỗn hợp",
+      "da nhạy cảm",
+    ],
+    "skinConcerns": [
+      "mất nước",
+      "khô ráp",
+      "kích ứng",
+      "đỏ rát",
+      "thiếu sức sống",
+    ],
+    "recommendationScore": 95,
+    "ageGroup": ["18-25", "25-40", "40+"],
   },
   {
     "id": "SP175",
@@ -8316,6 +9662,22 @@ final List<Map<String, dynamic>> productList = [
 4. Sử dụng sáng và tối trước serum/kem dưỡng.
 5. Có thể dùng làm lotion mask bằng cách thấm toner vào bông cotton và đắp lên mặt 3–5 phút.
 ''',
+    "skinTypeTags": [
+      "da thường",
+      "da khô",
+      "da dầu",
+      "da hỗn hợp",
+      "da nhạy cảm",
+    ],
+    "skinConcerns": [
+      "kích ứng",
+      "đỏ rát",
+      "mất nước",
+      "khô ráp",
+      "thiếu sức sống",
+    ],
+    "recommendationScore": 94,
+    "ageGroup": ["18-25", "25-40", "40+"],
   },
   {
     "id": "SP176",
@@ -8357,6 +9719,16 @@ final List<Map<String, dynamic>> productList = [
 3. Sử dụng buổi tối để đạt hiệu quả tốt nhất.
 4. Dùng liên tục ít nhất 4 tuần để thấy hiệu quả rõ rệt.
 ''',
+    "skinTypeTags": ["da thường", "da khô", "da hỗn hợp"],
+    "skinConcerns": [
+      "nếp nhăn",
+      "lão hóa sớm",
+      "xỉn màu",
+      "khô ráp",
+      "không đều màu",
+    ],
+    "recommendationScore": 96,
+    "ageGroup": ["25-40", "40+"],
   },
   {
     "id": "SP177",
@@ -8400,6 +9772,16 @@ final List<Map<String, dynamic>> productList = [
 5. Gỡ mặt nạ, vỗ nhẹ tinh chất còn lại để thẩm thấu.
 6. Không cần rửa lại bằng nước, tiếp tục các bước dưỡng da sau đó.
 ''',
+    "skinTypeTags": ["da thường", "da khô", "da hỗn hợp"],
+    "skinConcerns": [
+      "mất nước",
+      "khô ráp",
+      "nếp nhăn",
+      "lão hóa sớm",
+      "thiếu sức sống",
+    ],
+    "recommendationScore": 93,
+    "ageGroup": ["25-40", "40+"],
   },
   {
     "id": "SP178",
@@ -8442,6 +9824,10 @@ final List<Map<String, dynamic>> productList = [
 3. Massage nhẹ nhàng rồi rửa lại bằng nước sạch.
 4. Sử dụng sáng và tối để duy trì làn da khỏe mạnh.
 ''',
+    "skinTypeTags": ["da thường", "da khô", "da nhạy cảm"],
+    "skinConcerns": ["mất nước", "khô ráp", "kích ứng", "đỏ rát"],
+    "recommendationScore": 96,
+    "ageGroup": ["18-25", "25-40", "40+"],
   },
   {
     "id": "SP179",
@@ -8485,6 +9871,15 @@ final List<Map<String, dynamic>> productList = [
 3. Thoa lại sau mỗi 2 giờ nếu tiếp xúc trực tiếp với ánh nắng hoặc sau khi đổ mồ hôi/nước.
 4. Sử dụng hàng ngày để bảo vệ da tối ưu.
 ''',
+    "skinTypeTags": ["da dầu", "da hỗn hợp", "da thường"],
+    "skinConcerns": [
+      "cháy nắng",
+      "xỉn màu",
+      "da tiết dầu nhiều",
+      "không đều màu",
+    ],
+    "recommendationScore": 92,
+    "ageGroup": ["18-25", "25-40"],
   },
   {
     "id": "SP180",
@@ -8529,6 +9924,15 @@ final List<Map<String, dynamic>> productList = [
 4. Không cần rửa lại bằng nước, nhưng có thể rửa nếu muốn.
 5. Sử dụng hàng ngày, sáng và tối.
 ''',
+    "skinTypeTags": ["da thường", "da dầu", "da hỗn hợp"],
+    "skinConcerns": [
+      "bụi bẩn",
+      "lớp trang điểm",
+      "da tiết dầu nhiều",
+      "xỉn màu",
+    ],
+    "recommendationScore": 91,
+    "ageGroup": ["18-25", "25-40"],
   },
   {
     "id": "SP181",
@@ -8571,6 +9975,16 @@ final List<Map<String, dynamic>> productList = [
 3. Sử dụng buổi tối, kết hợp kem chống nắng ban ngày.
 4. Dùng liên tục ít nhất 4 tuần để thấy hiệu quả rõ rệt.
 ''',
+    "skinTypeTags": ["da thường", "da khô", "da hỗn hợp"],
+    "skinConcerns": [
+      "nếp nhăn",
+      "lão hóa sớm",
+      "không đều màu",
+      "xỉn màu",
+      "thiếu sức sống",
+    ],
+    "recommendationScore": 95,
+    "ageGroup": ["25-40", "40+"],
   },
   {
     "id": "SP182",
@@ -8613,6 +10027,16 @@ final List<Map<String, dynamic>> productList = [
 3. Vỗ nhẹ để dưỡng chất thẩm thấu.
 4. Sử dụng sáng và tối trước serum/kem dưỡng.
 ''',
+    "skinTypeTags": ["da thường", "da dầu", "da hỗn hợp", "da nhạy cảm"],
+    "skinConcerns": [
+      "mất nước",
+      "kích ứng nhẹ",
+      "lỗ chân lông to",
+      "da tiết dầu nhiều",
+      "xỉn màu",
+    ],
+    "recommendationScore": 93,
+    "ageGroup": ["18-25", "25-40", "40+"],
   },
   {
     "id": "SP183",
@@ -8655,6 +10079,10 @@ final List<Map<String, dynamic>> productList = [
 3. Sử dụng sáng và tối.
 4. Có thể dùng làm lớp khóa ẩm cuối cùng trong chu trình dưỡng da.
 ''',
+    "skinTypeTags": ["da thường", "da khô", "da nhạy cảm"],
+    "skinConcerns": ["mất nước", "khô ráp", "kích ứng nhẹ", "thiếu sức sống"],
+    "recommendationScore": 95,
+    "ageGroup": ["18-25", "25-40", "40+"],
   },
   {
     "id": "SP184",
@@ -8697,6 +10125,15 @@ final List<Map<String, dynamic>> productList = [
 4. Gỡ mặt nạ, vỗ nhẹ tinh chất còn lại để thẩm thấu.
 5. Không cần rửa lại bằng nước, tiếp tục các bước dưỡng da sau đó.
 ''',
+    "skinTypeTags": ["da thường", "da dầu", "da hỗn hợp"],
+    "skinConcerns": [
+      "lỗ chân lông to",
+      "xỉn màu",
+      "da tiết dầu nhiều",
+      "thiếu sức sống",
+    ],
+    "recommendationScore": 92,
+    "ageGroup": ["18-25", "25-40"],
   },
   {
     "id": "SP185",
@@ -8739,6 +10176,10 @@ final List<Map<String, dynamic>> productList = [
 4. Rửa lại bằng nước sạch.
 5. Sử dụng sáng và tối để duy trì làn da sạch khỏe.
 ''',
+    "skinTypeTags": ["da thường", "da dầu", "da hỗn hợp"],
+    "skinConcerns": ["bụi bẩn", "dầu thừa", "lỗ chân lông to", "xỉn màu"],
+    "recommendationScore": 91,
+    "ageGroup": ["18-25", "25-40"],
   },
   {
     "id": "SP186",
@@ -8782,6 +10223,22 @@ final List<Map<String, dynamic>> productList = [
 3. Thoa lại sau mỗi 2 giờ nếu tiếp xúc trực tiếp với ánh nắng hoặc sau khi đổ mồ hôi/nước.
 4. Sử dụng hàng ngày để bảo vệ da tối ưu.
 ''',
+    "skinTypeTags": [
+      "da thường",
+      "da khô",
+      "da dầu",
+      "da hỗn hợp",
+      "da nhạy cảm",
+    ],
+    "skinConcerns": [
+      "cháy nắng",
+      "lão hóa sớm",
+      "xỉn màu",
+      "khô ráp",
+      "kích ứng",
+    ],
+    "recommendationScore": 96,
+    "ageGroup": ["18-25", "25-40", "40+"],
   },
   {
     "id": "SP187",
@@ -8824,6 +10281,16 @@ final List<Map<String, dynamic>> productList = [
 3. Sử dụng sáng và tối.
 4. Buổi sáng nên kết hợp thêm kem chống nắng để bảo vệ da.
 ''',
+    "skinTypeTags": ["da thường", "da khô", "da hỗn hợp", "da nhạy cảm"],
+    "skinConcerns": [
+      "mất nước",
+      "khô ráp",
+      "xỉn màu",
+      "thiếu sức sống",
+      "lão hóa sớm",
+    ],
+    "recommendationScore": 95,
+    "ageGroup": ["25-40", "40+"],
   },
   {
     "id": "SP188",
@@ -8864,6 +10331,16 @@ final List<Map<String, dynamic>> productList = [
 2. Vỗ nhẹ để dưỡng chất thẩm thấu.
 3. Sử dụng sáng và tối.
 ''',
+    "skinTypeTags": ["da dầu", "da hỗn hợp", "da thường", "da nhạy cảm"],
+    "skinConcerns": [
+      "mụn",
+      "kích ứng",
+      "dầu thừa",
+      "lỗ chân lông to",
+      "đỏ rát",
+    ],
+    "recommendationScore": 93,
+    "ageGroup": ["18-25", "25-40"],
   },
   {
     "id": "SP189",
@@ -8906,6 +10383,16 @@ final List<Map<String, dynamic>> productList = [
 3. Sử dụng sáng và tối.
 4. Buổi sáng nên kết hợp thêm kem chống nắng để bảo vệ da.
 ''',
+    "skinTypeTags": ["da thường", "da khô", "da dầu", "da hỗn hợp"],
+    "skinConcerns": [
+      "xỉn màu",
+      "không đều màu",
+      "nám",
+      "tàn nhang",
+      "thiếu sức sống",
+    ],
+    "recommendationScore": 92,
+    "ageGroup": ["18-25", "25-40"],
   },
   {
     "id": "SP190",
@@ -8948,6 +10435,16 @@ final List<Map<String, dynamic>> productList = [
 3. Để qua đêm, sáng hôm sau rửa lại bằng nước sạch.
 4. Sử dụng 2–3 lần/tuần để đạt hiệu quả tốt nhất.
 ''',
+    "skinTypeTags": ["da thường", "da khô", "da hỗn hợp", "da nhạy cảm"],
+    "skinConcerns": [
+      "mất nước",
+      "khô ráp",
+      "xỉn màu",
+      "thiếu sức sống",
+      "căng thẳng da",
+    ],
+    "recommendationScore": 95,
+    "ageGroup": ["18-25", "25-40", "40+"],
   },
   {
     "id": "SP191",
@@ -8991,6 +10488,10 @@ final List<Map<String, dynamic>> productList = [
 4. Rửa lại bằng nước sạch.
 5. Sử dụng sáng và tối để duy trì làn da khỏe mạnh.
 ''',
+    "skinTypeTags": ["da thường", "da khô", "da hỗn hợp", "da nhạy cảm"],
+    "skinConcerns": ["kích ứng", "đỏ rát", "mất nước", "khô ráp"],
+    "recommendationScore": 96,
+    "ageGroup": ["18-25", "25-40", "40+"],
   },
   {
     "id": "SP192",
@@ -9034,6 +10535,16 @@ final List<Map<String, dynamic>> productList = [
 3. Thoa lại sau mỗi 2 giờ nếu tiếp xúc trực tiếp với ánh nắng hoặc sau khi đổ mồ hôi/nước.
 4. Sử dụng hàng ngày để bảo vệ da tối ưu.
 ''',
+    "skinTypeTags": [
+      "da thường",
+      "da khô",
+      "da dầu",
+      "da hỗn hợp",
+      "da nhạy cảm",
+    ],
+    "skinConcerns": ["cháy nắng", "kích ứng", "lão hóa sớm", "xỉn màu"],
+    "recommendationScore": 97,
+    "ageGroup": ["18-25", "25-40", "40+"],
   },
   {
     "id": "SP193",
@@ -9075,6 +10586,10 @@ final List<Map<String, dynamic>> productList = [
 3. Sử dụng buổi tối trước khi đi ngủ.
 4. Dùng liên tục ít nhất 4 tuần để thấy hiệu quả rõ rệt.
 ''',
+    "skinTypeTags": ["da thường", "da khô", "da hỗn hợp"],
+    "skinConcerns": ["mất nước", "xỉn màu", "thiếu sức sống", "lão hóa sớm"],
+    "recommendationScore": 94,
+    "ageGroup": ["25-40", "40+"],
   },
   {
     "id": "SP194",
@@ -9118,6 +10633,16 @@ final List<Map<String, dynamic>> productList = [
 3. Vỗ nhẹ để dưỡng chất thẩm thấu.
 4. Sử dụng sáng và tối.
 ''',
+    "skinTypeTags": ["da dầu", "da hỗn hợp", "da thường", "da nhạy cảm"],
+    "skinConcerns": [
+      "mụn",
+      "lỗ chân lông to",
+      "dầu thừa",
+      "kích ứng nhẹ",
+      "xỉn màu",
+    ],
+    "recommendationScore": 94,
+    "ageGroup": ["18-25", "25-40"],
   },
   {
     "id": "SP195",
@@ -9160,6 +10685,16 @@ final List<Map<String, dynamic>> productList = [
 3. Massage nhẹ nhàng để kem thẩm thấu.
 4. Sử dụng sáng và tối.
 ''',
+    "skinTypeTags": ["da thường", "da khô", "da hỗn hợp"],
+    "skinConcerns": [
+      "nếp nhăn",
+      "lão hóa sớm",
+      "chảy xệ",
+      "xỉn màu",
+      "thiếu sức sống",
+    ],
+    "recommendationScore": 94,
+    "ageGroup": ["40+", "50+"],
   },
   {
     "id": "SP196",
@@ -9202,6 +10737,16 @@ final List<Map<String, dynamic>> productList = [
 3. Để qua đêm, sáng hôm sau rửa lại bằng nước sạch.
 4. Sử dụng 2–3 lần/tuần để đạt hiệu quả tốt nhất.
 ''',
+    "skinTypeTags": ["da thường", "da khô", "da hỗn hợp", "da nhạy cảm"],
+    "skinConcerns": [
+      "mất nước",
+      "khô ráp",
+      "xỉn màu",
+      "thiếu sức sống",
+      "căng thẳng da",
+    ],
+    "recommendationScore": 95,
+    "ageGroup": ["18-25", "25-40", "40+"],
   },
   {
     "id": "SP197",
@@ -9247,6 +10792,10 @@ final List<Map<String, dynamic>> productList = [
 6. Sử dụng sáng và tối để duy trì làn da sạch khỏe.
 7. Kết hợp với toner và kem dưỡng để đạt hiệu quả chăm sóc da tối ưu.
 ''',
+    "skinTypeTags": ["da thường", "da khô", "da hỗn hợp", "da nhạy cảm"],
+    "skinConcerns": ["kích ứng", "đỏ rát", "mất nước", "khô ráp"],
+    "recommendationScore": 96,
+    "ageGroup": ["18-25", "25-40", "40+"],
   },
   {
     "id": "SP198",
@@ -9292,6 +10841,10 @@ final List<Map<String, dynamic>> productList = [
 6. Thoa lại sau mỗi 2 giờ nếu tiếp xúc trực tiếp với ánh nắng hoặc sau khi đổ mồ hôi/nước.
 7. Sử dụng hàng ngày để bảo vệ da tối ưu, kể cả khi trời râm hoặc ngồi trong phòng có ánh sáng mạnh.
 ''',
+    "skinTypeTags": ["da thường", "da dầu", "da hỗn hợp", "da khô"],
+    "skinConcerns": ["cháy nắng", "lão hóa sớm", "xỉn màu", "dầu thừa"],
+    "recommendationScore": 96,
+    "ageGroup": ["18-25", "25-40", "40+"],
   },
   {
     "id": "SP199",
@@ -9336,6 +10889,15 @@ final List<Map<String, dynamic>> productList = [
 4. Không cần rửa lại bằng nước, nhưng có thể rửa nếu muốn.
 5. Sử dụng hàng ngày, sáng và tối để duy trì làn da sạch khỏe.
 ''',
+    "skinTypeTags": ["da dầu", "da hỗn hợp", "da thường"],
+    "skinConcerns": [
+      "lớp trang điểm đậm",
+      "dầu thừa",
+      "bụi bẩn",
+      "lỗ chân lông bít tắc",
+    ],
+    "recommendationScore": 92,
+    "ageGroup": ["18-25", "25-40"],
   },
   {
     "id": "SP200",
@@ -9379,6 +10941,10 @@ final List<Map<String, dynamic>> productList = [
 4. Sử dụng sáng và tối đều đặn.
 5. Buổi sáng nên kết hợp thêm kem chống nắng để bảo vệ vùng da mắt.
 ''',
+    "skinTypeTags": ["da thường", "da khô", "da dầu", "da hỗn hợp"],
+    "skinConcerns": ["bọng mắt", "quầng thâm", "mệt mỏi", "lão hóa sớm"],
+    "recommendationScore": 93,
+    "ageGroup": ["18-25", "25-40", "40+"],
   },
   {
     "id": "SP201",
@@ -9422,6 +10988,10 @@ final List<Map<String, dynamic>> productList = [
 4. Để màu son bền lâu hơn, có thể phủ một lớp phấn mỏng lên môi trước khi thoa son.
 5. Tẩy trang môi kỹ vào cuối ngày để tránh thâm môi.
 ''',
+    "skinTypeTags": ["mọi loại da"],
+    "skinConcerns": ["khô môi", "thiếu sức sống", "không đều màu môi"],
+    "recommendationScore": 93,
+    "ageGroup": ["18-25", "25-40", "40+"],
   },
   {
     "id": "SP202",
@@ -9465,6 +11035,10 @@ final List<Map<String, dynamic>> productList = [
 4. Có thể dặm lại nhiều lần trong ngày để duy trì lớp nền mịn màng.
 5. Kết hợp với kem lót và kem nền cùng dòng Fit Me để đạt hiệu quả tối ưu.
 ''',
+    "skinTypeTags": ["da dầu", "da hỗn hợp", "da thường"],
+    "skinConcerns": ["dầu thừa", "lỗ chân lông to", "xỉn màu", "không đều màu"],
+    "recommendationScore": 93,
+    "ageGroup": ["18-25", "25-40"],
   },
   {
     "id": "SP203",
@@ -9508,6 +11082,10 @@ final List<Map<String, dynamic>> productList = [
 4. Kết hợp với kem lót để lớp nền bền lâu hơn.
 5. Tẩy trang kỹ vào cuối ngày để tránh bít tắc lỗ chân lông.
 ''',
+    "skinTypeTags": ["da dầu", "da hỗn hợp", "da thường"],
+    "skinConcerns": ["dầu thừa", "lỗ chân lông to", "không đều màu", "xỉn màu"],
+    "recommendationScore": 94,
+    "ageGroup": ["18-25", "25-40"],
   },
   {
     "id": "SP204",
@@ -9551,6 +11129,10 @@ final List<Map<String, dynamic>> productList = [
 4. Đợi vài giây cho mascara khô trước khi chớp mắt.
 5. Tẩy trang kỹ bằng nước tẩy trang dành riêng cho mắt vào cuối ngày.
 ''',
+    "skinTypeTags": ["mọi loại da"],
+    "skinConcerns": ["mi thưa", "mi ngắn", "thiếu độ cong", "thiếu độ dày"],
+    "recommendationScore": 94,
+    "ageGroup": ["18-25", "25-40", "40+"],
   },
   {
     "id": "SP205",
@@ -9594,6 +11176,10 @@ final List<Map<String, dynamic>> productList = [
 4. Đợi vài giây cho khô hoàn toàn trước khi chớp mắt.
 5. Tẩy trang kỹ bằng nước tẩy trang dành riêng cho mắt vào cuối ngày.
 ''',
+    "skinTypeTags": ["mọi loại da"],
+    "skinConcerns": ["mí mắt dầu", "không đều màu", "thiếu sắc nét ánh nhìn"],
+    "recommendationScore": 95,
+    "ageGroup": ["18-25", "25-40", "40+"],
   },
   {
     "id": "SP206",
@@ -9637,6 +11223,10 @@ final List<Map<String, dynamic>> productList = [
 3. Dùng nhiều lần trong ngày để duy trì độ ẩm cho môi.
 4. Sử dụng buổi tối như mặt nạ ngủ cho môi để phục hồi.
 ''',
+    "skinTypeTags": ["mọi loại da"],
+    "skinConcerns": ["khô môi", "nứt nẻ", "thiếu sức sống", "xỉn màu môi"],
+    "recommendationScore": 93,
+    "ageGroup": ["18-25", "25-40", "40+"],
   },
   {
     "id": "SP207",
@@ -9681,6 +11271,10 @@ final List<Map<String, dynamic>> productList = [
 4. Có thể dặm lại nhiều lần trong ngày để duy trì lớp nền mịn màng.
 5. Kết hợp với kem lót để lớp nền lâu trôi hơn.
 ''',
+    "skinTypeTags": ["da dầu", "da hỗn hợp", "da thường"],
+    "skinConcerns": ["dầu thừa", "lỗ chân lông to", "xỉn màu", "không đều màu"],
+    "recommendationScore": 95,
+    "ageGroup": ["18-25", "25-40"],
   },
   {
     "id": "SP208",
@@ -9724,6 +11318,16 @@ final List<Map<String, dynamic>> productList = [
 4. Kết hợp với kem lót để lớp nền bền lâu hơn.
 5. Tẩy trang kỹ vào cuối ngày để tránh bít tắc lỗ chân lông.
 ''',
+    "skinTypeTags": ["da dầu", "da hỗn hợp", "da thường"],
+    "skinConcerns": [
+      "dầu thừa",
+      "lỗ chân lông to",
+      "không đều màu",
+      "xỉn màu",
+      "che phủ khuyết điểm",
+    ],
+    "recommendationScore": 95,
+    "ageGroup": ["18-25", "25-40"],
   },
   {
     "id": "SP209",
@@ -9767,6 +11371,10 @@ final List<Map<String, dynamic>> productList = [
 4. Đợi vài giây cho mascara khô trước khi chớp mắt.
 5. Tẩy trang kỹ bằng nước tẩy trang dành riêng cho mắt vào cuối ngày.
 ''',
+    "skinTypeTags": ["mọi loại da"],
+    "skinConcerns": ["mi thưa", "mi ngắn", "thiếu độ dày", "thiếu độ cong"],
+    "recommendationScore": 94,
+    "ageGroup": ["18-25", "25-40", "40+"],
   },
   {
     "id": "SP211",
@@ -9810,6 +11418,10 @@ final List<Map<String, dynamic>> productList = [
 4. Để màu son bền lâu hơn, có thể phủ một lớp phấn mỏng lên môi trước khi thoa son.
 5. Tẩy trang môi kỹ vào cuối ngày để tránh thâm môi.
 ''',
+    "skinTypeTags": ["mọi loại da"],
+    "skinConcerns": ["khô môi", "thiếu sức sống", "không đều màu môi"],
+    "recommendationScore": 94,
+    "ageGroup": ["18-25", "25-40", "40+"],
   },
   {
     "id": "SP212",
@@ -9853,6 +11465,10 @@ final List<Map<String, dynamic>> productList = [
 4. Có thể dặm lại nhiều lần trong ngày để duy trì lớp nền mịn màng.
 5. Kết hợp với kem lót để lớp nền lâu trôi hơn.
 ''',
+    "skinTypeTags": ["da thường", "da dầu", "da hỗn hợp", "da khô"],
+    "skinConcerns": ["dầu thừa", "lỗ chân lông to", "xỉn màu", "không đều màu"],
+    "recommendationScore": 96,
+    "ageGroup": ["25-40", "40+"],
   },
   {
     "id": "SP213",
@@ -9896,6 +11512,15 @@ final List<Map<String, dynamic>> productList = [
 4. Kết hợp với kem lót để lớp nền bền lâu hơn.
 5. Tẩy trang kỹ vào cuối ngày để tránh bít tắc lỗ chân lông.
 ''',
+    "skinTypeTags": ["da thường", "da hỗn hợp", "da khô"],
+    "skinConcerns": [
+      "không đều màu",
+      "xỉn màu",
+      "thiếu sức sống",
+      "che phủ khuyết điểm",
+    ],
+    "recommendationScore": 96,
+    "ageGroup": ["25-40", "40+"],
   },
   {
     "id": "SP214",
@@ -9939,6 +11564,10 @@ final List<Map<String, dynamic>> productList = [
 4. Đợi vài giây cho mascara khô trước khi chớp mắt.
 5. Tẩy trang kỹ bằng nước tẩy trang dành riêng cho mắt vào cuối ngày.
 ''',
+    "skinTypeTags": ["mọi loại da"],
+    "skinConcerns": ["mi ngắn", "mi thưa", "thiếu độ cong", "thiếu độ dày"],
+    "recommendationScore": 95,
+    "ageGroup": ["18-25", "25-40", "40+"],
   },
   {
     "id": "SP215",
@@ -9982,6 +11611,14 @@ final List<Map<String, dynamic>> productList = [
 4. Đợi vài giây cho khô hoàn toàn trước khi chớp mắt.
 5. Tẩy trang kỹ bằng nước tẩy trang dành riêng cho mắt vào cuối ngày.
 ''',
+    "skinTypeTags": ["mọi loại da"],
+    "skinConcerns": [
+      "mí mắt dầu",
+      "thiếu sắc nét ánh nhìn",
+      "dễ lem khi trang điểm",
+    ],
+    "recommendationScore": 94,
+    "ageGroup": ["18-25", "25-40", "40+"],
   },
   {
     "id": "SP216",
@@ -10024,6 +11661,10 @@ final List<Map<String, dynamic>> productList = [
 3. Dùng nhiều lần trong ngày để duy trì độ ẩm cho môi.
 4. Sử dụng buổi tối như mặt nạ ngủ cho môi để phục hồi.
 ''',
+    "skinTypeTags": ["mọi loại da"],
+    "skinConcerns": ["khô môi", "nứt nẻ", "thiếu sức sống", "xỉn màu môi"],
+    "recommendationScore": 96,
+    "ageGroup": ["18-25", "25-40", "40+"],
   },
   {
     "id": "SP217",
@@ -10067,6 +11708,10 @@ final List<Map<String, dynamic>> productList = [
 4. Có thể dặm lại nhiều lần trong ngày để duy trì lớp nền mịn màng.
 5. Kết hợp với kem lót để lớp nền lâu trôi hơn.
 ''',
+    "skinTypeTags": ["da dầu", "da hỗn hợp", "da thường"],
+    "skinConcerns": ["dầu thừa", "lỗ chân lông to", "xỉn màu", "không đều màu"],
+    "recommendationScore": 94,
+    "ageGroup": ["18-25", "25-40"],
   },
   {
     "id": "SP218",
@@ -10110,6 +11755,16 @@ final List<Map<String, dynamic>> productList = [
 4. Kết hợp với kem lót để lớp nền bền lâu hơn.
 5. Tẩy trang kỹ vào cuối ngày để tránh bít tắc lỗ chân lông.
 ''',
+    "skinTypeTags": ["da dầu", "da hỗn hợp", "da thường"],
+    "skinConcerns": [
+      "dầu thừa",
+      "lỗ chân lông to",
+      "không đều màu",
+      "xỉn màu",
+      "che phủ khuyết điểm",
+    ],
+    "recommendationScore": 97,
+    "ageGroup": ["25-40", "40+"],
   },
   {
     "id": "SP219",
@@ -10153,6 +11808,10 @@ final List<Map<String, dynamic>> productList = [
 4. Đợi vài giây cho mascara khô trước khi chớp mắt.
 5. Tẩy trang kỹ bằng nước tẩy trang dành riêng cho mắt vào cuối ngày.
 ''',
+    "skinTypeTags": ["mọi loại da"],
+    "skinConcerns": ["mi thẳng", "mi ngắn", "thiếu độ cong", "thiếu độ dày"],
+    "recommendationScore": 94,
+    "ageGroup": ["18-25", "25-40", "40+"],
   },
   {
     "id": "SP220",
@@ -10196,6 +11855,14 @@ final List<Map<String, dynamic>> productList = [
 4. Đợi vài giây cho khô hoàn toàn trước khi chớp mắt.
 5. Tẩy trang kỹ bằng nước tẩy trang dành riêng cho mắt vào cuối ngày.
 ''',
+    "skinTypeTags": ["mọi loại da"],
+    "skinConcerns": [
+      "mí mắt dầu",
+      "thiếu sắc nét ánh nhìn",
+      "dễ lem khi trang điểm",
+    ],
+    "recommendationScore": 94,
+    "ageGroup": ["18-25", "25-40", "40+"],
   },
   {
     "id": "SP221",
@@ -10239,6 +11906,10 @@ final List<Map<String, dynamic>> productList = [
 4. Xả sạch bằng nước.
 5. Sử dụng 2–3 lần/tuần để đạt hiệu quả tốt nhất.
 ''',
+    "skinTypeTags": ["mọi loại da đầu"],
+    "skinConcerns": ["tóc khô xơ", "tóc hư tổn", "thiếu độ bóng", "gãy rụng"],
+    "recommendationScore": 93,
+    "ageGroup": ["18-25", "25-40", "40+"],
   },
   {
     "id": "SP222",
@@ -10282,6 +11953,10 @@ final List<Map<String, dynamic>> productList = [
 4. Xả sạch bằng nước.
 5. Sử dụng thường xuyên để tóc chắc khỏe và mềm mượt.
 ''',
+    "skinTypeTags": ["mọi loại da đầu"],
+    "skinConcerns": ["tóc hư tổn", "tóc khô xơ", "gãy rụng", "thiếu độ bóng"],
+    "recommendationScore": 94,
+    "ageGroup": ["18-25", "25-40", "40+"],
   },
   {
     "id": "SP223",
@@ -10324,6 +11999,15 @@ final List<Map<String, dynamic>> productList = [
 3. Có thể dùng trước khi sấy hoặc tạo kiểu để bảo vệ tóc khỏi nhiệt độ cao.
 4. Sử dụng hàng ngày để duy trì mái tóc mềm mượt và chắc khỏe.
 ''',
+    "skinTypeTags": ["mọi loại da đầu"],
+    "skinConcerns": [
+      "tóc khô xơ",
+      "tóc hư tổn do nhiệt",
+      "thiếu độ bóng",
+      "xơ rối",
+    ],
+    "recommendationScore": 95,
+    "ageGroup": ["18-25", "25-40", "40+"],
   },
   {
     "id": "SP224",
@@ -10367,6 +12051,16 @@ final List<Map<String, dynamic>> productList = [
 4. Ủ trong 5–10 phút rồi xả sạch bằng nước.
 5. Sử dụng 1–2 lần/tuần để đạt hiệu quả tốt nhất.
 ''',
+    "skinTypeTags": ["mọi loại da đầu"],
+    "skinConcerns": [
+      "tóc hư tổn",
+      "tóc khô xơ",
+      "gãy rụng",
+      "chẻ ngọn",
+      "thiếu độ bóng",
+    ],
+    "recommendationScore": 95,
+    "ageGroup": ["18-25", "25-40", "40+"],
   },
   {
     "id": "SP225",
@@ -10410,6 +12104,15 @@ final List<Map<String, dynamic>> productList = [
 4. Xả sạch bằng nước.
 5. Sử dụng thường xuyên để duy trì mái tóc sạch gàu và khỏe mạnh.
 ''',
+    "skinTypeTags": ["mọi loại da đầu"],
+    "skinConcerns": [
+      "gàu",
+      "ngứa da đầu",
+      "dầu thừa",
+      "thiếu cảm giác sạch mát",
+    ],
+    "recommendationScore": 93,
+    "ageGroup": ["18-25", "25-40", "40+"],
   },
   {
     "id": "SP226",
@@ -10453,6 +12156,10 @@ final List<Map<String, dynamic>> productList = [
 4. Để 2–3 phút rồi xả sạch bằng nước.
 5. Sử dụng thường xuyên để tóc mềm mượt và chắc khỏe.
 ''',
+    "skinTypeTags": ["mọi loại da đầu"],
+    "skinConcerns": ["tóc khô xơ", "tóc hư tổn", "gãy rụng", "thiếu độ bóng"],
+    "recommendationScore": 93,
+    "ageGroup": ["18-25", "25-40", "40+"],
   },
   {
     "id": "SP227",
@@ -10495,6 +12202,10 @@ final List<Map<String, dynamic>> productList = [
 3. Có thể dùng trước khi sấy hoặc tạo kiểu để bảo vệ tóc khỏi nhiệt độ cao.
 4. Sử dụng hàng ngày để duy trì mái tóc mềm mượt và chắc khỏe.
 ''',
+    "skinTypeTags": ["mọi loại da đầu"],
+    "skinConcerns": ["tóc khô xơ", "tóc hư tổn", "xơ rối", "thiếu độ bóng"],
+    "recommendationScore": 95,
+    "ageGroup": ["18-25", "25-40", "40+"],
   },
   {
     "id": "SP228",
@@ -10538,6 +12249,16 @@ final List<Map<String, dynamic>> productList = [
 4. Ủ trong 5–10 phút rồi xả sạch bằng nước.
 5. Sử dụng 1–2 lần/tuần để đạt hiệu quả tốt nhất.
 ''',
+    "skinTypeTags": ["mọi loại da đầu"],
+    "skinConcerns": [
+      "tóc hư tổn",
+      "tóc khô xơ",
+      "chẻ ngọn",
+      "thiếu độ bóng",
+      "xơ rối",
+    ],
+    "recommendationScore": 96,
+    "ageGroup": ["18-25", "25-40", "40+"],
   },
   {
     "id": "SP229",
@@ -10581,6 +12302,10 @@ final List<Map<String, dynamic>> productList = [
 4. Xả sạch bằng nước.
 5. Sử dụng thường xuyên để tóc mềm mượt và dễ chải.
 ''',
+    "skinTypeTags": ["mọi loại da đầu"],
+    "skinConcerns": ["tóc khô xơ", "xơ rối", "khó vào nếp", "thiếu độ bóng"],
+    "recommendationScore": 92,
+    "ageGroup": ["18-25", "25-40", "40+"],
   },
   {
     "id": "SP230",
@@ -10624,6 +12349,10 @@ final List<Map<String, dynamic>> productList = [
 4. Để 2–3 phút rồi xả sạch bằng nước.
 5. Sử dụng thường xuyên để tóc mềm mượt và dễ chải.
 ''',
+    "skinTypeTags": ["mọi loại da đầu"],
+    "skinConcerns": ["tóc khô xơ", "xơ rối", "thiếu độ bóng", "khó vào nếp"],
+    "recommendationScore": 92,
+    "ageGroup": ["18-25", "25-40", "40+"],
   },
   {
     "id": "SP231",
@@ -10666,6 +12395,15 @@ final List<Map<String, dynamic>> productList = [
 3. Có thể dùng trước khi sấy hoặc tạo kiểu để bảo vệ tóc khỏi nhiệt độ cao.
 4. Sử dụng hàng ngày để duy trì mái tóc mềm mượt và chắc khỏe.
 ''',
+    "skinTypeTags": ["mọi loại da đầu"],
+    "skinConcerns": [
+      "tóc khô xơ",
+      "tóc hư tổn do hóa chất",
+      "thiếu độ bóng",
+      "xơ rối",
+    ],
+    "recommendationScore": 94,
+    "ageGroup": ["18-25", "25-40", "40+"],
   },
   {
     "id": "SP232",
@@ -10709,6 +12447,10 @@ final List<Map<String, dynamic>> productList = [
 4. Ủ trong 5–10 phút rồi xả sạch bằng nước.
 5. Sử dụng 1–2 lần/tuần để đạt hiệu quả tốt nhất.
 ''',
+    "skinTypeTags": ["mọi loại da đầu"],
+    "skinConcerns": ["tóc khô xơ", "tóc hư tổn", "thiếu độ bóng", "xơ rối"],
+    "recommendationScore": 92,
+    "ageGroup": ["18-25", "25-40", "40+"],
   },
   {
     "id": "SP233",
@@ -10752,6 +12494,10 @@ final List<Map<String, dynamic>> productList = [
 4. Xả sạch bằng nước.
 5. Sử dụng thường xuyên để tóc sạch khỏe và thơm lâu.
 ''',
+    "skinTypeTags": ["mọi loại da đầu"],
+    "skinConcerns": ["tóc khô xơ", "xơ rối", "khó vào nếp", "thiếu độ bóng"],
+    "recommendationScore": 91,
+    "ageGroup": ["18-25", "25-40", "40+"],
   },
   {
     "id": "SP234",
@@ -10795,6 +12541,10 @@ final List<Map<String, dynamic>> productList = [
 4. Để 2–3 phút rồi xả sạch bằng nước.
 5. Sử dụng thường xuyên để tóc mềm mượt và dễ chải.
 ''',
+    "skinTypeTags": ["mọi loại da đầu"],
+    "skinConcerns": ["tóc khô xơ", "xơ rối", "khó vào nếp", "thiếu độ bóng"],
+    "recommendationScore": 91,
+    "ageGroup": ["18-25", "25-40", "40+"],
   },
   {
     "id": "SP235",
@@ -10837,6 +12587,10 @@ final List<Map<String, dynamic>> productList = [
 3. Có thể dùng trước khi sấy hoặc tạo kiểu để bảo vệ tóc khỏi nhiệt độ cao.
 4. Sử dụng hàng ngày để duy trì mái tóc mềm mượt và chắc khỏe.
 ''',
+    "skinTypeTags": ["mọi loại da đầu"],
+    "skinConcerns": ["tóc khô xơ", "tóc hư tổn", "thiếu độ bóng", "xơ rối"],
+    "recommendationScore": 95,
+    "ageGroup": ["18-25", "25-40", "40+"],
   },
   {
     "id": "SP236",
@@ -10880,6 +12634,10 @@ final List<Map<String, dynamic>> productList = [
 4. Ủ trong 5–10 phút rồi xả sạch bằng nước.
 5. Sử dụng 1–2 lần/tuần để đạt hiệu quả tốt nhất.
 ''',
+    "skinTypeTags": ["mọi loại da đầu"],
+    "skinConcerns": ["tóc khô xơ", "tóc hư tổn", "thiếu độ bóng", "xơ rối"],
+    "recommendationScore": 96,
+    "ageGroup": ["18-25", "25-40", "40+"],
   },
   {
     "id": "SP237",
@@ -10923,6 +12681,15 @@ final List<Map<String, dynamic>> productList = [
 4. Xả sạch bằng nước.
 5. Sử dụng thường xuyên để tóc dày và chắc khỏe hơn.
 ''',
+    "skinTypeTags": ["mọi loại da đầu"],
+    "skinConcerns": [
+      "tóc mỏng yếu",
+      "tóc hư tổn",
+      "thiếu độ dày",
+      "thiếu độ bóng",
+    ],
+    "recommendationScore": 94,
+    "ageGroup": ["18-25", "25-40", "40+"],
   },
   {
     "id": "SP238",
@@ -10966,6 +12733,10 @@ final List<Map<String, dynamic>> productList = [
 4. Để 2–3 phút rồi xả sạch bằng nước.
 5. Sử dụng thường xuyên để tóc mềm mượt và chắc khỏe.
 ''',
+    "skinTypeTags": ["mọi loại da đầu"],
+    "skinConcerns": ["tóc khô xơ", "tóc hư tổn", "thiếu độ bóng", "xơ rối"],
+    "recommendationScore": 94,
+    "ageGroup": ["18-25", "25-40", "40+"],
   },
   {
     "id": "SP239",
@@ -11008,6 +12779,10 @@ final List<Map<String, dynamic>> productList = [
 3. Có thể dùng trước khi sấy hoặc tạo kiểu để bảo vệ tóc khỏi nhiệt độ cao.
 4. Sử dụng hàng ngày để duy trì mái tóc mềm mượt và chắc khỏe.
 ''',
+    "skinTypeTags": ["mọi loại da đầu"],
+    "skinConcerns": ["tóc hư tổn", "tóc khô xơ", "xơ rối", "thiếu độ bóng"],
+    "recommendationScore": 94,
+    "ageGroup": ["18-25", "25-40", "40+"],
   },
   {
     "id": "SP240",
@@ -11051,6 +12826,10 @@ final List<Map<String, dynamic>> productList = [
 4. Ủ trong 5–10 phút rồi xả sạch bằng nước.
 5. Sử dụng 1–2 lần/tuần để đạt hiệu quả tốt nhất.
 ''',
+    "skinTypeTags": ["mọi loại da đầu"],
+    "skinConcerns": ["tóc khô xơ", "tóc hư tổn", "thiếu độ bóng", "xơ rối"],
+    "recommendationScore": 93,
+    "ageGroup": ["18-25", "25-40", "40+"],
   },
   {
     "id": "SP241",
@@ -11094,6 +12873,10 @@ final List<Map<String, dynamic>> productList = [
 4. Xả sạch bằng nước.
 5. Sử dụng hàng ngày để duy trì làn da mềm mịn và khỏe mạnh.
 ''',
+    "skinTypeTags": ["da thường", "da khô", "da nhạy cảm"],
+    "skinConcerns": ["khô ráp", "thiếu ẩm", "xỉn màu", "nhạy cảm"],
+    "recommendationScore": 93,
+    "ageGroup": ["18-25", "25-40", "40+"],
   },
   {
     "id": "SP242",
@@ -11136,6 +12919,10 @@ final List<Map<String, dynamic>> productList = [
 3. Massage nhẹ nhàng để dưỡng chất thấm sâu.
 4. Sử dụng hàng ngày để đạt hiệu quả tốt nhất.
 ''',
+    "skinTypeTags": ["da thường", "da khô", "da xỉn màu"],
+    "skinConcerns": ["khô ráp", "thiếu ẩm", "xỉn màu", "không đều màu"],
+    "recommendationScore": 93,
+    "ageGroup": ["18-25", "25-40", "40+"],
   },
   {
     "id": "SP243",
@@ -11179,6 +12966,15 @@ final List<Map<String, dynamic>> productList = [
 4. Rửa lại bằng nước sạch.
 5. Sử dụng 2–3 lần/tuần để duy trì làn da sáng mịn.
 ''',
+    "skinTypeTags": ["da thường", "da dầu", "da hỗn hợp"],
+    "skinConcerns": [
+      "tắc nghẽn lỗ chân lông",
+      "xỉn màu",
+      "mụn đầu đen",
+      "da thô ráp",
+    ],
+    "recommendationScore": 90,
+    "ageGroup": ["18-25", "25-40"],
   },
   {
     "id": "SP244",
@@ -11220,6 +13016,10 @@ final List<Map<String, dynamic>> productList = [
 2. Thoa lại sau mỗi 2 giờ nếu tiếp xúc trực tiếp với ánh nắng.
 3. Sử dụng hàng ngày để bảo vệ da tối ưu.
 ''',
+    "skinTypeTags": ["da thường", "da khô", "da hỗn hợp"],
+    "skinConcerns": ["khô ráp", "thiếu ẩm", "cháy nắng", "lão hóa sớm"],
+    "recommendationScore": 94,
+    "ageGroup": ["18-25", "25-40", "40+"],
   },
   {
     "id": "SP245",
@@ -11263,6 +13063,10 @@ final List<Map<String, dynamic>> productList = [
 4. Xả sạch bằng nước.
 5. Sử dụng hàng ngày để bảo vệ da khỏe mạnh.
 ''',
+    "skinTypeTags": ["da thường", "da dầu", "da hỗn hợp"],
+    "skinConcerns": ["vi khuẩn", "mùi cơ thể", "da nhờn", "thiếu sạch sâu"],
+    "recommendationScore": 90,
+    "ageGroup": ["18-25", "25-40", "40+"],
   },
   {
     "id": "SP246",
@@ -11305,6 +13109,10 @@ final List<Map<String, dynamic>> productList = [
 3. Massage nhẹ nhàng để dưỡng chất thấm sâu.
 4. Sử dụng hàng ngày để đạt hiệu quả tốt nhất.
 ''',
+    "skinTypeTags": ["da khô", "da nhạy cảm", "da thường"],
+    "skinConcerns": ["khô ráp", "thiếu ẩm", "nhạy cảm", "kích ứng nhẹ"],
+    "recommendationScore": 94,
+    "ageGroup": ["18-25", "25-40", "40+"],
   },
   {
     "id": "SP247",
@@ -11348,6 +13156,15 @@ final List<Map<String, dynamic>> productList = [
 4. Rửa lại bằng nước sạch.
 5. Sử dụng 2–3 lần/tuần để duy trì làn da sáng mịn.
 ''',
+    "skinTypeTags": ["da thường", "da khô", "da xỉn màu"],
+    "skinConcerns": [
+      "da thô ráp",
+      "xỉn màu",
+      "thiếu mịn màng",
+      "tắc nghẽn lỗ chân lông",
+    ],
+    "recommendationScore": 92,
+    "ageGroup": ["18-25", "25-40", "40+"],
   },
   {
     "id": "SP248",
@@ -11389,6 +13206,15 @@ final List<Map<String, dynamic>> productList = [
 2. Thoa lại sau mỗi 2 giờ nếu vận động ngoài trời hoặc tiếp xúc trực tiếp với nước.
 3. Sử dụng hàng ngày để bảo vệ da tối ưu.
 ''',
+    "skinTypeTags": ["da thường", "da dầu", "da hỗn hợp"],
+    "skinConcerns": [
+      "cháy nắng",
+      "lão hóa sớm",
+      "da nhờn khi vận động",
+      "thiếu bảo vệ UV",
+    ],
+    "recommendationScore": 95,
+    "ageGroup": ["18-25", "25-40", "40+"],
   },
   {
     "id": "SP249",
@@ -11432,6 +13258,10 @@ final List<Map<String, dynamic>> productList = [
 4. Xả sạch bằng nước.
 5. Sử dụng hàng ngày để duy trì làn da sáng mịn và thơm mát.
 ''',
+    "skinTypeTags": ["da thường", "da hỗn hợp", "da xỉn màu"],
+    "skinConcerns": ["xỉn màu", "thiếu sáng", "khô ráp nhẹ", "thiếu sức sống"],
+    "recommendationScore": 91,
+    "ageGroup": ["18-25", "25-40", "40+"],
   },
   {
     "id": "SP250",
@@ -11475,6 +13305,10 @@ final List<Map<String, dynamic>> productList = [
 3. Massage nhẹ nhàng để dưỡng chất thấm sâu.
 4. Sử dụng hàng ngày để duy trì độ ẩm cho da.
 ''',
+    "skinTypeTags": ["da khô", "da nhạy cảm", "da thường"],
+    "skinConcerns": ["khô ráp", "thiếu ẩm", "nhạy cảm", "kích ứng nhẹ"],
+    "recommendationScore": 95,
+    "ageGroup": ["18-25", "25-40", "40+"],
   },
   {
     "id": "SP251",
@@ -11518,6 +13352,10 @@ final List<Map<String, dynamic>> productList = [
 4. Rửa lại bằng nước sạch.
 5. Sử dụng 2–3 lần/tuần để duy trì làn da sáng mịn.
 ''',
+    "skinTypeTags": ["da thường", "da khô", "da xỉn màu"],
+    "skinConcerns": ["da thô ráp", "xỉn màu", "thiếu mịn màng", "thiếu ẩm"],
+    "recommendationScore": 95,
+    "ageGroup": ["18-25", "25-40", "40+"],
   },
   {
     "id": "SP252",
@@ -11560,6 +13398,15 @@ final List<Map<String, dynamic>> productList = [
 3. Thoa lại sau mỗi 2 giờ nếu vận động ngoài trời hoặc tiếp xúc trực tiếp với nước.
 4. Sử dụng hàng ngày để bảo vệ da tối ưu.
 ''',
+    "skinTypeTags": ["da thường", "da dầu", "da hỗn hợp"],
+    "skinConcerns": [
+      "cháy nắng",
+      "lão hóa sớm",
+      "da nhờn khi vận động",
+      "thiếu bảo vệ UV",
+    ],
+    "recommendationScore": 96,
+    "ageGroup": ["18-25", "25-40", "40+"],
   },
   {
     "id": "SP253",
@@ -11603,6 +13450,10 @@ final List<Map<String, dynamic>> productList = [
 4. Xả sạch bằng nước.
 5. Sử dụng hàng ngày để duy trì làn da sạch khỏe và thơm mát.
 ''',
+    "skinTypeTags": ["da thường", "da khô", "da hỗn hợp"],
+    "skinConcerns": ["khô ráp nhẹ", "thiếu ẩm", "xỉn màu", "thiếu hương thơm"],
+    "recommendationScore": 90,
+    "ageGroup": ["18-25", "25-40", "40+"],
   },
   {
     "id": "SP254",
@@ -11645,6 +13496,10 @@ final List<Map<String, dynamic>> productList = [
 3. Massage nhẹ nhàng để dưỡng chất thấm sâu.
 4. Sử dụng hàng ngày để đạt hiệu quả tốt nhất.
 ''',
+    "skinTypeTags": ["da thường", "da khô", "da nhạy cảm"],
+    "skinConcerns": ["khô ráp", "thiếu ẩm", "xỉn màu", "nhạy cảm"],
+    "recommendationScore": 95,
+    "ageGroup": ["18-25", "25-40", "40+"],
   },
   {
     "id": "SP255",
@@ -11688,6 +13543,15 @@ final List<Map<String, dynamic>> productList = [
 4. Rửa lại bằng nước sạch.
 5. Sử dụng 2–3 lần/tuần để duy trì làn da sáng mịn.
 ''',
+    "skinTypeTags": ["da thường", "da khô", "da xỉn màu"],
+    "skinConcerns": [
+      "da thô ráp",
+      "xỉn màu",
+      "thiếu mịn màng",
+      "tắc nghẽn lỗ chân lông",
+    ],
+    "recommendationScore": 94,
+    "ageGroup": ["18-25", "25-40", "40+"],
   },
   {
     "id": "SP256",
@@ -11728,6 +13592,10 @@ final List<Map<String, dynamic>> productList = [
 2. Thoa lại sau mỗi 2 giờ nếu tiếp xúc trực tiếp với ánh nắng hoặc vận động ngoài trời.
 3. Sử dụng hàng ngày để bảo vệ da tối ưu.
 ''',
+    "skinTypeTags": ["da thường", "da khô", "da hỗn hợp"],
+    "skinConcerns": ["cháy nắng", "lão hóa sớm", "thiếu ẩm", "thiếu bảo vệ UV"],
+    "recommendationScore": 95,
+    "ageGroup": ["18-25", "25-40", "40+"],
   },
   {
     "id": "SP257",
@@ -11770,6 +13638,10 @@ final List<Map<String, dynamic>> productList = [
 4. Xả sạch bằng nước.
 5. Sử dụng hàng ngày để duy trì làn da sạch khỏe và thư giãn.
 ''',
+    "skinTypeTags": ["da thường", "da khô", "da nhạy cảm"],
+    "skinConcerns": ["khô ráp nhẹ", "thiếu ẩm", "nhạy cảm", "căng thẳng"],
+    "recommendationScore": 90,
+    "ageGroup": ["18-25", "25-40", "40+"],
   },
   {
     "id": "SP258",
@@ -11812,6 +13684,10 @@ final List<Map<String, dynamic>> productList = [
 3. Massage nhẹ nhàng để dưỡng chất thấm sâu.
 4. Sử dụng hàng ngày để đạt hiệu quả tốt nhất.
 ''',
+    "skinTypeTags": ["da thường", "da khô", "da xỉn màu"],
+    "skinConcerns": ["xỉn màu", "không đều màu", "thiếu săn chắc", "khô ráp"],
+    "recommendationScore": 93,
+    "ageGroup": ["18-25", "25-40", "40+"],
   },
   {
     "id": "SP259",
@@ -11855,6 +13731,10 @@ final List<Map<String, dynamic>> productList = [
 4. Rửa lại bằng nước sạch.
 5. Sử dụng 2–3 lần/tuần để duy trì làn da sáng mịn.
 ''',
+    "skinTypeTags": ["da thường", "da khô", "da xỉn màu"],
+    "skinConcerns": ["da thô ráp", "xỉn màu", "thiếu mịn màng", "thiếu ẩm"],
+    "recommendationScore": 92,
+    "ageGroup": ["18-25", "25-40", "40+"],
   },
   {
     "id": "SP260",
@@ -11896,6 +13776,15 @@ final List<Map<String, dynamic>> productList = [
 2. Thoa lại sau mỗi 2 giờ nếu tiếp xúc trực tiếp với ánh nắng hoặc vận động ngoài trời.
 3. Sử dụng hàng ngày để bảo vệ da tối ưu.
 ''',
+    "skinTypeTags": ["da thường", "da dầu", "da hỗn hợp"],
+    "skinConcerns": [
+      "cháy nắng",
+      "lão hóa sớm",
+      "da nhờn khi vận động",
+      "thiếu bảo vệ UV",
+    ],
+    "recommendationScore": 94,
+    "ageGroup": ["18-25", "25-40", "40+"],
   },
   {
     "id": "SP261",
@@ -11936,6 +13825,14 @@ final List<Map<String, dynamic>> productList = [
 2. Tránh xịt trực tiếp vào mắt.
 3. Bảo quản nơi khô ráo, tránh ánh nắng trực tiếp.
 ''',
+    "skinTypeTags": ["mọi loại da"],
+    "skinConcerns": [
+      "mong muốn lưu hương lâu",
+      "tạo phong cách sang trọng",
+      "tăng sự tự tin",
+    ],
+    "recommendationScore": 97,
+    "ageGroup": ["18-25", "25-40", "40+"],
   },
   {
     "id": "SP262",
@@ -11976,6 +13873,15 @@ final List<Map<String, dynamic>> productList = [
 2. Có thể xịt nhiều lần trong ngày để duy trì hương thơm.
 3. Bảo quản nơi khô ráo, tránh ánh nắng trực tiếp.
 ''',
+    "skinTypeTags": ["mọi loại da"],
+    "skinConcerns": [
+      "mong muốn lưu hương lâu",
+      "tạo phong cách nữ tính",
+      "tăng sự tự tin",
+      "thư giãn",
+    ],
+    "recommendationScore": 92,
+    "ageGroup": ["18-25", "25-40", "40+"],
   },
   {
     "id": "SP263",
@@ -12016,6 +13922,15 @@ final List<Map<String, dynamic>> productList = [
 5. Bảo quản nơi khô ráo, tránh ánh nắng trực tiếp và nhiệt độ cao.
 6. Sử dụng vào buổi tối hoặc những dịp đặc biệt để tạo ấn tượng mạnh mẽ.
 ''',
+    "skinTypeTags": ["mọi loại da"],
+    "skinConcerns": [
+      "mong muốn lưu hương lâu",
+      "tạo phong cách nam tính",
+      "tăng sự tự tin",
+      "thư giãn",
+    ],
+    "recommendationScore": 96,
+    "ageGroup": ["18-25", "25-40", "40+"],
   },
   {
     "id": "SP264",
@@ -12055,6 +13970,15 @@ final List<Map<String, dynamic>> productList = [
 4. Kết hợp với lotion cùng mùi hương để tăng độ lưu hương.
 5. Bảo quản nơi khô ráo, tránh ánh nắng trực tiếp.
 ''',
+    "skinTypeTags": ["mọi loại da"],
+    "skinConcerns": [
+      "mong muốn lưu hương lâu",
+      "tạo phong cách nữ tính",
+      "tăng sự tự tin",
+      "thư giãn",
+    ],
+    "recommendationScore": 91,
+    "ageGroup": ["18-25", "25-40", "40+"],
   },
   {
     "id": "SP265",
@@ -12095,6 +14019,15 @@ final List<Map<String, dynamic>> productList = [
 5. Sử dụng vào buổi tối hoặc những dịp đặc biệt để tạo ấn tượng nữ tính, sang trọng.
 6. Bảo quản nơi khô ráo, tránh ánh nắng trực tiếp và nhiệt độ cao.
 ''',
+    "skinTypeTags": ["mọi loại da"],
+    "skinConcerns": [
+      "mong muốn lưu hương lâu",
+      "tạo phong cách nữ tính",
+      "tăng sự tự tin",
+      "thư giãn",
+    ],
+    "recommendationScore": 95,
+    "ageGroup": ["18-25", "25-40", "40+"],
   },
   {
     "id": "SP266",
@@ -12134,6 +14067,15 @@ final List<Map<String, dynamic>> productList = [
 4. Kết hợp với lotion cùng mùi hương để tăng độ lưu hương.
 5. Bảo quản nơi khô ráo, tránh ánh nắng trực tiếp và nhiệt độ cao.
 ''',
+    "skinTypeTags": ["mọi loại da"],
+    "skinConcerns": [
+      "mong muốn lưu hương lâu",
+      "tạo phong cách tinh tế",
+      "tăng sự tự tin",
+      "thư giãn",
+    ],
+    "recommendationScore": 93,
+    "ageGroup": ["18-25", "25-40", "40+"],
   },
   {
     "id": "SP267",
@@ -12174,6 +14116,15 @@ final List<Map<String, dynamic>> productList = [
 5. Sử dụng vào buổi tối hoặc những dịp đặc biệt để tạo ấn tượng sang trọng.
 6. Bảo quản nơi khô ráo, tránh ánh nắng trực tiếp và nhiệt độ cao.
 ''',
+    "skinTypeTags": ["mọi loại da"],
+    "skinConcerns": [
+      "mong muốn lưu hương lâu",
+      "tạo phong cách nữ tính",
+      "tăng sự tự tin",
+      "thư giãn",
+    ],
+    "recommendationScore": 94,
+    "ageGroup": ["18-25", "25-40", "40+"],
   },
   {
     "id": "SP268",
@@ -12213,6 +14164,15 @@ final List<Map<String, dynamic>> productList = [
 4. Kết hợp với lotion cùng mùi hương để tăng độ lưu hương.
 5. Bảo quản nơi khô ráo, tránh ánh nắng trực tiếp và nhiệt độ cao.
 ''',
+    "skinTypeTags": ["mọi loại da"],
+    "skinConcerns": [
+      "mong muốn lưu hương nhẹ nhàng",
+      "tạo phong cách trẻ trung",
+      "tăng sự tự tin",
+      "thư giãn",
+    ],
+    "recommendationScore": 90,
+    "ageGroup": ["18-25", "25-40"],
   },
   {
     "id": "SP269",
@@ -12253,6 +14213,15 @@ final List<Map<String, dynamic>> productList = [
 5. Sử dụng hàng ngày hoặc trong các dịp đặc biệt để tạo phong cách unisex, tươi mát.
 6. Bảo quản nơi khô ráo, tránh ánh nắng trực tiếp và nhiệt độ cao.
 ''',
+    "skinTypeTags": ["mọi loại da"],
+    "skinConcerns": [
+      "mong muốn lưu hương lâu",
+      "tạo phong cách trẻ trung",
+      "tăng sự tự tin",
+      "thư giãn",
+    ],
+    "recommendationScore": 94,
+    "ageGroup": ["18-25", "25-40", "40+"],
   },
   {
     "id": "SP270",
@@ -12292,6 +14261,15 @@ final List<Map<String, dynamic>> productList = [
 4. Kết hợp với lotion cùng mùi hương để tăng độ lưu hương.
 5. Bảo quản nơi khô ráo, tránh ánh nắng trực tiếp và nhiệt độ cao.
 ''',
+    "skinTypeTags": ["mọi loại da"],
+    "skinConcerns": [
+      "mong muốn lưu hương nhẹ nhàng",
+      "tạo phong cách ngọt ngào",
+      "tăng sự tự tin",
+      "thư giãn",
+    ],
+    "recommendationScore": 90,
+    "ageGroup": ["18-25", "25-40"],
   },
   {
     "id": "SP271",
@@ -12332,6 +14310,15 @@ final List<Map<String, dynamic>> productList = [
 5. Sử dụng vào ban ngày hoặc những dịp đặc biệt để tạo phong cách tinh tế, sang trọng.
 6. Bảo quản nơi khô ráo, tránh ánh nắng trực tiếp và nhiệt độ cao.
 ''',
+    "skinTypeTags": ["mọi loại da"],
+    "skinConcerns": [
+      "mong muốn lưu hương lâu",
+      "tạo phong cách thanh lịch",
+      "tăng sự tự tin",
+      "thư giãn",
+    ],
+    "recommendationScore": 95,
+    "ageGroup": ["18-25", "25-40", "40+"],
   },
   {
     "id": "SP272",
@@ -12371,6 +14358,15 @@ final List<Map<String, dynamic>> productList = [
 4. Kết hợp với lotion cùng mùi hương để tăng độ lưu hương.
 5. Bảo quản nơi khô ráo, tránh ánh nắng trực tiếp và nhiệt độ cao.
 ''',
+    "skinTypeTags": ["mọi loại da"],
+    "skinConcerns": [
+      "mong muốn lưu hương nhẹ nhàng",
+      "tạo phong cách quyến rũ",
+      "tăng sự tự tin",
+      "thư giãn",
+    ],
+    "recommendationScore": 89,
+    "ageGroup": ["18-25", "25-40"],
   },
   {
     "id": "SP273",
@@ -12411,6 +14407,15 @@ final List<Map<String, dynamic>> productList = [
 5. Sử dụng vào buổi tối hoặc những dịp đặc biệt để tạo phong cách sang trọng, nữ tính.
 6. Bảo quản nơi khô ráo, tránh ánh nắng trực tiếp và nhiệt độ cao.
 ''',
+    "skinTypeTags": ["mọi loại da"],
+    "skinConcerns": [
+      "mong muốn lưu hương lâu",
+      "tạo phong cách sang trọng",
+      "tăng sự tự tin",
+      "thư giãn",
+    ],
+    "recommendationScore": 96,
+    "ageGroup": ["25-40", "40+"],
   },
   {
     "id": "SP274",
@@ -12450,6 +14455,15 @@ final List<Map<String, dynamic>> productList = [
 4. Kết hợp với lotion cùng mùi hương để tăng độ lưu hương.
 5. Bảo quản nơi khô ráo, tránh ánh nắng trực tiếp và nhiệt độ cao.
 ''',
+    "skinTypeTags": ["mọi loại da"],
+    "skinConcerns": [
+      "mong muốn lưu hương nhẹ nhàng",
+      "tạo phong cách dịu dàng",
+      "thư giãn",
+      "giảm căng thẳng",
+    ],
+    "recommendationScore": 88,
+    "ageGroup": ["18-25", "25-40"],
   },
   {
     "id": "SP275",
@@ -12490,6 +14504,15 @@ final List<Map<String, dynamic>> productList = [
 5. Sử dụng vào buổi tối hoặc những dịp đặc biệt để tạo phong cách tinh tế, sang trọng.
 6. Bảo quản nơi khô ráo, tránh ánh nắng trực tiếp và nhiệt độ cao.
 ''',
+    "skinTypeTags": ["mọi loại da"],
+    "skinConcerns": [
+      "mong muốn lưu hương lâu",
+      "tạo phong cách thanh lịch",
+      "tăng sự tự tin",
+      "thư giãn",
+    ],
+    "recommendationScore": 93,
+    "ageGroup": ["18-25", "25-40", "40+"],
   },
   {
     "id": "SP276",
@@ -12529,6 +14552,15 @@ final List<Map<String, dynamic>> productList = [
 4. Kết hợp với lotion cùng mùi hương để tăng độ lưu hương.
 5. Bảo quản nơi khô ráo, tránh ánh nắng trực tiếp và nhiệt độ cao.
 ''',
+    "skinTypeTags": ["mọi loại da"],
+    "skinConcerns": [
+      "mong muốn lưu hương nhẹ nhàng",
+      "tạo phong cách ngọt ngào",
+      "thư giãn",
+      "tăng sự tự tin",
+    ],
+    "recommendationScore": 89,
+    "ageGroup": ["18-25", "25-40"],
   },
   {
     "id": "SP277",
@@ -12569,6 +14601,15 @@ final List<Map<String, dynamic>> productList = [
 5. Sử dụng vào ban ngày để tạo cảm giác tươi mát, sảng khoái.
 6. Bảo quản nơi khô ráo, tránh ánh nắng trực tiếp và nhiệt độ cao.
 ''',
+    "skinTypeTags": ["mọi loại da"],
+    "skinConcerns": [
+      "mong muốn lưu hương nhẹ nhàng",
+      "tạo phong cách tươi mát",
+      "thư giãn",
+      "tăng sự tự tin",
+    ],
+    "recommendationScore": 90,
+    "ageGroup": ["18-25", "25-40", "40+"],
   },
   {
     "id": "SP278",
@@ -12610,6 +14651,15 @@ final List<Map<String, dynamic>> productList = [
 4. Kết hợp với lotion cùng mùi hương để tăng độ lưu hương.
 5. Bảo quản nơi khô ráo, tránh ánh nắng trực tiếp và nhiệt độ cao.
 ''',
+    "skinTypeTags": ["mọi loại da"],
+    "skinConcerns": [
+      "mong muốn lưu hương nhẹ nhàng",
+      "tạo phong cách ngọt ngào",
+      "thư giãn",
+      "tăng sự tự tin",
+    ],
+    "recommendationScore": 89,
+    "ageGroup": ["18-25", "25-40"],
   },
   {
     "id": "SP279",
@@ -12652,6 +14702,15 @@ final List<Map<String, dynamic>> productList = [
 5. Sử dụng vào buổi tối hoặc những dịp đặc biệt để tạo phong cách quyến rũ, sang trọng.
 6. Bảo quản nơi khô ráo, tránh ánh nắng trực tiếp và nhiệt độ cao.
 ''',
+    "skinTypeTags": ["mọi loại da"],
+    "skinConcerns": [
+      "mong muốn lưu hương lâu",
+      "tạo phong cách quyến rũ",
+      "tăng sự tự tin",
+      "thư giãn",
+    ],
+    "recommendationScore": 95,
+    "ageGroup": ["25-40", "40+"],
   },
   {
     "id": "SP280",
@@ -12693,6 +14752,15 @@ final List<Map<String, dynamic>> productList = [
 4. Kết hợp với lotion cùng mùi hương để tăng độ lưu hương.
 5. Bảo quản nơi khô ráo, tránh ánh nắng trực tiếp và nhiệt độ cao.
 ''',
+    "skinTypeTags": ["mọi loại da, kể cả da nhạy cảm"],
+    "skinConcerns": [
+      "mong muốn lưu hương nhẹ nhàng",
+      "làm dịu da",
+      "thư giãn",
+      "tăng sự tự tin",
+    ],
+    "recommendationScore": 91,
+    "ageGroup": ["18-25", "25-40"],
   },
   {
     "id": "SP281",
@@ -12732,6 +14800,15 @@ final List<Map<String, dynamic>> productList = [
 4. Vệ sinh cọ thường xuyên bằng dung dịch chuyên dụng để đảm bảo an toàn cho da.
 5. Để cọ khô tự nhiên, tránh ánh nắng trực tiếp và nhiệt độ cao.
 ''',
+    "skinTypeTags": ["mọi loại da"],
+    "skinConcerns": [
+      "mong muốn trang điểm tự nhiên",
+      "tăng sự tự tin",
+      "dễ sử dụng",
+      "đa năng",
+    ],
+    "recommendationScore": 92,
+    "ageGroup": ["18-25", "25-40", "40+"],
   },
   {
     "id": "SP282",
@@ -12769,6 +14846,15 @@ final List<Map<String, dynamic>> productList = [
 3. Có thể dùng để đắp lotion mask bằng cách thấm toner và đặt lên da 3–5 phút.
 4. Bảo quản nơi khô ráo, tránh ẩm mốc.
 ''',
+    "skinTypeTags": ["mọi loại da", "da nhạy cảm"],
+    "skinConcerns": [
+      "làm sạch da",
+      "giảm kích ứng",
+      "hỗ trợ dưỡng da",
+      "tiện lợi",
+    ],
+    "recommendationScore": 92,
+    "ageGroup": ["18-25", "25-40", "40+"],
   },
   {
     "id": "SP283",
@@ -12809,6 +14895,15 @@ final List<Map<String, dynamic>> productList = [
 5. Vệ sinh máy sau mỗi lần sử dụng bằng nước ấm, tránh dùng chất tẩy mạnh.
 6. Bảo quản nơi khô ráo, tránh ánh nắng trực tiếp và nhiệt độ cao.
 ''',
+    "skinTypeTags": ["mọi loại da", "da dầu", "da hỗn hợp", "da nhạy cảm"],
+    "skinConcerns": [
+      "làm sạch sâu",
+      "giảm bã nhờn",
+      "hỗ trợ ngừa mụn",
+      "tăng hiệu quả dưỡng da",
+    ],
+    "recommendationScore": 95,
+    "ageGroup": ["18-25", "25-40", "40+"],
   },
   {
     "id": "SP284",
@@ -12849,6 +14944,15 @@ final List<Map<String, dynamic>> productList = [
 5. Để cọ khô tự nhiên, tránh ánh nắng trực tiếp và nhiệt độ cao.
 6. Bảo quản trong hộp hoặc túi cọ để giữ vệ sinh và tránh bụi bẩn.
 ''',
+    "skinTypeTags": ["mọi loại da"],
+    "skinConcerns": [
+      "mong muốn trang điểm chuyên nghiệp",
+      "tạo lớp nền mịn",
+      "tăng sự tự tin",
+      "đa năng",
+    ],
+    "recommendationScore": 93,
+    "ageGroup": ["18-25", "25-40", "40+"],
   },
   {
     "id": "SP285",
@@ -12888,6 +14992,15 @@ final List<Map<String, dynamic>> productList = [
 4. Dùng để lau sạch móng tay sau khi tẩy sơn.
 5. Bảo quản nơi khô ráo, tránh ẩm mốc.
 ''',
+    "skinTypeTags": ["mọi loại da", "da nhạy cảm"],
+    "skinConcerns": [
+      "làm sạch da",
+      "giảm kích ứng",
+      "hỗ trợ dưỡng da",
+      "tiện lợi",
+    ],
+    "recommendationScore": 90,
+    "ageGroup": ["18-25", "25-40", "40+"],
   },
   {
     "id": "SP286",
@@ -12928,6 +15041,15 @@ final List<Map<String, dynamic>> productList = [
 5. Vệ sinh dụng cụ sau mỗi lần sử dụng bằng khăn mềm hoặc nước ấm.
 6. Bảo quản nơi khô ráo, tránh ánh nắng trực tiếp và nhiệt độ cao.
 ''',
+    "skinTypeTags": ["mọi loại da", "da nhạy cảm"],
+    "skinConcerns": [
+      "giảm sưng mặt",
+      "thư giãn",
+      "hỗ trợ hấp thụ dưỡng chất",
+      "tăng tuần hoàn máu",
+    ],
+    "recommendationScore": 91,
+    "ageGroup": ["18-25", "25-40", "40+"],
   },
   {
     "id": "SP287",
@@ -12967,6 +15089,15 @@ final List<Map<String, dynamic>> productList = [
 4. Vệ sinh cọ thường xuyên bằng dung dịch chuyên dụng để đảm bảo an toàn cho da.
 5. Để cọ khô tự nhiên, tránh ánh nắng trực tiếp và nhiệt độ cao.
 ''',
+    "skinTypeTags": ["mọi loại da"],
+    "skinConcerns": [
+      "tạo lớp nền mịn",
+      "dễ sử dụng",
+      "tăng sự tự tin",
+      "trang điểm tự nhiên",
+    ],
+    "recommendationScore": 91,
+    "ageGroup": ["18-25", "25-40", "40+"],
   },
   {
     "id": "SP288",
@@ -13006,6 +15137,15 @@ final List<Map<String, dynamic>> productList = [
 4. Dùng để lau sạch móng tay sau khi tẩy sơn.
 5. Bảo quản nơi khô ráo, tránh ẩm mốc.
 ''',
+    "skinTypeTags": ["mọi loại da", "da nhạy cảm"],
+    "skinConcerns": [
+      "làm sạch da",
+      "giảm kích ứng",
+      "hỗ trợ dưỡng da",
+      "tiện lợi",
+    ],
+    "recommendationScore": 89,
+    "ageGroup": ["18-25", "25-40", "40+"],
   },
   {
     "id": "SP289",
@@ -13047,6 +15187,15 @@ final List<Map<String, dynamic>> productList = [
 5. Vệ sinh đầu hút sau mỗi lần sử dụng bằng nước ấm hoặc dung dịch chuyên dụng.
 6. Bảo quản nơi khô ráo, tránh ánh nắng trực tiếp và nhiệt độ cao.
 ''',
+    "skinTypeTags": ["da dầu", "da hỗn hợp", "da thường"],
+    "skinConcerns": [
+      "làm sạch sâu",
+      "giảm mụn đầu đen",
+      "giảm bã nhờn",
+      "tăng sự tự tin",
+    ],
+    "recommendationScore": 90,
+    "ageGroup": ["18-25", "25-40"],
   },
   {
     "id": "SP290",
@@ -13087,6 +15236,15 @@ final List<Map<String, dynamic>> productList = [
 5. Để cọ khô tự nhiên, tránh ánh nắng trực tiếp và nhiệt độ cao.
 6. Bảo quản trong hộp hoặc túi cọ để giữ vệ sinh và tránh bụi bẩn.
 ''',
+    "skinTypeTags": ["mọi loại da"],
+    "skinConcerns": [
+      "mong muốn trang điểm mắt chuyên nghiệp",
+      "tạo điểm nhấn cho đôi mắt",
+      "tăng sự tự tin",
+      "đa năng",
+    ],
+    "recommendationScore": 94,
+    "ageGroup": ["18-25", "25-40", "40+"],
   },
   {
     "id": "SP291",
@@ -13126,6 +15284,15 @@ final List<Map<String, dynamic>> productList = [
 4. Dùng để lau sạch móng tay sau khi tẩy sơn.
 5. Bảo quản nơi khô ráo, tránh ẩm mốc.
 ''',
+    "skinTypeTags": ["mọi loại da", "da nhạy cảm"],
+    "skinConcerns": [
+      "làm sạch da",
+      "giảm kích ứng",
+      "hỗ trợ dưỡng da",
+      "tiện lợi",
+    ],
+    "recommendationScore": 88,
+    "ageGroup": ["18-25", "25-40", "40+"],
   },
   {
     "id": "SP292",
@@ -13166,6 +15333,15 @@ final List<Map<String, dynamic>> productList = [
 5. Vệ sinh dụng cụ sau mỗi lần sử dụng bằng khăn mềm hoặc nước ấm.
 6. Bảo quản nơi khô ráo, tránh ánh nắng trực tiếp và nhiệt độ cao.
 ''',
+    "skinTypeTags": ["mọi loại da", "da lão hóa", "da nhạy cảm"],
+    "skinConcerns": [
+      "nâng cơ mặt",
+      "giảm chảy xệ",
+      "thư giãn",
+      "tăng tuần hoàn máu",
+    ],
+    "recommendationScore": 96,
+    "ageGroup": ["25-40", "40+"],
   },
   {
     "id": "SP293",
@@ -13206,6 +15382,15 @@ final List<Map<String, dynamic>> productList = [
 5. Để cọ khô tự nhiên, tránh ánh nắng trực tiếp và nhiệt độ cao.
 6. Bảo quản trong hộp hoặc túi cọ để giữ vệ sinh và tránh bụi bẩn.
 ''',
+    "skinTypeTags": ["mọi loại da"],
+    "skinConcerns": [
+      "tạo lớp nền mịn",
+      "trang điểm tự nhiên",
+      "dễ sử dụng",
+      "tăng sự tự tin",
+    ],
+    "recommendationScore": 90,
+    "ageGroup": ["18-25", "25-40", "40+"],
   },
   {
     "id": "SP294",
@@ -13245,6 +15430,15 @@ final List<Map<String, dynamic>> productList = [
 4. Dùng để lau sạch móng tay sau khi tẩy sơn.
 5. Bảo quản nơi khô ráo, tránh ẩm mốc.
 ''',
+    "skinTypeTags": ["mọi loại da", "da nhạy cảm"],
+    "skinConcerns": [
+      "làm sạch da",
+      "giảm kích ứng",
+      "hỗ trợ dưỡng da",
+      "tiện lợi",
+    ],
+    "recommendationScore": 89,
+    "ageGroup": ["18-25", "25-40", "40+"],
   },
   {
     "id": "SP295",
@@ -13285,6 +15479,10 @@ final List<Map<String, dynamic>> productList = [
 4. Vệ sinh bình chứa và đầu phun sau mỗi lần sử dụng để tránh vi khuẩn.
 5. Bảo quản nơi khô ráo, tránh ánh nắng trực tiếp và nhiệt độ cao.
 ''',
+    "skinTypeTags": ["mọi loại da", "da khô", "da dầu", "da hỗn hợp"],
+    "skinConcerns": ["làm sạch sâu", "cấp ẩm", "giảm bã nhờn", "thư giãn"],
+    "recommendationScore": 92,
+    "ageGroup": ["18-25", "25-40", "40+"],
   },
   {
     "id": "SP296",
@@ -13325,6 +15523,15 @@ final List<Map<String, dynamic>> productList = [
 5. Để cọ khô tự nhiên, tránh ánh nắng trực tiếp và nhiệt độ cao.
 6. Bảo quản trong hộp hoặc túi cọ để giữ vệ sinh và tránh bụi bẩn.
 ''',
+    "skinTypeTags": ["mọi loại da"],
+    "skinConcerns": [
+      "tạo lớp má hồng tự nhiên",
+      "dễ sử dụng",
+      "tăng sự tự tin",
+      "trang điểm đều màu",
+    ],
+    "recommendationScore": 89,
+    "ageGroup": ["18-25", "25-40", "40+"],
   },
   {
     "id": "SP297",
@@ -13364,6 +15571,15 @@ final List<Map<String, dynamic>> productList = [
 4. Dùng để lau sạch móng tay sau khi tẩy sơn.
 5. Bảo quản nơi khô ráo, tránh ẩm mốc.
 ''',
+    "skinTypeTags": ["mọi loại da", "da nhạy cảm"],
+    "skinConcerns": [
+      "làm sạch da",
+      "giảm kích ứng",
+      "hỗ trợ dưỡng da",
+      "tiện lợi",
+    ],
+    "recommendationScore": 93,
+    "ageGroup": ["18-25", "25-40"],
   },
   {
     "id": "SP298",
@@ -13404,6 +15620,15 @@ final List<Map<String, dynamic>> productList = [
 5. Vệ sinh dụng cụ sau mỗi lần sử dụng bằng khăn mềm hoặc nước ấm.
 6. Bảo quản nơi khô ráo, tránh ánh nắng trực tiếp và nhiệt độ cao.
 ''',
+    "skinTypeTags": ["mọi loại da", "da nhạy cảm", "da dầu"],
+    "skinConcerns": [
+      "giảm sưng mặt",
+      "se khít lỗ chân lông",
+      "thư giãn",
+      "hỗ trợ hấp thụ dưỡng chất",
+    ],
+    "recommendationScore": 92,
+    "ageGroup": ["18-25", "25-40", "40+"],
   },
   {
     "id": "SP299",
@@ -13444,6 +15669,15 @@ final List<Map<String, dynamic>> productList = [
 5. Để cọ khô tự nhiên, tránh ánh nắng trực tiếp và nhiệt độ cao.
 6. Bảo quản trong hộp hoặc túi cọ để giữ vệ sinh và tránh bụi bẩn.
 ''',
+    "skinTypeTags": ["mọi loại da"],
+    "skinConcerns": [
+      "tạo lớp nền mịn",
+      "trang điểm tự nhiên",
+      "dễ sử dụng",
+      "tăng sự tự tin",
+    ],
+    "recommendationScore": 90,
+    "ageGroup": ["18-25", "25-40", "40+"],
   },
   {
     "id": "SP300",
@@ -13483,6 +15717,15 @@ final List<Map<String, dynamic>> productList = [
 4. Dùng để lau sạch móng tay sau khi tẩy sơn.
 5. Bảo quản nơi khô ráo, tránh ẩm mốc.
 ''',
+    "skinTypeTags": ["mọi loại da", "da nhạy cảm"],
+    "skinConcerns": [
+      "làm sạch da",
+      "giảm kích ứng",
+      "hỗ trợ dưỡng da",
+      "tiện lợi",
+    ],
+    "recommendationScore": 87,
+    "ageGroup": ["18-25", "25-40", "40+"],
   },
   {
     "id": "SP301",
@@ -13524,6 +15767,16 @@ final List<Map<String, dynamic>> productList = [
 4. Không dùng quá liều khuyến nghị, tham khảo ý kiến bác sĩ nếu đang mang thai hoặc cho con bú.
 5. Bảo quản nơi khô ráo, tránh ánh nắng trực tiếp và nhiệt độ cao.
 ''',
+
+    "skinTypeTags": ["mọi loại da", "da lão hóa"],
+    "skinConcerns": [
+      "chống lão hóa",
+      "làm sáng da",
+      "giảm sạm nám",
+      "tăng sự tự tin",
+    ],
+    "recommendationScore": 94,
+    "ageGroup": ["25-40", "40+"],
   },
   {
     "id": "SP302",
@@ -13562,6 +15815,15 @@ final List<Map<String, dynamic>> productList = [
 4. Không tái sử dụng khẩu trang dùng một lần.
 5. Bảo quản nơi khô ráo, tránh ánh nắng trực tiếp và nhiệt độ cao.
 ''',
+    "skinTypeTags": ["mọi loại da", "da nhạy cảm"],
+    "skinConcerns": [
+      "bảo vệ da khỏi bụi mịn",
+      "giảm kích ứng do ô nhiễm",
+      "an toàn khi di chuyển",
+      "thoải mái khi đeo lâu",
+    ],
+    "recommendationScore": 95,
+    "ageGroup": ["18-25", "25-40", "40+"],
   },
   {
     "id": "SP303",
@@ -13602,6 +15864,15 @@ final List<Map<String, dynamic>> productList = [
 3. Không dùng cho trẻ em dưới 12 tuổi nếu không có chỉ định của bác sĩ.
 4. Bảo quản nơi khô ráo, tránh ánh nắng trực tiếp và nhiệt độ cao.
 ''',
+    "skinTypeTags": ["mọi loại da"],
+    "skinConcerns": [
+      "hơi thở thơm mát",
+      "diệt khuẩn khoang miệng",
+      "giảm mảng bám",
+      "tăng sự tự tin",
+    ],
+    "recommendationScore": 93,
+    "ageGroup": ["18-25", "25-40", "40+"],
   },
   {
     "id": "SP304",
@@ -13643,6 +15914,15 @@ final List<Map<String, dynamic>> productList = [
 4. Tránh sử dụng trên vết thương hở hoặc vùng da bị kích ứng.
 5. Bảo quản nơi khô ráo, tránh ánh nắng trực tiếp và nhiệt độ cao.
 ''',
+    "skinTypeTags": ["mọi loại da", "da khô", "da nhạy cảm"],
+    "skinConcerns": [
+      "thư giãn tinh thần",
+      "dưỡng ẩm da",
+      "giảm căng thẳng",
+      "tăng sự tự tin",
+    ],
+    "recommendationScore": 91,
+    "ageGroup": ["18-25", "25-40", "40+"],
   },
   {
     "id": "SP305",
@@ -13684,6 +15964,15 @@ final List<Map<String, dynamic>> productList = [
 4. Tránh xịt vào mắt hoặc vùng da bị trầy xước.
 5. Bảo quản nơi khô ráo, tránh ánh nắng trực tiếp và nhiệt độ cao.
 ''',
+    "skinTypeTags": ["mọi loại da"],
+    "skinConcerns": [
+      "ngăn mùi cơ thể",
+      "giữ khô thoáng",
+      "tạo cảm giác mát lạnh",
+      "tăng sự tự tin",
+    ],
+    "recommendationScore": 92,
+    "ageGroup": ["18-25", "25-40"],
   },
   {
     "id": "SP306",
@@ -13723,6 +16012,15 @@ final List<Map<String, dynamic>> productList = [
 4. Có thể dùng dưới lớp trang điểm để bảo vệ da.
 5. Bảo quản nơi khô ráo, tránh ánh nắng trực tiếp và nhiệt độ cao.
 ''',
+    "skinTypeTags": ["da dầu", "da mụn", "da hỗn hợp"],
+    "skinConcerns": [
+      "giảm mụn viêm",
+      "bảo vệ da",
+      "hỗ trợ làm lành",
+      "tăng sự tự tin",
+    ],
+    "recommendationScore": 95,
+    "ageGroup": ["18-25", "25-40"],
   },
   {
     "id": "SP307",
@@ -13764,6 +16062,15 @@ final List<Map<String, dynamic>> productList = [
 5. Thích hợp làm quà tặng cho người thân và bạn bè trong dịp lễ.
 6. Bảo quản nơi khô ráo, tránh ánh nắng trực tiếp và nhiệt độ cao.
 ''',
+    "skinTypeTags": ["mọi loại da", "da khô", "da dầu", "da hỗn hợp"],
+    "skinConcerns": [
+      "dưỡng ẩm",
+      "làm sáng da",
+      "chống lão hóa",
+      "tăng sự tự tin",
+    ],
+    "recommendationScore": 94,
+    "ageGroup": ["18-25", "25-40", "40+"],
   },
   {
     "id": "SP308",
@@ -13805,6 +16112,15 @@ final List<Map<String, dynamic>> productList = [
 4. Không để kem quá lâu trên da để tránh kích ứng.
 5. Bảo quản nơi khô ráo, tránh ánh nắng trực tiếp và nhiệt độ cao.
 ''',
+    "skinTypeTags": ["mọi loại da", "da thường", "da khô"],
+    "skinConcerns": [
+      "loại bỏ lông",
+      "giữ da mềm mịn",
+      "giảm khô ráp",
+      "tăng sự tự tin",
+    ],
+    "recommendationScore": 91,
+    "ageGroup": ["18-25", "25-40", "40+"],
   },
   {
     "id": "SP309",
@@ -13845,6 +16161,15 @@ final List<Map<String, dynamic>> productList = [
 3. Sử dụng bất cứ khi nào cần làm sạch tay nhanh chóng, đặc biệt trước khi ăn hoặc sau khi tiếp xúc nơi công cộng.
 4. Bảo quản nơi khô ráo, tránh ánh nắng trực tiếp và nhiệt độ cao.
 ''',
+    "skinTypeTags": ["mọi loại da", "da nhạy cảm"],
+    "skinConcerns": [
+      "diệt khuẩn tay",
+      "giữ tay sạch sẽ",
+      "tiện lợi khi di chuyển",
+      "tăng sự tự tin",
+    ],
+    "recommendationScore": 93,
+    "ageGroup": ["6-12", "13-17", "18-25", "25-40", "40+"],
   },
   {
     "id": "SP310",
@@ -13886,6 +16211,15 @@ final List<Map<String, dynamic>> productList = [
 4. Không sử dụng cho vết thương hở hoặc vùng da bị kích ứng.
 5. Bảo quản nơi khô ráo, tránh ánh nắng trực tiếp và nhiệt độ cao.
 ''',
+    "skinTypeTags": ["mọi loại da", "da nhạy cảm"],
+    "skinConcerns": [
+      "làm sạch vùng kín",
+      "khử mùi",
+      "giảm kích ứng",
+      "tăng sự tự tin",
+    ],
+    "recommendationScore": 94,
+    "ageGroup": ["18-25", "25-40", "40+"],
   },
   {
     "id": "SP311",
@@ -13927,6 +16261,15 @@ final List<Map<String, dynamic>> productList = [
 4. Không dùng quá liều khuyến nghị, tham khảo ý kiến bác sĩ nếu đang mang thai hoặc cho con bú.
 5. Bảo quản nơi khô ráo, tránh ánh nắng trực tiếp và nhiệt độ cao.
 ''',
+    "skinTypeTags": ["mọi loại da", "da xỉn màu", "da lão hóa"],
+    "skinConcerns": [
+      "làm sáng da",
+      "giảm sạm nám",
+      "chống oxy hóa",
+      "tăng sự tự tin",
+    ],
+    "recommendationScore": 93,
+    "ageGroup": ["25-40", "40+"],
   },
   {
     "id": "SP312",
@@ -13966,6 +16309,15 @@ final List<Map<String, dynamic>> productList = [
 4. Không tái sử dụng khẩu trang dùng một lần.
 5. Bảo quản nơi khô ráo, tránh ánh nắng trực tiếp và nhiệt độ cao.
 ''',
+    "skinTypeTags": ["mọi loại da", "da nhạy cảm"],
+    "skinConcerns": [
+      "bảo vệ da khỏi bụi bẩn",
+      "giảm kích ứng do ô nhiễm",
+      "an toàn khi di chuyển",
+      "thoải mái khi đeo lâu",
+    ],
+    "recommendationScore": 92,
+    "ageGroup": ["6-12", "13-17", "18-25", "25-40", "40+"],
   },
   {
     "id": "SP313",
@@ -14006,6 +16358,15 @@ final List<Map<String, dynamic>> productList = [
 3. Không dùng cho trẻ em dưới 12 tuổi nếu không có chỉ định của bác sĩ.
 4. Bảo quản nơi khô ráo, tránh ánh nắng trực tiếp và nhiệt độ cao.
 ''',
+    "skinTypeTags": ["mọi loại da"],
+    "skinConcerns": [
+      "hơi thở thơm mát",
+      "diệt khuẩn khoang miệng",
+      "giảm mảng bám",
+      "tăng sự tự tin",
+    ],
+    "recommendationScore": 92,
+    "ageGroup": ["18-25", "25-40", "40+"],
   },
   {
     "id": "SP314",
@@ -14047,6 +16408,15 @@ final List<Map<String, dynamic>> productList = [
 4. Tránh sử dụng trên vết thương hở hoặc vùng da bị kích ứng.
 5. Bảo quản nơi khô ráo, tránh ánh nắng trực tiếp và nhiệt độ cao.
 ''',
+    "skinTypeTags": ["mọi loại da", "da khô", "da nhạy cảm"],
+    "skinConcerns": [
+      "thư giãn cơ thể",
+      "dưỡng ẩm da",
+      "giảm căng thẳng",
+      "tăng sự tự tin",
+    ],
+    "recommendationScore": 92,
+    "ageGroup": ["18-25", "25-40", "40+"],
   },
   {
     "id": "SP315",
@@ -14088,6 +16458,15 @@ final List<Map<String, dynamic>> productList = [
 4. Tránh xịt vào mắt hoặc vùng da bị trầy xước.
 5. Bảo quản nơi khô ráo, tránh ánh nắng trực tiếp và nhiệt độ cao.
 ''',
+    "skinTypeTags": ["mọi loại da"],
+    "skinConcerns": [
+      "ngăn mùi cơ thể",
+      "giữ khô thoáng",
+      "hương thơm quyến rũ",
+      "tăng sự tự tin",
+    ],
+    "recommendationScore": 92,
+    "ageGroup": ["18-25", "25-40"],
   },
   {
     "id": "SP316",
@@ -14128,6 +16507,15 @@ final List<Map<String, dynamic>> productList = [
 4. Có thể dùng dưới lớp trang điểm để bảo vệ da.
 5. Bảo quản nơi khô ráo, tránh ánh nắng trực tiếp và nhiệt độ cao.
 ''',
+    "skinTypeTags": ["da dầu", "da mụn", "da hỗn hợp"],
+    "skinConcerns": [
+      "giảm mụn viêm",
+      "bảo vệ da",
+      "hỗ trợ làm lành",
+      "tăng sự tự tin",
+    ],
+    "recommendationScore": 94,
+    "ageGroup": ["18-25", "25-40"],
   },
   {
     "id": "SP317",
@@ -14168,6 +16556,15 @@ final List<Map<String, dynamic>> productList = [
 4. Thích hợp làm quà tặng cho người thân và bạn bè trong dịp lễ.
 5. Bảo quản nơi khô ráo, tránh ánh nắng trực tiếp và nhiệt độ cao.
 ''',
+    "skinTypeTags": ["mọi loại da", "da khô", "da hỗn hợp"],
+    "skinConcerns": [
+      "cấp ẩm sâu",
+      "làm dịu da",
+      "tăng độ đàn hồi",
+      "tăng sự tự tin",
+    ],
+    "recommendationScore": 95,
+    "ageGroup": ["18-25", "25-40", "40+"],
   },
   {
     "id": "SP318",
@@ -14209,6 +16606,15 @@ final List<Map<String, dynamic>> productList = [
 4. Không để kem quá lâu trên da để tránh kích ứng.
 5. Bảo quản nơi khô ráo, tránh ánh nắng trực tiếp và nhiệt độ cao.
 ''',
+    "skinTypeTags": ["mọi loại da", "da khô", "da thường"],
+    "skinConcerns": [
+      "loại bỏ lông",
+      "dưỡng ẩm da",
+      "giữ da mềm mịn",
+      "tăng sự tự tin",
+    ],
+    "recommendationScore": 90,
+    "ageGroup": ["18-25", "25-40", "40+"],
   },
   {
     "id": "SP319",
@@ -14249,6 +16655,15 @@ final List<Map<String, dynamic>> productList = [
 3. Sử dụng bất cứ khi nào cần làm sạch tay nhanh chóng, đặc biệt trước khi ăn hoặc sau khi tiếp xúc nơi công cộng.
 4. Bảo quản nơi khô ráo, tránh ánh nắng trực tiếp và nhiệt độ cao.
 ''',
+    "skinTypeTags": ["mọi loại da", "da nhạy cảm"],
+    "skinConcerns": [
+      "diệt khuẩn tay",
+      "giữ tay sạch sẽ",
+      "tiện lợi khi di chuyển",
+      "tăng sự tự tin",
+    ],
+    "recommendationScore": 92,
+    "ageGroup": ["6-12", "13-17", "18-25", "25-40", "40+"],
   },
   {
     "id": "SP320",
@@ -14291,6 +16706,15 @@ final List<Map<String, dynamic>> productList = [
 5. Không sử dụng cho vết thương hở hoặc vùng da bị kích ứng.
 6. Bảo quản nơi khô ráo, tránh ánh nắng trực tiếp và nhiệt độ cao.
 ''',
+    "skinTypeTags": ["mọi loại da", "da nhạy cảm"],
+    "skinConcerns": [
+      "làm sạch vùng kín",
+      "cân bằng pH",
+      "ngăn ngừa viêm nhiễm",
+      "tăng sự tự tin",
+    ],
+    "recommendationScore": 94,
+    "ageGroup": ["18-25", "25-40", "40+"],
   },
   {
     "id": "SP321",
@@ -14332,6 +16756,15 @@ final List<Map<String, dynamic>> productList = [
 4. Tránh xịt vào mắt hoặc vùng da bị trầy xước.
 5. Bảo quản nơi khô ráo, tránh ánh nắng trực tiếp và nhiệt độ cao.
 ''',
+    "skinTypeTags": ["mọi loại da"],
+    "skinConcerns": [
+      "ngăn mùi cơ thể",
+      "giữ khô thoáng",
+      "hương biển tươi mát",
+      "tăng sự tự tin",
+    ],
+    "recommendationScore": 93,
+    "ageGroup": ["18-25", "25-40"],
   },
   {
     "id": "SP322",
@@ -14372,6 +16805,15 @@ final List<Map<String, dynamic>> productList = [
 3. Sử dụng hàng ngày để ngăn mùi hiệu quả.
 4. Không để lại vệt trắng trên quần áo.
 ''',
+    "skinTypeTags": ["mọi loại da", "da nhạy cảm"],
+    "skinConcerns": [
+      "ngăn mùi cơ thể",
+      "giữ khô thoáng",
+      "không để lại vệt trên áo",
+      "tăng sự tự tin",
+    ],
+    "recommendationScore": 93,
+    "ageGroup": ["18-25", "25-40", "40+"],
   },
   {
     "id": "SP323",
@@ -14412,6 +16854,15 @@ final List<Map<String, dynamic>> productList = [
 3. Thích hợp dùng sau khi tập luyện thể thao.
 4. Lưu hương lâu, tạo cảm giác năng động.
 ''',
+    "skinTypeTags": ["mọi loại da"],
+    "skinConcerns": [
+      "ngăn mùi cơ thể",
+      "giữ khô thoáng",
+      "hương thơm nam tính",
+      "tăng sự tự tin",
+    ],
+    "recommendationScore": 92,
+    "ageGroup": ["18-25", "25-40"],
   },
   {
     "id": "SP324",
@@ -14451,6 +16902,15 @@ final List<Map<String, dynamic>> productList = [
 3. Sử dụng hàng ngày để ngăn mùi hiệu quả.
 4. Lưu hương lâu, phù hợp môi trường công sở.
 ''',
+    "skinTypeTags": ["mọi loại da"],
+    "skinConcerns": [
+      "ngăn mùi cơ thể",
+      "giữ khô thoáng",
+      "hương thơm cổ điển nam tính",
+      "tăng sự tự tin",
+    ],
+    "recommendationScore": 92,
+    "ageGroup": ["18-25", "25-40", "40+"],
   },
   {
     "id": "SP325",
@@ -14490,6 +16950,15 @@ final List<Map<String, dynamic>> productList = [
 3. Thích hợp dùng cho các buổi hẹn hò.
 4. Lưu hương ngọt ngào, quyến rũ.
 ''',
+    "skinTypeTags": ["mọi loại da"],
+    "skinConcerns": [
+      "ngăn mùi cơ thể",
+      "giữ khô thoáng",
+      "hương thơm ngọt ngào gợi cảm",
+      "tăng sự tự tin",
+    ],
+    "recommendationScore": 92,
+    "ageGroup": ["18-25", "25-40"],
   },
   {
     "id": "SP326",
@@ -14531,6 +17000,15 @@ final List<Map<String, dynamic>> productList = [
 4. Tránh xịt vào mắt hoặc vùng da bị trầy xước.
 5. Bảo quản nơi khô ráo, tránh ánh nắng trực tiếp và nhiệt độ cao.
 ''',
+    "skinTypeTags": ["mọi loại da"],
+    "skinConcerns": [
+      "ngăn mùi cơ thể",
+      "giữ khô thoáng",
+      "hương thơm lãng mạn nữ tính",
+      "tăng sự tự tin",
+    ],
+    "recommendationScore": 92,
+    "ageGroup": ["18-25", "25-40"],
   },
   {
     "id": "SP327",
@@ -14572,6 +17050,15 @@ final List<Map<String, dynamic>> productList = [
 4. Có thể dùng trước khi ngủ để hỗ trợ giấc ngủ sâu.
 5. Tránh sử dụng trên vết thương hở hoặc vùng da bị kích ứng.
 ''',
+    "skinTypeTags": ["mọi loại da", "da khô", "da nhạy cảm"],
+    "skinConcerns": [
+      "thư giãn tinh thần",
+      "giảm căng thẳng",
+      "dưỡng ẩm da",
+      "tăng sự tự tin",
+    ],
+    "recommendationScore": 93,
+    "ageGroup": ["18-25", "25-40", "40+"],
   },
   {
     "id": "SP328",
@@ -14611,6 +17098,15 @@ final List<Map<String, dynamic>> productList = [
 2. Có thể dùng kết hợp với đá nóng để tăng hiệu quả thư giãn.
 3. Sử dụng thường xuyên giúp da mềm mại, mịn màng.
 ''',
+    "skinTypeTags": ["mọi loại da", "da khô", "da nhạy cảm"],
+    "skinConcerns": [
+      "dưỡng ẩm sâu",
+      "nuôi dưỡng da",
+      "thư giãn cơ thể",
+      "tăng sự tự tin",
+    ],
+    "recommendationScore": 93,
+    "ageGroup": ["18-25", "25-40", "40+"],
   },
   {
     "id": "SP329",
@@ -14650,6 +17146,15 @@ final List<Map<String, dynamic>> productList = [
 3. Có thể dùng để massage cho bé giúp bé ngủ ngon.
 4. Tránh tiếp xúc với mắt.
 ''',
+    "skinTypeTags": ["mọi loại da", "da khô", "da nhạy cảm"],
+    "skinConcerns": [
+      "dưỡng ẩm da",
+      "làm mềm da",
+      "thư giãn cơ thể",
+      "tăng sự tự tin",
+    ],
+    "recommendationScore": 95,
+    "ageGroup": ["0-5", "6-12", "13-17", "18-25", "25-40", "40+"],
   },
   {
     "id": "SP330",
@@ -14689,6 +17194,15 @@ final List<Map<String, dynamic>> productList = [
 2. Có thể dùng để massage vùng da khô như khuỷu tay, đầu gối.
 3. Bảo quản nơi khô ráo, tránh ánh nắng trực tiếp.
 ''',
+    "skinTypeTags": ["mọi loại da", "da khô", "da nhạy cảm"],
+    "skinConcerns": [
+      "dưỡng ẩm sâu",
+      "nuôi dưỡng da",
+      "thư giãn cơ thể",
+      "tăng sự tự tin",
+    ],
+    "recommendationScore": 94,
+    "ageGroup": ["18-25", "25-40", "40+"],
   },
   {
     "id": "SP331",
@@ -14729,6 +17243,15 @@ final List<Map<String, dynamic>> productList = [
 3. Có thể dùng để massage chân tay giảm mỏi.
 4. Bảo quản nơi khô ráo, tránh ánh nắng trực tiếp.
 ''',
+    "skinTypeTags": ["mọi loại da", "da khô", "da nhạy cảm"],
+    "skinConcerns": [
+      "thư giãn cơ thể",
+      "dưỡng ẩm da",
+      "hỗ trợ tuần hoàn máu",
+      "tăng sự tự tin",
+    ],
+    "recommendationScore": 93,
+    "ageGroup": ["18-25", "25-40", "40+"],
   },
   {
     "id": "SP332",
@@ -14773,6 +17296,15 @@ final List<Map<String, dynamic>> productList = [
 5. Thích hợp sử dụng trước khi ngủ để hỗ trợ giấc ngủ sâu.
 6. Bảo quản nơi khô ráo, tránh ánh nắng trực tiếp và nhiệt độ cao.
 ''',
+    "skinTypeTags": ["mọi loại da", "da khô", "da nhạy cảm"],
+    "skinConcerns": [
+      "thư giãn tinh thần",
+      "giảm căng thẳng",
+      "dưỡng ẩm da",
+      "tăng sự tự tin",
+    ],
+    "recommendationScore": 93,
+    "ageGroup": ["18-25", "25-40", "40+"],
   },
   {
     "id": "SP333",
@@ -14813,6 +17345,15 @@ final List<Map<String, dynamic>> productList = [
 3. Thay miếng dán sau 6–8 giờ hoặc khi patch chuyển màu trắng.
 4. Có thể dùng dưới lớp trang điểm để bảo vệ da.
 ''',
+    "skinTypeTags": ["da dầu", "da mụn", "da hỗn hợp"],
+    "skinConcerns": [
+      "giảm mụn viêm",
+      "bảo vệ da",
+      "hỗ trợ làm lành",
+      "tăng sự tự tin",
+    ],
+    "recommendationScore": 95,
+    "ageGroup": ["18-25", "25-40"],
   },
   {
     "id": "SP334",
@@ -14853,6 +17394,15 @@ final List<Map<String, dynamic>> productList = [
 3. Thay miếng dán sau 6–8 giờ hoặc khi patch chuyển màu trắng.
 4. Sử dụng thường xuyên để bảo vệ da khỏi vi khuẩn và giảm sưng viêm.
 ''',
+    "skinTypeTags": ["da dầu", "da mụn", "da hỗn hợp"],
+    "skinConcerns": [
+      "giảm mụn viêm",
+      "bảo vệ da",
+      "hỗ trợ làm lành",
+      "tăng sự tự tin",
+    ],
+    "recommendationScore": 94,
+    "ageGroup": ["18-25", "25-40"],
   },
   {
     "id": "SP335",
@@ -14893,6 +17443,15 @@ final List<Map<String, dynamic>> productList = [
 3. Thay miếng dán sau 8 giờ hoặc khi patch chuyển màu.
 4. Có thể dùng qua đêm để tăng hiệu quả giảm sưng viêm.
 ''',
+    "skinTypeTags": ["da dầu", "da mụn", "da hỗn hợp"],
+    "skinConcerns": [
+      "giảm mụn viêm",
+      "bảo vệ da",
+      "hỗ trợ làm lành",
+      "tăng sự tự tin",
+    ],
+    "recommendationScore": 94,
+    "ageGroup": ["18-25", "25-40"],
   },
   {
     "id": "SP336",
@@ -14933,6 +17492,15 @@ final List<Map<String, dynamic>> productList = [
 3. Thay miếng dán sau 6–8 giờ hoặc khi patch chuyển màu trắng.
 4. Có thể dùng dưới lớp trang điểm để bảo vệ da.
 ''',
+    "skinTypeTags": ["da dầu", "da mụn", "da hỗn hợp"],
+    "skinConcerns": [
+      "giảm mụn viêm",
+      "bảo vệ da",
+      "hỗ trợ làm lành",
+      "tăng sự tự tin",
+    ],
+    "recommendationScore": 94,
+    "ageGroup": ["18-25", "25-40"],
   },
   {
     "id": "SP337",
@@ -14974,6 +17542,15 @@ final List<Map<String, dynamic>> productList = [
 4. Có thể dùng qua đêm để tăng hiệu quả hút dịch mụn.
 5. Bảo quản nơi khô ráo, tránh ánh nắng trực tiếp.
 ''',
+    "skinTypeTags": ["da dầu", "da mụn", "da hỗn hợp"],
+    "skinConcerns": [
+      "giảm mụn viêm",
+      "bảo vệ da",
+      "hỗ trợ làm lành",
+      "tăng sự tự tin",
+    ],
+    "recommendationScore": 95,
+    "ageGroup": ["18-25", "25-40"],
   },
   {
     "id": "SP338",
@@ -15015,6 +17592,15 @@ final List<Map<String, dynamic>> productList = [
 4. Có thể dùng dưới lớp trang điểm để bảo vệ da.
 5. Sử dụng thường xuyên để giảm sưng viêm và ngăn ngừa vi khuẩn.
 ''',
+    "skinTypeTags": ["da dầu", "da mụn", "da hỗn hợp"],
+    "skinConcerns": [
+      "giảm mụn viêm",
+      "bảo vệ da",
+      "hỗ trợ làm lành",
+      "tăng sự tự tin",
+    ],
+    "recommendationScore": 94,
+    "ageGroup": ["18-25", "25-40"],
   },
   {
     "id": "SP339",
@@ -15049,6 +17635,15 @@ final List<Map<String, dynamic>> productList = [
     ],
     "usage":
         "Sử dụng toner sau khi rửa mặt, serum trước khi dưỡng, kem dưỡng cuối cùng.",
+    "skinTypeTags": ["mọi loại da", "da dầu", "da hỗn hợp", "da nhạy cảm"],
+    "skinConcerns": [
+      "dưỡng ẩm da",
+      "chống oxy hóa",
+      "làm dịu da",
+      "tăng sự tự tin",
+    ],
+    "recommendationScore": 96,
+    "ageGroup": ["18-25", "25-40", "40+"],
   },
   {
     "id": "SP340",
@@ -15081,6 +17676,15 @@ final List<Map<String, dynamic>> productList = [
       "Essential Oils – tạo hương tự nhiên",
     ],
     "usage": "Xịt trực tiếp lên vùng da cổ tay, sau tai hoặc quần áo.",
+    "skinTypeTags": ["mọi loại da"],
+    "skinConcerns": [
+      "tạo phong cách sang trọng",
+      "thể hiện cá tính",
+      "tăng sự tự tin",
+      "làm quà tặng cao cấp",
+    ],
+    "recommendationScore": 97,
+    "ageGroup": ["18-25", "25-40", "40+"],
   },
   {
     "id": "SP341",
@@ -15112,6 +17716,15 @@ final List<Map<String, dynamic>> productList = [
       "Vitamin B5 – nuôi dưỡng tóc chắc khỏe",
     ],
     "usage": "Dùng dầu gội và dầu xả khi gội đầu, xịt dưỡng sau khi sấy tóc.",
+    "skinTypeTags": ["mọi loại tóc", "tóc khô", "tóc hư tổn", "tóc nhuộm"],
+    "skinConcerns": [
+      "dưỡng ẩm tóc",
+      "phục hồi hư tổn",
+      "bảo vệ tóc nhuộm",
+      "tăng sự tự tin",
+    ],
+    "recommendationScore": 96,
+    "ageGroup": ["18-25", "25-40", "40+"],
   },
   {
     "id": "SP342",
@@ -15144,6 +17757,15 @@ final List<Map<String, dynamic>> productList = [
       "Vitamin E – chống oxy hóa",
     ],
     "usage": "Dùng sữa tắm hàng ngày, thoa kem dưỡng thể sau khi tắm.",
+    "skinTypeTags": ["mọi loại da", "da khô", "da nhạy cảm"],
+    "skinConcerns": [
+      "dưỡng ẩm sâu",
+      "phục hồi da khô",
+      "làm mềm mịn da",
+      "tăng sự tự tin",
+    ],
+    "recommendationScore": 96,
+    "ageGroup": ["18-25", "25-40", "40+"],
   },
   {
     "id": "SP343",
@@ -15176,6 +17798,15 @@ final List<Map<String, dynamic>> productList = [
       "Fragrance – hương thơm nhẹ",
     ],
     "usage": "Dùng son cho môi, mascara cho mi và phấn phủ sau lớp nền.",
+    "skinTypeTags": ["mọi loại da"],
+    "skinConcerns": [
+      "tạo phong cách trang điểm",
+      "làm đẹp tự nhiên",
+      "thể hiện cá tính",
+      "tăng sự tự tin",
+    ],
+    "recommendationScore": 96,
+    "ageGroup": ["18-25", "25-40"],
   },
   {
     "id": "SP344",
@@ -15215,6 +17846,15 @@ final List<Map<String, dynamic>> productList = [
 3. Sử dụng đều đặn sáng và tối để đạt hiệu quả tối ưu.
 4. Bảo quản nơi khô ráo, tránh ánh nắng trực tiếp.
 ''',
+    "skinTypeTags": ["mọi loại da", "da khô", "da dầu", "da hỗn hợp"],
+    "skinConcerns": [
+      "cấp nước sâu",
+      "dưỡng ẩm da",
+      "phục hồi da mệt mỏi",
+      "tăng sự tự tin",
+    ],
+    "recommendationScore": 97,
+    "ageGroup": ["18-25", "25-40", "40+"],
   },
   {
     "id": "SP345",
@@ -15251,1110 +17891,16 @@ final List<Map<String, dynamic>> productList = [
 2. Không dùng cho trẻ em dưới 12 tuổi.
 3. Bảo quản nơi khô ráo, tránh ánh nắng trực tiếp.
 ''',
+    "skinTypeTags": ["mọi loại da"],
+    "skinConcerns": [
+      "tăng sức đề kháng",
+      "chống oxy hóa",
+      "hỗ trợ sáng da",
+      "tăng sự tự tin",
+    ],
+    "recommendationScore": 95,
+    "ageGroup": ["18-25", "25-40", "40+"],
   },
-  //   {
-  //     "id": "SP346",
-  //     "name": "Thực phẩm chức năng Omega-3 Fish Oil",
-  //     "brand": "Nature Made",
-  //     "type": "thực phẩm chức năng",
-  //     "category": "Others",
-  //     "originalPrice": 450000,
-  //     "discountPrice": 450000,
-  //     "isDiscountActive": false,
-  //     "promotion": null,
-  //     "promotionStart": null,
-  //     "promotionEnd": null,
-  //     "stockQuantity": 180,
-  //     "image": "https://example.com/image346.jpg",
-  //     "description": "Omega-3 Fish Oil hỗ trợ tim mạch, não bộ và thị lực.",
-  //     "specs": {
-  //       "Quy cách": "Hộp 100 viên",
-  //       "Đối tượng phù hợp": "Người trưởng thành",
-  //       "Xuất xứ": "Mỹ",
-  //       "Ngày sản xuất": "07/2025",
-  //       "Hạn sử dụng": "36 tháng kể từ ngày sản xuất",
-  //       "Mã vạch": "0794003460001",
-  //     },
-  //     "ingredients": [
-  //       "EPA – hỗ trợ tim mạch",
-  //       "DHA – tốt cho não bộ và thị lực",
-  //       "Gelatin – vỏ viên nang",
-  //     ],
-  //     "usage": '''
-  // 1. Uống 1–2 viên/ngày sau bữa ăn.
-  // 2. Không dùng cho người dị ứng hải sản.
-  // ''',
-  //   },
-  //   {
-  //     "id": "SP347",
-  //     "name": "Thực phẩm chức năng Collagen Peptide",
-  //     "brand": "Shiseido",
-  //     "type": "thực phẩm chức năng",
-  //     "category": "Others",
-  //     "originalPrice": 680000,
-  //     "discountPrice": 640000,
-  //     "isDiscountActive": true,
-  //     "promotion": "Giảm giá 6% cho đơn hàng online",
-  //     "promotionStart": "2025-11-25T09:00:00",
-  //     "promotionEnd": "2025-11-30T23:59:00",
-  //     "stockQuantity": 150,
-  //     "image": "https://example.com/image347.jpg",
-  //     "description":
-  //         "Collagen Peptide hỗ trợ làm đẹp da, tăng độ đàn hồi và giảm nếp nhăn.",
-  //     "specs": {
-  //       "Quy cách": "Hộp 30 gói bột",
-  //       "Đối tượng phù hợp": "Nữ giới trên 25 tuổi",
-  //       "Xuất xứ": "Nhật Bản",
-  //       "Ngày sản xuất": "09/2025",
-  //       "Hạn sử dụng": "24 tháng kể từ ngày sản xuất",
-  //       "Mã vạch": "4901873470001",
-  //     },
-  //     "ingredients": [
-  //       "Collagen Peptide – tăng độ đàn hồi da",
-  //       "Vitamin C – hỗ trợ tổng hợp collagen",
-  //       "Hyaluronic Acid – giữ ẩm cho da",
-  //     ],
-  //     "usage": '''
-  // 1. Pha 1 gói với nước ấm, uống mỗi ngày.
-  // 2. Dùng liên tục ít nhất 3 tháng để thấy hiệu quả.
-  // ''',
-  //   },
-  //   {
-  //     "id": "SP348",
-  //     "name": "Thực phẩm chức năng Probiotic",
-  //     "brand": "Culturelle",
-  //     "type": "thực phẩm chức năng",
-  //     "category": "Others",
-  //     "originalPrice": 520000,
-  //     "discountPrice": 520000,
-  //     "isDiscountActive": false,
-  //     "promotion": null,
-  //     "promotionStart": null,
-  //     "promotionEnd": null,
-  //     "stockQuantity": 220,
-  //     "image": "https://example.com/image348.jpg",
-  //     "description": "Probiotic hỗ trợ tiêu hóa, cân bằng hệ vi sinh đường ruột.",
-  //     "specs": {
-  //       "Quy cách": "Hộp 50 viên",
-  //       "Đối tượng phù hợp": "Người lớn và trẻ em trên 6 tuổi",
-  //       "Xuất xứ": "Mỹ",
-  //       "Ngày sản xuất": "06/2025",
-  //       "Hạn sử dụng": "24 tháng kể từ ngày sản xuất",
-  //       "Mã vạch": "0491003480001",
-  //     },
-  //     "ingredients": [
-  //       "Lactobacillus rhamnosus GG – lợi khuẩn chính",
-  //       "Inulin – chất xơ hòa tan",
-  //       "Magnesium Stearate – tá dược",
-  //     ],
-  //     "usage": '''
-  // 1. Uống 1 viên/ngày, có thể uống trước hoặc sau bữa ăn.
-  // 2. Dùng thường xuyên để duy trì hệ tiêu hóa khỏe mạnh.
-  // ''',
-  //   },
-  //   {
-  //     "id": "SP349",
-  //     "name": "Thực phẩm chức năng Vitamin D3 + K2",
-  //     "brand": "Now Foods",
-  //     "type": "thực phẩm chức năng",
-  //     "category": "Others",
-  //     "originalPrice": 390000,
-  //     "discountPrice": 370000,
-  //     "isDiscountActive": true,
-  //     "promotion": "Giảm giá 5% cho tuần lễ Black Friday",
-  //     "promotionStart": "2025-11-25T09:00:00",
-  //     "promotionEnd": "2025-11-30T23:59:00",
-  //     "stockQuantity": 160,
-  //     "image": "https://example.com/image349.jpg",
-  //     "description": "Vitamin D3 + K2 hỗ trợ xương chắc khỏe và tim mạch.",
-  //     "specs": {
-  //       "Quy cách": "Hộp 60 viên",
-  //       "Đối tượng phù hợp": "Người trưởng thành",
-  //       "Xuất xứ": "Mỹ",
-  //       "Ngày sản xuất": "08/2025",
-  //       "Hạn sử dụng": "24 tháng kể từ ngày sản xuất",
-  //       "Mã vạch": "7337393490001",
-  //     },
-  //     "ingredients": [
-  //       "Vitamin D3 – hỗ trợ hấp thu canxi",
-  //       "Vitamin K2 – điều hòa canxi vào xương",
-  //       "Olive Oil – dung môi",
-  //     ],
-  //     "usage": '''
-  // 1. Uống 1 viên/ngày sau bữa ăn.
-  // 2. Không dùng cho trẻ em dưới 12 tuổi.
-  // ''',
-  //   },
-  //   {
-  //     "id": "SP350",
-  //     "name": "Thực phẩm chức năng Glucosamine Sulfate",
-  //     "brand": "Kirkland Signature",
-  //     "type": "thực phẩm chức năng",
-  //     "category": "Others",
-  //     "originalPrice": 560000,
-  //     "discountPrice": 530000,
-  //     "isDiscountActive": true,
-  //     "promotion": "Giảm giá 5% cho tuần lễ Black Friday",
-  //     "promotionStart": "2025-11-25T09:00:00",
-  //     "promotionEnd": "2025-11-30T23:59:00",
-  //     "stockQuantity": 140,
-  //     "image": "https://example.com/image350.jpg",
-  //     "description":
-  //         "Glucosamine Sulfate hỗ trợ khớp, giảm đau nhức và tăng cường vận động.",
-  //     "specs": {
-  //       "Quy cách": "Hộp 200 viên",
-  //       "Đối tượng phù hợp": "Người trưởng thành",
-  //       "Xuất xứ": "Mỹ",
-  //       "Ngày sản xuất": "07/2025",
-  //       "Hạn sử dụng": "36 tháng kể từ ngày sản xuất",
-  //       "Mã vạch": "0966193500001",
-  //     },
-  //     "ingredients": [
-  //       "Glucosamine Sulfate – hỗ trợ khớp, giảm đau nhức",
-  //       "Chondroitin – tăng cường sụn khớp",
-  //       "MSM (Methylsulfonylmethane) – giảm viêm, hỗ trợ vận động",
-  //       "Gelatin – vỏ viên nang",
-  //       "Magnesium Stearate – tá dược",
-  //     ],
-  //     "usage": '''
-  // 1. Uống 1–2 viên/ngày sau bữa ăn.
-  // 2. Dùng liên tục ít nhất 3 tháng để thấy hiệu quả rõ rệt.
-  // 3. Không dùng cho phụ nữ có thai hoặc cho con bú nếu chưa tham khảo ý kiến bác sĩ.
-  // 4. Bảo quản nơi khô ráo, tránh ánh nắng trực tiếp.
-  // ''',
-  //   },
-  //   {
-  //     "id": "SP351",
-  //     "name": "Kem tẩy lông Veet Silk & Fresh",
-  //     "brand": "Veet",
-  //     "type": "tẩy lông",
-  //     "category": "Others",
-  //     "originalPrice": 120000,
-  //     "discountPrice": 110000,
-  //     "isDiscountActive": true,
-  //     "promotion": "Giảm giá 8% tuần lễ Black Friday",
-  //     "promotionStart": "2025-11-25T09:00:00",
-  //     "promotionEnd": "2025-11-30T23:59:00",
-  //     "stockQuantity": 200,
-  //     "image": "https://example.com/image351.jpg",
-  //     "description":
-  //         "Kem tẩy lông Veet Silk & Fresh giúp loại bỏ lông nhanh chóng, da mềm mịn.",
-  //     "specs": {
-  //       "Dung tích": "100ml",
-  //       "Loại da phù hợp": "Da thường",
-  //       "Xuất xứ": "Pháp",
-  //       "Ngày sản xuất": "08/2025",
-  //       "Hạn sử dụng": "36 tháng",
-  //       "Mã vạch": "3030053510001",
-  //     },
-  //     "ingredients": [
-  //       "Thioglycolic Acid – phá vỡ cấu trúc lông",
-  //       "Aloe Vera – làm dịu da",
-  //       "Vitamin E – chống oxy hóa",
-  //     ],
-  //     "usage":
-  //         "Thoa kem lên vùng da cần tẩy, để 5–10 phút rồi lau sạch bằng khăn.",
-  //   },
-  //   {
-  //     "id": "SP352",
-  //     "name": "Kem tẩy lông Evoluderm",
-  //     "brand": "Evoluderm",
-  //     "type": "tẩy lông",
-  //     "category": "Others",
-  //     "originalPrice": 95000,
-  //     "discountPrice": 95000,
-  //     "isDiscountActive": false,
-  //     "promotion": null,
-  //     "promotionStart": null,
-  //     "promotionEnd": null,
-  //     "stockQuantity": 180,
-  //     "image": "https://example.com/image352.jpg",
-  //     "description": "Kem tẩy lông Evoluderm dịu nhẹ, phù hợp cho da nhạy cảm.",
-  //     "specs": {
-  //       "Dung tích": "75ml",
-  //       "Loại da phù hợp": "Da nhạy cảm",
-  //       "Xuất xứ": "Pháp",
-  //       "Ngày sản xuất": "07/2025",
-  //       "Hạn sử dụng": "36 tháng",
-  //       "Mã vạch": "3760103520001",
-  //     },
-  //     "ingredients": [
-  //       "Chamomile Extract – làm dịu da",
-  //       "Thioglycolic Acid – loại bỏ lông",
-  //       "Glycerin – dưỡng ẩm",
-  //     ],
-  //     "usage": "Thoa kem lên da, để 8 phút rồi rửa sạch bằng nước ấm.",
-  //   },
-  //   {
-  //     "id": "SP353",
-  //     "name": "Kem tẩy lông Cléo",
-  //     "brand": "Cléo",
-  //     "type": "tẩy lông",
-  //     "category": "Others",
-  //     "originalPrice": 75000,
-  //     "discountPrice": 72000,
-  //     "isDiscountActive": true,
-  //     "promotion": "Giảm giá 4% cho đơn hàng online",
-  //     "promotionStart": "2025-11-25T09:00:00",
-  //     "promotionEnd": "2025-11-30T23:59:00",
-  //     "stockQuantity": 250,
-  //     "image": "https://example.com/image353.jpg",
-  //     "description": "Kem tẩy lông Cléo chiết xuất từ bơ hạt mỡ, dịu nhẹ cho da.",
-  //     "specs": {
-  //       "Dung tích": "100ml",
-  //       "Loại da phù hợp": "Da thường",
-  //       "Xuất xứ": "Việt Nam",
-  //       "Ngày sản xuất": "09/2025",
-  //       "Hạn sử dụng": "36 tháng",
-  //       "Mã vạch": "8934863530001",
-  //     },
-  //     "ingredients": [
-  //       "Shea Butter – dưỡng ẩm",
-  //       "Thioglycolic Acid – loại bỏ lông",
-  //       "Vitamin E – chống oxy hóa",
-  //     ],
-  //     "usage": "Thoa kem lên da, để 5–7 phút rồi lau sạch bằng khăn.",
-  //   },
-  //   {
-  //     "id": "SP354",
-  //     "name": "Kem tẩy lông The Face Shop",
-  //     "brand": "The Face Shop",
-  //     "type": "tẩy lông",
-  //     "category": "Others",
-  //     "originalPrice": 135000,
-  //     "discountPrice": 135000,
-  //     "isDiscountActive": false,
-  //     "promotion": null,
-  //     "promotionStart": null,
-  //     "promotionEnd": null,
-  //     "stockQuantity": 160,
-  //     "image": "https://example.com/image354.jpg",
-  //     "description": "Kem tẩy lông The Face Shop dịu nhẹ, hương thơm dễ chịu.",
-  //     "specs": {
-  //       "Dung tích": "100ml",
-  //       "Loại da phù hợp": "Mọi loại da",
-  //       "Xuất xứ": "Hàn Quốc",
-  //       "Ngày sản xuất": "08/2025",
-  //       "Hạn sử dụng": "36 tháng",
-  //       "Mã vạch": "8809613540001",
-  //     },
-  //     "ingredients": [
-  //       "Green Tea Extract – chống oxy hóa",
-  //       "Thioglycolic Acid – loại bỏ lông",
-  //       "Aloe Vera – làm dịu da",
-  //     ],
-  //     "usage": "Thoa kem lên da, để 10 phút rồi rửa sạch bằng nước.",
-  //   },
-  //   {
-  //     "id": "SP355",
-  //     "name": "Kem tẩy lông Missha",
-  //     "brand": "Missha",
-  //     "type": "tẩy lông",
-  //     "category": "Others",
-  //     "originalPrice": 125000,
-  //     "discountPrice": 118000,
-  //     "isDiscountActive": true,
-  //     "promotion": "Giảm giá 6% cho tuần lễ Black Friday",
-  //     "promotionStart": "2025-11-25T09:00:00",
-  //     "promotionEnd": "2025-11-30T23:59:00",
-  //     "stockQuantity": 140,
-  //     "image": "https://example.com/image355.jpg",
-  //     "description":
-  //         "Kem tẩy lông Missha giúp loại bỏ lông nhanh chóng, da mềm mịn.",
-  //     "specs": {
-  //       "Dung tích": "100ml",
-  //       "Loại da phù hợp": "Da thường",
-  //       "Xuất xứ": "Hàn Quốc",
-  //       "Ngày sản xuất": "07/2025",
-  //       "Hạn sử dụng": "36 tháng",
-  //       "Mã vạch": "8806183550001",
-  //     },
-  //     "ingredients": [
-  //       "Thioglycolic Acid – loại bỏ lông",
-  //       "Vitamin E – chống oxy hóa",
-  //       "Chamomile Extract – làm dịu da",
-  //     ],
-  //     "usage": "Thoa kem lên da, để 8 phút rồi lau sạch bằng khăn.",
-  //   },
-  //   {
-  //     "id": "SP356",
-  //     "name": "Kem tẩy lông Romano",
-  //     "brand": "Romano",
-  //     "type": "tẩy lông",
-  //     "category": "Others",
-  //     "originalPrice": 95000,
-  //     "discountPrice": 95000,
-  //     "isDiscountActive": false,
-  //     "promotion": null,
-  //     "promotionStart": null,
-  //     "promotionEnd": null,
-  //     "stockQuantity": 200,
-  //     "image": "https://example.com/image356.jpg",
-  //     "description":
-  //         "Kem tẩy lông Romano dành cho nam giới, hương thơm nam tính.",
-  //     "specs": {
-  //       "Dung tích": "100ml",
-  //       "Loại da phù hợp": "Nam giới",
-  //       "Xuất xứ": "Việt Nam",
-  //       "Ngày sản xuất": "09/2025",
-  //       "Hạn sử dụng": "36 tháng",
-  //       "Mã vạch": "8934863560001",
-  //     },
-  //     "ingredients": [
-  //       "Thioglycolic Acid – loại bỏ lông",
-  //       "Menthol – tạo cảm giác mát lạnh",
-  //       "Vitamin E – chống oxy hóa",
-  //     ],
-  //     "usage": "Thoa kem lên da, để 7 phút rồi rửa sạch bằng nước.",
-  //   },
-  //   {
-  //     "id": "SP357",
-  //     "name": "Gel rửa tay kháng khuẩn Lifebuoy",
-  //     "brand": "Lifebuoy",
-  //     "type": "gel rửa tay",
-  //     "category": "Others",
-  //     "originalPrice": 45000,
-  //     "discountPrice": 42000,
-  //     "isDiscountActive": true,
-  //     "promotion": "Giảm giá 7% tuần lễ Black Friday",
-  //     "promotionStart": "2025-11-25T09:00:00",
-  //     "promotionEnd": "2025-11-30T23:59:00",
-  //     "stockQuantity": 500,
-  //     "image": "https://example.com/image357.jpg",
-  //     "description":
-  //         "Gel rửa tay Lifebuoy kháng khuẩn, sạch tay nhanh chóng, hương thơm dễ chịu.",
-  //     "specs": {
-  //       "Dung tích": "50ml",
-  //       "Kết cấu": "Gel trong suốt",
-  //       "Đối tượng phù hợp": "Mọi đối tượng",
-  //       "Xuất xứ": "Việt Nam",
-  //       "Ngày sản xuất": "08/2025",
-  //       "Hạn sử dụng": "24 tháng",
-  //       "Mã vạch": "8934863570001",
-  //     },
-  //     "ingredients": [
-  //       "Alcohol 70% – diệt khuẩn",
-  //       "Glycerin – dưỡng ẩm",
-  //       "Fragrance – hương thơm dễ chịu",
-  //     ],
-  //     "usage": "Lấy một lượng gel vừa đủ, xoa đều khắp tay đến khi khô.",
-  //   },
-  //   {
-  //     "id": "SP358",
-  //     "name": "Gel rửa tay khô Bath & Body Works",
-  //     "brand": "Bath & Body Works",
-  //     "type": "gel rửa tay",
-  //     "category": "Others",
-  //     "originalPrice": 99000,
-  //     "discountPrice": 99000,
-  //     "isDiscountActive": false,
-  //     "promotion": null,
-  //     "promotionStart": null,
-  //     "promotionEnd": null,
-  //     "stockQuantity": 300,
-  //     "image": "https://example.com/image358.jpg",
-  //     "description":
-  //         "Gel rửa tay Bath & Body Works với nhiều mùi hương đa dạng, tiện lợi.",
-  //     "specs": {
-  //       "Dung tích": "29ml",
-  //       "Kết cấu": "Gel trong suốt",
-  //       "Đối tượng phù hợp": "Mọi đối tượng",
-  //       "Xuất xứ": "Mỹ",
-  //       "Ngày sản xuất": "07/2025",
-  //       "Hạn sử dụng": "24 tháng",
-  //       "Mã vạch": "6675483580001",
-  //     },
-  //     "ingredients": [
-  //       "Alcohol 68% – diệt khuẩn",
-  //       "Aloe Vera – làm dịu da",
-  //       "Vitamin E – chống oxy hóa",
-  //     ],
-  //     "usage": "Xoa đều gel lên tay, không cần rửa lại với nước.",
-  //   },
-  //   {
-  //     "id": "SP359",
-  //     "name": "Gel rửa tay kháng khuẩn Purell Advanced",
-  //     "brand": "Purell",
-  //     "type": "gel rửa tay",
-  //     "category": "Others",
-  //     "originalPrice": 120000,
-  //     "discountPrice": 115000,
-  //     "isDiscountActive": true,
-  //     "promotion": "Giảm giá 5% cho đơn hàng online",
-  //     "promotionStart": "2025-11-25T09:00:00",
-  //     "promotionEnd": "2025-11-30T23:59:00",
-  //     "stockQuantity": 250,
-  //     "image": "https://example.com/image359.jpg",
-  //     "description":
-  //         "Gel rửa tay Purell Advanced diệt khuẩn nhanh, an toàn cho da.",
-  //     "specs": {
-  //       "Dung tích": "60ml",
-  //       "Kết cấu": "Gel trong suốt",
-  //       "Đối tượng phù hợp": "Mọi đối tượng",
-  //       "Xuất xứ": "Mỹ",
-  //       "Ngày sản xuất": "09/2025",
-  //       "Hạn sử dụng": "24 tháng",
-  //       "Mã vạch": "0738523590001",
-  //     },
-  //     "ingredients": [
-  //       "Alcohol 70% – diệt khuẩn",
-  //       "Glycerin – dưỡng ẩm",
-  //       "Aloe Vera – làm dịu da",
-  //     ],
-  //     "usage": "Lấy một lượng gel vừa đủ, xoa đều khắp tay đến khi khô.",
-  //   },
-  //   {
-  //     "id": "SP360",
-  //     "name": "Gel rửa tay kháng khuẩn On1",
-  //     "brand": "On1",
-  //     "type": "gel rửa tay",
-  //     "category": "Others",
-  //     "originalPrice": 35000,
-  //     "discountPrice": 35000,
-  //     "isDiscountActive": false,
-  //     "promotion": null,
-  //     "promotionStart": null,
-  //     "promotionEnd": null,
-  //     "stockQuantity": 600,
-  //     "image": "https://example.com/image360.jpg",
-  //     "description":
-  //         "Gel rửa tay On1 kháng khuẩn, giá cả hợp lý, tiện lợi mang theo.",
-  //     "specs": {
-  //       "Dung tích": "100ml",
-  //       "Kết cấu": "Gel trong suốt",
-  //       "Đối tượng phù hợp": "Mọi đối tượng",
-  //       "Xuất xứ": "Việt Nam",
-  //       "Ngày sản xuất": "08/2025",
-  //       "Hạn sử dụng": "24 tháng",
-  //       "Mã vạch": "8934863600001",
-  //     },
-  //     "ingredients": [
-  //       "Alcohol 65% – diệt khuẩn",
-  //       "Glycerin – dưỡng ẩm",
-  //       "Fragrance – hương thơm nhẹ",
-  //     ],
-  //     "usage": "Xoa đều gel lên tay, không cần rửa lại với nước.",
-  //   },
-  //   {
-  //     "id": "SP361",
-  //     "name": "Gel rửa tay kháng khuẩn The Body Shop",
-  //     "brand": "The Body Shop",
-  //     "type": "gel rửa tay",
-  //     "category": "Others",
-  //     "originalPrice": 135000,
-  //     "discountPrice": 128000,
-  //     "isDiscountActive": true,
-  //     "promotion": "Giảm giá 5% cho tuần lễ Black Friday",
-  //     "promotionStart": "2025-11-25T09:00:00",
-  //     "promotionEnd": "2025-11-30T23:59:00",
-  //     "stockQuantity": 180,
-  //     "image": "https://example.com/image361.jpg",
-  //     "description":
-  //         "Gel rửa tay The Body Shop với chiết xuất thiên nhiên, an toàn cho da.",
-  //     "specs": {
-  //       "Dung tích": "60ml",
-  //       "Kết cấu": "Gel trong suốt",
-  //       "Đối tượng phù hợp": "Mọi đối tượng",
-  //       "Xuất xứ": "Anh",
-  //       "Ngày sản xuất": "07/2025",
-  //       "Hạn sử dụng": "24 tháng",
-  //       "Mã vạch": "5028193610001",
-  //     },
-  //     "ingredients": [
-  //       "Alcohol 70% – diệt khuẩn",
-  //       "Aloe Vera – làm dịu da",
-  //       "Vitamin E – chống oxy hóa",
-  //     ],
-  //     "usage": "Lấy một lượng gel vừa đủ, xoa đều khắp tay đến khi khô.",
-  //   },
-  //   {
-  //     "id": "SP362",
-  //     "name": "Gel rửa tay kháng khuẩn Germ-X",
-  //     "brand": "Germ-X",
-  //     "type": "gel rửa tay",
-  //     "category": "Others",
-  //     "originalPrice": 95000,
-  //     "discountPrice": 95000,
-  //     "isDiscountActive": false,
-  //     "promotion": null,
-  //     "promotionStart": null,
-  //     "promotionEnd": null,
-  //     "stockQuantity": 220,
-  //     "image": "https://example.com/image362.jpg",
-  //     "description":
-  //         "Gel rửa tay Germ-X kháng khuẩn, tiện lợi mang theo bên mình.",
-  //     "specs": {
-  //       "Dung tích": "60ml",
-  //       "Kết cấu": "Gel trong suốt",
-  //       "Đối tượng phù hợp": "Mọi đối tượng",
-  //       "Xuất xứ": "Mỹ",
-  //       "Ngày sản xuất": "09/2025",
-  //       "Hạn sử dụng": "24 tháng",
-  //       "Mã vạch": "0727853620001",
-  //     },
-  //     "ingredients": [
-  //       "Alcohol 62% – diệt khuẩn",
-  //       "Glycerin – dưỡng ẩm",
-  //       "Fragrance – hương thơm nhẹ",
-  //     ],
-  //     "usage": "Xoa đều gel lên tay, không cần rửa lại với nước.",
-  //   },
-  //   {
-  //     "id": "SP363",
-  //     "name": "Son lì MAC Retro Matte Ruby Woo",
-  //     "brand": "MAC",
-  //     "type": "son",
-  //     "category": "Makeup",
-  //     "originalPrice": 650000,
-  //     "discountPrice": 620000,
-  //     "isDiscountActive": true,
-  //     "promotion": "Giảm giá 5% Black Friday",
-  //     "promotionStart": "2025-11-25T09:00:00",
-  //     "promotionEnd": "2025-11-30T23:59:00",
-  //     "stockQuantity": 200,
-  //     "image": "https://example.com/image363.jpg",
-  //     "description": "Son lì Ruby Woo nổi tiếng với màu đỏ cổ điển, lâu trôi.",
-  //     "specs": {
-  //       "Dung tích": "3g",
-  //       "Kết cấu": "Son thỏi lì",
-  //       "Xuất xứ": "Mỹ",
-  //       "Ngày sản xuất": "08/2025",
-  //       "Hạn sử dụng": "36 tháng",
-  //       "Mã vạch": "7736023630001",
-  //     },
-  //     "ingredients": [
-  //       "Pigments – tạo màu",
-  //       "Wax – giữ kết cấu",
-  //       "Vitamin E – dưỡng môi",
-  //     ],
-  //     "usage": "Thoa trực tiếp lên môi.",
-  //   },
-  //   {
-  //     "id": "SP364",
-  //     "name": "Son dưỡng Dior Addict Lip Glow",
-  //     "brand": "Dior",
-  //     "type": "son",
-  //     "category": "Makeup",
-  //     "originalPrice": 950000,
-  //     "discountPrice": 950000,
-  //     "isDiscountActive": false,
-  //     "promotion": null,
-  //     "promotionStart": null,
-  //     "promotionEnd": null,
-  //     "stockQuantity": 150,
-  //     "image": "https://example.com/image364.jpg",
-  //     "description":
-  //         "Son dưỡng Dior Addict Lip Glow giúp môi mềm mịn, lên màu tự nhiên.",
-  //     "specs": {
-  //       "Dung tích": "3.5g",
-  //       "Kết cấu": "Son dưỡng",
-  //       "Xuất xứ": "Pháp",
-  //       "Ngày sản xuất": "07/2025",
-  //       "Hạn sử dụng": "36 tháng",
-  //       "Mã vạch": "3348903640001",
-  //     },
-  //     "ingredients": [
-  //       "Shea Butter – dưỡng ẩm",
-  //       "Mango Butter – làm mềm môi",
-  //       "Pigments – tạo màu nhẹ",
-  //     ],
-  //     "usage": "Thoa trực tiếp lên môi.",
-  //   },
-  //   {
-  //     "id": "SP365",
-  //     "name": "Son kem lì Maybelline SuperStay Matte Ink",
-  //     "brand": "Maybelline",
-  //     "type": "son",
-  //     "category": "Makeup",
-  //     "originalPrice": 220000,
-  //     "discountPrice": 210000,
-  //     "isDiscountActive": true,
-  //     "promotion": "Giảm giá 5% cho đơn hàng online",
-  //     "promotionStart": "2025-11-25T09:00:00",
-  //     "promotionEnd": "2025-11-30T23:59:00",
-  //     "stockQuantity": 300,
-  //     "image": "https://example.com/image365.jpg",
-  //     "description":
-  //         "Son kem lì Maybelline bền màu đến 16 giờ, chất son mịn mượt.",
-  //     "specs": {
-  //       "Dung tích": "5ml",
-  //       "Kết cấu": "Son kem lì",
-  //       "Xuất xứ": "Mỹ",
-  //       "Ngày sản xuất": "09/2025",
-  //       "Hạn sử dụng": "36 tháng",
-  //       "Mã vạch": "3600533650001",
-  //     },
-  //     "ingredients": [
-  //       "Pigments – tạo màu",
-  //       "Silica – kiểm soát dầu",
-  //       "Dimethicone – làm mịn môi",
-  //     ],
-  //     "usage": "Thoa trực tiếp lên môi.",
-  //   },
-  //   {
-  //     "id": "SP366",
-  //     "name": "Son dưỡng Vaseline Lip Therapy",
-  //     "brand": "Vaseline",
-  //     "type": "son",
-  //     "category": "Makeup",
-  //     "originalPrice": 75000,
-  //     "discountPrice": 75000,
-  //     "isDiscountActive": false,
-  //     "promotion": null,
-  //     "promotionStart": null,
-  //     "promotionEnd": null,
-  //     "stockQuantity": 500,
-  //     "image": "https://example.com/image366.jpg",
-  //     "description":
-  //         "Son dưỡng Vaseline Lip Therapy giúp môi mềm mại, chống nứt nẻ.",
-  //     "specs": {
-  //       "Dung tích": "7g",
-  //       "Kết cấu": "Son dưỡng",
-  //       "Xuất xứ": "Mỹ",
-  //       "Ngày sản xuất": "08/2025",
-  //       "Hạn sử dụng": "36 tháng",
-  //       "Mã vạch": "0794003660001",
-  //     },
-  //     "ingredients": [
-  //       "Petrolatum – khóa ẩm",
-  //       "Vitamin E – chống oxy hóa",
-  //       "Fragrance – hương nhẹ",
-  //     ],
-  //     "usage": "Thoa trực tiếp lên môi nhiều lần trong ngày.",
-  //   },
-  //   {
-  //     "id": "SP367",
-  //     "name": "Son kem lì 3CE Velvet Lip Tint",
-  //     "brand": "3CE",
-  //     "type": "son",
-  //     "category": "Makeup",
-  //     "originalPrice": 320000,
-  //     "discountPrice": 300000,
-  //     "isDiscountActive": true,
-  //     "promotion": "Giảm giá 6% cho tuần lễ Black Friday",
-  //     "promotionStart": "2025-11-25T09:00:00",
-  //     "promotionEnd": "2025-11-30T23:59:00",
-  //     "stockQuantity": 220,
-  //     "image": "https://example.com/image367.jpg",
-  //     "description":
-  //         "Son kem lì 3CE Velvet Lip Tint cho màu sắc thời thượng, chất son mịn.",
-  //     "specs": {
-  //       "Dung tích": "4g",
-  //       "Kết cấu": "Son kem lì",
-  //       "Xuất xứ": "Hàn Quốc",
-  //       "Ngày sản xuất": "09/2025",
-  //       "Hạn sử dụng": "36 tháng",
-  //       "Mã vạch": "8809613670001",
-  //     },
-  //     "ingredients": [
-  //       "Pigments – tạo màu",
-  //       "Dimethicone – làm mịn môi",
-  //       "Vitamin E – dưỡng môi",
-  //     ],
-  //     "usage": "Thoa trực tiếp lên môi.",
-  //   },
-  //   {
-  //     "id": "SP368",
-  //     "name": "Son dưỡng Nivea Original Care",
-  //     "brand": "Nivea",
-  //     "type": "son",
-  //     "category": "Makeup",
-  //     "originalPrice": 65000,
-  //     "discountPrice": 65000,
-  //     "isDiscountActive": false,
-  //     "promotion": null,
-  //     "promotionStart": null,
-  //     "promotionEnd": null,
-  //     "stockQuantity": 400,
-  //     "image": "https://example.com/image368.jpg",
-  //     "description":
-  //         "Son dưỡng Nivea Original Care giúp môi mềm mại, chống khô nứt.",
-  //     "specs": {
-  //       "Dung tích": "4.8g",
-  //       "Kết cấu": "Son dưỡng",
-  //       "Xuất xứ": "Đức",
-  //       "Ngày sản xuất": "07/2025",
-  //       "Hạn sử dụng": "36 tháng",
-  //       "Mã vạch": "4005903680001",
-  //     },
-  //     "ingredients": [
-  //       "Shea Butter – dưỡng ẩm",
-  //       "Jojoba Oil – làm mềm môi",
-  //       "Vitamin E – chống oxy hóa",
-  //     ],
-  //     "usage": "Thoa trực tiếp lên môi nhiều lần trong ngày.",
-  //   },
-  //   {
-  //     "id": "SP387",
-  //     "name": "Phấn phủ MAC Studio Fix Powder Plus Foundation",
-  //     "brand": "MAC",
-  //     "type": "phấn phủ",
-  //     "category": "Makeup",
-  //     "originalPrice": 950000,
-  //     "discountPrice": 900000,
-  //     "isDiscountActive": true,
-  //     "promotion": "Giảm giá 5% Black Friday",
-  //     "promotionStart": "2025-11-25T09:00:00",
-  //     "promotionEnd": "2025-11-30T23:59:00",
-  //     "stockQuantity": 120,
-  //     "image": "https://example.com/image387.jpg",
-  //     "description":
-  //         "Phấn phủ MAC Studio Fix cho lớp nền mịn, che phủ tốt và lâu trôi.",
-  //     "specs": {
-  //       "Dung tích": "15g",
-  //       "Kết cấu": "Phấn nén",
-  //       "Xuất xứ": "Mỹ",
-  //       "Ngày sản xuất": "07/2025",
-  //       "Hạn sử dụng": "36 tháng",
-  //       "Mã vạch": "7736023870001",
-  //     },
-  //     "ingredients": [
-  //       "Talc – tạo độ mịn",
-  //       "Silica – kiểm soát dầu",
-  //       "Iron Oxides – tạo màu tự nhiên",
-  //     ],
-  //     "usage": "Dùng bông hoặc cọ phủ đều lên mặt sau lớp kem nền.",
-  //   },
-  //   {
-  //     "id": "SP388",
-  //     "name": "Phấn phủ Maybelline Fit Me Matte + Poreless",
-  //     "brand": "Maybelline",
-  //     "type": "phấn phủ",
-  //     "category": "Makeup",
-  //     "originalPrice": 250000,
-  //     "discountPrice": 250000,
-  //     "isDiscountActive": false,
-  //     "promotion": null,
-  //     "promotionStart": null,
-  //     "promotionEnd": null,
-  //     "stockQuantity": 300,
-  //     "image": "https://example.com/image388.jpg",
-  //     "description":
-  //         "Phấn phủ Maybelline Fit Me kiểm soát dầu, cho lớp nền mịn tự nhiên.",
-  //     "specs": {
-  //       "Dung tích": "8.5g",
-  //       "Kết cấu": "Phấn nén",
-  //       "Xuất xứ": "Mỹ",
-  //       "Ngày sản xuất": "08/2025",
-  //       "Hạn sử dụng": "36 tháng",
-  //       "Mã vạch": "3600533880001",
-  //     },
-  //     "ingredients": [
-  //       "Talc – tạo độ mịn",
-  //       "Silica – kiểm soát dầu",
-  //       "Dimethicone – làm mịn da",
-  //     ],
-  //     "usage": "Dùng cọ hoặc bông phủ đều lên mặt.",
-  //   },
-  //   {
-  //     "id": "SP389",
-  //     "name": "Phấn phủ Innisfree No-Sebum Mineral Powder",
-  //     "brand": "Innisfree",
-  //     "type": "phấn phủ",
-  //     "category": "Makeup",
-  //     "originalPrice": 180000,
-  //     "discountPrice": 170000,
-  //     "isDiscountActive": true,
-  //     "promotion": "Giảm giá 6% cho đơn hàng online",
-  //     "promotionStart": "2025-11-25T09:00:00",
-  //     "promotionEnd": "2025-11-30T23:59:00",
-  //     "stockQuantity": 250,
-  //     "image": "https://example.com/image389.jpg",
-  //     "description":
-  //         "Phấn phủ Innisfree No-Sebum kiểm soát dầu, cho da khô thoáng.",
-  //     "specs": {
-  //       "Dung tích": "5g",
-  //       "Kết cấu": "Phấn bột",
-  //       "Xuất xứ": "Hàn Quốc",
-  //       "Ngày sản xuất": "09/2025",
-  //       "Hạn sử dụng": "36 tháng",
-  //       "Mã vạch": "8809613890001",
-  //     },
-  //     "ingredients": [
-  //       "Silica – kiểm soát dầu",
-  //       "Mineral Powder – tạo độ mịn",
-  //       "Green Tea Extract – chống oxy hóa",
-  //     ],
-  //     "usage": "Dùng bông hoặc cọ phủ đều lên mặt.",
-  //   },
-  //   {
-  //     "id": "SP390",
-  //     "name": "Phấn phủ Chanel Poudre Universelle Libre",
-  //     "brand": "Chanel",
-  //     "type": "phấn phủ",
-  //     "category": "Makeup",
-  //     "originalPrice": 1650000,
-  //     "discountPrice": 1650000,
-  //     "isDiscountActive": false,
-  //     "promotion": null,
-  //     "promotionStart": null,
-  //     "promotionEnd": null,
-  //     "stockQuantity": 100,
-  //     "image": "https://example.com/image390.jpg",
-  //     "description":
-  //         "Phấn phủ Chanel dạng bột mịn, cho lớp nền tự nhiên và sang trọng.",
-  //     "specs": {
-  //       "Dung tích": "30g",
-  //       "Kết cấu": "Phấn bột",
-  //       "Xuất xứ": "Pháp",
-  //       "Ngày sản xuất": "07/2025",
-  //       "Hạn sử dụng": "36 tháng",
-  //       "Mã vạch": "3145893900001",
-  //     },
-  //     "ingredients": [
-  //       "Talc – tạo độ mịn",
-  //       "Silica – kiểm soát dầu",
-  //       "Iron Oxides – tạo màu",
-  //     ],
-  //     "usage": "Dùng cọ phủ đều lên mặt sau lớp nền.",
-  //   },
-  //   {
-  //     "id": "SP391",
-  //     "name": "Phấn phủ L'Oréal True Match Super-Blendable Powder",
-  //     "brand": "L'Oréal",
-  //     "type": "phấn phủ",
-  //     "category": "Makeup",
-  //     "originalPrice": 320000,
-  //     "discountPrice": 300000,
-  //     "isDiscountActive": true,
-  //     "promotion": "Giảm giá 6% cho tuần lễ Black Friday",
-  //     "promotionStart": "2025-11-25T09:00:00",
-  //     "promotionEnd": "2025-11-30T23:59:00",
-  //     "stockQuantity": 200,
-  //     "image": "https://example.com/image391.jpg",
-  //     "description": "Phấn phủ L'Oréal True Match cho lớp nền mịn, dễ tán đều.",
-  //     "specs": {
-  //       "Dung tích": "9g",
-  //       "Kết cấu": "Phấn nén",
-  //       "Xuất xứ": "Pháp",
-  //       "Ngày sản xuất": "08/2025",
-  //       "Hạn sử dụng": "36 tháng",
-  //       "Mã vạch": "3011373910001",
-  //     },
-  //     "ingredients": [
-  //       "Talc – tạo độ mịn",
-  //       "Dimethicone – làm mịn da",
-  //       "Iron Oxides – tạo màu",
-  //     ],
-  //     "usage": "Dùng bông hoặc cọ phủ đều lên mặt.",
-  //   },
-  //   {
-  //     "id": "SP392",
-  //     "name": "Phấn phủ Maybelline White Superfresh",
-  //     "brand": "Maybelline",
-  //     "type": "phấn phủ",
-  //     "category": "Makeup",
-  //     "originalPrice": 220000,
-  //     "discountPrice": 220000,
-  //     "isDiscountActive": false,
-  //     "promotion": null,
-  //     "promotionStart": null,
-  //     "promotionEnd": null,
-  //     "stockQuantity": 280,
-  //     "image": "https://example.com/image392.jpg",
-  //     "description":
-  //         "Phấn phủ Maybelline White Superfresh kiểm soát dầu, cho da sáng mịn.",
-  //     "specs": {
-  //       "Dung tích": "9g",
-  //       "Kết cấu": "Phấn nén",
-  //       "Xuất xứ": "Mỹ",
-  //       "Ngày sản xuất": "09/2025",
-  //       "Hạn sử dụng": "36 tháng",
-  //       "Mã vạch": "3600533920001",
-  //     },
-  //     "ingredients": [
-  //       "Talc – tạo độ mịn",
-  //       "Silica – kiểm soát dầu",
-  //       "Titanium Dioxide – chống nắng",
-  //     ],
-  //     "usage": "Dùng bông hoặc cọ phủ đều lên mặt.",
-  //   },
-  //   {
-  //     "id": "SP393",
-  //     "name": "Kem nền L'Oréal Infallible 24h Fresh Wear",
-  //     "brand": "L'Oréal",
-  //     "type": "kem nền",
-  //     "category": "Makeup",
-  //     "originalPrice": 320000,
-  //     "discountPrice": 300000,
-  //     "isDiscountActive": true,
-  //     "promotion": "Giảm giá 6% Black Friday",
-  //     "promotionStart": "2025-11-25T09:00:00",
-  //     "promotionEnd": "2025-11-30T23:59:00",
-  //     "stockQuantity": 200,
-  //     "image": "https://example.com/image393.jpg",
-  //     "description":
-  //         "Kem nền L'Oréal Infallible cho độ che phủ cao, lâu trôi suốt 24 giờ.",
-  //     "specs": {
-  //       "Dung tích": "30ml",
-  //       "Kết cấu": "Kem lỏng",
-  //       "Xuất xứ": "Pháp",
-  //       "Ngày sản xuất": "09/2025",
-  //       "Hạn sử dụng": "36 tháng",
-  //       "Mã vạch": "3011373930001",
-  //     },
-  //     "ingredients": [
-  //       "Dimethicone – làm mịn da",
-  //       "Iron Oxides – tạo màu",
-  //       "Titanium Dioxide – chống nắng",
-  //     ],
-  //     "usage": "Dùng cọ hoặc mút tán đều kem nền trên mặt.",
-  //   },
-  //   {
-  //     "id": "SP394",
-  //     "name": "Kem nền Maybelline Fit Me Matte + Poreless",
-  //     "brand": "Maybelline",
-  //     "type": "kem nền",
-  //     "category": "Makeup",
-  //     "originalPrice": 250000,
-  //     "discountPrice": 250000,
-  //     "isDiscountActive": false,
-  //     "promotion": null,
-  //     "promotionStart": null,
-  //     "promotionEnd": null,
-  //     "stockQuantity": 300,
-  //     "image": "https://example.com/image394.jpg",
-  //     "description":
-  //         "Kem nền Maybelline Fit Me kiểm soát dầu, cho lớp nền mịn tự nhiên.",
-  //     "specs": {
-  //       "Dung tích": "30ml",
-  //       "Kết cấu": "Kem lỏng",
-  //       "Xuất xứ": "Mỹ",
-  //       "Ngày sản xuất": "08/2025",
-  //       "Hạn sử dụng": "36 tháng",
-  //       "Mã vạch": "3600533940001",
-  //     },
-  //     "ingredients": [
-  //       "Dimethicone – làm mịn da",
-  //       "Iron Oxides – tạo màu",
-  //       "Talc – tạo độ mịn",
-  //     ],
-  //     "usage": "Dùng cọ hoặc mút tán đều kem nền trên mặt.",
-  //   },
-  //   {
-  //     "id": "SP395",
-  //     "name": "Kem nền MAC Studio Fix Fluid SPF15",
-  //     "brand": "MAC",
-  //     "type": "kem nền",
-  //     "category": "Makeup",
-  //     "originalPrice": 950000,
-  //     "discountPrice": 900000,
-  //     "isDiscountActive": true,
-  //     "promotion": "Giảm giá 5% cho đơn hàng online",
-  //     "promotionStart": "2025-11-25T09:00:00",
-  //     "promotionEnd": "2025-11-30T23:59:00",
-  //     "stockQuantity": 150,
-  //     "image": "https://example.com/image395.jpg",
-  //     "description":
-  //         "Kem nền MAC Studio Fix Fluid che phủ tốt, có chống nắng SPF15.",
-  //     "specs": {
-  //       "Dung tích": "30ml",
-  //       "Kết cấu": "Kem lỏng",
-  //       "Xuất xứ": "Mỹ",
-  //       "Ngày sản xuất": "07/2025",
-  //       "Hạn sử dụng": "36 tháng",
-  //       "Mã vạch": "7736023950001",
-  //     },
-  //     "ingredients": [
-  //       "Dimethicone – làm mịn da",
-  //       "Titanium Dioxide – chống nắng",
-  //       "Iron Oxides – tạo màu",
-  //     ],
-  //     "usage": "Thoa đều kem nền lên mặt bằng cọ hoặc mút.",
-  //   },
-  //   {
-  //     "id": "SP396",
-  //     "name": "Kem nền Dior Forever Skin Glow",
-  //     "brand": "Dior",
-  //     "type": "kem nền",
-  //     "category": "Makeup",
-  //     "originalPrice": 1650000,
-  //     "discountPrice": 1650000,
-  //     "isDiscountActive": false,
-  //     "promotion": null,
-  //     "promotionStart": null,
-  //     "promotionEnd": null,
-  //     "stockQuantity": 100,
-  //     "image": "https://example.com/image396.jpg",
-  //     "description":
-  //         "Kem nền Dior Forever Skin Glow cho lớp nền sáng mịn, lâu trôi.",
-  //     "specs": {
-  //       "Dung tích": "30ml",
-  //       "Kết cấu": "Kem lỏng",
-  //       "Xuất xứ": "Pháp",
-  //       "Ngày sản xuất": "07/2025",
-  //       "Hạn sử dụng": "36 tháng",
-  //       "Mã vạch": "3348903960001",
-  //     },
-  //     "ingredients": [
-  //       "Dimethicone – làm mịn da",
-  //       "Iron Oxides – tạo màu",
-  //       "Glycerin – dưỡng ẩm",
-  //     ],
-  //     "usage": "Thoa đều kem nền lên mặt bằng cọ hoặc mút.",
-  //   },
-  //   {
-  //     "id": "SP397",
-  //     "name": "Kem nền Innisfree My Foundation",
-  //     "brand": "Innisfree",
-  //     "type": "kem nền",
-  //     "category": "Makeup",
-  //     "originalPrice": 320000,
-  //     "discountPrice": 300000,
-  //     "isDiscountActive": true,
-  //     "promotion": "Giảm giá 6% Black Friday",
-  //     "promotionStart": "2025-11-25T09:00:00",
-  //     "promotionEnd": "2025-11-30T23:59:00",
-  //     "stockQuantity": 180,
-  //     "image": "https://example.com/image397.jpg",
-  //     "description":
-  //         "Kem nền Innisfree My Foundation cho lớp nền tự nhiên, nhiều tông màu lựa chọn.",
-  //     "specs": {
-  //       "Dung tích": "30ml",
-  //       "Kết cấu": "Kem lỏng",
-  //       "Xuất xứ": "Hàn Quốc",
-  //       "Ngày sản xuất": "09/2025",
-  //       "Hạn sử dụng": "36 tháng",
-  //       "Mã vạch": "8809613970001",
-  //     },
-  //     "ingredients": [
-  //       "Dimethicone – làm mịn da",
-  //       "Iron Oxides – tạo màu",
-  //       "Green Tea Extract – chống oxy hóa",
-  //     ],
-  //     "usage": "Thoa đều kem nền lên mặt bằng cọ hoặc mút.",
-  //   },
-  //   {
-  //     "id": "SP398",
-  //     "name": "Kem nền Estee Lauder Double Wear Stay-in-Place",
-  //     "brand": "Estee Lauder",
-  //     "type": "kem nền",
-  //     "category": "Makeup",
-  //     "originalPrice": 1450000,
-  //     "discountPrice": 1450000,
-  //     "isDiscountActive": false,
-  //     "promotion": null,
-  //     "promotionStart": null,
-  //     "promotionEnd": null,
-  //     "stockQuantity": 120,
-  //     "image": "https://example.com/image398.jpg",
-  //     "description":
-  //         "Kem nền Estee Lauder Double Wear cho độ che phủ cao, lâu trôi cả ngày.",
-  //     "specs": {
-  //       "Dung tích": "30ml",
-  //       "Kết cấu": "Kem lỏng",
-  //       "Xuất xứ": "Mỹ",
-  //       "Ngày sản xuất": "08/2025",
-  //       "Hạn sử dụng": "36 tháng",
-  //       "Mã vạch": "0271313980001",
-  //     },
-  //     "ingredients": [
-  //       "Dimethicone – làm mịn da",
-  //       "Iron Oxides – tạo màu",
-  //       "Titanium Dioxide – chống nắng",
-  //     ],
-  //     "usage": "Thoa đều kem nền lên mặt bằng cọ hoặc mút.",
-  //   },
 ];
 
 /// Hàm phân loại theo type
@@ -16431,6 +17977,11 @@ final List<Map<String, dynamic>> productListt = productList.map((product) {
   final category = getCategory(type);
   return {...product, 'category': category};
 }).toList();
+
+/// Parse sang List<Product> để dùng trong logic
+final List<Product> productListRaw = productList
+    .map((map) => Product.fromMap(map))
+    .toList();
 
 final List<Map<String, dynamic>> productCategories = [
   {'label': 'Skincare', 'image': 'assets/skincare.jpg'},

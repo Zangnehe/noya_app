@@ -108,11 +108,15 @@ class _RecommendedProductsWidgetState extends State<RecommendedProductsWidget> {
               final originalPrice = product.originalPrice ?? product.price;
               final discountPrice = product.discountPrice;
 
-              // Kiểm tra trạng thái giảm giá
+              final now = DateTime.now();
+
+              // Kiểm tra trạng thái giảm giá còn hiệu lực
               final isDiscountActive =
                   product.isDiscountActive == true &&
                   product.promotionStart != null &&
-                  product.promotionEnd != null;
+                  product.promotionEnd != null &&
+                  now.isAfter(product.promotionStart!) &&
+                  now.isBefore(product.promotionEnd!);
 
               final hasDiscount =
                   isDiscountActive &&
@@ -125,7 +129,7 @@ class _RecommendedProductsWidgetState extends State<RecommendedProductsWidget> {
                         .round()
                   : 0;
 
-              final endTime = hasDiscount && product.promotionEnd != null
+              final endTime = hasDiscount
                   ? product.promotionEnd!.millisecondsSinceEpoch
                   : null;
 
@@ -179,7 +183,7 @@ class _RecommendedProductsWidgetState extends State<RecommendedProductsWidget> {
 
                         const SizedBox(height: 8),
 
-                        if (product.promotion != null)
+                        if (product.promotion != null && hasDiscount)
                           _PromotionBadge(text: product.promotion!),
 
                         const SizedBox(height: 6),

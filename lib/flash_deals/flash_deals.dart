@@ -518,45 +518,35 @@ class _FlashDealsPageState extends State<FlashDealsPage> {
   }
 
   List<Product> get filteredProducts {
-    final list = productList
-        .where((p) {
-          final originalPrice = _getPrice(p['originalPrice'] ?? p['price']);
-          final discountPrice = _getPrice(p['discountPrice']);
-          final hasDiscount =
-              discountPrice > 0 && discountPrice < originalPrice;
+    // Parse toàn bộ danh sách sang Product
+    final products = productList.map((p) => Product.fromJson(p)).toList();
 
-          final matchPrice =
-              selectedFixedPrice == null ||
-              originalPrice <= selectedFixedPrice!;
-          final matchBrand =
-              selectedBrand == null ||
-              (p['brand']?.toString() == selectedBrand);
-          final matchType =
-              selectedType == null || (p['type']?.toString() == selectedType);
+    // Lọc theo điều kiện
+    final filtered = products.where((p) {
+      final matchDiscount = p.discountPercent > 0 && p.isPromotionValid;
+      final matchPrice =
+          selectedFixedPrice == null || p.effectivePrice <= selectedFixedPrice!;
+      final matchBrand = selectedBrand == null || p.brand == selectedBrand;
+      final matchType = selectedType == null || p.type == selectedType;
 
-          return hasDiscount && matchPrice && matchBrand && matchType;
-        })
-        .map((p) => Product.fromJson(p))
-        .toList();
+      return matchDiscount && matchPrice && matchBrand && matchType;
+    }).toList();
 
-    list.sort((a, b) {
+    // Sắp xếp theo tùy chọn
+    filtered.sort((a, b) {
       switch (sortOption) {
         case 'Thương hiệu A-Z':
-          return a.brand.compareTo(b.brand);
+          return (a.brand ?? '').compareTo(b.brand ?? '');
         case 'Giá tăng dần':
-          return (a.discountPrice ?? a.price).compareTo(
-            b.discountPrice ?? b.price,
-          );
+          return a.effectivePrice.compareTo(b.effectivePrice);
         case 'Giá giảm dần':
-          return (b.discountPrice ?? b.price).compareTo(
-            a.discountPrice ?? a.price,
-          );
+          return b.effectivePrice.compareTo(a.effectivePrice);
         default:
           return 0;
       }
     });
 
-    return list;
+    return filtered;
   }
 
   void resetFilters() {

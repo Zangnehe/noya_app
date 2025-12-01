@@ -4,7 +4,6 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 
 import '../provider/cart_provider.dart';
-import '../provider/addresspage.dart';
 import '../provider/paymentpage.dart';
 import '../provider/order_history_page.dart';
 import '../provider/order_confirmation_page.dart';
@@ -16,6 +15,7 @@ import '../widget/bottom_nav_bar.dart' as widget; // alias cho BottomNavBar
 import '../BranchSelectionPage/branch_info_page.dart';
 import '../ProductDetailPage/favorite_page.dart';
 import '../ProductDetailPage/favorite_provider.dart';
+import '../Account/SkinAssessmentProvider.dart';
 
 import 'firebase_options.dart';
 import '../Login/login_page.dart';
@@ -28,10 +28,11 @@ import '../cart/category.dart';
 import '../screens/guide.dart';
 import '../screens/new_products.dart';
 
+import '../provider/addresspage.dart';
+
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
-
   runApp(const BeautyApp());
 }
 
@@ -44,6 +45,7 @@ class BeautyApp extends StatelessWidget {
       providers: [
         ChangeNotifierProvider(create: (_) => CartProvider()),
         ChangeNotifierProvider(create: (_) => FavoriteProvider()),
+        ChangeNotifierProvider(create: (_) => SkinAssessmentProvider()),
       ],
       child: MaterialApp(
         title: 'Beauty Shop',
@@ -52,15 +54,11 @@ class BeautyApp extends StatelessWidget {
           scaffoldBackgroundColor: const Color(0xFFFDF6F0),
         ),
         debugShowCheckedModeBanner: false,
-        initialRoute: '/',
+        home: const AuthGate(), // ✅ entry point
         routes: {
-          '/': (context) => const AuthGate(),
           '/login': (context) => const LoginPage(),
           '/forgot': (context) => const ForgotPasswordPage(),
           '/register': (context) => const RegisterPage(),
-          '/address': (context) => const AddressPage(),
-          '/address-list': (context) => const AddressListPage(),
-          '/address-edit': (context) => const AddressEditPage(),
           '/payment': (context) => const PaymentPage(),
           '/history': (context) => const OrderHistoryPage(),
           '/order-confirm': (context) => const OrderConfirmationPage(),
@@ -71,6 +69,9 @@ class BeautyApp extends StatelessWidget {
           '/guide': (context) => const GuidePage(),
           '/new-products': (context) =>
               NewProductsPage(productList: productList),
+          '/address': (context) => const AddressPage(),
+          '/home': (context) =>
+              const widget.BottomNavBar(), // ✅ thêm route Home
         },
       ),
     );
@@ -85,17 +86,26 @@ class AuthGate extends StatelessWidget {
     return StreamBuilder<User?>(
       stream: FirebaseAuth.instance.authStateChanges(),
       builder: (context, snapshot) {
-        if (snapshot.connectionState == ConnectionState.waiting) {
+        // Nếu có lỗi
+        if (snapshot.hasError) {
           return const Scaffold(
-            body: Center(child: CircularProgressIndicator()),
+            body: Center(child: Text('❌ Lỗi kết nối FirebaseAuth')),
           );
         }
-        final user = snapshot.data;
-        if (user != null) {
-          return const widget.BottomNavBar(); // ✅ dùng alias widget.BottomNavBar
-        } else {
-          return const login.SplashScreen(); // ✅ dùng alias login.SplashScreen
+
+        // Nếu đang chờ kết nối
+        if (snapshot.connectionState == ConnectionState.waiting) {
+          return const login.SplashScreen(); // dùng SplashScreen khi loading
         }
+
+        // Nếu đã đăng nhập
+        if (snapshot.hasData && snapshot.data != null) {
+          debugPrint('✅ User đăng nhập: ${snapshot.data!.email}');
+          return const widget.BottomNavBar();
+        }
+
+        // Nếu chưa đăng nhập
+        return const LoginPage();
       },
     );
   }

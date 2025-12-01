@@ -12,14 +12,16 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   void initState() {
     super.initState();
-    Timer(const Duration(seconds: 5), () {
-      Navigator.pushReplacementNamed(context, '/login');
-    });
+    // Timer(const Duration(seconds: 5), () {
+    //   if (mounted) {
+    //     Navigator.pushReplacementNamed(context, '/login');
+    //   }
+    // });
   }
 
   @override
   Widget build(BuildContext context) {
-    const themeColor = Colors.brown; // ✅ dùng màu nâu đậm cho đồng bộ
+    const themeColor = Colors.brown;
 
     return Scaffold(
       body: Stack(
@@ -32,22 +34,17 @@ class _SplashScreenState extends State<SplashScreen> {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                // Logo to hơn, bo góc
                 ClipRRect(
                   borderRadius: BorderRadius.circular(40),
-                  child: Image.asset(
-                    'assets/logo.jpg',
-                    height: 160,
-                  ), // ✅ tăng kích thước logo
+                  child: Image.asset('assets/logo.jpg', height: 160),
                 ),
                 const SizedBox(height: 30),
-                // Chữ chào mừng in đậm, màu nâu đậm
                 const Text(
                   'Chào mừng bạn đến với Noya',
                   textAlign: TextAlign.center,
                   style: TextStyle(
-                    fontSize: 28, // ✅ chữ to hơn
-                    fontWeight: FontWeight.bold, // ✅ in đậm
+                    fontSize: 28,
+                    fontWeight: FontWeight.bold,
                     fontStyle: FontStyle.italic,
                     fontFamily: 'DancingScript',
                     color: themeColor,

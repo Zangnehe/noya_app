@@ -4,84 +4,121 @@ import 'dart:convert';
 import '../models/product.dart';
 
 class FavoriteProvider extends ChangeNotifier {
-  final List<Product> _favorites = [];
+  final List<Map<String, dynamic>> _favorites = [];
 
-  // Constructor: tự động load dữ liệu khi Provider khởi tạo
   FavoriteProvider() {
     loadFavorites();
   }
 
-  // Getter: trả về bản sao để tránh lỗi unmodifiable
-  List<Product> get favorites => List<Product>.from(_favorites);
+  /// ✅ Trả về số lượng sản phẩm yêu thích
+  int get countFavorites => favorites.length;
 
-  bool isFavorite(String productId) {
-    return _favorites.any((p) => p.id == productId);
+  /// ✅ Trả về danh sách Product đã an toàn
+  List<Product> get favorites {
+    return _favorites
+        .where((e) => e['product'] != null)
+        .map((e) => Product.fromJson(e['product'] as Map<String, dynamic>))
+        .toList();
   }
 
-  void addFavorite(Product product) {
+  /// ✅ Trả về dữ liệu gốc để lấy thêm thông tin (vd: addedAt)
+  List<Map<String, dynamic>> get rawFavorites =>
+      _favorites.where((e) => e is Map<String, dynamic>).toList();
+
+  /// ✅ Kiểm tra sản phẩm có trong yêu thích chưa
+  bool isFavorite(String productId) {
+    return _favorites.any((p) => (p['product']?['id']) == productId);
+  }
+
+  /// ✅ Thêm sản phẩm vào yêu thích
+  Future<void> addFavorite(Product product) async {
     if (!isFavorite(product.id)) {
-      _favorites.add(product);
-      saveFavorites(); // lưu vào SharedPreferences
-      syncToServer(); // đồng bộ server
+      _favorites.add({
+        'product': product.toJson(),
+        'addedAt': DateTime.now().toIso8601String(),
+      });
+      await saveFavorites();
       notifyListeners();
     }
   }
 
-  void removeFavorite(String productId) {
-    _favorites.removeWhere((p) => p.id == productId);
-    saveFavorites();
-    syncToServer();
+  /// ✅ Xóa sản phẩm khỏi yêu thích
+  Future<void> removeFavorite(String productId) async {
+    _favorites.removeWhere((p) => (p['product']?['id']) == productId);
+    await saveFavorites();
     notifyListeners();
   }
 
-  void toggleFavorite(Product product) {
+  /// ✅ Toggle trạng thái yêu thích
+  Future<void> toggleFavorite(Product product) async {
     if (isFavorite(product.id)) {
-      removeFavorite(product.id);
+      await removeFavorite(product.id);
     } else {
-      addFavorite(product);
+      await addFavorite(product);
     }
   }
 
-  /// Lưu danh sách yêu thích vào SharedPreferences
+  /// ✅ Lưu danh sách yêu thích vào SharedPreferences
   Future<void> saveFavorites() async {
     final prefs = await SharedPreferences.getInstance();
-    final encoded = jsonEncode(_favorites.map((p) => p.toJson()).toList());
-    await prefs.setString('favorites', encoded);
+    await prefs.setString('favorites', jsonEncode(_favorites));
   }
 
-  /// Tải danh sách yêu thích từ SharedPreferences
+  /// ✅ Load danh sách yêu thích từ SharedPreferences
   Future<void> loadFavorites() async {
     final prefs = await SharedPreferences.getInstance();
     final raw = prefs.getString('favorites');
-    if (raw != null) {
+
+    if (raw == null) return;
+
+    try {
       final List decoded = jsonDecode(raw);
-      _favorites.clear();
-      _favorites.addAll(decoded.map((e) => Product.fromJson(e)));
+
+      final List<Map<String, dynamic>> clean = [];
+      for (final e in decoded) {
+        if (e is Map<String, dynamic>) {
+          if (e['product'] is Map<String, dynamic>) {
+            // Format mới
+            clean.add({
+              'product': e['product'] as Map<String, dynamic>,
+              'addedAt': (e['addedAt'] is String)
+                  ? e['addedAt'] as String
+                  : DateTime.now().toIso8601String(),
+            });
+          } else {
+            // Format cũ: migrate
+            if (e['id'] != null) {
+              clean.add({
+                'product': e,
+                'addedAt': DateTime.now().toIso8601String(),
+              });
+            }
+          }
+        }
+      }
+
+      _favorites
+        ..clear()
+        ..addAll(clean);
+
+      // Resave sau migrate để ổn định dữ liệu
+      await saveFavorites();
       notifyListeners();
+    } catch (e) {
+      debugPrint('Lỗi khi load favorites: $e');
     }
   }
 
-  /// Đồng bộ danh sách yêu thích lên server (placeholder)
-  Future<void> syncToServer() async {
-    // TODO: Gửi danh sách _favorites lên API backend
-    // Ví dụ: await ApiService.syncFavorites(_favorites);
+  /// ✅ Xóa toàn bộ danh sách yêu thích
+  Future<void> resetFavorites() async {
+    final prefs = await SharedPreferences.getInstance();
+    await prefs.remove('favorites');
+    _favorites.clear();
+    notifyListeners();
   }
 
-  /// Lấy danh sách theo danh mục (wishlist nâng cao)
-  List<Product> getByCategory(String category) {
-    return _favorites.where((p) => p.category == category).toList();
-  }
-
-  /// Sắp xếp danh sách theo tiêu chí
-  List<Product> getSorted(String sortType) {
-    final sorted = List<Product>.from(_favorites);
-    if (sortType == 'Giá thấp nhất') {
-      sorted.sort((a, b) => a.price.compareTo(b.price));
-    } else if (sortType == 'Giá cao nhất') {
-      sorted.sort((a, b) => b.price.compareTo(a.price));
-    } else if (sortType == 'Mới nhất') {
-      sorted.sort((a, b) => b.id.compareTo(a.id));
-    }
-    return sorted;
+  /// ✅ Ép migrate dữ liệu ngay cả khi đang dùng app
+  Future<void> forceMigrate() async {
+    await loadFavorites();
   }
 }
