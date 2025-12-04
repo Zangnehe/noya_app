@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:hive_flutter/hive_flutter.dart';
 
 import '../provider/cart_provider.dart';
 import '../provider/paymentpage.dart';
@@ -35,7 +36,15 @@ import '../provider/cart_page.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
+
+  // Khởi tạo Firebase
   await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
+
+  // ✅ Khởi tạo Hive
+  await Hive.initFlutter();
+  await Hive.openBox('chatBox'); // box lưu chat
+  await Hive.openBox('settingsBox'); // ví dụ lưu settings khác
+
   runApp(const BeautyApp());
 }
 
@@ -72,17 +81,10 @@ class BeautyApp extends StatelessWidget {
           '/favorites': (context) => const FavoritePage(),
           '/category': (context) => const CategoryPage(),
           '/guide': (context) => const GuidePage(),
-
-          // '/product-detail': (context) {
-          //   final product =
-          //       ModalRoute.of(context)!.settings.arguments as Product;
-          //   return ProductDetailPage(product: product);
-          // },
           '/new-products': (context) =>
               NewProductsPage(productList: productList),
           '/address': (context) => const AddressPage(),
-          '/home': (context) =>
-              const widget.BottomNavBar(), // ✅ thêm route Home
+          '/home': (context) => const widget.BottomNavBar(),
         },
       ),
     );
